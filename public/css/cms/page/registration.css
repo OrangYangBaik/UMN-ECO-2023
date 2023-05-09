@@ -1,0 +1,126 @@
+/* new form 2022 */
+
+.main-container {
+    position: relative;
+}
+
+.form-regis h5 {
+    font-family: "Montserrat";
+    font-size: 16px;
+}
+
+.artboard-bg {
+    z-index: -1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -400px;
+    left: 50%;
+    width: 100%;
+}
+
+.logo-division {
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.76);
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.76);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.76);
+    width: 15%;
+    border-radius: 50%;
+}
+
+[id="main-navigation-toggle"] ~ label {
+    position: absolute;
+}
+.toggler-container {
+    position: absolute;
+}
+.navbar {
+    position: absolute;
+}
+
+.form {
+    padding-top: 20px;
+    padding-bottom: 2%;
+}
+.form-control {
+    background-color: #ffffff;
+    font-family: "Montserrat";
+}
+.has-error .form-control,
+.form-control.error {
+    background-color: #ffc0a4;
+    /* color: #eb5e28; */
+    border-color: #eb5e28;
+}
+label.error:not(.form-control) {
+    color: #fd5555;
+    font-size: 0.9em;
+    /* text-shadow: 0px 4px 4px rgb(0 0 0 / 25%); */
+}
+
+.button-reg button,
+.button-next button {
+    font-family: "Montserrat";
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 35px;
+    color: white;
+    padding: 10px 40px;
+    background-color: #bfcc81;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    box-shadow: 0px 7px 13px -1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 7px 13px -1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 7px 13px -1px rgba(0, 0, 0, 0.5);
+}
+
+.button-reg button:hover,
+.button-next button:hover {
+    transition: 0.2s;
+    background-color: #94a53f;
+    cursor: pointer;
+}
+
+.button-reg button:focus,
+.button-next button:focus {
+    border: none;
+    outline: none;
+}
+@media (max-width: 1200px) {
+    .artboard-bg {
+        top: -300px;
+    }
+}
+
+@media (max-width: 991px) {
+    .artboard-bg {
+        top: -200px;
+    }
+}
+@media (max-width: 769px) {
+    .logo-division {
+        width: 100px;
+    }
+    .artboard-bg {
+        top: -100px;
+        width: 100%;
+    }
+}
+@media (max-width: 350px) {
+    .artboard-bg {
+        top: -20px;
+    }
+}
+@media (max-width: 576px) {
+    .button-reg {
+        flex-direction: column;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .button-reg button {
+        width: 50%;
+        min-width: 150px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}

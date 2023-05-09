@@ -1,0 +1,298 @@
+body {
+    background: linear-gradient(#a84604, #8e5c2e, #71492a);
+    height: 100vh;
+    font-family: "Montserrat";
+    font-family: "Montserrat Bold";
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+
+.container-fluid-footer{
+    background: #844e24!important;
+}
+
+h4 {
+    font-family: 'Montserrat Bold';
+    font-style: normal;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    padding-top:100px;
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+p {
+    line-height: 1.45rem;
+    padding: 0;
+    margin: 0;
+}
+
+.background-overlay {
+    padding: 50px;
+    height: 100%;
+    min-height: 100vh;
+    /* background-image: url("../../../images/drought/bingo/droughtBingoBackground.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.retak1 {
+    /* background-image: url("../../../images/drought/bingo/retak1.png"); */
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: left;
+    width: 299px;
+    height: 382px;
+    bottom: 5%;
+    left: 0;
+    z-index: -1;
+}
+
+.retak2 {
+    /* background-image: url("../../../images/drought/bingo/retak2.png"); */
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 315px;
+    height: 358px;
+    bottom: 5%;
+    right: 0;
+    z-index: -1;
+}
+
+.bingo-title {
+  line-height: 1.4rem;
+}
+
+div .bingo-flex-container {
+    margin-top: 100px;
+    margin-top: 50px;
+    /* flex-wrap: wrap;
+    padding: 40px calc((100% - (255px * 3)) / 2); */
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+div .bingo-flex-item {
+    background-color: #392405;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.6);
+    width: 175px;
+    min-width: 175px;
+    height: 175px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 15px; 
+    /* flex-basis: 25%; */
+}
+
+/* FORM */
+.drought-form h1 {
+    font-family: "Montserrat Bold 2";
+    color: #1b5b3b;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.form-control {
+    border-radius: 20px !important;
+    border: none;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 8px 22px;
+}
+
+.button-submit {
+    background: #bfdb3b;
+    box-shadow: 0px 4px 4px #aab675;
+    border-radius: 20px;
+    padding: 8px 30px;
+    outline: none;
+    border: none;
+    font-family: "Montserrat Bold";
+    text-transform: uppercase;
+    color: white;
+    transition: 0.2s;
+}
+
+.show {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.show > .biji-bingo {
+  width: 100%;
+}
+
+.button-submit:focus {
+    outline: none;
+    border: none;
+}
+
+.button-submit:hover {
+    background: #95ac2f;
+    transition: 0.2s;
+}
+
+.biji-bingo {
+  width: 80% !important;
+}
+
+/* END FORM */
+
+/* SWAL */
+.swal2-modal {
+    border-radius: 25px !important;
+    height: 400px;
+    background: linear-gradient(
+        134.8deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.8) 60%,
+        rgba(255, 255, 255, 0.3) 100%
+    ) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+}
+
+.swal2-actions {
+    gap: 20px;
+}
+
+.swal2-cancel,
+.swal2-confirm {
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 8px 25px;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.swal2-cancel {
+    background-color: #87837e;
+}
+
+.swal2-confirm {
+    color: black;
+    background-color: #bfdb3b;
+}
+
+/* END SWAL */
+
+/* MODAL */
+.modal-content {
+  position: relative;
+    /* custom modal height */
+    height: 80%;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+    /* box-shadow: -1px -1px 1px 0 rgba(255, 255, 255, .8), -1px -1px 1px 0 rgba(0, 0, 0, .4); */
+    background: linear-gradient(
+        134.8deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(25px);
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 30px;
+}
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 2px;
+  background: linear-gradient(139deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0) 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+}
+
+.modal-backdrop {
+    opacity: 0 !important;
+}
+
+.modal-content .modal-title {
+    font-family: "Montserrat Bold 2";
+}
+
+.modal-dialog {
+    min-width: 70vw;
+    width: 70vw;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+div.modal.fade.show body {
+    background-color: aqua !important;
+}
+
+/* END MODAL */
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    div .bingo-flex-item {
+        width: 130px;
+        min-width: 130px;
+        height: 130px;
+        font-size: 1em;
+    }
+    h4 {
+        font-size: 16px;
+        font-family: 'Montserrat Bold';
+        font-style: normal;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .bingo-title {
+      line-height: .8rem !important;
+    }
+
+    p {
+        line-height: 1rem;
+    }
+
+    .modal-dialog {
+        width: 97vw;
+    }
+
+    .modal-content {
+        padding-left: 20px;
+    }
+
+    div .bingo-flex-item {
+        width: 80px;
+        min-width: 80px;
+        height: 80px;
+        font-size: 0.6em;
+    }
+}
+/* END RESPONSIVE */

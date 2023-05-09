@@ -1,0 +1,103 @@
+body{
+    background-color: blueviolet;
+    font-family: "Montserrat";
+}
+.drought-form {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+}
+.drought-form h1{
+    font-family: "Montserrat Bold 2";
+    color: #1B5B3B;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.overlay-background{
+    background: linear-gradient(134.8deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(25px);
+    border-radius: 50px;
+}
+
+.umn-eco-logo{
+    width: 250px;
+}
+
+form{
+    width:500px;
+}
+
+.form-control, .form-select{
+    border-radius: 20px !important;
+    border : none;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 8px 22px;
+}
+
+.form-select:hover{
+    cursor:pointer!important;
+}
+
+.button-submit{
+    background: #BFDB3B;
+    box-shadow: 0px 4px 4px #aab675;
+    border-radius: 20px;
+    padding: 8px 30px;
+    outline: none;
+    border: none;
+    font-family: "Montserrat Bold";
+    text-transform: uppercase;
+    color:white;
+    transition: 0.2s;
+}
+
+.button-submit:focus{
+    outline: none;
+    border: none;
+}
+
+.button-submit:hover{
+    background: #95ac2f;
+    transition: 0.2s;
+}
+
+.text-color-green a {
+    color: #79DD20; 
+    transition: 0.2s;
+}
+.text-color-green a:hover {
+    color: #62b51a; 
+    transition: 0.2s;
+}
+.contact-us {
+    font-size: 0.8rem;
+}
+
+@media (max-width:692px){
+    .umn-eco-logo{
+        width:150px;
+    }
+    .container{
+        max-width: none;
+    }
+}
+@media (max-width:492px){
+    .text-color-green{
+        padding: 0px 15px;
+    }
+}
+.error{
+    color: #ffc0a4;
+    font-size: 0.8rem;
+}
+.form-control.error {
+    color: #020202;
+    background-color: #ffc0a4;
+    border-color: #eb5e28;
+}
+
+.drought-form {
+    position: relative;
+    z-index: 10;
+}

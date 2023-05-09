@@ -1,0 +1,245 @@
+html, body {
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #A7C1C9 -59.72%, #E4EBF2 63.4%, #8C929A 100%);
+}
+.main {
+    height: 100vh;
+    position: relative;
+}
+
+.bg-right {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+}
+
+.bg-left {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 1;
+}
+.lamp-left {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-100%, 1%);
+    z-index: 5;
+}
+
+.lamp-right {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(0%, 1%);
+    z-index: 5;
+}
+
+.tiang-container {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    left: 50%;
+    transform: translate(-50%, 1%);
+
+}
+
+.tiang {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 1%);
+    width: 1200px;
+    position: relative;
+}
+
+.btn-container {
+
+    padding: 8px 22px;
+    text-decoration: none;
+    
+    
+    border-radius: 30px;
+    font-family: "Montserrat Bold";
+    font-size: 18px;
+    transition: 0.5s;
+    /* width: 50px; */
+} 
+
+.btn-container {
+    padding: 8px 45px;
+    color: #12192D;
+    position: absolute;
+    transform: translate(-50%, -220%);
+    left: 50%;
+    background-color:#12192D;
+    color: #FFFFFF;
+    border: 2pt solid #12192D;
+}
+
+.btn-container:hover {
+    background-color: #FFFFFF;
+    color: #12192D;
+    border: 2pt solid #12192D;
+    transition: 0.5s;
+    cursor: pointer;
+    /* width: 50px; */
+}
+
+.btn-1 {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-136%, 0%);
+    padding: 8px 45px;
+}
+.btn-2 {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(21%, 0%);
+}
+
+.btn-1-confirm {
+    pointer-events: none;
+    color: white;
+    padding: 8px 20px!important;
+    transform: translate(-110%, 0%);
+}
+
+.btn-2-confirm {
+    pointer-events: none;
+    color: white;
+    padding: 8px 20px!important;
+
+    transform: translate( 14%, 0%);
+}
+
+.btn-confirm {
+    background-color:#63A355;
+    border: 2pt solid #63A355;
+    pointer-events: none;
+    color: white;
+}
+
+.btn-button-hide{
+    background: none !important;
+    border: none;
+    color:#FFFFFF;
+}
+
+.btn-button-hide:focus{
+    outline: none;
+    border: none;
+}
+
+.btn-button-hide:hover{
+    color:#000000;
+}
+
+.swal2-header{
+  font-family: 'Montserrat Bold' !important;
+}
+
+.swal2-content, .swal2-actions{
+  font-family: 'Montserrat' !important;
+}
+
+@media (max-width: 1024px) {
+    
+    .bg-right {
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        z-index: 4;
+        transform: translate(30%, 0);
+    }
+
+    .bg-left {
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        transform: translate(-40%, 0);
+    }
+
+}
+@media (max-width: 600px) {
+    
+    .main{
+        height: 650px;
+    }
+
+    .bg-right {
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        z-index: 4;
+        transform: translate(40%, 0);
+    }
+
+    .bg-left {
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        transform: translate(-50%, 0);
+    }
+    .tiang {
+        display: none;
+    }
+
+    .btn-container {
+        width: 270px;
+    }
+
+    .btn-1 {
+        top: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -620%);
+        left: 50%;
+        width: 270px;
+    }
+    .btn-2 {
+        top: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -420%);
+        left: 50%;
+        width: 270px;
+    }
+    
+    .btn-1-confirm {
+        pointer-events: none;
+        color: white;
+        padding: 8px 20px!important;
+        width: 270px;
+        transform: translate(-50%, -620%);
+        left: 50%;
+    }
+    
+    .btn-2-confirm {
+        pointer-events: none;
+        color: white;
+        padding: 8px 20px!important;
+        transform: translate(-50%, -420%);
+        left: 50%;
+        width: 270px;
+    }
+}

@@ -1,0 +1,250 @@
+body {
+    background: linear-gradient(180deg, #c86c00 -59.72%, #424242 184.72%);
+    font-family: "Montserrat";
+    font-style: normal;
+    color: #ffffff;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    /* samain max-width dgn width carouselItem */
+    max-width: 728px;
+}
+
+.carousel-item {
+    z-index: 2;
+    background-image: url("../../../images/info/batukotak.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 728px;
+    height: 448px;
+    position: relative;
+}
+
+.carousel-control-next {
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    right: -80px;
+}
+.carousel-control-prev {
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    left: -100px;
+}
+
+.bungkus {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.batukiri {
+    z-index: 1;
+    position: absolute;
+    width: 32%;
+    height: 70%;
+    bottom: 0;
+    left: 0;
+}
+
+.batukanan {
+    position: absolute;
+    width: 35%;
+    height: 65%;
+    bottom: 0;
+    right: 0;
+}
+
+.start-btn {
+    background-color: #3f201b;
+    border: none;
+    max-width: 30%;
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 60px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.start-btn:hover {
+    background-color: rgb(105, 50, 41);
+}
+
+.palang {
+    z-index: 2;
+    position: absolute;
+    width: 30%;
+    bottom: 0;
+    left: 1.5%;
+}
+.mascot {
+    z-index: 2;
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    right: 0;
+}
+
+.frame {
+    width: 100%;
+}
+
+.btn {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.7));
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 41px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Montserrat Bold";
+
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 992px) {
+    .palang {
+        width: 40%;
+    }
+    .carousel-item {
+        width: 600px;
+        height: 448px;
+    }
+    .carousel-inner {
+        /* samain max-width dgn width carouselItem */
+        max-width: 600px;
+    }
+    .start-btn {
+        font-size: 18px;
+        bottom: 25%;
+    }
+
+    .carousel-item h1 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .carousel-item p {
+        font-size: 18px;
+    }
+
+    .carousel-control-prev {
+        left: -80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .palang {
+        width: 50%;
+    }
+
+    .carousel-control-next {
+        right: 20px;
+    }
+    .carousel-control-prev {
+        left: 20px;
+    }
+    .carousel-control-next img {
+        max-width: 40px;
+    }
+    .carousel-control-prev img {
+        max-width: 40px;
+    }
+    .carousel-item {
+        width: 570px;
+    }
+    .carousel-inner {
+        /* samain max-width dgn width carouselItem */
+        max-width: 570px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .bungkus {
+        padding-top: 100px;
+        min-height: 120vh;
+        position: relative;
+
+    }
+    .palang {
+        width: 230px;
+    }
+    .carousel-item {
+        z-index: 2;
+        background-image: url("../../../images/info/batukotakrotate.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 90vw;
+        /* height: auto; */
+    }
+    .carousel-inner {
+        /* samain max-width dgn width carouselItem */
+        max-width: 90vw;
+        height: 600px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        top: -24%;
+    }
+
+    .batukanan {
+        width: 60%;
+    }
+
+    .batukiri {
+        width: 60%;
+    }
+
+    .carousel-item h1 {
+        font-size: 18px;
+        /* padding-left: 60px;
+        padding-right: 60px; */
+    }
+
+    .carousel-item p {
+        font-size: 12px;
+        line-height: 20px;
+        /* padding-left: 60px;
+        padding-right: 60px; */
+    }
+    .start-btn {
+        bottom: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container-text {
+        max-width: 45vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .carousel-inner {
+        margin-top: 50px;
+    }
+    .container-text {
+        max-width: 55vw;
+    }
+
+    .carousel-item h1 {
+        margin-bottom: 30px;
+    }
+}
