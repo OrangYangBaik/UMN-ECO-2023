@@ -6,18 +6,18 @@
 @endsection
 
 @section('content')
-    <div class="all-content position-relative">
+    <div class="all-content">
         {{-- Tahun Switch --}}
-        <div class="year position-absolute">
+        <div class="year position-relative">
             <h4 class="switch-year">2023</h4>
             <h4 class="switch-year">2022</h4>
             <h4 class="switch-year">2021</h4>
         </div>
 
         {{-- Content 2021 --}}
-        <div class="main main-content-2021 position-relative">
+        <div class="main main-content-2021">
             <h2 class="title justify-content-center w-100 align-items-center pt-5 d-xl-none d-flex">WELCOME TO ECO FAMILY!</h2>
-            <div class="container position-relative section-1 text-center d-xl-block d-none mb-5" >
+            <div class="container section-1 text-center d-xl-block d-none mb-5" >
                 <h2 class="title text-center mb-5 margin-title">WELCOME TO ECO FAMILY!</h2>
                     {{-- GAMBAR DI PC --}}
                     <img class="slider-item mb-2" width="10%" src="{{ asset('images/oprec2/logo/ANTA.png') }}" alt="">
@@ -203,9 +203,9 @@
 
 
         <!-- Content 2022 -->
-        <div class="main main-content-2022 position-relative">
+        <div class="main main-content-2022">
             <h2 class="title justify-content-center w-100 align-items-center pt-5 d-xl-none d-flex">WELCOME TO ECO FAMILY!</h2>
-            <div class="container position-relative section-1 text-center mb-5 d-xl-block d-none" >
+            <div class="container section-1 text-center mb-5 d-xl-block d-none" >
                 <h2 class="text-center mb-5 margin-title">WELCOME TO ECO FAMILY!</h2>
                 {{-- GAMBAT BUAT PC --}}
                 <img class="slider-item-2022 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/ANTA.png') }}" alt="">
@@ -277,9 +277,9 @@
 
 
         {{-- Content 2023 --}}
-        <div class="main main-content-2023 position-relative">
+        <div class="main main-content-2023">
             <h2 class="title justify-content-center w-100 align-items-center pt-5 d-xl-none d-flex">WELCOME TO ECO FAMILY!</h2>
-            <div class="container position-relative section-1 text-center mb-5 d-xl-block d-none" >
+            <div class="container section-1 text-center mb-5 d-xl-block d-none" >
                 <h2 class="text-center mb-5 margin-title">WELCOME TO ECO FAMILY!</h2>
                 {{-- GAMBAT BUAT PC --}}
                 <img class="slider-item-2023 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/ANTA.png') }}" alt="">

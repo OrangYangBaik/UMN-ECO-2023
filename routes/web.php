@@ -59,7 +59,7 @@ Route::group(['prefix' => 'fun-walk'], function() {
 });
 
 //Milestone
-Route::get('/');
+Route::get('/milestone');
 
 
 //drought

@@ -320,10 +320,16 @@ body {
 }
 
 .year {
-    position: absolute;
+    /* position: absolute;
     z-index: 100;
     right: 10%;
-    top: 200px;
+    top: 200px; */
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    top: 125px;
 }
 
 .switch-year {
@@ -333,6 +339,7 @@ body {
     color: rgba(255, 255, 255, 0.4);
     text-align: right;
     transition: color 0.5s, font-size 0.5s;
+    padding: 0 2rem 0 2rem;
 }
 
 .main-content-2022 .slider-eco,
