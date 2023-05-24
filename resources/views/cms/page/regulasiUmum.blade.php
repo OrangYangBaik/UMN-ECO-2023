@@ -67,20 +67,17 @@
         transition: 0.2s;
     }
 </style>
-{{-- <link rel="stylesheet" href="{{ asset('css/cms/page/landingDrought.css') }}"> --}}
 <link rel="stylesheet" href="{{ asset('css/cms/page/landingDrought.css') }}">
-
 @endsection
 
-@section('content')
 
+@section('content')
 <div class="main">
 <div class="container text-white pdfregulasi">
     <div class=" overlay-background ">
 
         <h1 class="text-center py-4">Regulasi Umum DROUGHT</h1>
         <iframe class="d-block mx-auto regulasi" src="https://drive.google.com/file/d/19Ttwhi0mgWpWOenxyCGxMkQ6g6X3fTOC/preview" width="640" height="480" allow="autoplay"></iframe>
-        {{-- <iframe class="d-block mx-auto regulasi" src="https://drive.google.com/file/d/19Ttwhi0mgWpWOenxyCGxMkQ6g6X3fTOC/view?usp=sharing" frameborder="0" ></iframe> --}}
         <form action="{{ route('regisDrought') }}" method="get" class="my-4" id="regulasi">
             @csrf
             <div class="form-check d-flex justify-content-center">
