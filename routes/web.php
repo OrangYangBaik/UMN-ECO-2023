@@ -28,22 +28,38 @@ use App\Http\Controllers\SheetController;
 */
 
 //WEB UTAMA ECO 2022
+
 //Route Halaman Utama
-// Route::get('/', [DroughtController::class, 'index'])->name('homeDrought');
 Route::get('/', [HomeController::class, 'index'])->name('about-us');
-// Route::get('/landing', [HomeController::class, 'landing'])->name('landing');
 Route::get('/eco-fam', [Team2021Controller::class, 'index'])->name('eco-fam');
 Route::get('/our-team', [HomeController::class, 'ourteam'])->name('our-team');
 
-//After OPREC
-Route::get('/oprec-thanks', [HomeController::class, 'oprecthanks'])->name('oprec-thanks');
-
 //Form Recruitment
-Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
-Route::get('/recruitmentForm/{team:subdivisi}-sub', [RecruitmentController::class, 'index'])->name('recruitmentFormSubdivisi');
-Route::get('/recruitmentForm/{team:name}', [RecruitmentController::class, 'index'])->name('recruitmentForm');
+// Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
+// Route::get('/recruitmentForm/{team:subdivisi}-sub', [RecruitmentController::class, 'index'])->name('recruitmentFormSubdivisi');
+// Route::get('/recruitmentForm/{team:name}', [RecruitmentController::class, 'index'])->name('recruitmentForm');
 // Route::post('/recruitmentForm', [RecruitmentController::class, 'store']);
-Route::post('/recruitmentForm', [SheetController::class, 'store']);
+// Route::post('/recruitmentForm', [SheetController::class, 'store']);
+
+//After OPREC
+// Route::get('/oprec-thanks', [HomeController::class, 'oprecthanks'])->name('oprec-thanks');
+
+//ECO Town
+Route::group(['prefix' => 'town'], function() {
+    Route::get('/');
+    Route::get('/register');
+    Route::get('/info');
+});
+
+//ECO Fun Walk
+Route::group(['prefix' => 'fun-walk'], function() {
+    Route::get('/');
+    Route::get('/register');
+    Route::get('/info');
+});
+
+//Milestone
+Route::get('/');
 
 
 //drought

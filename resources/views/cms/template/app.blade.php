@@ -56,7 +56,6 @@
     <!-- gsap -->
     <script src="{{ asset('js/cms/base/gsap-3.6.0/gsap.min.js') }}"></script>
     <script src="{{ asset('js/cms/base/gsap-3.6.0/ScrollTrigger.min.js') }}"></script>
-    <!-- <script src="{{ asset('js/cms/base/gsap-3.6.0/CSSRulePlugin.min.js') }}"></script> -->
     <!-- Sweetalert -->
     <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
     <!-- Preloader -->
@@ -70,31 +69,7 @@
             $('#main-navigation-toggle').prop('checked', false);
         });
     </script>
-    {{-- <script>
-        $(".button-go-to-stamp-not-registered").click(function () {
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-                confirmButton: "btn btn-success ms-2",
-                cancelButton: "btn btn-primary",
-            },
-            buttonsStyling: false,
-        });
 
-        swalWithBootstrapButtons.fire({
-            title: "Anda belum terdaftar!",
-            text: "Pastikan Anda mendaftar Activities Booth terlebih dahulu.",
-            showCancelButton: true,
-            confirmButtonText: "Daftar",
-            cancelButtonText: "Kembali",
-            reverseButtons: true,
-            allowOutsideClick: false,
-        }).then((result) => {
-            if(result.isConfirmed) {
-                window.location.href = "{{ route('pendaftaranDownpour') }}";
-            }
-        });
-    });
-    </script> --}}
 	<!-- Tooltips -->
     <script> 
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -104,7 +79,5 @@
     </script>
     <!-- Custom JS -->
     @yield('custom-js')
-
-
 </body>
 </html>
