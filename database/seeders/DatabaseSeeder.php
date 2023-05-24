@@ -27,15 +27,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'role' => 'Coordinator',
             'email' => 'admin@umn.ac.id',
-            'password' => bcrypt('DynamicSeasons2023')
+            'password' => bcrypt('nirmalabentalaumneco2023')
           ]);
-      
-        // User::create([
-        //     'name' => 'LAWANG',
-        //     'role' => 'Lawang',
-        //     'email' => 'eco.lawang@umn.ac.id',
-        //     'password' => bcrypt('DROUGHT-ECO2022')
-        // ]);
 
         Team::create([
             'name' => 'JAGAT',

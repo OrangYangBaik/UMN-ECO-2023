@@ -74,13 +74,13 @@ Route::get('/milestone');
 //     Route::get('/registration', [DroughtRegistrationController::class, 'registration'])->name('regisDrought');
 //     Route::post('/registration', [DroughtRegistrationController::class, 'registrationValidation'])->name('regisDrought');
 
-//     //Login Drought
+    //Login Drought
 
 //     Route::get('/login', [DroughtController::class, 'login'])->name('loginDrought')->middleware('guest:drought');
 //     Route::post('/login/verification', [DroughtController::class, 'loginVerification'])->name('loginVerification')->middleware('guest:drought');
 //     Route::get('/logout', [DroughtController::class, 'logout'])->name('logoutDrought')->middleware('auth:drought');
 
-//     //Drought Bingo
+    //Drought Bingo
 //     Route::get('/bingo', [DroughtBingoController::class, 'bingo'])->name('bingoDrought')->middleware('auth:drought');
 //     Route::post('/submitBingo', [DroughtBingoController::class, 'submitBingoVerification'])->name('bingoSubmitVerification')->middleware('auth:drought');
 
@@ -92,30 +92,34 @@ Route::get('/milestone');
 //     Route::get('/description', [DownpourHomeController::class, 'description'])->name('descDownpour');
 // 	Route::get('/pendaftaran', [DownpourHomeController::class, 'teste'])->name('pendaftaranDownpour')->middleware('auth:downpour');
     
-// 	//Registration Downpour
+	//Registration Downpour
 //     Route::get('/registration', [LoginDownpourController::class, 'registrationDownpour'])->name('downpourRegistration')->middleware('guest:downpour');
 //     Route::post('/registration', [LoginDownpourController::class, 'registrationValidation'])->name('regisDownpour');
 
-//     //Login Downpour
+    //Login Downpour
 //     Route::get('/login', [LoginDownpourController::class, 'loginDownpour'])->name('loginDownpour')->middleware('guest:downpour');
 //     Route::post('/login', [DownpourController::class, 'loginVerification'])->name('loginVerification');
 //     Route::get('/logout', [DownpourController::class, 'logout'])->name('logoutDownpour')->middleware('auth:downpour');
 
-//     //Forget Password Downpour
+    //Forget Password Downpour
 //     Route::get('/forgetPassword', [LoginDownpourController::class, 'forgetVerifyPageDownpour'])->name('forgetVerifyPageDownpour')->middleware('guest:downpour');
 //     Route::get('/newPassword', [LoginDownpourController::class, 'newPassDownpour'])->name('newPassDownpour')->middleware('guest:downpour');
 //     Route::post('/forgetPassword', [LoginDownpourController::class, 'forgetPassword'])->name('email.forgetPassword');
 //     Route::post('/newPassword', [LoginDownpourController::class, 'newPass'])->name('email.newPass');
 
-//     //Post Login
+    //Post Login
 //     Route::get('/ticket', [DownpourController::class, 'ticketDownpour'])->name('ticketDownpour')->middleware('auth:downpour');
 //     Route::post('/ticket', [DownpourController::class, 'activityVerification'])->name('activitySubmitVerification');
-//     //Route::get('/pendaftaran', [DownpourController::class, 'pendaftaranDownpour'])->name('pendaftaranDownpour')->middleware('auth:downpour');
+    //Route::get('/pendaftaran', [DownpourController::class, 'pendaftaranDownpour'])->name('pendaftaranDownpour')->middleware('auth:downpour');
 //     Route::post('/pendaftaranSeminar', [DownpourController::class, 'daftarSeminarDownpour'])->name('daftarSeminarDownpour');
 //     Route::post('/pendaftaranActivity', [DownpourController::class, 'daftarActivityDownpour'])->name('daftarActivityDownpour');
 //     Route::post('/registration',[DownpourRegistrationController::class, 'registrationValidation'])->name('downpourRegistration');
 //     Route::get('/download-regulation', [DownpourController::class, 'getDownload'])->name('downloadRegulation');
 // });
+
+
+//---------------------------------------------------------------------------------------------------------------------------------
+
 
 //WEB ADMIN
 //Login untuk Admin
@@ -128,6 +132,11 @@ Route::get('/registerAdmin', [AdminController::class, 'register'])->name('regist
 Route::post('/registerAdmin', [AdminController::class, 'store']);
 
 //Halaman utama admin
+Route::group(['prefix' => 'dashboard'], function(){
+    Route::get('/', [AdminController::class, 'dashboardMain'])->name('dashboardMain')->middleware('auth:web');
+    Route::get('/town')->middleware('auth:web');
+    Route::get('/fun-walk')->middleware('auth:web');
+});
 
 
 // Route::get('/dashboardOprec', [AdminController::class, 'dashboardOprec'])->middleware('auth:web')->name('dashboardOprec');
