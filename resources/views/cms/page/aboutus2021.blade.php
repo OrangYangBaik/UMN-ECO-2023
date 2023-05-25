@@ -207,37 +207,25 @@
             <h2 class="title justify-content-center w-100 align-items-center pt-5 d-xl-none d-flex">WELCOME TO ECO FAMILY!</h2>
             <div class="container section-1 text-center mb-5 d-xl-block d-none" >
                 <h2 class="text-center mb-5 margin-title">WELCOME TO ECO FAMILY!</h2>
-                {{-- GAMBAT BUAT PC --}}
-                <img class="slider-item-2022 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/ANTA.png') }}" alt="">
-                <img class="slider-item-2022 mb-2" width="10%" src="{{ asset('images/oprec2/logo/ARTO.png') }}" alt="">
-                <img class="slider-item-2022 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/BACARITA.png') }}" alt="">
-                <img class="slider-item-2022 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/GANTAR.png') }}" alt="">
-                <img class="slider-item-2022 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/GENTA.png') }}" alt="">
-                <img class="slider-eco mb-2 " src="{{ asset('images/umn-eco-logo.png')}}" alt="">
-                <img class="slider-item-2022 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/JAGAT.png') }}" alt="">
-                <img class="slider-item-2022 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/LAWANG.png') }}" alt="">
-                <img class="slider-item-2022 mb-2 " width="10%" src="{{ asset('images/oprec2/logo/LIKU.png') }}" alt="">
-                <img class="slider-item-2022 mb-2" width="10%" src="{{ asset('images/oprec2/logo/LUA.png') }}" alt="">
-                <img class="slider-item-2022 mb-2" width="10%" src="{{ asset('images/oprec2/logo/ORTA.png') }}" alt="">
+                <div class="pengganti-swiper-desktop">
+                    <div class="text-center">
+                        <img class="pengganti-swiper-desktop-logo" src="{{ asset('images/umn-eco-logo.png')}}" alt="">
+                    </div>
+                    <div class="text-center">
+                        <img class="pengganti-swiper-desktop-ranting" src="{{ asset('images/aboutus/penggantiSliderDesktop.png')}}" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="swiper swiper-2022 d-xl-none d-flex pt-5 mb-5">
-                <div class="swiper-wrapper">
-                    <!-- Slides for HP -->
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/ANTA.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/ARTO.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/BACARITA.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/GANTAR.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/GENTA.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/umn-eco-logo.png')}}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/JAGAT.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/LAWANG.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/LIKU.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/LUA.png') }}" alt=""></div>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"><img class="slider-item mb-5" width="150px" src="{{ asset('images/oprec2/logo/ORTA.png') }}" alt=""></div>
+            <div class="pengganti-swiper-mobile">
+                <div class="text-center">
+                    <img class="pengganti-swiper-mobile-logo" src="{{ asset('images/umn-eco-logo.png')}}" alt="">
+                </div>
+                <div class="text-center">
+                    <img class="pengganti-swiper-mobile-ranting" src="{{ asset('images/aboutus/penggantiSliderHP.png')}}" alt="">
                 </div>
             </div>
 
-            <div class="mb-5 mx-3">
+            <div class="overflow-temaKonsep-main d-flex justify-content-center align-items-center mb-5 mx-3 mt-4">
                 <div class="overflow-temaKonsep-2022">
                     <div class="d-flex justify-content-center overflow-temaKonsep-2022-content">
                         <div class="white-bg-aboutus all-2022-logo eco-logo justify-content-center align-items-center d-flex">
@@ -363,17 +351,6 @@
             initialSlide: 5,
             pagination: 'swiper-slide',
             paginationClickable: true,
-        });
-
-        const swiper2 = new Swiper('.swiper-2022', {
-            speed: 400,
-            slidesPerView: 3,
-            slideActiveClass: 'swiper-items-active',
-            centeredSlides: true,
-            initialSlide: 5,
-            pagination: 'swiper-slide',
-            paginationClickable: true,
-            enabled: false,
         });
 
         const swiper3 = new Swiper('.swiper-2023', {

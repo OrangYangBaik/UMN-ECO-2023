@@ -77,7 +77,6 @@ body {
 .swiper {
     width: 800px;
     height: 200px;
-    overflow-x: visible;
     margin-top: 30px;
 }
 
@@ -93,6 +92,10 @@ body {
     transform: scale(1);
     filter: blur(0px) grayscale(0) !important;
     transition: 0.2s;
+}
+
+.pengganti-swiper-mobile {
+    display: none;
 }
 
 .main h2 {
@@ -451,73 +454,44 @@ body {
     filter: drop-shadow(0px -3px 8px rgba(0, 0, 0, 0.25));
 }
 
-@media (max-width: 700px) {
-    .margin2021 {
-        margin-left: 0;
+@media screen and (min-width: 1201px) {
+    .pengganti-swiper-dekstop {
+        display: block;
+    }
+    .pengganti-swiper-desktop-logo {
+        width: 150px;
+    }
+    .pengganti-swiper-desktop-ranting {
+        width: 1100px;
+        margin-top: -200px;
     }
 }
 
-@media (max-width: 600px) {
-    .main-content-2022 .slider-eco,
-    .main-content-2023 .slider-eco {
-        width: 20%;
-    }
-    .main h2 {
-        font-family: "Montserrat Bold 2";
-        font-size: 18px;
-        color: white;
-    }
-}
-
-@media (max-width: 988px) {
-    .main-content-2022 .slider-eco,
-    .main-content-2023 .slider-eco {
-        width: 15%;
-    }
-    .main h2 {
-        font-family: "Montserrat Bold 2";
-        font-size: 36px;
-        color: white;
-    }
-}
-
-@media (max-width: 771px) {
-    .main-content-2022 .slider-eco,
-    .main-content-2023 .slider-eco {
-        width: 20%;
-    }
-    .main h2 {
-        font-family: "Montserrat Bold 2";
-        font-size: 24px;
-        color: white;
-    }
-    .switch-year {
-        font-size: 10px;
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .year {
-        top: 150px;
+        top: 100px;
     }
-}
-
-@media (max-width: 1200px) {
     .slider-item {
         pointer-events: none;
     }
-}
-
-@media (max-width: 788px) {
-    .swiper {
-        width: 600px;
+    .all-2022-logo,
+    .all-2023-logo {
+        display: none !important;
+    }
+    .pengganti-swiper-mobile {
+        display: block;
+    }
+    .pengganti-swiper-desktop {
+        display: none;
     }
     .content-temaKonsep .content-container {
         margin-left: 100px;
     }
     .scrolling-wrapper-flexbox {
         margin-left: 100px;
+    }
+    .overflow-temaKonsep-2022 {
+        max-width: 800px;
     }
     .overflow-temaKonsep-2022-content,
     .overflow-temaKonsep-2023-content {
@@ -533,26 +507,97 @@ body {
     }
     .content-about-2022a,
     .content-about-2023a {
+        border-radius: 35px 35px 0 0;
         min-width: unset !important;
         max-width: none;
         max-height: none;
     }
-
-    .all-2022-logo,
-    .all-2023-logo {
-        border-radius: 35px 35px 0 0;
-        max-width: none;
-        max-height: none;
-        min-width: unset !important;
+    .pengganti-swiper-mobile-logo {
+        width: 300px;
+        margin-top: 2rem;
+    }
+    .pengganti-swiper-mobile-ranting {
+        width: 700px;
+        margin-top: -300px;
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 988px) {
+    .main-content-2022 .slider-eco,
+    .main-content-2023 .slider-eco {
+        width: 15%;
+    }
+    .main h2 {
+        font-family: "Montserrat Bold 2";
+        font-size: 36px;
+        color: white;
+    }
+    .pengganti-swiper-mobile-logo {
+        width: 210px;
+        margin-top: 2rem;
+    }
+    .pengganti-swiper-mobile-ranting {
+        width: 450px;
+        margin-top: -190px;
+    }
+}
+
+@media screen and (max-width: 788px) {
+    .swiper {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 771px) {
+    .main-content-2022 .slider-eco,
+    .main-content-2023 .slider-eco {
+        width: 20%;
+    }
+    .main h2 {
+        font-family: "Montserrat Bold 2";
+        font-size: 24px;
+        color: white;
+    }
+    .switch-year {
+        font-size: 10px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .margin2021 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .pengganti-swiper-mobile-logo {
+        width: 190px;
+        margin-top: 2rem;
+        margin-left: 10px;
+    }
+    .pengganti-swiper-mobile-ranting {
+        width: 400px;
+        margin-top: -170px;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .swiper {
         width: 450px;
     }
+    .main-content-2022 .slider-eco,
+    .main-content-2023 .slider-eco {
+        width: 20%;
+    }
+    .main h2 {
+        font-family: "Montserrat Bold 2";
+        font-size: 18px;
+        color: white;
+    }
 }
-@media (max-width: 400px) {
+
+@media screen and (max-width: 400px) {
     .swiper {
         width: 380px;
     }
@@ -568,5 +613,14 @@ body {
         transform: scale(1);
         filter: blur(0px) grayscale(0) !important;
         transition: 0.2s;
+    }
+    .pengganti-swiper-mobile-logo {
+        width: 170px;
+        margin-top: 2rem;
+        margin-left: 10px;
+    }
+    .pengganti-swiper-mobile-ranting {
+        width: 350px;
+        margin-top: -150px;
     }
 }
