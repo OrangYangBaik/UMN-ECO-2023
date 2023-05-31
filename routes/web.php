@@ -2,18 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\DownpourAdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EcoFamilyController;
 use App\Http\Controllers\RecruitmentController;
-use App\Http\Controllers\Team2021Controller;
-use App\Http\Controllers\DroughtRegistrationController;
-use App\Http\Controllers\DroughtController;
-use App\Http\Controllers\DownpourController;
-use App\Http\Controllers\DownpourRegistrationController;
-use App\Http\Controllers\LoginDownpourController;
-use App\Http\Controllers\DroughtBingoController;
-use App\Http\Controllers\BingoSubmissionRequestController;
-use App\Http\Controllers\DownpourHomeController;
 use App\Http\Controllers\SheetController;
 
 /*{{  }}
@@ -31,15 +22,15 @@ use App\Http\Controllers\SheetController;
 
 //Route Halaman Utama
 Route::get('/', [HomeController::class, 'index'])->name('about-us');
-Route::get('/eco-fam', [Team2021Controller::class, 'index'])->name('eco-fam');
+Route::get('/eco-fam', [EcoFamilyController::class, 'index'])->name('eco-fam');
 Route::get('/our-team', [HomeController::class, 'ourteam'])->name('our-team');
 
 //Form Recruitment
-// Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
-// Route::get('/recruitmentForm/{team:subdivisi}-sub', [RecruitmentController::class, 'index'])->name('recruitmentFormSubdivisi');
-// Route::get('/recruitmentForm/{team:name}', [RecruitmentController::class, 'index'])->name('recruitmentForm');
-// Route::post('/recruitmentForm', [RecruitmentController::class, 'store']);
-// Route::post('/recruitmentForm', [SheetController::class, 'store']);
+Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
+Route::get('/recruitmentForm/{team:subdivisi}-sub', [RecruitmentController::class, 'index'])->name('recruitmentFormSubdivisi');
+Route::get('/recruitmentForm/{team:name}', [RecruitmentController::class, 'index'])->name('recruitmentForm');
+Route::post('/recruitmentForm', [RecruitmentController::class, 'store']);
+Route::post('/recruitmentForm', [SheetController::class, 'store']);
 
 //After OPREC
 // Route::get('/oprec-thanks', [HomeController::class, 'oprecthanks'])->name('oprec-thanks');

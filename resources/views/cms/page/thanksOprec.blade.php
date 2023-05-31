@@ -1,7 +1,7 @@
 @extends('cms.template.app')
 
 @section('custom-css')
-    <link rel="stylesheet" href="{{ asset('css/cms/page/oprec-thanks.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cms/page/thanksOprec.css') }}">
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"> -->
 
 @endsection

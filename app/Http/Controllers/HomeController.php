@@ -28,9 +28,4 @@ class HomeController extends Controller
     public function disableJagat(){
         return redirect("our-team");
     }
-    // public function info(){
-    //     return view('cms.page.info', [
-    //         'title' => 'UMN ECO 2022 - Info Challenge',
-    //     ]);
-    // }
 }

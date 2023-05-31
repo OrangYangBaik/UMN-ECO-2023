@@ -15,7 +15,7 @@ class CreateVerificationsTable extends Migration
     {
         Schema::create('verifications', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("user_id")->constrained("downpour_users")->onUpdate("cascade")->onDelete("cascade");
+            // $table->foreignId("user_id")->constrained("downpour_users")->onUpdate("cascade")->onDelete("cascade");
             $table->string("about");
             $table->string("token")->unique();
             $table->timestamp("expires");            

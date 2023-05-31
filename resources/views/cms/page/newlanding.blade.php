@@ -11,7 +11,7 @@
     <div class="section-1">
         <!-- Desktop  -->
         <div class="container-nonover d-none d-md-block">
-            <img src="{{ asset('images/home/umn-eco-logo.png')}}" alt="" class="eco-logo" style="">
+            <img src="{{ asset('images/landing/umn-eco-logo.png')}}" alt="" class="eco-logo" style="">
             <img src="{{ asset('images/landing/wide/batu-bg-welcome.png')}}" class="rock-bg-1" alt="">
             <img src="{{ asset('images/landing/wide/waterfall2.gif')}}" class=" waterfall_1 " alt="">
             <img src="{{ asset('images/landing/GapuraKanan.png')}}" alt="" class="gapura-kanan" style="">
@@ -22,7 +22,7 @@
 
         <!-- Mobile  -->
         <div class="container-nonover d-block d-md-none">
-            <img src="{{ asset('images/home/umn-eco-logo.png')}}" alt="" class="eco-logo" style="">
+            <img src="{{ asset('images/landing/umn-eco-logo.png')}}" alt="" class="eco-logo" style="">
             <img src="{{ asset('images/landing/wide/waterfall2.gif')}}" class=" waterfall_1 " alt="">
             <img src="{{ asset('images/landing/GapuraKanan.png')}}" alt="" class="gapura-kanan" style="">
             <img src="{{ asset('images/landing/GapuraKiri.png')}}" alt="" class="gapura-kiri" style="">

@@ -1,4 +1,4 @@
-@extends('admin.layouts.dashboard')
+@extends('admin.template.dashboard')
 
 @section('custom-css')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap-toggle.css" integrity="sha512-9tISBnhZjiw7MV4a1gbemtB9tmPcoJ7ahj8QWIc0daBCdvlKjEA48oLlo6zALYm3037tPYYulT0YQyJIJJoyMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -12,9 +12,6 @@
             <div class="text-center">
                 <h1>Recruitment Setting</h1>
             </div>
-        </div>
-        <div class="col-md-6 text-center">
-            <h1>Download File Excel</h1>
         </div>
     </div>
     
@@ -39,32 +36,6 @@
                 </div>
             @endif
         @endforeach    
-    </div>
-    
-    <div class="col-md-6">
-        {{-- Download Table --}}
-            
-        @foreach($teams->unique("name") as $team)
-            @if($team->name != 'JAGAT')
-                <div class="row text-center mt-3">
-                    <a href="/export/{{ $team->name }}">
-                        <button class="btn btn-primary">
-                            Download Excel {{ $team->name }}
-                        </button>
-                    </a>
-                </div>
-            @endif
-        @endforeach
-    </div>
-                
-    <div class="row">
-        <div class="col-md-12 text-center mt-5">
-            <a href="/export">
-                <button class="btn btn-primary">
-                    Download Excel All Team
-                </button>
-            </a>
-        </div>
     </div>
                 
 </div>

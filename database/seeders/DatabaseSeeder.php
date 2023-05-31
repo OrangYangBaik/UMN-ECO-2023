@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
+
+        // User Admin
         User::create([
             'name' => 'Admin',
             'role' => 'Coordinator',
@@ -30,6 +32,9 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('nirmalabentalaumneco2023')
           ]);
 
+
+
+        // Divisi UMN ECO 2023
         Team::create([
             'name' => 'JAGAT',
             'alias' => 'Badan Pengurus Harian',
@@ -52,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan antusias dalam brainstorming, bersemangat, serta menarik perhatian.',
             'desc' => 'Seperti matahari yang menjadi penerang dan pemberi kehidupan bagi alam semesta, tim Anta juga berperan untuk menyinari dan memberi kehidupan dalam pelaksanaan UMN ECO melalui konten-konten yang menarik serta berkualitas.',
             'jobdesc' => 'Tim Anta memiliki tanggung jawab untuk menciptakan konsep serta memberikan konten kreatif selama keberlangsungan kegiatan UMN ECO 2023.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'GANTAR',
@@ -64,7 +69,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan keseriusan, kestabilan, kemandirian, dan tanggung jawab.',
             'desc' => 'Seperti perisai yang merupakan alat pertahanan dan perlindungan, tim Gantar siap menjadi benteng terdepan untuk menjaga kelancaran serta keamanan dari berlangsungnya kegiatan UMN ECO 2023.',
             'jobdesc' => 'Tim Gantar berperan dalam menjaga ketertiban dan kelancaran berlangsungnya kegiatan UMN ECO 2023 dari awal hingga akhir, sesuai dengan regulasi yang berlaku.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'LIKU',
@@ -77,7 +82,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan sifat yang kalem dan lembut.',
             'desc' => 'DDalam hal mempersatukan dan memperkuat suatu hal, diperlukanlah tali yang mengikat dengan erat. Begitu pula dengan tim Liku yang mempersatukan dan menghubungkan berbagai pihak dengan UMN ECO.',
             'jobdesc' => 'Tim Liku sendiri merupakan gabungan dari Tim Sponsorship dan Tim Media Partner, dimana berperan untuk mencari sponsor dan media partner dari berbagai pihak agar kerja sama dapat terjalin dengan UMN ECO 2023.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'LIKU',
@@ -90,7 +95,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan sifat yang kalem dan lembut.',
             'desc' => 'DDalam hal mempersatukan dan memperkuat suatu hal, diperlukanlah tali yang mengikat dengan erat. Begitu pula dengan tim Liku yang mempersatukan dan menghubungkan berbagai pihak dengan UMN ECO.',
             'jobdesc' => 'Tim Liku sendiri merupakan gabungan dari Tim Sponsorship dan Tim Media Partner, dimana berperan untuk mencari sponsor dan media partner dari berbagai pihak agar kerja sama dapat terjalin dengan UMN ECO 2023.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'LUA',
@@ -102,7 +107,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan keseimbangan fisik, mental dan perhatian terhadap sesama.',
             'desc' => 'Sama seperti gerobak yang berfungsi membawakan berbagai macam barang kebutuhan, tim Lua juga berperan sebagai penampung segala keperluan kegiatan UMN ECO 2023.',
             'jobdesc' => 'Tim Lua memiliki tanggung jawab untuk menyediakan dan menampung segala keperluan fisik yang akan digunakan selama kegiatan UMN ECO 2023 berlangsung.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'LAWANG',
@@ -114,7 +119,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan kehangatan, rasa nyaman, kepercayaan, dan ketabahan.',
             'desc' => 'Pintu merupakan simbol dari awal untuk memulai segalanya, begitu juga dengan tim Lawang yang menjadi pintu masuk bagi ECO Friends untuk ikut serta dalam kegiatan UMN ECO.',
             'jobdesc' => 'Tim Lawang berperan mengurus registrasi terkait pendataan ECO Friends dalam kegiatan UMN ECO 2023.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'ORTA',
@@ -126,7 +131,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan sisi yang segar dan aktif.',
             'desc' => 'Bagaikan koran yang menyuguhkan berbagai macam berita, tim Orta siap menyediakan platform sebagai tempat dimuatnya informasi seputar UMN ECO 2023.',
             'jobdesc' => 'Tim Orta bertanggung jawab dalam pengelolaan website resmi UMN ECO 2023, mencakup pemaparan informasi yang lengkap dan aktual di dalamnya.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'ARTO',
@@ -138,7 +143,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan ambisi dan kekayaan yang berlimpah.',
             'desc' => 'Selaras dengan logonya,  tim Arto mengelola segala hal yang berkaitan dengan uang. Penggunaan bahasa Jawa halus memiliki keterkaitan dengan tim Arto yang memecahkan permasalahan dengan lembut.',
             'jobdesc' => 'Tim Arto berperan dalam menyusun strategi untuk pencarian dana demi pelaksanaan kegiatan UMN ECO 2023.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'GENTA',
@@ -151,7 +156,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan karakter yang positif dan optimis.',
             'desc' => 'Bagaikan bel yang bunyinya dapat didengar oleh banyak orang, tim GENTA siap untuk menjadi sumber informasi bagi para ECO Friends.',
             'jobdesc' => 'Tim Genta terbagi menjadi dua yaitu tim Public Relations dan tim Visual. Tim Public Relations berperan mempublikasikan informasi serta merancang ide-ide konten sosial media dari UMN ECO 2023. Sedangkan, tim Visual bertugas membuat visualisasi dari berbagai konten yang sesuai dengan tema dan konsep UMN ECO 2023.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'GENTA',
@@ -164,7 +169,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan karakter yang positif dan optimis.',
             'desc' => 'Bagaikan bel yang bunyinya dapat didengar oleh banyak orang, tim GENTA siap untuk menjadi sumber informasi bagi para ECO Friends.',
             'jobdesc' => 'Tim Genta terbagi menjadi dua yaitu tim Public Relations dan tim Visual. Tim Public Relations berperan mempublikasikan informasi serta merancang ide-ide konten sosial media dari UMN ECO 2023. Sedangkan, tim Visual bertugas membuat visualisasi dari berbagai konten yang sesuai dengan tema dan konsep UMN ECO 2023.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'BACARITA',
@@ -177,7 +182,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan kanvas kosong akan dipenuhi dengan berbagai warna dan gambar  yang menyimpan kisah UMN ECO.',
             'desc' => 'Seperti kamera berfungsi untuk menangkap momen, dan buku sebagai media menyampaikan cerita, tim Bacarita juga berperan untuk menangkap dan menceritakan momen-momen UMN ECO.',
             'jobdesc' => 'Tim Bacarita berperan untuk mengabadikan serta menyampaikan seluruh cerita yang berkaitan kegiatan UMN ECO 2023, baik melalui foto maupun video yang sudah diabadikan.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'BACARITA',
@@ -190,7 +195,7 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan kanvas kosong akan dipenuhi dengan berbagai warna dan gambar  yang menyimpan kisah UMN ECO.',
             'desc' => 'Seperti kamera berfungsi untuk menangkap momen, dan buku sebagai media menyampaikan cerita, tim Bacarita juga berperan untuk menangkap dan menceritakan momen-momen UMN ECO.',
             'jobdesc' => 'Tim Bacarita berperan untuk mengabadikan serta menyampaikan seluruh cerita yang berkaitan kegiatan UMN ECO 2023, baik melalui foto maupun video yang sudah diabadikan.',
-            'status' => 1
+            'status' => 0
         ]);
         Team::create([
             'name' => 'GERHA',
@@ -202,9 +207,14 @@ class DatabaseSeeder extends Seeder
             'articolor' => 'Merepresentasikan ketenangan, kesan professional dan handal.',
             'desc' => 'Bangunan dan ukiran selalu menjadi satu kesatuan. Dimana ukiran selalu diibaratkan sebagai hal indah yang menghiasi bangunan, sama seperti tim Gerha yang memperindah latar dan mengukir makna di setiap kegiatan UMN ECO.',
             'jobdesc' => 'Tim Gerha berperan mempercantik latar dari setiap lokasi pelaksanaan kegiatan UMN ECO 2023, dengan tujuan untuk memperkuat suasana acara serta menarik perhatian audiens.',
-            'status' => 1
+            'status' => 0
         ]);
 
+
+
+        // Anggota UMN ECO 2021
+
+        // JAGAT
         Team2021::create([
             'name' => 'Agnes Viriana',
             'team' => 'JAGAT',
@@ -223,7 +233,6 @@ class DatabaseSeeder extends Seeder
             'jabatan' => 'Wakil Ketua',
             'image' => 'Foto2021/JAGAT/JAGAT_Putu Pricilia_1.png'
         ]);
-
         Team2021::create([
             'name' => 'Jovita Christie',
             'team' => 'JAGAT',
@@ -243,7 +252,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/JAGAT/JAGAT_Lucya Mawar_1.png'
         ]);
 
-        //ANTA
+        // ANTA
         Team2021::create([
             'name' => 'Luis Centuri',
             'team' => 'ANTA',
@@ -281,7 +290,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/ANTA/ANTA_Jesslyn Anggreani_1.png'
         ]);
 
-        //ARTO
+        // ARTO
         Team2021::create([
             'name' => 'Priscilla Agatha',
             'team' => 'ARTO',
@@ -325,7 +334,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/ARTO/ARTO_Caterine_1.png'
         ]);
 
-        //Bacarita
+        // BACARITA
         Team2021::create([
             'name' => 'Fiezra',
             'team' => 'BACARITA',
@@ -381,7 +390,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/BACARITA/BACARITA_Alpin Santoso_1.png'
         ]);
 
-        //GANTAR
+        // GANTAR
         Team2021::create([
             'name' => 'Melvin Dwi Rangga',
             'team' => 'GANTAR',
@@ -455,7 +464,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/GANTAR/GANTAR_Survina_1.png'
         ]);
 
-        //GENTA
+        // GENTA
         Team2021::create([
             'name' => 'Laurensius Dimas',
             'team' => 'GENTA',
@@ -541,7 +550,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/GENTA/GENTA_Priscilla Brenda_1.png'
         ]);
 
-        //LAWANG
+        // LAWANG
         Team2021::create([
             'name' => 'Steven',
             'team' => 'LAWANG',
@@ -597,7 +606,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/LAWANG/LAWANG_Andrea_1.png'
         ]);
 
-        //LIKU
+        // LIKU
         Team2021::create([
             'name' => 'Jesslyn',
             'team' => 'LIKU',
@@ -653,7 +662,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/LIKU/LIKU_Nadia Noor_1.png'
         ]);
 
-        //LUA
+        // LUA
         Team2021::create([
             'name' => 'Sandyka Ari Kurniawan',
             'team' => 'LUA',
@@ -679,7 +688,7 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/LUA/LUA_Adipta Muhammad_1.png'
         ]);
 
-        //ORTA
+        // ORTA
         Team2021::create([
             'name' => 'Felix Laynardi',
             'team' => 'ORTA',
@@ -722,193 +731,6 @@ class DatabaseSeeder extends Seeder
             'jabatan' => 'Anggota',
             'image' => 'Foto2021/ORTA/ORTA_Chotiwut_1.png'
         ]);
-
-        //Team 2022
-
-        // Team2022::create([
-        //     'name' => 'Gregory Kurniawan',
-        //     'team' => 'ORTA',
-        //     'jabatan' => 'Koordinator',
-        //     'image' => 'Foto2022/ORTA/ORTA_Gre.jpg'
-        // ]);
-
-        // DownpourUser::create([
-        //   "name" => "Atras Shalhan",
-        //   "student_id" => "00000050597",
-        //   "username_student_email" => "atras.shalhan@student.umn.ac.id",
-        //   "password" => bcrypt("testing12345"),
-        //   "major" => "Informatika",
-        //   "generation" => 2021,
-        //   "instagram_username" => "atras_30",
-        //   "line_id" => "atrasshalhan",
-        //   "telephone" => "081287318166",
-        // ]);
-        //Team 2022
-
-        // Team2022::create([
-        //     'name' => 'Gregory Kurniawan',
-        //     'team' => 'ORTA',
-        //     'jabatan' => 'Koordinator',
-        //     'image' => 'Foto2022/ORTA/ORTA_Gre.jpg'
-        // ]);
-
-        // DownpourUser::create([
-        //   "name" => "Atras Shalhan",
-        //   "student_id" => "00000050597",
-        //   "username_student_email" => "atras.shalhan@student.umn.ac.id",
-        //   "password" => bcrypt("testing12345"),
-        //   "major" => "Informatika",
-        //   "generation" => 2021,
-        //   "instagram_username" => "atras_30",
-        //   "line_id" => "atrasshalhan",
-        //   "telephone" => "081287318166",
-        // ]);
-        
-//         DownpourUser::create([
-//           "name" => "Vallencius Gavriel",
-//           "student_id" => "00000043232",
-//           "username_student_email" => "vallencius.siswanto@student.umn.ac.id",
-//           "password" => bcrypt("testing12345"),
-//           "major" => "Informatika",
-//           "generation" => 2021,
-//           "instagram_username" => "valen123",
-//           "line_id" => "valenaja",
-//           "telephone" => "081208120812",
-//         ]);
-
-//         DownpourUser::create([
-//           "name" => "Antonius Kevin Budi Saputra",
-//           "student_id" => "000000454454",
-//           "username_student_email" => "antonius.kevin@student.umn.ac.id",
-//           "password" => bcrypt("testing12345"),
-//           "major" => "Informatika",
-//           "generation" => 2021,
-//           "instagram_username" => "anton123",
-//           "line_id" => "antonkali",
-//           "telephone" => "081273648275",
-//         ]);
-
-        
-//     // DROUGHT BINGO
-//     Drought_bingo::create([
-//         "title" => "TOLONG RAWAT TEMAN MARU!",
-//         "slug" => "tolong-rawat-teman-maru",
-//         "status" => 1,
-//         "description" => "<ol>
-//     <li>
-//       <p>ECO Players diminta untuk membuat video Instagram Story dengan durasi <b>minimal 15 detik</b> yang <b>menunjukkan aksi memotong daun kering pada tanaman.</b></p>
-//     </li>
-//     <li>
-//       <p>ECO Players <b>WAJIB</b> membuat unggahan Instagram Story tambahan yaitu menyertakan tampilan foto tanaman <b>yang telah bebas dari daun kering</b> secara keseluruhan.</p>
-//     </li>
-//     <li>
-//       <p>ECO Players <b>WAJIB</b> mengambil video dengan jarak minimal 60 cm dari tanaman dan menunjukan proses pemotongan daun kering pada tanaman tersebut.</p>
-//     </li>
-//     <li>
-//       <p>Daun kering yang <b>DAPAT</b> dipotong ECO Players harus memiliki karakteristik: <br></p>
-//       <p>- Daun telah berwarna kuning kecoklatan.</p>
-//       <p>- Daun rapuh dan mudah hancur.</p>
-//       <p>- Daun menggulung ke dalam.</p>
-//     </li>
-//     <li>
-//       <p>ECO Players <b>WAJIB</b> menyertakan penjelasan dapat berupa <b>tulisan atau audio</b> (voice-over/suara langsung ketika merekam video) dalam video mengenai alasan ECO Players memotong daun kering pada tumbuhan di musim kemarau.VIDEO dan FOTO diunggah ke Instagram Story akun pribadi (TIDAK di-private) dengan mention @umn_eco dan mention minimal 3 mahasiswa UMN. Selain itu, sertakan caption “Tolong Rawat Teman Maru”, dan hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara (Pastikan seluruh mention dan hashtag bisa di klik).</p>
-//     </li>
-//     <li>
-//       <p><b>VIDEO</b> dan <b>FOTO</b> diunggah ke Instagram Story akun pribadi (<b>TIDAK</b> di-private) dengan <b>mention @umn_eco</b> dan <b>mention minimal 3 mahasiswa UMN</b>. Selain itu, sertakan <b>caption “Tolong Rawat Teman Maru”</b>, dan <b>hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara</b> (Pastikan seluruh mention dan hashtag bisa di klik).</p>
-//     </li>
-//   </ol>"
-//       ]);
-
-//       Drought_bingo::create([
-//         "title" => "AKSI HEMAT AIR",
-//         "slug" => "aksi-hemat-air",
-//         "status" => 1,
-//         "description" => "<ol>
-//     <li>ECO Players diminta untuk membuat video Instagram Story dengan durasi <b>minimal 15 detik</b> yang <b>menunjukkan cara menghemat air versi ECO Players di musim kemarau.</b></li>
-//     <li>ECO Players menunjukkan <b>MINIMAL 1 AKSI</b> dalam menghemat air di musim kemarau.</li>
-//     <li>ECO Players <b>WAJIB</b> menyertakan penjelasan, yang dapat <b>berupa tulisan atau audio</b> (voice-over/suara langsung ketika merekam video) dalam video mengenai aksi yang sedang dilakukan dan manfaatnya.</li>
-//     <li>Video diunggah ke Instagram Story akun pribadi (<b>TIDAK</b> di-private) dengan <b>mention @umn_eco</b> dan <b>mention minimal 3 mahasiswa UMN.</b> Selain itu, sertakan <b>caption “Aksi Hemat Air”,</b> dan <b>hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara</b> (Pastikan seluruh mention dan hashtag bisa di klik).</li>
-//   </ol>"
-//       ]);
-//       Drought_bingo::create([
-//         "title" => "MARU DAN AIR SERBA GUNA",
-//         "slug" => "maru-dan-air-serba-guna",
-//         "status" => 1,
-//         "description" => "<ol>
-//     <li>
-//       <p>ECO Players diminta membuat video Instagram Story dengan durasi <b>minimal 15 detik</b> yang <b>menunjukkan aksi menyiram tanaman dengan memanfaatkan air yang sudah terpakai dalam kegiatan sehari-hari.</b></p>
-//     </li>
-//     <li>
-//       <p>Air bekas yang <b>DAPAT</b> digunakan ECO Players adalah air bekas cucian beras, buah dan sayur, air AC, atau air hujan sebagai air untuk menyiram tanaman.</p>
-//     </li>
-//     <li>
-//       <p>Air yang <b>TIDAK DAPAT</b> digunakan oleh ECO Players adalah air bekas cuci piring, air yang mengandung deterjen (air bekas cuci pakaian, pel).</p>
-//     </li>
-//     <li>
-//       <p>ECO Players WAJIB menyertakan penjelasan dapat berupa <b>tulisan atau audio</b> (voice-over/suara langsung ketika merekam video) dalam video mengenai alasan ECO Players menyiram tanaman menggunakan air bekas di musim kemarau.</p>
-//     </li>
-//     <li>
-//       <p>Video diunggah ke Instagram Story akun pribadi (<b>TIDAK</b> di-private) dengan <b>mention @umn_eco</b> dan <b>mention minimal 3 mahasiswa UMN.</b> Selain itu, sertakan <b>caption “Maru dan Air Serba Guna”</b> dan <b>hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara</b> (Pastikan seluruh mention dan hashtag bisa di klik).</p>
-//     </li>
-//   </ol>"
-//       ]);
-  
-//       Drought_bingo::create([
-//         "title" => "PANDEMI? BIJAK AIR!",
-//         "slug" => "pandemi-bijak-air",
-//         "status" => 1,
-//         "description" => "<ol>  <li><p>ECO Players diminta membuat video Instagram Story dengan durasi minimal 15 detik untuk menunjukkan aksi menghemat air yang berhubungan dengan MASA PANDEMI.</p></li>  <li><p>ECO Players menunjukkan MINIMAL 1 AKSI dalam menghemat air di musim kemarau pada masa pandemi</p></li>  <li><p>ECO Players WAJIB menyertakan penjelasan dapat berupa tulisan atau audio (voice-over/suara langsung ketika merekam video) mengenai hubungan antara pandemi dengan hemat air dan cara menghemat air di masa pandemi.</p></li>  <li><p>ECO Players WAJIB menyebutkan secara verbal \"Pandemi gini harus tetap bijak, dong!\" di akhir video Instagram Story.</p></li>  <li><p>Video diunggah ke Instagram Story akun pribadi (TIDAK di-private) dengan mention @umn_eco dan  mention minimal 3 mahasiswa UMN. Selain itu, sertakan  caption “Pandemi? Bijak Air!” dan hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara (Pastikan seluruh mention dan hashtag bisa di klik).</p></li></ol>"
-//       ]);
-  
-//       Drought_bingo::create([
-//         "title" => "TANAM TEMAN MARU (TTM)",
-//         "slug" => "tanam-teman-maru",
-//         "status" => 1,
-//         "description" => "<ol><li><p>ECO Players diminta membuat video Instagram Story dengan durasi minimal 15 detik untuk menunjukkan aksi menanam bibit tanaman baru.</p></li><li><p>ECO Players WAJIB membuat unggahan Instagram Story tambahan, yaitu menyertakan tampilan foto alat dan bahan menanam bibit tanaman baru.</p></li><li><p>Untuk melaksanakan tantangan ini, ECO Players DAPAT menanam bibit menggunakan alat dan bahan sendiri atau membeli bibit melalui ECO Store, @ecostore_umn. </p> <p class='text-red'>*PROMO: ECO Store menjual bundle bahan untuk mempermudah ECO Players mengerjakan tantangan ini dan “Tanaman Bermicin”! ECO Players dapat memilih bibit yang akan dibeli karena ECO Store menyediakan beberapa jenis bibit tanaman!</p></li><li><p>Jika ECO Players memutuskan untuk membeli bibit melalui ECO Store, maka ketentuan nomor 2 diganti menjadi ECO Players WAJIB untuk membuat unggahan Instagram Story tambahan yaitu foto paket ECO Store beserta isinya.</p></li><li><p>ECO Players WAJIB menunjukkan tahapan menanam bibit tanaman baru (boleh menggunakan time-lapse).</p></li><li><p>ECO Players WAJIB menyertakan penjelasan dapat berupa tulisan atau audio (voice-over/suara langsung ketika merekam video) dalam video untuk menjelaskan alasan menanam bibit tanaman baru di musim kemarau.</p></li><li><p>Video diunggah ke Instagram Story akun pribadi (TIDAK di-private) dengan mention @umn_eco dan  mention minimal 3 mahasiswa UMN. Selain itu, sertakan  caption “Tanam Teman Maru” dan hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara (Pastikan seluruh mention dan hashtag bisa di klik).</p></li></ol>"
-//       ]);
-  
-//       Drought_bingo::create([
-//         "title" => "KISAHKU MENGHADAPI KEKERINGAN",
-//         "slug" => "kisahku-menghadapi-kekeringan",
-//         "status" => 1,
-//         "description" => "<ol><li>ECO Players diminta untuk membuat video Instagram Story dengan durasi minimal  15 detik untuk menceritakan pengalaman ECO Players dalam mencegah kekeringan berkepanjangan.</li><li>ECO Players diminta untuk membuat Instagram Story sekreatif mungkin (misalnya dengan membuat video TikTok, storytelling, draw my life, dan lain sebagainya) mengenai salah satu dampak kekeringan berkepanjangan serta menyebutkan solusi dari dampak tersebut yang sebelumnya sudah pernah dilakukan ECO Players.</li><li>Video diunggah ke Instagram Story akun pribadi (TIDAK di-private) dengan mention @umn_eco dan  mention minimal 3 mahasiswa UMN. Selain itu, sertakan  caption “Kisahku Menghadapi Kekeringan”, dan hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara (Pastikan seluruh mention dan hashtag bisa di klik).</li></ol>"
-//       ]);
-
-//       Drought_bingo::create([
-//         "title" => "TANAMAN BERMICIN",
-//         "slug" => "tanaman-bermicin",
-//         "status" => 1,
-//         "description" => "<ol><li>ECO Players diminta membuat video Instagram Story dengan durasi minimal 15 detik untuk menunjukkan aksi memberikan pupuk micin sebagai nutrisi pada tanaman yang ada di rumah.</li><li>ECO Players WAJIB membuat unggahan Instagram Story tambahan, yaitu menyertakan tampilan foto alat dan bahan membuat pupuk micin.</li>*PROMO: Untuk melaksanakan tantangan ini, ECO Players DAPAT membuat pupuk micin menggunakan alat dan bahan sendiri atau membeli pupuk micin melalui ECO Store.<br>*PROMO: ECO Store menjual bundle bahan untuk mempermudah ECO Players mengerjakan tantangan ini dan “Tanam Teman Maru (TTM)”! ECO Players tidak perlu khawatir karena ECO Store sudah menyediakan pupuk micin yang sudah jadi!</li><li>Jika ECO Players memutuskan untuk membeli pupuk micin melalui ECO Store, maka ketentuan nomor 2 diganti menjadi ECO Players WAJIB untuk membuat unggahan Instagram Story tambahan yaitu foto paket ECO Store beserta isinya.</li><li>ECO Players WAJIB menyertakan penjelasan yang dapat berupa tulisan atau audio (voice-over/suara langsung ketika merekam video) dalam video untuk menjelaskan alasan mengapa memberikan pupuk micin pada tanaman di musim kemarau.</li><li>Video diunggah ke Instagram Story akun pribadi (TIDAK di-private) dengan mention @umn_eco dan  mention minimal 3 mahasiswa UMN. Selain itu, sertakan  caption “Tanaman Bermicin” dan hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara (Pastikan seluruh mention dan hashtag bisa di klik).</li></ol>"
-//       ]);
-
-//       Drought_bingo::create([
-//         "title" => "MENILIK ISU KEKERINGAN NUSANTARA",
-//         "slug" => "menilik-isu-kekeringan-nusantara",
-//         "status" => 1,
-//         "description" => "<ol><li>ECO Players diminta untuk membuat infografik sekreatif mungkin mengenai isu kekeringan yang pernah terjadi di Indonesia dengan media/platform yang dikuasai oleh ECO Players.</li><li>Informasi pada infografik WAJIB terlihat jelas dan tidak terpotong.</li><li>WAJIB mencantumkan SUMBER KREDIBEL di dalam infografik.</li><li>Infografik berbentuk PORTRAIT (9:16).</li><li>Infografik diunggah ke Instagram Story akun pribadi (TIDAK di-private) dengan mention @umn_eco dan  mention minimal 3 mahasiswa UMN. Selain itu, sertakan  caption “Menilik Isu Kekeringan Nusantara”, dan hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara (Pastikan seluruh mention dan hashtag bisa di klik).</li></ol>"
-//       ]);
-      
-//       Drought_bingo::create([
-//         "title" => "CUCI, HEMAT, CERMAT",
-//         "slug" => "cuci-hemat-cermat",
-//         "status" => 1,
-//         "description" => "<ol><li>ECO Players diminta membuat konten edukatif melalui Instagram Story dengan durasi minimal 15 detik yang menjelaskan minimal 3 tips and trick menghemat air dalam kegiatan mencuci versi kreatifnya ECO Players.</li><li>ECO Players WAJIB menampilkan wajah secara jelas dan menjelaskan tips and trick secara verbal (langsung)/voice over.</li><li>Berikut merupakan contoh topik kegiatan mencuci yang bisa ECO Players pilih untuk dijelaskan tips and trick-nya: <br>      <p>- Mencuci piring</p>      <p>- Mencuci pakaian</p>      <p>- Mencuci buah</p>      <p>- dll</p>      </li>      </li><li>Video diunggah ke Instagram Story akun pribadi (TIDAK di-private) dengan mention @umn_eco dan  mention minimal 3 mahasiswa UMN. Selain itu, sertakan  caption “Cuci, Hemat, Cermat” dan hashtag #DetermineTheWayOut #DynamicSeasonsOfNusantara (Pastikan seluruh mention dan hashtag bisa di klik).</li></ol>"
-//       ]);
-  
-//       Settings::create([
-//         'features' => 'Registration',
-//         'status' => 1
-//       ]);
-
-//       Settings::create([
-//         'features' => 'Seminar',
-//         'status' => 1
-//       ]);
-      
-//       Settings::create([
-//         'features' => 'Activities Booth',
-//         'status' => 1
-//       ]);
     }
 }
 

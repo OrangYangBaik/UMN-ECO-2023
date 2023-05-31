@@ -94,6 +94,7 @@ $(document).ready(function () {
         },
         "Nomor telepon Anda sudah terdaftar"
     );
+
     $("#form-register").validate({
         rules: {
             Name: {
@@ -119,12 +120,6 @@ $(document).ready(function () {
             Angkatan: {
                 required: true,
             },
-            // Tempat_lahir: {
-            //     required: true
-            // },
-            // Tanggal_lahir: {
-            //     required: true
-            // },
             Instagram_account: {
                 required: true,
                 unique_instagram: true,
@@ -140,43 +135,15 @@ $(document).ready(function () {
                 maxlength: 13,
                 unique_phone: true,
             },
-            // Image: {
-            //     required: true,
-            //     extension: "jpeg|jpg|png",
-            // },
             Pengetahuan: {
                 required: true,
             },
             Kesibukan: {
                 required: true,
             },
-            // Kelebihan: {
-            //     required: true,
-            // },
-            // Kekurangan: {
-            //     required: true,
-            // },
             Experience: {
                 required: true,
             },
-            // What: {
-            //     required: true,
-            // },
-            // Why: {
-            //     required: true,
-            // },
-            // Paham_jobdesc: {
-            //     required: true,
-            // },
-            // Question1: {
-            //     required: true,
-            // },
-            // Question2: {
-            //     required: true,
-            // },
-            // Question3: {
-            //     required: true,
-            // },
             Alasan1: {
                 required: true,
             },
@@ -217,12 +184,6 @@ $(document).ready(function () {
             Angkatan: {
                 required: "Anda perlu mengisi angkatan Anda",
             },
-            // Tempat_lahir: {
-            //     required: "Anda perlu mengisi tempat lahir Anda",
-            // },
-            // Tanggal_lahir: {
-            //     required: "Anda perlu mengisi tanggal lahir Anda",
-            // },
             Instagram_account: {
                 required: "Anda perlu mengisi nama akun instagram Anda",
                 unique_instagram: "Akun instagram Anda sudah terdaftar!",
@@ -238,43 +199,15 @@ $(document).ready(function () {
                 digits: "Nomor telepon harus berupa angka",
                 unique_phone: "Nomor telepon Anda sudah terdaftar!",
             },
-            // Image: {
-            //     required: "Anda perlu mengisi foto 3x4 Anda",
-            //     extension: "Masukkan file dengan ekstensi .jpg/.png/.jpeg",
-            // },
             Pengetahuan: {
                 required: "Tuliskan apa yang Anda ketahui tentang UMN ECO!",
             },
             Kesibukan: {
                 required: "Tuliskan kesibukan Anda!",
             },
-            // Kelebihan: {
-            //     required: "Isilah 3 Kelebihan anda!",
-            // },
-            // Kekurangan: {
-            //     required: "Isilah 3 Kekurangan anda!",
-            // },
             Experience: {
                 required: "Tuliskan pengalaman organisasi Anda!",
             },
-            // What: {
-            //     required: "Kolom diatas harus di isi!",
-            // },
-            // Why: {
-            //     required: "Kolom diatas harus di isi!",
-            // },
-            // Paham_jobdesc: {
-            //     required: "Kolom diatas harus di isi!",
-            // },
-            // Question1: {
-            //     required: "Kolom diatas harus di isi!",
-            // },
-            // Question2: {
-            //     required: "Kolom diatas harus di isi!",
-            // },
-            // Question3: {
-            //     required: "Kolom diatas harus di isi!",
-            // },
             Alasan1: {
                 required:
                     "Anda perlu menuliskan alasan memilih divisi tersebut!",
