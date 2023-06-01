@@ -58,14 +58,14 @@ Route::group(['prefix' => 'milestone'], function() {
     Route::get('/', [MilestoneController::class, 'index'])->name('milestone-landing');
     Route::group(['prefix' => 'bank-sampah'], function() {
         Route::get('/gen-1', [MilestoneController::class, 'firstGenBS'])->name('1st-gen-bank-sampah');
-        Route::get('/gen-2', [MilestoneController::class, 'secondGenBS'])->name('2nd-gen-bank-sampah');
+        Route::get('/gen-2', [MilestoneController::class, 'secGenBS'])->name('2nd-gen-bank-sampah');
         Route::get('/gen-3', [MilestoneController::class, 'thirdGenBS'])->name('3rd-gen-bank-sampah');
         Route::get('/gen-4', [MilestoneController::class, 'fourthGenBS'])->name('4th-gen-bank-sampah');
         Route::get('/gen-5', [MilestoneController::class, 'fifthGenBS'])->name('5th-gen-bank-sampah');
     });
     Route::group(['prefix' => 'umn-eco'], function() {
         Route::get('/gen-1', [MilestoneController::class, 'firstGenECO'])->name('1st-gen-umn-eco');
-        Route::get('/gen-2', [MilestoneController::class, 'secondGenECO'])->name('2st-gen-umn-eco');
+        Route::get('/gen-2', [MilestoneController::class, 'secGenECO'])->name('2st-gen-umn-eco');
         Route::get('/gen-3', [MilestoneController::class, 'thirdGenECO'])->name('3st-gen-umn-eco');
     });
 });
@@ -94,13 +94,3 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/setting', [AdminController::class, 'setting'])->name('admin-setting')->middleware('auth:web');
     Route::get('/change-status', [AdminController::class, 'changeStatus'])->name('admin-setting-change-status')->middleware('auth:web');
 });
-
-
-
-// Route::get('/changeActivity1Status', [AdminController::class, 'changeActivity1Status'])->middleware('auth:web');
-// Route::get('/changeActivity2Status', [AdminController::class, 'changeActivity2Status'])->middleware('auth:web');
-// Route::get('/changeActivity3Status', [AdminController::class, 'changeActivity3Status'])->middleware('auth:web');
-// Route::get('/changeActivity4Status', [AdminController::class, 'changeActivity4Status'])->middleware('auth:web');
-// Route::get('/changeSeminarStatus', [AdminController::class, 'changeSeminarStatus'])->middleware('auth:web');
-// Route::get('/changeBingoStatus', [AdminController::class, 'changeBingoStatus'])->middleware('auth:web');
-// Route::get('/changeStatusFeatures', [AdminController::class, 'changeStatusFeatures'])->middleware('auth:web');
