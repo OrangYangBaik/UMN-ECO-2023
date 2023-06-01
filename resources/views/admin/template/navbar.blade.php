@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">UMN ECO My Admin</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,20 +9,20 @@
             <div class="navbar-nav navbar-right">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Welcome, {{ auth()->user()->name }}
+                        {{ auth()->user()->name }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
-                            <a href="/dashboardAdmin" class="dropdown-item">Dashboard</a>
+                            <a href="/admin/dashboard" class="dropdown-item">Dashboard</a>
                         </li>
                         <li>
-                            <a href="/recruitmentSetting" class="dropdown-item">Recruitment Setting</a>
+                            <a href="/admin/setting" class="dropdown-item">Setting</a>
                         </li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form action="/logoutAdmin" method="POST">
                                 @csrf
-                                <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i>Logout</button>
+                                <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</button>
                             </form>
                         </li>
                     </ul>

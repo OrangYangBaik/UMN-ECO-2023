@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-fixed-top p-3">
     <div class="container-fluid container justify-content-centre">
-        <a href="{{ route('about-us') }}">
+        <a href="{{ route('landing') }}">
             <img src="{{ asset('images/umn-eco-logo.png')}}" class="navbar-blue-logo">
         </a>
         <!-- <img src="{{ asset('images/BlueLogo.png')}}" class="navbar-blue-logo"> -->
@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
             <div class="col-2 nav-item">
-                <a href="{{ route('about-us') }}"><img class="w-25" src="{{ asset('images/umn-eco-logo.png')}}" ></a>
+                <a href="{{ route('landing') }}"><img class="w-25" src="{{ asset('images/umn-eco-logo.png')}}" ></a>
                 
             </div>
             <ul class="navbar-nav col-10">
@@ -65,7 +65,7 @@
 <nav id="main-navigation" class="nav-main">
     <ul class="menu">
         <li class="menu__item">
-            <a class="menu__link"  href="{{ route('about-us') }}">Home</a>
+            <a class="menu__link"  href="{{ route('landing') }}">Home</a>
         </li>
         {{-- <li class="menu__item">
             <a class="menu__link" href="{{ route('home') }}">About Us</a>

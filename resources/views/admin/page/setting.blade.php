@@ -6,38 +6,56 @@
 @endsection
 
 @section('content')
-<div clas="container">
+<div class="container text-white">
     <div class="row">
-        <div class="col-md-6">
-            <div class="text-center">
-                <h1>Recruitment Setting</h1>
-            </div>
+        <div class="col-12 text-center">
+            <h1 class="text-white">Recruitment Setting</h1>
         </div>
     </div>
-    
-    <div class="col-md-6">
-        @foreach($teams as $team)
-            @if($team->name != 'JAGAT')
-                <div class="row" style="margin:30px">
 
-                    <div class="col-md-8 text-right">
-                        <h4>Recruitment {{ $team->name }}
-                        @if( $team->subdivisi != NULL)
-                                - {{ $team->subdivisi }}
+    <div class="row">
+        <div class="col-12">
+            <table class="table mt-4">
+                <thead>
+                    <tr>
+                        <th class="text-white">Recruitment Team</th>
+                        <th class="text-white text-end">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($teams as $team)
+                        @if($team->name != 'JAGAT')
+                        <tr>
+                            <td>
+                                <h4 class="text-white mb-0">
+                                    Recruitment {{ $team->name }}
+                                    @if($team->subdivisi != NULL)
+                                        - {{ $team->subdivisi }}
+                                    @endif
+                                </h4>
+                            </td>
+                            <td class="text-end align-middle">
+                                <div class="form-check form-switch d-flex justify-content-end">
+                                    <input
+                                        data-id="{{ $team->id }}"
+                                        class="toggle-class form-check-input"
+                                        type="checkbox"
+                                        data-onstyle="success"
+                                        data-offstyle="danger"
+                                        data-toggle="toggle"
+                                        data-on="On"
+                                        data-off="Off"
+                                        {{ $team->status ? 'checked' : '' }}
+                                    >
+                                </div>
+                            </td>
+                        </tr>
                         @endif
-                        </h4>
-                    </div>
-
-                    <div class="col-md-4 text-right">
-                        <div class="form-check form-switch">
-                            <input data-id="{{ $team->id }}" class="toggle-class form-check-input" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Opened" data-off="Closed" {{ $team->status ? 'checked' : '' }}>
-                        </div>
-                    </div>
-                </div>
-            @endif
-        @endforeach    
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
-                
 </div>
 @endsection
 
@@ -50,7 +68,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "/changeStatus",
+                url: "/admin/change-status",
                 data: {'status': status, 'team_id': team_id},
                 success: function(data){
                     console.log('success');

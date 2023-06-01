@@ -19,7 +19,7 @@
                      <div class="col-xl 1"></div>
                     <div class="col-xl-3 col-md-4 col-sm-4 col-12 ml-xl-3">
                          <ul class="list-unstyled footer-menu mt-sm-0 mt-5" style="text-align:left;">
-                             <a href="{{ route('about-us') }}" class="footer-menu-li"><li>About Us</li></a>
+                             <a href="{{ route('landing') }}" class="footer-menu-li"><li>About Us</li></a>
                              <a href="{{ route('eco-fam') }}" class="footer-menu-li"><li>ECO Family</li></a>
                              <a href="{{ route('our-team') }}" class="footer-menu-li"><li>Our Team</li></a>
                          </ul>
