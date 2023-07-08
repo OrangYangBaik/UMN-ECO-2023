@@ -815,8 +815,60 @@ class DatabaseSeeder extends Seeder
             'keterangan_program_5' => '',
             'achievement' => 'Kegiatan SPACE, ADEM, dan RUSH memperoleh antusiasme yang tinggi baik dari pihak internal maupun external Universitas Multimedia Nusantara. Hal ini terpancarkan melalui donasi sebesar Rp. 12.500.000,00 yang terkumpul dari 365 peserta RUSH, dan diteruskan untuk pembuatan Alat Pelindung Diri (APD) Upcycle tenaga medis Indonesia melalui kerja sama Bank Sampah x Demi Bumi.',
             'environmental_outcomes' => 'Dampak positif terhadap kelestarian lingkungan berupa pengurangan jumlah sampah kertas bekas, peningkatan kepedulian terhadap tanaman, hingga pembuatan Alat Pelindung Diri (APD) Upcycle berhasil dicetak oleh Bank Sampah Gen 5.',
+
+        ]);
+        Milestone::create([
+            'nama_organisasi' => 'UMN ECO GEN 1 (2021)',
+            'overview' => 'Pada 2020, pandemi Covid-19 terjadi sehingga  segala kegiatan harus dilaksanakan secara daring. Hal ini, membuat Bank Sampah akhirnya melakukan rebranding menjadi UMN ECO (Earth Caring Operation – artinya tidak merusak dan membahayakan lingkungan) dengan pemikiran dapat mengangkat isu lebih luas. Tim UMN ECO beserta dengan logo-logonya juga terbentuk dan memiliki sebutan ECO Family/Fams. Di tahun pertamanya ini,  UMN ECO mengangkat tema “Environmental Compassion for Our Nation” yang mencerminkan rasa keprihatinan secara mendalam terhadap bangsa dalam ranah lingkungan, dengan konsep “True Colors of Nature”. UMN ECO melaksanakan 3 kegiatan utama, yaitu RED, GREEN dan BLUE.',
+            'program_1' => 'RED',
+            'program_2' => 'GREEN atau GREENATE',
+            'program_3' => 'BLUE (Behold The Undersea)',
+            'program_4' => '',
+            'program_5' => '',
+            'keterangan_program_1' => 'Kegiatan ini mengajak ECO Friends (mahasiswa/i Universitas Multimedia Nusantara) untuk melakukan upaya penyelamatan bumi melalui 2 cara. Cara yang pertama adalah QUEST (misi wajib) berisi UTOPIA: Small Act Big Impact, ECO Friends diminta untuk menghapuskan Email yang sudah tidak perlu sebagai pengurangan polusi karbon. Kemudian RISE, ECO Friends diminta untuk menanam tanaman sebagai simbol dari permulaan kehidupan baru. Cara yang kedua adalah MYSTERY QUEST (misi tambahan) berisi UTILE (Useless Become Useful), ECO Friends diminta membuat kerajinan tangan dari bahan daur ulang demi meningkatkan kepedulian terhadap hewan. ECO Friends yang berpartisipasi pada kegiatan QUEST akan memperoleh e-certificate dan SKKM. Sedangkan ECO Friends yang berpartisipasi pada kegiatan MYSTERY QUEST berkesempatan untuk memenangkan berbagai hadiah menarik.',        
+            'keterangan_program_2' => 'Kegiatan ini mengajak ECO Friends untuk lebih peduli terhadap food waste dan bagaimana pengelolaannya yang baik. Diawali dengan DINE-IN, yaitu seminar yang mengangkat isu  mengenai food waste dan dilanjutkan dengan TAKE AWAY, yaitu pemberian 3 tantangan kepada ECO Friends dengan misi yang berbeda-beda. Pertama XHORT, dimana ECO Friends diminta untuk membuat video berisi tips bagaimana cara menyimpan makanan lebih lama. Kedua ALTER, dimana ECO Friends diminta untuk membuat video berisi cara mengolah sisa makanan menjadi hidangan baru. Ketiga TIDBIT, dimana ECO Friends diminta untuk membuat video memperlihatkan dirinya menghabiskan makanan hingga tidak tersisa. ECO Friends yang berpartisipasi di dalamnya akan memperoleh e-certificate dan SKKM.',
+            'keterangan_program_3' =>  'Kegiatan terakhir ini mengajak ECO Friends untuk lebih dalam membahas isu sampah plastik yang mencemari lautan (mikroplastik) dengan Lulu sebagai maskot utama. ECO Friends diminta untuk membuat video berisi proses mengubah sampah plastik menjadi barang yang lebih berguna. ECO Friends yang berpartisipasi akan memperoleh e-certificate dan SKKM.',
+            'keterangan_program_4' => '',
+            'keterangan_program_5' => '',
+            'achievement' => 'Ketiga rangkaian acara UMN ECO Gen 1 (RED, GREEN, dan BLUE)  memperoleh antusiasme yang tinggi baik dari ECO Friends. Hal ini terpancarkan melalui hasil akhir dari setiap kegiatan yang di luar ekspektasi. RED berhasil menghapus Email sebanyak 243.600 buah dan daya simpan sebanyak 8.120 GB, mengurangi penggunaan listrik sebesar 260,652 kWh, menanam 219 tanaman yang menambah produksi oksigen sebanyak 1.075 mm/jam, serta menyebarkan kata-kata positif sebanyak 370.548 kata. GREEN berhasil mengajak 633 ECO Friends untuk berpartisipasi pada DINE-IN dan teredukasi perihal food waste, serta mengajak 734 ECO Friends untuk memerangi food waste melalui video yang dibuat. BLUE berhasil mengajak 100+ ECO Friends membuat video kreasi dari sampah plastik dan meraih penonton sebanyak 76.000 viewers.',
+            'environmental_outcomes' => 'Dampak positif terhadap kelestarian lingkungan berupa pengurangan jumlah polusi karbon dan penggunaan listrik, serta penyebaran edukasi perihal food waste dan pengolahan sampah plastik berhasil dicetak oleh UMN ECO Gen 1.',     
         ]);
 
+         Milestone::create([   
+            'nama_organisasi' => 'UMN ECO GEN 2 (2022)',
+            'overview' => 'UMN ECO Gen 2 mengangkat tema “Endless Ventures to Treasure our Nature”, artinya sebuah perjalanan yang tidak akan pernah putus. Dengan konsep “Dynamic Season of Nusantara” yang mengambil isu kekeringan dan musim hujan. Tahun ini, UMN ECO ditemani oleh maskot bernama Maru yang diambil dari kata kemarau dan hujan. Terdapat 2 kegiatan utama yang akan dilaksanakan, yaitu DROUGHT dan DOWNPOUR.',
+            'program_1' => 'DROUGHT (Determine The Way Out)',
+            'program_2' => 'DOWNPOUR: Better Human Better Earth',
+            'program_3' => '',
+            'program_4' => '',
+            'program_5' => '',
+            'keterangan_program_1' => 'Dalam kegiatan ini, ECO Friends terjebak di Nusantara yang sedang berada di dalam kondisi yang tidak baik dan harus segera diatasi, kalau tidak ingin segera musnah. ECO Friends diberi pilihan untuk menentukan (Determine) keluar dari zona nyaman dan turut serta memperbaiki Nusantara, atau hanya diam (The Way Out). ECO Friends dapat keluar dari Nusantara dengan ikut serta melakukan 3 tantangan dari 9 macam tantangan yang diberikan untuk mengatasi kekeringan. ECO Friends yang berpartisipasi di dalamnya akan memperoleh e-certificate dan SKKM',
+            'keterangan_program_2' => 'Dalam kegiatan ini, ECO Friends diajak untuk berpartisipasi ke dalam 2 kegiatan. Pertama berupa seminar “Turning Our Generation, Into GREENATION” dengan narasumber pada sesi pertama Valerie Krasnadewi (Asia’s Next Top Model C5 dan Founder @twnseco) bersama dengan Veronica Krasnassari (Asia’s Next Top Model C5 dan Founder @twnseco), dan pada sesi kedua Kenny Liana Kenny Siswanto (Sustainability Development Executive Nutrifood). Kedua berupa activity booth “The Green Town of Ours” di ECO TOWN yang berisikan The Environmental Gallery, Maru On Strike, Throw It, dan Drop Your Empties.',
+            'keterangan_program_3' => '',
+            'keterangan_program_4' => '',
+            'keterangan_program_5' => '',
+            'achievement' => 'Kedua rangkaian acara UMN ECO Gen 2 (DROUGHT dan DOWNPOUR)  memperoleh antusiasme yang tinggi baik dari ECO Friends. Hal ini terpancarkan melalui hasil akhir dari kedua kegiatan, yaitu sebanyak 45 kg kemasan/botol plastik terkumpul dan sebanyak 470+ ECO Friends sudah teredukasi perihal isu lingkungan.',
+            'environmental_outcomes' => 'Dampak positif terhadap kelestarian lingkungan berupa pengumpulan dan pengolahan kemasan/botol plastik, serta peningkatan edukasi perihal isu lingkungan kepada ECO Friends berhasil dicetak oleh UMN ECO Gen 2.',
+        ]);
+
+        Milestone::create([
+            'nama_organisasi' => 'UMN ECO GEN 3 (2023)',
+            'overview' => 'UMN ECO Gen 3 mengangkat tema “Know Your Path for Earth’s Sustainability”, artinya melakukan ekspansi secara berkelanjutan dengan melewati berbagai macam lika-liku perjalanan untuk menjaga, mempertahankan, dan melestarikan kondisi bumi menjadi lebih baik lagi. Dengan konsep “The Dwelling Places of Natures Temple” yang mengambil isu carbon footprint (emisi karbon), dimana menjadi isu kode merah akibat berbagai aktivitas manusia sehari-hari. Tahun ini, UMN ECO ditemani oleh maskot bernama Nala yang diambil dari kata Nirmala Bentala. ECO Friends diajak untuk berpartisipasi dalam berbagai macam kegiatan untuk menghadapi isu carbon footprint. Untuk mengetahui kegiatan apa saja yang akan dilaksanakan tahun ini, ECO Friends dapat memperoleh informasi-informasi selanjutnya di website dan akun media sosial resmi UMN ECO. Sampai jumpa!',
+            'program_1' => '',
+            'program_2' => '',
+            'program_3' => '',
+            'program_4' => '',
+            'program_5' => '',
+            'keterangan_program_1' => '',
+            'keterangan_program_2' => '',
+            'keterangan_program_3' => '',
+            'keterangan_program_4' => '',
+            'keterangan_program_5' => '',
+            'achievement' => '',
+            'environmental_outcomes'=> '',
+            
+
+        ]);
     }
 }
 
