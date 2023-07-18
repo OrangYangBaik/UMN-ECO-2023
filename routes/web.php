@@ -9,7 +9,8 @@ use App\Http\Controllers\SheetController;
 use App\Http\Controllers\TownController;
 use App\Http\Controllers\FunWalkController;
 use App\Http\Controllers\MilestoneController;
-
+use App\Http\Controllers\QrHandlerController;
+use App\Http\Controllers\UserController;
 
 /*{{  }}
 |--------------------------------------------------------------------------
@@ -89,8 +90,22 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard-admin')->middleware('auth:web');
     Route::get('/town')->middleware('auth:web');
     Route::get('/fun-walk')->middleware('auth:web');
+    Route::get('/daftar', [AdminController::class, 'daftar'])->middleware('auth:web');
 
     // Setting Admin
     Route::get('/setting', [AdminController::class, 'setting'])->name('admin-setting')->middleware('auth:web');
     Route::get('/change-status', [AdminController::class, 'changeStatus'])->name('admin-setting-change-status')->middleware('auth:web');
 });
+//login & register user
+Route::get('/registerUser', [UserController::class, 'registerPage'])->name('registerUser')->middleware('guest:users');
+Route::post('/registerUser', [UserController::class, 'store']);
+
+Route::get('/loginUser', [UserController::class, 'loginPage'])->name('loginUser')->middleware('guest:users');
+Route::post('/loginUser', [UserController::class, 'login']);
+// tes scan qr
+Route::get('/tesqr', [QrHandlerController::class, 'index'])->name('tesqr')->middleware('auth:participant');
+Route::post('/verificationAdmin/sendReq', [QrHandlerController::class, 'sendReq']);
+Route::post('/sendDataToAdmin', [AdminController::class, 'sendToAdminPage']);
+Route::post('/respond', [AdminController::class, 'respond']);
+
+

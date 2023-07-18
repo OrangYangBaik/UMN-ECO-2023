@@ -19,10 +19,11 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
+        //buat ngehandle guard yang udh ke auth
         $guards = empty($guards) ? [null] : $guards;
         foreach ($guards as $guard) {
-            if($guard == 'downpour'){
-                if (Auth::guard('downpour')->check()) {
+            if($guard == 'participant'){
+                if (Auth::guard('participant')->check()) {
                     return redirect(RouteServiceProvider::HOME);
                 }
             }else if($guard == 'web'){
@@ -31,7 +32,6 @@ class RedirectIfAuthenticated
                 }
             }
         }
-
         return $next($request);
     }
 }

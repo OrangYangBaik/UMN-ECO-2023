@@ -731,6 +731,10 @@ class DatabaseSeeder extends Seeder
             'jabatan' => 'Anggota',
             'image' => 'Foto2021/ORTA/ORTA_Chotiwut_1.png'
         ]);
+
+        //seeder milestones
+        
+
     }
 }
 
