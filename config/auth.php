@@ -40,13 +40,9 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'drought' => [
+        'participant' =>[
             'driver' => 'session',
-            'provider' => 'droughtRegistrations',
-        ],
-        'downpour' => [
-            'driver' => 'session',
-            'provider' => 'downpourRegistrations',
+            'provider' => 'pesertas',
         ],
     ],
 
@@ -70,18 +66,23 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+
+        'pesertas' => [
+            'driver' => 'eloquent',
             'model' => App\Models\User::class,
-        ],
-
-        'droughtRegistrations' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\DroughtRegistration::class,
-        ],
-
-        'downpourRegistrations' =>[
-            'driver' => 'eloquent',
-            'model' => App\Models\DownpourUser::class,
         ]
+
+        // 'droughtRegistrations' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\DroughtRegistration::class,
+        // ],
+
+        // 'downpourRegistrations' =>[
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\DownpourUser::class,
+        // ]
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -105,6 +106,13 @@ return [
 
     'passwords' => [
         'users' => [
+            'provider' => 'pesertas',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'admins' => [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
