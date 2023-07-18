@@ -732,35 +732,6 @@ class DatabaseSeeder extends Seeder
             'jabatan' => 'Anggota',
             'image' => 'Foto2021/ORTA/ORTA_Chotiwut_1.png'
         ]);
-
-        //Milestone
-        Milestone::create([
-            'nama_organisasi' => 'UMN ECO GEN 1 (2021)',
-            'overview' => 'Pada 2020, pandemi Covid-19 terjadi sehingga  segala kegiatan harus dilaksanakan secara daring. Hal ini, membuat Bank Sampah akhirnya melakukan rebranding menjadi UMN ECO (Earth Caring Operation – artinya tidak merusak dan membahayakan lingkungan) dengan pemikiran dapat mengangkat isu lebih luas. Tim UMN ECO beserta dengan logo-logonya juga terbentuk dan memiliki sebutan ECO Family/Fams. Di tahun pertamanya ini,  UMN ECO mengangkat tema “Environmental Compassion for Our Nation” yang mencerminkan rasa keprihatinan secara mendalam terhadap bangsa dalam ranah lingkungan, dengan konsep “True Colors of Nature”. UMN ECO melaksanakan 3 kegiatan utama, yaitu RED, GREEN dan BLUE.',
-            'program_1' => 'RED',
-            'program_2' => 'GREEN atau GREENATE',
-            'program_3' => 'BLUE (Behold The Undersea)',
-            'program_4' => '',
-            'program_5' => '',
-            'keterangan_program_1' => 'Kegiatan ini mengajak ECO Friends (mahasiswa/i Universitas Multimedia Nusantara) untuk melakukan upaya penyelamatan bumi melalui 2 cara. Cara yang pertama adalah QUEST (misi wajib) berisi UTOPIA: Small Act Big Impact, ECO Friends diminta untuk menghapuskan Email yang sudah tidak perlu sebagai pengurangan polusi karbon. Kemudian RISE, ECO Friends diminta untuk menanam tanaman sebagai simbol dari permulaan kehidupan baru. Cara yang kedua adalah MYSTERY QUEST (misi tambahan) berisi UTILE (Useless Become Useful), ECO Friends diminta membuat kerajinan tangan dari bahan daur ulang demi meningkatkan kepedulian terhadap hewan. ECO Friends yang berpartisipasi pada kegiatan QUEST akan memperoleh e-certificate dan SKKM. Sedangkan ECO Friends yang berpartisipasi pada kegiatan MYSTERY QUEST berkesempatan untuk memenangkan berbagai hadiah menarik.',        
-            'keterangan_program_2' => 'Kegiatan ini mengajak ECO Friends untuk lebih peduli terhadap food waste dan bagaimana pengelolaannya yang baik. Diawali dengan DINE-IN, yaitu seminar yang mengangkat isu  mengenai food waste dan dilanjutkan dengan TAKE AWAY, yaitu pemberian 3 tantangan kepada ECO Friends dengan misi yang berbeda-beda. Pertama XHORT, dimana ECO Friends diminta untuk membuat video berisi tips bagaimana cara menyimpan makanan lebih lama. Kedua ALTER, dimana ECO Friends diminta untuk membuat video berisi cara mengolah sisa makanan menjadi hidangan baru. Ketiga TIDBIT, dimana ECO Friends diminta untuk membuat video memperlihatkan dirinya menghabiskan makanan hingga tidak tersisa. ECO Friends yang berpartisipasi di dalamnya akan memperoleh e-certificate dan SKKM.',
-            'keterangan_program_3' =>  'Kegiatan terakhir ini mengajak ECO Friends untuk lebih dalam membahas isu sampah plastik yang mencemari lautan (mikroplastik) dengan Lulu sebagai maskot utama. ECO Friends diminta untuk membuat video berisi proses mengubah sampah plastik menjadi barang yang lebih berguna. ECO Friends yang berpartisipasi akan memperoleh e-certificate dan SKKM.',
-            'keterangan_program_4' => '',
-            'keterangan_program_5' => '',
-            'achievement' => 'Ketiga rangkaian acara UMN ECO Gen 1 (RED, GREEN, dan BLUE)  memperoleh antusiasme yang tinggi baik dari ECO Friends. Hal ini terpancarkan melalui hasil akhir dari setiap kegiatan yang di luar ekspektasi. RED berhasil menghapus Email sebanyak 243.600 buah dan daya simpan sebanyak 8.120 GB, mengurangi penggunaan listrik sebesar 260,652 kWh, menanam 219 tanaman yang menambah produksi oksigen sebanyak 1.075 mm/jam, serta menyebarkan kata-kata positif sebanyak 370.548 kata. GREEN berhasil mengajak 633 ECO Friends untuk berpartisipasi pada DINE-IN dan teredukasi perihal food waste, serta mengajak 734 ECO Friends untuk memerangi food waste melalui video yang dibuat. BLUE berhasil mengajak 100+ ECO Friends membuat video kreasi dari sampah plastik dan meraih penonton sebanyak 76.000 viewers.',
-            'environmental_outcomes' => 'Dampak positif terhadap kelestarian lingkungan berupa pengurangan jumlah polusi karbon dan penggunaan listrik, serta penyebaran edukasi perihal food waste dan pengolahan sampah plastik berhasil dicetak oleh UMN ECO Gen 1.',     
-        ]);
-
-        // Milestone::create([   
-        //     'nama_organisasi' => 'UMN ECO GEN 2 (2022)',
-        //     'overview' =>
-        //     'program_1' => '',
-        //     'program_2' => '',
-        //     'achievement' => '',
-
-
-        // ]);
-
     }
 }
 

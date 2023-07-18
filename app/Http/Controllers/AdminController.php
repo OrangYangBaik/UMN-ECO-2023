@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Team;
@@ -28,13 +29,14 @@ class AdminController extends Controller
         ]);
     }
 
-    public function login(Request $request){
+    public function login(Request $request)
+    {
         $credentials = $request->validate([
             'email'=>'required|email',
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials)){
+        if(Auth::guard('web')->attempt($credentials)){
             $request->session()->regenerate();
             return redirect()->intended('/admin/dashboard');
         }
@@ -61,15 +63,14 @@ class AdminController extends Controller
     public function store(Request $request){
         $ValidReq = $request->validate([
             'name'=>'required',
-            'email'=>'required|email:dns|unique:users',
+            'email'=>'required|email:dns|unique:admins',
             'password'=>'required|min:8',
             'code'=>'required'
         ]);
 
         if($ValidReq['code']==="ECO2022JaYaJayA"){
             $ValidReq['password'] = Hash::make($ValidReq['password']);
-            User::create($ValidReq);
-
+            Admin::create($ValidReq);
             $request->session()->flash('success','Registrasi Berhasil!');
             return redirect('/loginAdmin');
         }
@@ -95,5 +96,26 @@ class AdminController extends Controller
         $Tim = Team::find($request->team_id);
         $Tim->status = $request->status;
         $Tim->save();
+    }
+
+    public function sendToAdminPage(Request $request){
+        $nama = $request->input('nama');
+        $nim = $request->input('nim');
+
+        $msg = 'data sudah terkirim';
+
+        return response()->json(['message' => $msg, 'success' => true]);
+    }
+
+    public function daftar(Request $request){
+        return view('admin.page.daftar', [
+            'title' => 'daftar yang ngescan',
+            'requester' => User::where('scanned', true)->get()
+        ]);
+    }
+
+    public function respond(Request $request){
+        $userName = $request->nama;
+        $userName = $request->nim;
     }
 }
