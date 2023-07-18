@@ -11,6 +11,7 @@ use App\Models\Team2021;
 use App\Models\Drought_bingo;
 use App\Models\Settings;
 use App\Models\Team2022;
+use App\Models\Milestone;
 
 class DatabaseSeeder extends Seeder
 {
@@ -731,10 +732,6 @@ class DatabaseSeeder extends Seeder
             'jabatan' => 'Anggota',
             'image' => 'Foto2021/ORTA/ORTA_Chotiwut_1.png'
         ]);
-
-        //seeder milestones
-        
-
     }
 }
 
