@@ -733,8 +733,6 @@ class DatabaseSeeder extends Seeder
             'image' => 'Foto2021/ORTA/ORTA_Chotiwut_1.png'
         ]);
 
-
-
         //Milestone
         Milestone::create([
             'nama_organisasi' => 'UMN ECO GEN 1 (2021)',
