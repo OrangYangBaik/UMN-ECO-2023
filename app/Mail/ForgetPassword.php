@@ -12,7 +12,8 @@ class ForgetPassword extends Mailable
     use Queueable, SerializesModels;
 
 
-    private $full_name;
+    
+          private $full_name;
     private $token;
 
     public function __construct($full_name, $token) {
