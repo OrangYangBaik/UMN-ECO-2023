@@ -24,7 +24,7 @@
 
                         </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="password" name="password" placeholder="Password">
+                                <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
 
                                 @error('password')
                                 <div style="color:red; font-size:0.7em; margin-left:20px; margin-top:10px;">

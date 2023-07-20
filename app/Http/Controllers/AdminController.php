@@ -102,20 +102,39 @@ class AdminController extends Controller
         $nama = $request->input('nama');
         $nim = $request->input('nim');
 
-        $msg = 'data sudah terkirim';
+        $user = User::where('nama', $nama)
+                ->where('nim', $nim)
+                ->first();
 
-        return response()->json(['message' => $msg, 'success' => true]);
+        if ($user) {
+            $msg = 'data sudah terkirim';
+            return response()->json(['message' => $msg, 'success' => true]);
+        } else {
+            $msg = 'data anda tidak dapat ditemukan';
+            return response()->json(['message' => $msg, 'success' => false]);
+
+        }
     }
 
-    public function daftar(Request $request){
-        return view('admin.page.daftar', [
+    public function verificationPoint(Request $request){
+        return view('admin.page.verificationPointAdmin', [
             'title' => 'daftar yang ngescan',
             'requester' => User::where('scanned', true)->get()
         ]);
     }
-
-    public function respond(Request $request){
-        $userName = $request->nama;
-        $userName = $request->nim;
-    }
+    public function increaseCreditPoints(Request $request)
+     {
+        // Find the user based on some identifier (e.g., user ID or email)
+        // $user = User::where('id', $userId)->first();
+     
+        // if ($user) {
+        //     $increasePoints = 10;
+        //     $user->credit_points += $increasePoints;
+        //     $user->save();
+     
+        //     return response()->json(['success' => true]);
+        // } else {
+        //     return response()->json(['success' => false, 'message' => 'User not found']);
+        // }
+     }
 }
