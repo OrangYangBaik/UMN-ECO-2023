@@ -16,7 +16,7 @@ class QrHandlerController extends Controller
      */
     public function index()
     {
-        return view('cms.page.event.tesScanQr');
+        return view('cms.page.event.scannerPage');
     }
 
     /**
@@ -65,32 +65,4 @@ class QrHandlerController extends Controller
             ]);
         }
     }
-
-     public function increaseCreditPoints(Request $request)
-     {
-        //  $qrCodeMessage = $request->input('qrCode');
-     
-        //  // Check if the scanned QR code message matches the expected code
-        //  $expectedQrCode = "SOME_EXPECTED_QR_CODE";
-        //  if ($qrCodeMessage === $expectedQrCode) {
-        //      // Find the user based on some identifier (e.g., user ID or email)
-        //      $user = User::where('id', $userId)->first();
-     
-        //      if ($user) {
-        //          // Perform credit point increase logic here based on your specific business rules
-        //          // Increase the appropriate credit points for the specific action (e.g., scanning QR code)
-     
-        //          // Example: Increase 10 credit points
-        //          $increasePoints = 10;
-        //          $user->credit_points += $increasePoints;
-        //          $user->save();
-     
-        //          return response()->json(['success' => true]);
-        //      } else {
-        //          return response()->json(['success' => false, 'message' => 'User not found']);
-        //      }
-        //  } else {
-        //      return response()->json(['success' => false, 'message' => 'Invalid QR code']);
-        //  }
-     }
 }

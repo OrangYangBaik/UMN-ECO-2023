@@ -8,7 +8,6 @@
     @foreach ($requester as $user)
         <p>User Name: {{ $user->nama }}</p>
         <p>User NIM: {{ $user->nim }}</p>
-        <!-- Other user attributes you want to display -->
     @endforeach
     {{-- <form action="/respond" method="post">
         <h3>Nama: {{$requester->nama}}</h3>

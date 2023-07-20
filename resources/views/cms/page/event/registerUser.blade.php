@@ -48,7 +48,7 @@
                     {{ $message }}
                 </div>
               @enderror
-              <h5 class="mt-3">Password </h5><input type="text" placeholder="ya password" class="form-control @error('Password') is-invalid @enderror" id="Password" name="Password" value="{{ old('Password') }}">
+              <h5 class="mt-3">Password </h5><input type="password" placeholder="ya password" class="form-control @error('Password') is-invalid @enderror" id="Password" name="Password" value="{{ old('Password') }}">
               @error('Password')
                 <div class="invalid-feedback">
                     {{ $message }}

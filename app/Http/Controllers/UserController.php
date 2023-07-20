@@ -9,9 +9,16 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    public function dashboard()
+    {
+        return view('cms.page.dashboard',['title' => 'user dashboard']);
+    }
+
     public function loginPage()
     {
-        return view('cms.page.event.loginUser',['title' => 'login page']);
+        return view('cms.page.event.loginUser',[
+            'title' => 'login page',
+        ]);
     }
 
     public function registerPage()
@@ -44,10 +51,18 @@ class UserController extends Controller
         ]);
         if(Auth::guard('participant')->attempt($credentials)){
             $request->session()->regenerate();
-            return view('cms.page.event.arriveAt');
+            return view('cms.page.dashboard',['title' => 'user dashboard']);
             //return redirect()->intended('/admin/dashboard');
-        }else{
-            dd($credentials);
-        }
+        }else return back()->with('status', 'Invalid login details');
+    }
+
+    public function logout(){
+        Auth::guard('participant')->logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
+        return redirect(route('loginUser'));
     }
 }

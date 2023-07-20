@@ -44,16 +44,16 @@
       function success(result) {
         if (!ajaxSent) { 
             ajaxSent = true;
-            // Asynchronous function to perform two nested AJAX calls
             async function performNestedAjaxCalls() {
               try {
-                // First AJAX request
+                //kirim ajax call pertama buat cek bener ga qrcodenya
                 const response1 = await makeAjaxRequest('/verificationAdmin/sendReq', {
                   qrcode: result,
                 });
-
+                //kalo qrcodenya bener bakal dikirim data user yang ngescan ke AdminController@sendToAdminPage buat dicek validasi lagi
                 if (response1.success) {
                   alert(response1.message);
+                  // ini dikirimnya
                   const response2 = await makeAjaxRequest('/sendDataToAdmin', {
                     nama : response1.nama,
                     nim : response1.nim
@@ -62,18 +62,18 @@
                     scanner.clear();
                     document.getElementById('reader').remove();
                     alert(response2.message);
+                    //ini routenya (buat redirect) kalo dia udh ngescan dan bener datanya 
                     window.location.href = "{{ route('landing') }}";
+                  }else {
+                    alert(response1.message);
                   }
                 } else {
                   alert(response1.message);
                 }
               } catch (error) {
-                // Handle errors from either AJAX call
                 console.error('An error occurred:', error);
               }
             }
-
-            // Call the performNestedAjaxCalls function to initiate the nested AJAX calls
             performNestedAjaxCalls();
         }
       }
