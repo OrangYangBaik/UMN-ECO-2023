@@ -51,8 +51,7 @@ class UserController extends Controller
         ]);
         if(Auth::guard('participant')->attempt($credentials)){
             $request->session()->regenerate();
-            return view('cms.page.dashboard',['title' => 'user dashboard']);
-            //return redirect()->intended('/admin/dashboard');
+            return view('cms.page.dashboard', ['title' => 'dashboard user']);
         }else return back()->with('status', 'Invalid login details');
     }
 
