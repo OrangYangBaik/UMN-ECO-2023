@@ -109,5 +109,3 @@ Route::get('/scannerPage', [QrHandlerController::class, 'index'])->name('scanner
 Route::post('/verificationAdmin/sendReq', [QrHandlerController::class, 'sendReq']);
 Route::post('/sendDataToAdmin', [AdminController::class, 'sendToAdminPage']);
 Route::post('/respond', [AdminController::class, 'respond']);
-
-

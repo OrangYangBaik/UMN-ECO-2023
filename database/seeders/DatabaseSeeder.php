@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-
+use App\Models\Admin;
 use App\Models\DownpourUser;
 use Illuminate\Database\Seeder;
 use App\Models\User;
@@ -26,15 +26,13 @@ class DatabaseSeeder extends Seeder
 
 
         // User Admin
-        User::create([
+        Admin::create([
             'name' => 'Admin',
-            'role' => 'Coordinator',
             'email' => 'admin@umn.ac.id',
             'password' => bcrypt('nirmalabentalaumneco2023')
-          ]);
+        ]);
 
-
-
+         
         // Divisi UMN ECO 2023
         Team::create([
             'name' => 'JAGAT',
