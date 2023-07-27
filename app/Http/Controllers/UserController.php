@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function dashboard()
     {
-        return view('cms.page.dashboard',['title' => 'user dashboard']);
+        return view('cms.page.landing',['title' => 'User Dashboard']);
     }
 
     public function loginPage()
@@ -51,7 +51,7 @@ class UserController extends Controller
         ]);
         if(Auth::guard('participant')->attempt($credentials)){
             $request->session()->regenerate();
-            return view('cms.page.dashboard', ['title' => 'dashboard user']);
+            return redirect((route('dashboardUser')));
         }else return back()->with('status', 'Invalid login details');
     }
 

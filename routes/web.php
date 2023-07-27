@@ -96,14 +96,17 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/setting', [AdminController::class, 'setting'])->name('admin-setting')->middleware('auth:web');
     Route::get('/change-status', [AdminController::class, 'changeStatus'])->name('admin-setting-change-status')->middleware('auth:web');
 });
-//login & register user
+
+// Login & Register user
 Route::get('/registerUser', [UserController::class, 'registerPage'])->name('registerUser')->middleware('guest:participant');
 Route::post('/registerUser', [UserController::class, 'store']);
 
 Route::get('/loginUser', [UserController::class, 'loginPage'])->name('loginUser')->middleware('guest:participant');
 Route::post('/loginUser', [UserController::class, 'login']);
-Route::post('/logoutUser', [UserController::class, 'logout']);
-Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('dashboard-user')->middleware('auth:participant');
+Route::post('/logoutUser', [UserController::class, 'logout'])->name('logoutUser');
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('dashboardUser')->middleware('auth:participant');
+
+
 // tes scan qr
 Route::get('/scannerPage', [QrHandlerController::class, 'index'])->name('scannerPage')->middleware('auth:participant');
 Route::post('/verificationAdmin/sendReq', [QrHandlerController::class, 'sendReq']);

@@ -6,22 +6,16 @@
 
 @section('content')
     @foreach ($requester as $user)
-        <p>User Name: {{ $user->nama }}</p>
-        <p>User NIM: {{ $user->nim }}</p>
+        <form action="{{ route('add.points', ['userId' => $user->id]) }}" method="post">
+            @csrf
+            <h3>Nama: {{ $user->nama }}</h3>
+            <h3>NIM: {{ $user->nim }}</h3>
+            <label for="point">Poin tambahan:</label>
+            <input type="number" name="point" id="point">
+            <button id="acc" type="submit">approve</button>
+        </form>
     @endforeach
-    {{-- <form action="/respond" method="post">
-        <h3>Nama: {{$requester->nama}}</h3>
-        <h3>NIM: {{$requester->$nim}}</h3>
-        <label for="point">Poin tambahan:</label>
-        <input type="number" name="point" id="point">
-        <input type="hidden" id="name" name="name" value={{$nama}}>
-        <input type="hidden" id="nim" name="name" value={{$nim}}>
-        <button id="acc">approve</button>
-    </form> --}}
 @endsection
 
 @section('custom-js')
-    <script>
-       
-    </script>
 @endsection

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Page Title -->
     <title>{{ $title }}</title>
     <!-- UMN ECO Icon -->
@@ -27,28 +28,29 @@
     <link rel="stylesheet" href="{{ asset('css/cms/base/jquery/jquery-ui.css') }}">
     <!-- Animate -->
     <link rel="stylesheet" href="{{ asset('css/cms/base/animate/animate.css') }}">
-    
+
     <!-- Custom CSS -->
     @yield('custom-css')
 </head>
+
 <body>
     <!-- Preloader -->
     <div id="preloader">
         {{-- <iframe class="loading-img" src="https://embed.lottiefiles.com/animation/69435"></iframe> --}}
         {{-- <lottie-player src="{{ asset('images/loading3.json') }}"   speed="1"  loop autoplay class="lottie-gif col-lg-2 col-sm-4 col-6"></lottie-player> --}}
-        <img src="{{ asset('images/gif-logo.gif') }}" class="loading-img" > 
+        <img src="{{ asset('images/gif-logo.gif') }}" class="loading-img">
     </div>
 
     @include('cms.template.navbar')
 
     @yield('content')
-    
+
     <!-- Javascript -->
-     <!-- Popper js  -->
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <!-- Popper js  -->
+    {{-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script> --}}
     <!-- Lottie -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    {{-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> --}}
     <!-- Bootstrap 5 -->
     <script src="{{ asset('js/cms/base/bootstrap/bootstrap.min.js') }}"></script>
     <!-- Jquery 4 -->
@@ -65,19 +67,20 @@
             width = $(window).width();
             $("#preloader").fadeOut("slow");
         });
-        $(".menu__link").click(function(){
+        $(".menu__link").click(function() {
             $('#main-navigation-toggle').prop('checked', false);
         });
     </script>
 
-	<!-- Tooltips -->
-    <script> 
+    <!-- Tooltips -->
+    <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     </script>
     <!-- Custom JS -->
     @yield('custom-js')
 </body>
+
 </html>

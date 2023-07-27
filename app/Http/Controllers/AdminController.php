@@ -122,6 +122,7 @@ class AdminController extends Controller
             'requester' => User::where('scanned', true)->get()
         ]);
     }
+    
     public function increaseCreditPoints(Request $request)
      {
         // Find the user based on some identifier (e.g., user ID or email)

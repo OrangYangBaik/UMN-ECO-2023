@@ -2,15 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Admin;
-use App\Models\DownpourUser;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Admin;
 use App\Models\Team;
 use App\Models\Team2021;
-use App\Models\Drought_bingo;
-use App\Models\Settings;
-use App\Models\Team2022;
 use App\Models\Milestone;
 
 class DatabaseSeeder extends Seeder
@@ -30,6 +26,20 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@umn.ac.id',
             'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
+        // Dummy User
+        User::create([
+            'id' => '1',
+            'nama' => 'Kathleen Tamvan',
+            'nim' => '00000012345',
+            'email' => 'kathleen.tamvan@student.umn.ac.id',
+            'password' => bcrypt('heheheha'),
+            'wehea' => 0,
+            'meru_betiri' => 0,
+            'scanned' => 0,
+            'credit' => 5,
+            'point' => 0,
         ]);
 
          
