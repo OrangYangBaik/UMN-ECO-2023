@@ -46,4 +46,12 @@ class MilestoneController extends Controller
     {
         return view("cms.page.milestone.eco.thirdGenECO", ['title' => 'titel ECO3']);
     }
+    public function banksampah()
+    {
+        return view("cms.page.milestone.milestoneDetailBs", ['title' => 'titel ECO3']);
+    }
+    public function eco()
+    {
+        return view("cms.page.milestone.milestoneDetailEco", ['title' => 'titel ECO3']);
+    }
 }

@@ -1,0 +1,336 @@
+@font-face {
+    font-family: bobbyjones;
+    src: url("{{ public('fonts/bobby-jones-soft.otf') }}") format("truetype");
+}
+
+.tahun, .tahun-2, .tahun-3, .tahun-4, .tahun-5, .tahun-6, .tahun-7, .tahun-8 {
+    font-family: bobbyjones;
+}
+
+
+body {
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+.container-Bs {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 342vw;
+    background: linear-gradient(180deg, #9ACDE0 0%, rgba(221, 237, 236, 0.90) 18.23%, #FFDD82 57.81%, #FFDE82 68.75%, #F79735 100%);
+}
+
+/* .gradasi-bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #9ACDE0 0%, rgba(221, 237, 236, 0.90) 18.23%, #FFDD82 57.81%, #FFDE82 68.75%, #F79735 100%);
+} */
+
+.container-Bs .awan-kiri{
+    position: absolute;
+    width: 100%;
+    top: 10vw;
+    left: 10vw;
+}
+
+.container-Bs .header-1 {
+    z-index: 1;
+    position: absolute;
+    color: #F9F8DC;
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 41px;
+    background: #458B95;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 2vw;
+    top: 13vw;
+    left: 23.5vw;
+    letter-spacing: 0.5vw;
+}
+
+.container-Bs .header-2 {
+    z-index: 1;
+    position: absolute;
+    color: #284C3F;
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 72vw;
+    left: 43vw;
+    letter-spacing: 0.1vw;
+}
+
+.container-Bs .overview p {
+    position: absolute;
+    top: 80vw;
+    left: 26vw;
+    color: #284C3F;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50vw;
+}
+
+.container-Bs .overview span {
+    font-weight: 700;
+}
+
+.container-Bs .header-3 {
+    z-index: 1;
+    position: absolute;
+    color: #284C3F;
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 100vw;
+    left: 42vw;
+    letter-spacing: 0.1vw;
+}
+
+.container-Bs .header-4 {
+    z-index: 1;
+    position: absolute;
+    color: #284C3F;
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 180vw;
+    left: 39vw;
+    letter-spacing: 0.1vw;
+}
+
+.container-Bs .header-5 {
+    z-index: 1;
+    position: absolute;
+    color: #284C3F;
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 210vw;
+    left: 30vw;
+    letter-spacing: 0.1vw;
+}
+
+.container-Bs .programs p {
+    position: absolute;
+    top: 113vw;
+    left: 27vw;
+    color: #284C3F;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50vw;
+}
+
+.container-Bs .programs .paragraf-2 {
+    position: absolute;
+    top: 125vw;
+    left: 27vw;
+    color: #284C3F;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50vw;
+}
+
+.container-Bs .programs ul {
+    position: absolute;
+    top: 110vw;
+    left: 27vw;
+    color: #284C3F;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50vw;
+}
+
+.container-Bs .programs .li-2 {
+    position: absolute;
+    top: 12vw;
+    left: 10w;
+    color: #284C3F;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50vw;
+}
+
+.container-Bs .programs span {
+    font-weight: 700;
+}
+
+.container-Bs .achievements .paragraf-3 {
+    position: absolute;
+    top: 187vw;
+    left: 24vw;
+    color: #284C3F;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50vw;
+}
+
+.container-Bs .environmental .paragraf-4 {
+    position: absolute;
+    top: 217vw;
+    left: 22.5vw;
+    color: #284C3F;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 70vw;
+}
+
+.container-Bs .environmental .paragraf-5 {
+    position: absolute;
+    top: 199vw;
+    left: 24.5vw;
+    color: #284C3F;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 50vw;
+}
+
+.container-Bs .tahun {
+    z-index: 1;
+    position: absolute;
+    top: 24vw;
+    left: 41.5vw;
+    padding: 0.5vw 2.5vw;
+    border-radius: 41px;
+    background: #83A9AC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #F9F8DC;
+    text-align: center;
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5vw;
+}
+
+.container-Bs .tahun h2 {
+    margin: 0;
+}
+
+.container-Bs .header-1 h2 {
+    margin: 0;
+}
+
+.container-Bs .temple {
+    z-index: 0;
+    position: absolute;
+    width: 130%;
+    top: 7vw;
+    left: -15vw;
+}
+
+.container-Bs .jembatan {
+    z-index: 1;
+    position: absolute;
+    width: 110%;
+    left: -3vw;
+    top: 49vw;
+}
+
+.container-Bs .bush-kiri {
+    z-index: 2;
+    position: absolute;
+    width: 38%;
+    left: -10vw;
+    top: 35.5vw;
+    /* display: none; */
+}
+
+.container-Bs .bush-kanan {
+    z-index: 2;
+    position: absolute;
+    width: 38%;
+    right: -10vw;
+    top: 35.5vw;
+    /* display: none; */
+}
+
+.container-Bs .daun-merah-kiri {
+    z-index: 3;
+    position: absolute;
+    width: 34%;
+    left: 5vw;
+    top: 31vw;
+    /* display: none; */
+}
+
+.container-Bs .daun-merah-kanan {
+    z-index: 3;
+    position: absolute;
+    width: 34%;
+    right: 5vw;
+    top: 31vw;
+    /* display: none; */
+}
+
+.container-Bs .tanaman-menjalar-kiri {
+    z-index: 1;
+    position: absolute;
+    width: 33%;
+    left: -1vw;
+    top: 49vw;
+}
+
+.container-Bs .tanaman-menjalar-kanan {
+    z-index: 1;
+    position: absolute;
+    width: 33%;
+    right: -1vw;
+    top: 49vw;
+    /* display: none; */
+}
+
+.container-Bs .tanaman-menjalar-tengah {
+    z-index: 1;
+    position: absolute;
+    width: 22%;
+    left: 38vw;
+    top: 48.5vw;
+    /* display: none; */
+}

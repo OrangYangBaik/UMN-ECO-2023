@@ -1,0 +1,1014 @@
+/* /public/css/custom.css */
+@font-face {
+    font-family: bobbyjones;
+    src: url("{{ public('fonts/bobby-jones-soft.otf') }}") format("truetype");
+}
+
+.tahun, .tahun-2, .tahun-3, .tahun-4, .tahun-5, .tahun-6, .tahun-7, .tahun-8 {
+    font-family: bobbyjones;
+}
+
+
+/* * MEDIA QUERY */
+/* @media only screen and (max-width: 1024px) {
+    .bambu-kiri{
+        min-width: 30%;
+    }
+  } */
+
+  :root{
+    --bobby-jones: 'bobby-jones-soft-regular', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* CSS MARIO */
+.container-milestone {
+    width: 100%;
+    position: relative;
+}
+
+.container-milestone .bg-utama {
+    z-index: 0;
+    position: absolute;
+    top: -1vw;
+    left: -1vw;
+    right: 0;
+    width: 101vw;
+    height: 60vw;
+    background: linear-gradient(180deg, #F79735 23%, #F9F1DC 100%);
+    /* display: none; */
+}
+
+.container-milestone  .gradasi-bg {
+    z-index: 0;
+    position: absolute;
+    top: -1vw;
+    left: -1vw;
+    right: 0;
+    width: 101vw;
+    height: 60vw;
+    background: linear-gradient(180deg, rgba(154, 205, 224, 0.90) 0%, rgba(157.25, 228.47, 255, 0.90) 0%, rgba(221, 237, 236, 0.90) 19%, rgba(255, 220.56, 129.62, 0.90) 54%, rgba(247, 176, 85, 0.90) 97%);
+    /* display: none; */
+}
+
+.container-milestone .gradasi-bg-2 {
+    z-index: 0;
+    position: absolute;
+    top: 60vw;
+    left: -1vw;
+    right: 0;
+    width: 101vw;
+    height: 250vw;
+    background: linear-gradient(180deg, #E5DBB1 0%, #B7CD85 84.38%, #B3D66B 100%);
+    /* display: none; */
+}
+
+.container-milestone .gif-temple {
+    z-index: 4;
+    position: absolute;
+    width: 150vw;
+    top: -7vw;
+    left: -25vw;
+}
+
+.container-milestone .eco-temple {
+    z-index: 4;
+    width: 50%;
+    position: absolute;
+    top: 5vw;
+    left: 25vw;
+}
+
+.container-milestone .daun-3 {
+    z-index: 6;
+    width: 19%;
+    position: absolute;
+    transform: rotate(-8deg);
+    top: 44vw;
+    left: 41vw;
+}
+
+.container-milestone .bush-1-belakang {
+    z-index: 5;
+    position: absolute;
+    width: 71%;
+    top: 49.5vw;
+    left: 16vw;
+}
+
+.container-milestone .bush-1-depan {
+    z-index: 7;
+    position: absolute;
+    width: 29%;
+    top: 52.5vw;
+    left: 37vw;
+    /* display: none; */
+}
+
+.container-milestone .bush-2-kanan {
+    z-index: 8;
+    position: absolute;
+    width: 23%;
+    top: 45vw;
+    right: 19vw;
+    /* display: none; */
+}
+
+.container-milestone .bush-2-kiri {
+    z-index: 8;
+    position: absolute;
+    width: 23%;
+    top: 45vw;
+    left: 21vw;
+    /* display: none; */
+}
+
+.container-milestone .bush-3-kanan {
+    z-index: 9;
+    position: absolute;
+    width: 38%;
+    top: 56.5vw;
+    right: 8vw;
+    /* display: none; */
+}
+
+.container-milestone .bush-3-kiri {
+    z-index: 9;
+    position: absolute;
+    width: 38%;
+    top: 57.1vw;
+    left: 9.5vw;
+    /* display: none; */
+}
+
+.container-milestone .palm-tree-kanan {
+    z-index: 3;
+    position: absolute;
+    width: 21%;
+    top: 24vw;
+    right: 13.5vw;
+    transform: rotate(-3deg);
+}
+
+.container-milestone .palm-tree-kiri {
+    z-index: 3;
+    position: absolute;
+    width: 21%;
+    top: 24vw;
+    left: 14vw;
+    transform: rotate(3deg);
+}
+
+.container-milestone .rumput-laut-kanan {
+    z-index: 2;
+    position: absolute;
+    width: 18%;
+    top: 35vw;
+    right: 10.5vw;
+    transform: rotate(10deg);
+}
+
+.container-milestone .rumput-laut-kiri {
+    z-index: 2;
+    position: absolute;
+    width: 18%;
+    top: 34vw;
+    left: 11vw;
+    transform: rotate(-10deg);
+}
+
+.container-milestone .siluet-temple {
+    z-index: 1;
+    position: absolute;
+    width: 102%;
+    top: 17vw;
+    left: -1vw;
+    mix-blend-mode: multiply;
+}
+
+.container-milestone .bush-1-depan-kiri {
+    z-index: 3;
+    position: absolute;
+    width: 42%;
+    top: 54vw;
+    left: -21.5vw;
+}
+
+.container-milestone .bush-1-depan-kanan {
+    z-index: 3;
+    position: absolute;
+    width: 42%;
+    top: 55vw;
+    right: -23vw;
+}
+/* CSS MARIO */
+
+.container-milestone .bambu-kiri{
+    width: 25%;
+    position: absolute;
+    left: -11vw;
+    top: 60vw
+}
+
+
+.container-milestone .bambu-kanan {
+    width: 25%;
+    position: absolute;
+    right: -11vw;
+    top: 60vw
+}
+
+.container-milestone .sungai{
+    width: 35%;
+    position: relative;
+    top: 53vw;
+    left: 37vw;
+}  
+
+.container-milestone .gps{
+    width: 15%;
+    position: absolute;
+    top: 25vw;
+    left: 11vw;
+}
+
+/* GEN-1  */
+.container-milestone .tong-sampah {
+    position: absolute;
+    width: 7%;
+    left: 17vw;
+    top: 81vw;
+}
+
+.container-milestone .tahun{
+    color: #49734D;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1vw;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 3vw;
+    left: 12vw;
+}
+
+.container-milestone .gen{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0.4vw;
+    margin-top: 0;
+    border-radius: 10px;
+    background: #78AA96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 0.6vw;
+    position: absolute;
+    left: 12vw;
+    top: 0.5vw;
+}
+
+.container-milestone .arrow{
+    width: 0.6vw;
+    height: auto;
+    margin-left: 0.5vw;
+    flex-shrink: 0;
+}
+
+.container-milestone .header-1{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen1{
+    position: absolute;
+    top: 77vw;
+    left: 25vw;
+    width: 15%;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen1 span{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .text-gen1{
+    display: flex;
+    position: relative;
+    left: 0vw;
+    top: 1vw;
+    width: 50vw;
+}
+
+.container-milestone .garis{
+    width: 1.3vw;
+    margin: 0.3vw 0.3vw;
+}
+
+/* GEN-2  */
+.container-milestone .tong-sampah-2 {
+    position: absolute;
+    width: 8%;
+    right: 29vw;
+    top: 87vw;
+}
+
+.container-milestone .tahun-2{
+    color: #49734D;
+    font-size: 2.8vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1vw;
+    margin-bottom: 0;
+    position: absolute;
+    
+}
+
+.container-milestone .gen-2{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 1.5vw;
+    margin-top: 0;
+    border-radius: 10px;
+    background: #78AA96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 0.6vw;
+    position: absolute;
+    left: -1vw;
+    top: 4vw;
+
+}
+
+
+.container-milestone .arrow-2{
+    width: 0.6vw;
+    height: auto;
+    margin-left: 0.5vw;
+    flex-shrink: 0;
+}
+
+.container-milestone .header-2{
+    position: absolute;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 3vw;
+    left: 7vw;
+}
+
+.container-milestone .teks-gen2{
+    position: absolute;
+    top: 98vw;
+    right: 23vw;
+    width: 26%;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen2 span{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen2 .italic{
+    font-style: italic;
+}
+
+.container-milestone .text-gen2{
+    display: flex;
+    position: relative;
+    left: -0.5vw;
+    bottom: 6.5vw;
+}
+
+.container-milestone .garis-2{
+    width: 1.3vw;
+    margin: 0.3vw 0.5vw
+}
+
+/* GEN-3 */
+.container-milestone .tong-sampah-3 {
+    position: absolute;
+    width: 12%;
+    left: 25vw;
+    top: 107vw;
+}
+
+.container-milestone .tahun-3{
+    color: #49734D;
+    font-size: 2.8vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1vw;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 3vw;
+    left: 12.5vw;
+}
+
+.container-milestone .gen-3{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0.6vw;
+    margin-top: 0;
+    border-radius: 10px;
+    background: #78AA96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 0.6vw;
+    position: absolute;
+    left: 12vw;
+    top: 0.5vw;
+
+}
+
+.container-milestone .arrow-3{
+    width: 0.6vw;
+    height: auto;
+    margin-left: 0.5vw;
+    flex-shrink: 0;
+}
+
+.container-milestone .header-3{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen3{
+    position: absolute;
+    top: 116vw;
+    left: 23vw;
+    width: 21%;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen3 span{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .text-gen3{
+    display: flex;
+    position: absolute;
+    left: 2vw;
+    top: -3vw;
+    width: 50vw;
+}
+
+.container-milestone .garis-3{
+    width: 1.3vw;
+    margin: 0.3vw 0.4vw
+}
+
+/* GEN-4 */
+.container-milestone .tong-sampah-4 {
+    position: absolute;
+    width: 8%;
+    right: 24vw;
+    top: 115vw;
+}
+
+.container-milestone .tahun-4{
+    color: #49734D;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1vw;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 4vw;
+    left: 1vw;
+}
+
+.container-milestone .gen-4{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 1.5vw;
+    margin-top: 0;
+    border-radius: 10px;
+    background: #78AA96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 0.6vw;
+
+}
+
+.container-milestone .arrow-4{
+    width: 0.6vw;
+    height: auto;
+    margin-left: 0.5vw;
+    flex-shrink: 0;
+}
+
+.container-milestone .header-4{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    left: 9vw;
+    bottom: 0.6vw;
+}
+
+.container-milestone .teks-gen4{
+    position: absolute;
+    top: 122vw;
+    right: 16vw;
+    width: 22%;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen4 span{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen4 .italic{
+    font-style: italic;
+}
+
+.container-milestone .text-gen4{
+    display: flex;
+    position: relative;
+    left: -1.5vw;
+    top: 1vw;
+    width: 50vw
+}
+
+.container-milestone .text-part-4 {
+    display: flex;
+}
+
+.container-milestone .garis-4{
+    width: 1.3vw;
+    margin: 0.3vw 0.1vw;
+}
+
+/* GEN-5 */
+
+.container-milestone .tong-sampah-5 {
+    position: absolute;
+    width: 10%;
+    left: 25vw;
+    top: 128vw;
+}
+
+.container-milestone .teks-gen5{
+    position: absolute;
+    top: 139vw;
+    left: 23vw;
+    width: 13%;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen5 span{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .text-gen5{
+    display: flex;
+    position: absolute;
+    left: 0vw;
+    bottom: 15vw;
+    width: 50vw;
+}
+
+.container-milestone .tahun-5{
+    color: #49734D;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1vw;
+    margin-bottom: 0;
+    position: absolute;
+    left: 12vw;
+    bottom: -2vw;
+}
+
+.container-milestone .gen-5{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0.4vw;
+    margin-top: 0;
+    border-radius: 10px;
+    background: #78AA96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 0.6vw;
+    position: absolute;
+    left: 12vw;
+    top: 1.5vw;
+}
+
+.container-milestone .arrow-5{
+    width: 0.6vw;
+    height: auto;
+    margin-left: 0.5vw;
+    flex-shrink: 0;
+}
+
+.container-milestone .header-5{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    top: 1vw;
+}
+
+.container-milestone .text-part-5 {
+    display: flex;
+}
+
+.container-milestone .garis-5{
+    width: 1.3vw;
+    margin: 0.3vw 0.3vw;
+}
+
+/* GEN-6 */
+.container-milestone .tong-sampah-6 {
+    position: absolute;
+    width: 6%;
+    right: 35vw;
+    top: 139vw;
+}
+
+.container-milestone .tahun-6{
+    color: #49734D;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1vw;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 7vw;
+    left: -1vw;
+}
+
+.container-milestone .gen-6{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0.4vw;
+    margin-top: 0;
+    border-radius: 10px;
+    background: #78AA96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 0.6vw;
+    position: absolute;
+    left: -0.5vw;
+    bottom: 4.5vw;
+
+}
+
+.container-milestone .arrow-6{
+    width: 0.6vw;
+    height: auto;
+    margin-left: 0.5vw;
+    flex-shrink: 0;
+}
+
+.container-milestone .header-6{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    bottom: 4.3vw;
+    left: 6.5vw;
+}
+
+.container-milestone .teks-gen6{
+    position: absolute;
+    top: 152vw;
+    right: 21vw;
+    width: 28%;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen6 span{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen6 .italic{
+    font-style: italic;
+}
+
+.container-milestone .text-gen6{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 5vw;
+    width: 50vw;
+}
+
+.container-milestone .garis-6{
+    width: 1.3vw;
+    margin: 0.3vw 0.3vw;
+}
+
+/* GEN 7 */
+.container-milestone .tong-sampah-7 {
+    position: absolute;
+    width: 8%;
+    left: 28vw;
+    top: 160vw;
+}
+
+.container-milestone .teks-gen7{
+    position: absolute;
+    top: 172vw;
+    left: 23vw;
+    width: 19%;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen7 span{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .text-gen7{
+    display: flex;
+    position: absolute;
+    left: 3vw;
+    top: 6vw;
+    width: 50vw;
+}
+
+.container-milestone .tahun-7{
+    color: #49734D;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1vw;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 8.5vw;
+    left: 10vw;
+}
+
+.container-milestone .gen-7{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0.4vw;
+    margin-top: 0;
+    border-radius: 10px;
+    background: #78AA96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 0.6vw;
+    position: absolute;
+    bottom: 6vw;
+    left: 10vw;
+
+}
+
+.container-milestone .arrow-7{
+    width: 0.6vw;
+    height: auto;
+    margin-left: 0.5vw;
+    flex-shrink: 0;
+}
+
+.container-milestone .header-7{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    bottom: 6vw;
+    left: 1vw;
+}
+
+.container-milestone .garis{
+    width: 1.3vw;
+    margin: 0.3vw 0.3vw;
+}
+
+/* GEN 8 */
+.container-milestone .tong-sampah-8 {
+    position: absolute;
+    width: 7%;
+    right: 25vw;
+    top: 179vw;
+}
+
+.container-milestone .tahun-8{
+    color: #49734D;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 1vw;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 8vw;
+    left: 2vw;
+}
+
+.container-milestone .gen-8{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0.4vw;
+    margin-top: 0;
+    border-radius: 10px;
+    background: #78AA96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5vw 0.6vw;
+    position: absolute;
+    bottom: 5vw;
+    left: 2vw;
+}
+
+.container-milestone .arrow-8{
+    width: 0.6vw;
+    height: auto;
+    margin-left: 0.5vw;
+    flex-shrink: 0;
+}
+
+.container-milestone .header-8{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: absolute;
+    bottom: 5vw;
+    left: 9.5vw;
+}
+
+.container-milestone .teks-gen8{
+    position: absolute;
+    top: 189vw;
+    right: 18vw;
+    width: 25%;
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen8 span{
+    color: #284C3F;
+    font-family: Montserrat;
+    font-size: 0.88vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-milestone .teks-gen8 .italic{
+    font-style: italic;
+}
+
+.container-milestone .text-gen8{
+    display: flex;
+    position: absolute;
+    left: 0vw;
+    top: 5vw;
+    width: 50vw;
+}
+
+.container-milestone .garis-8{
+    width: 1.3vw;
+    margin: 0.3vw 0.3vw;
+}
+
+@media only screen and (max-width: 1024px) {
+    /* .bambu-kiri{
+        min-width: 30%;
+        left: -15%;
+    }
+
+    .bambu-kanan{
+        min-width: 30%;
+        right: -15%;
+    } */
+  }
+
+
