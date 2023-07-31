@@ -11,7 +11,7 @@
         <img  src="{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.svg') }}" />
       </div>
       <div class="header-1">
-        <h2>BANK SAMPAH GEN 1</h2>
+        <h2>{{$milestone->nama_organisasi}}</h2>
       </div>
       <div class="tahun">
         <h2>2016</h2>
@@ -19,28 +19,44 @@
       <div class="overview">
         <h2 class="header-2">OVERVIEW</h2>
         <p>
-            Bank Sampah Gen 1 memiliki kegiatan utama yang bertajuk <span>“Chlorofeel”</span>. Dengan diselenggarankannya kegiatan tersebut diharapkan mahasiswa/i dapat meningkatkan kepeduliannya terhadap lingkungan melalui pengumpulan dan penukaran berbagai kategori sampah.  </p>
+            {{$milestone->overview}}</p>
       </div>
       <div class="programs">
         <h2 class="header-3">PROGRAMS</h2>
         <ul>
             <li><span>“Chlorofeel”</span></li>
-            <li class="li-2"><span>“Dari Sampah Jadi Berkah”</span></li>
+            <li class="li-2"><span>{{$milestone->program_1}}</span></li>
         </ul>
-        <p class="paragraf-1">Kegiatan pengumpulan serta penukaran berbagai kategori sampah dengan berbagai hadiah manarik oleh para nasabah yang merupakan mahasiswa/i Universitas Multimedia Nusantara.</p>
+        <p class="paragraf-1">{{$milestone->keterangan_program_1}}</p>
         <p class="paragraf-2">
-            Program ini dicanagkan dalam bentuk kunjungan sosial Bank Sampah Gen 1 ke salah satu sekolah yaitu SDN Curug Wetan V. Kegiatan ini adalah wujud nyata dari hasil pengumpulan sampah para nasabah yang disumbangkan menjadi alat-alat kebersihan untuk sekolah  tersebut.
+            {{$milestone->keterangan_program_1}}
+        </p>
+        <ul>
+            <li><span>“Chlorofeel”</span></li>
+            <li class="li-2"><span>{{$milestone->program_2}}</span></li>
+        </ul>
+        <p class="paragraf-1">{{$milestone->keterangan_program_2}}</p>
+        <p class="paragraf-2">
+            {{$milestone->keterangan_program_2}}
+        </p>
+        <ul>
+            <li><span>“Chlorofeel”</span></li>
+            <li class="li-2"><span>{{$milestone->program_3}}</span></li>
+        </ul>
+        <p class="paragraf-1">{{$milestone->keterangan_program_3}}</p>
+        <p class="paragraf-2">
+            {{$milestone->keterangan_program_3}}
         </p>
       </div>
       <div class="achievements">
         <h2 class="header-4">ACHIEVEMENTS</h2>
-        <p class="paragraf-3">Kegiatan pengumpulan serta penukaran sampah yang diadakan oleh Bank Sampah Gen 1 sukses menarik perhatian, antusiasme, hingga kepedulian mahasiswa/i Universitas Multimedia Nusantara terhadap lingkungan. Hal ini terbukti dari jumlah nasabah yang mencapai angka ratusan mahasiswa/i.</p>
+        <p class="paragraf-3">{{$milestone->achievement}}</p>
       </div>
       <div class="environmental">
         <h2 class="header-5">ENVIRONMENTAL OUTCOMES</h2>
-        <p class="paragraf-4">“Lingkungan yang bersih adalah lingkungan yang bebas dari sampah”
+        <p class="paragraf-4">{{$milestone->environmental_outcomes}}
         </p>
-        <p class="paragraf-5">Tentunya, kegiatan yang diselenggarakan oleh Bank Sampah Gen 1 mempunyai kontribusi terhadap lingkungan agar dapat lebih bersih dan terbebas dari sampah. 
+        <p class="paragraf-5">{{$milestone->environmental_outcomes}}
         </p>
       </div>
       <div class="jembatan">

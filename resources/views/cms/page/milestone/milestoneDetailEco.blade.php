@@ -13,16 +13,55 @@
       <div class="awan-kiri-bawah"><img src="{{ asset('images/milestoneEco/awan kiri.svg') }}" alt=""></div>
       <div class="awan-kanan"><img src="{{ asset('images/milestoneEco/awan kiri.svg') }}" alt=""></div>
       <div class="awan-kanan-bawah"><img src="{{ asset('images/milestoneEco/awan kiri.svg') }}" alt=""></div>
+      </div>
       <div class="header-1">
-        <h2>UMN ECO GEN 3</h2>
+        <h2>{{$milestone->nama_organisasi}}</h2>
       </div>
       <div class="tahun">
-        <h2>2023</h2>
+        <h2>2016</h2>
       </div>
       <div class="overview">
         <h2 class="header-2">OVERVIEW</h2>
         <p>
-            UMN ECO Gen 3 mengangkat tema <span>“Know Your Path for Earth’s Sustainability”</span>, artinya melakukan ekspansi secara berkelanjutan dengan melewati berbagai macam lika-liku perjalanan untuk menjaga, mempertahankan, dan melestarikan kondisi bumi menjadi lebih baik lagi. Dengan konsep <span>“The Dwelling Places of Natures Temple”</span> yang mengambil isu carbon footprint (emisi karbon), dimana menjadi isu kode merah akibat berbagai aktivitas manusia sehari-hari. Tahun ini, UMN ECO ditemani oleh maskot bernama <span>Nala</span> yang diambil dari kata Nirmala Bentala. ECO Friends diajak untuk berpartisipasi dalam berbagai macam kegiatan untuk menghadapi isu carbon footprint. Untuk mengetahui kegiatan apa saja yang akan dilaksanakan tahun ini, ECO Friends dapat memperoleh informasi-informasi selanjutnya di website dan akun media sosial resmi UMN ECO. <br>Sampai jumpa! </p>
+            {{$milestone->overview}}</p>
+      </div>
+      <div class="programs">
+        <h2 class="header-3">PROGRAMS</h2>
+        <ul>
+            <li><span>“Chlorofeel”</span></li>
+            <li class="li-2"><span>{{$milestone->program_1}}</span></li>
+        </ul>
+        <p class="paragraf-1">{{$milestone->keterangan_program_1}}</p>
+        <p class="paragraf-2">
+            {{$milestone->keterangan_program_1}}
+        </p>
+        <ul>
+            <li><span>“Chlorofeel”</span></li>
+            <li class="li-2"><span>{{$milestone->program_2}}</span></li>
+        </ul>
+        <p class="paragraf-1">{{$milestone->keterangan_program_2}}</p>
+        <p class="paragraf-2">
+            {{$milestone->keterangan_program_2}}
+        </p>
+        <ul>
+            <li><span>“Chlorofeel”</span></li>
+            <li class="li-2"><span>{{$milestone->program_3}}</span></li>
+        </ul>
+        <p class="paragraf-1">{{$milestone->keterangan_program_3}}</p>
+        <p class="paragraf-2">
+            {{$milestone->keterangan_program_3}}
+        </p>
+      </div>
+      <div class="achievements">
+        <h2 class="header-4">ACHIEVEMENTS</h2>
+        <p class="paragraf-3">{{$milestone->achievement}}</p>
+      </div>
+      <div class="environmental">
+        <h2 class="header-5">ENVIRONMENTAL OUTCOMES</h2>
+        <p class="paragraf-4">{{$milestone->environmental_outcomes}}
+        </p>
+        <p class="paragraf-5">{{$milestone->environmental_outcomes}}
+        </p>
       </div>
       <div class="jembatan">
         <img src="{{ asset('images/milestoneEco/Jembatan.svg') }}" />
