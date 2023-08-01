@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Milestone;
 
 class MilestoneController extends Controller
 {
@@ -12,19 +13,34 @@ class MilestoneController extends Controller
         return view("cms.page.milestone.milestone", ['title' => 'titel milestone']);
     }
 
+    // public function firstGenBS()
+    // {   
+    //     return view("cms.page.milestone.bs.firstGenBS", [
+    //         'title' => 'titel BS1',
+    //         'milestone' => Milestone::where('id', '2')->get()
+    //     ]);
+    // }
     public function firstGenBS()
     {   
-        return view("cms.page.milestone.bs.firstGenBS", ['title' => 'titel BS1']);
+        return view("cms.page.milestone.milestoneDetailBs", [
+            'title' => 'titel BS2',
+            'milestone' => Milestone::where('id', '1')->first()
+        ]);
     }
 
     public function secGenBS()
     {
-        return view("cms.page.milestone.bs.secGenBS", ['title' => 'titel BS2']);
+        return view("cms.page.milestone.bs.secGenBS", [
+            'title' => 'titel BS2',
+            'milestone' => Milestone::where('id', '2')->first()
+        ]);
     }
 
     public function thirdGenBS()
     {
-        return view("cms.page.milestone.bs.thirdGenBS", ['title' => 'titel BS3']);
+        return view("cms.page.milestone.bs.thirdGenBS", [
+            'title' => 'titel BS3'
+        ]);
     }
     public function fourthGenBS()
     {
