@@ -28,7 +28,7 @@ class QrHandlerController extends Controller
     {
         $qrCodeYangBenar = 'hmhisqouyi';
         if (Auth::guard('participant')->check()) {
-            if (strcmp($request->input('qrcode'), $qrCodeYangBenar) === 0) {
+            if (strcmp($request->input('qrcode'), $qrCodeYangBenar) === 0 && Auth::guard('participant')->user()->scanned == 0) {
                 $user = Auth::guard('participant')->user();
                 if ($user->credit > 0) {
                     $userNama = $user->nama;
