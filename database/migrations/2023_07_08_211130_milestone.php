@@ -16,6 +16,8 @@ class Milestone extends Migration
         Schema::create('milestones', function (Blueprint $table) {
             $table->id();
             $table->string("nama_organisasi");
+            $table->string("gen");
+            $table->string("tahun");
             $table->longText("overview");
             $table->string("program_1");
             $table->string("program_2");
