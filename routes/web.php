@@ -71,8 +71,6 @@ Route::group(['prefix' => 'milestone'], function() {
     });
 });
 
-Route::get('/milestonebanksampah', [MilestoneController::class, 'firstGenBS']);
-Route::get('/milestoneeco', [MilestoneController::class, 'eco']);
 //-------------------------------------------------------------------------------------------------------------------------
 
 
