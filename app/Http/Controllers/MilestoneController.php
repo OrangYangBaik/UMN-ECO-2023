@@ -31,33 +31,55 @@ class MilestoneController extends Controller
     {
         return view("cms.page.milestone.bs.milestoneDetailBs", [
             'title' => 'Bank Sampah Gen 3',
+            'milestone' => Milestone::where('id', '3')->first()
         ]);
     }
 
     public function fourthGenBS()
     {
-        return view("cms.page.milestone.bs.milestoneDetailBs", ['title' => 'Bank Sampah Gen 4',]);
+        return view("cms.page.milestone.bs.milestoneDetailBs", [
+            'title' => 'Bank Sampah Gen 4',
+            'milestone' => Milestone::where('id', '4')->first()
+        ]);
     }
+
     public function fifthGenBS()
     {
-        return view("cms.page.milestone.bs.milestoneDetailBs", ['title' => 'Bank Sampah Gen 5',]);
+        return view("cms.page.milestone.bs.milestoneDetailBs", [
+            'title' => 'Bank Sampah Gen 5',
+            'milestone' => Milestone::where('id', '5')->first()
+        ]);
     }
+
     public function sixthGenBS()
     {
-        return view("cms.page.milestone.bs.milestoneDetailBs", ['title' => 'Bank Sampah Gen 6',]);
+        return view("cms.page.milestone.bs.milestoneDetailBs", [
+            'title' => 'Bank Sampah Gen 6',
+            'milestone' => Milestone::where('id', '6')->first()
+        ]);
     }
 
 
     public function firstGenEco()
     {
-        return view("cms.page.milestone.eco.milestoneDetailEco", ['title' => 'UMN ECO Gen 1']);
+        return view("cms.page.milestone.eco.milestoneDetailEco", [
+            'title' => 'UMN ECO Gen 1',
+            'milestone' => Milestone::where('id', '7')->first()
+        ]);
     }
+
     public function secGenEco()
     {
-        return view("cms.page.milestone.eco.milestoneDetailEco", ['title' => 'UMN ECO Gen 2']);
+        return view("cms.page.milestone.eco.milestoneDetailEco", [
+            'title' => 'UMN ECO Gen 2',
+            'milestone' => Milestone::where('id', '8')->first()
+        ]);
     }
     public function thirdGenECO()
     {
-        return view("cms.page.milestone.eco.milestoneDetailEco", ['title' => 'UMN ECO Gen 3']);
+        return view("cms.page.milestone.eco.milestoneDetailEco", [
+            'title' => 'UMN ECO Gen 3',
+            'milestone' => Milestone::where('id', '9')->first()
+        ]);
     }
 }
