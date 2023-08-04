@@ -8,19 +8,19 @@ use App\Models\Team;
 class HomeController extends Controller
 {
     public function index(){
-        return view('cms.page.newlanding', ['title' => 'UMN ECO 2023 - Home'] );
+        return view('cms.page.newlanding', ['title' => 'Home'] );
     }
 
     public function ourteam(){
         return view('cms.page.oprecView', [
-            'title' => 'UMN ECO 2023 - Our Team',
+            'title' => 'Our Team',
             'teams' => Team::All()
         ]);
     }
 
     public function oprecthanks(){
         return view('cms.page.thanksOprec', [
-            'title' => 'UMN ECO 2023 - Thank You',
+            'title' => 'Thank You',
             'teams' => Team::All()
         ]);
     }

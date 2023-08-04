@@ -9,7 +9,7 @@ class MilestoneController extends Controller
 {
 
     public function index(){
-        return view("cms.page.milestone.milestone", ['title' => 'titel milestone']);
+        return view("cms.page.milestone.milestone", ['title' => 'Milestone']);
     }
 
     public function firstGenBS(){   
