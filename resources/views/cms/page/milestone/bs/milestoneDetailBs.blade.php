@@ -18,13 +18,12 @@
       </div>
       <div class="overview">
         <h2 class="header-2">OVERVIEW</h2>
-        <p>
-            {{$milestone->overview}}</p>
+          <p>
+              {{$milestone->overview}}</p>
       </div>
       <div class="programs">
         <h2 class="header-3">PROGRAMS</h2>
         <ul>
-            <li><span>“Chlorofeel”</span></li>
             <li class="li-2"><span>{{$milestone->program_1}}</span></li>
         </ul>
         <p class="paragraf-1">{{$milestone->keterangan_program_1}}</p>
@@ -32,7 +31,6 @@
             {{$milestone->keterangan_program_1}}
         </p>
         <ul>
-            <li><span>“Chlorofeel”</span></li>
             <li class="li-2"><span>{{$milestone->program_2}}</span></li>
         </ul>
         <p class="paragraf-1">{{$milestone->keterangan_program_2}}</p>
@@ -40,7 +38,6 @@
             {{$milestone->keterangan_program_2}}
         </p>
         <ul>
-            <li><span>“Chlorofeel”</span></li>
             <li class="li-2"><span>{{$milestone->program_3}}</span></li>
         </ul>
         <p class="paragraf-1">{{$milestone->keterangan_program_3}}</p>
@@ -55,8 +52,6 @@
       <div class="environmental">
         <h2 class="header-5">ENVIRONMENTAL OUTCOMES</h2>
         <p class="paragraf-4">{{$milestone->environmental_outcomes}}
-        </p>
-        <p class="paragraf-5">{{$milestone->environmental_outcomes}}
         </p>
       </div>
       <div class="jembatan">

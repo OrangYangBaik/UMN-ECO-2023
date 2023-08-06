@@ -1,12 +1,14 @@
 @font-face {
     font-family: bobbyjones;
-    src: url("{{ public('fonts/bobby-jones-soft.otf') }}") format("truetype");
+    src: url("{{ asset('fonts/bobby-jones-soft.otf') }}") format("truetype");
 }
 
 .tahun, .tahun-2, .tahun-3, .tahun-4, .tahun-5, .tahun-6, .tahun-7, .tahun-8 {
     font-family: bobbyjones;
 }
 
+h2 {all: unset;
+font-family: bobbyjones;}
 
 body {
     overflow-x: hidden;
@@ -44,9 +46,13 @@ body {
 
 .container-Bs .header-1 {
     z-index: 1;
+    text-align: center;
     position: absolute;
+    top: 5%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
     color: #F9F8DC;
-    font-size: 3.5vw;
+    font-size: 5vw !important;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -54,36 +60,37 @@ body {
     background: #458B95;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 2vw;
-    top: 13vw;
-    left: 23.5vw;
     letter-spacing: 0.5vw;
 }
 
 .container-Bs .header-2 {
     z-index: 1;
-    position: absolute;
     color: #284C3F;
     font-size: 3.5vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    top: 72vw;
-    left: 43vw;
     letter-spacing: 0.1vw;
 }
 
-.container-Bs .overview p {
-    position: absolute;
-    top: 80vw;
-    left: 26vw;
-    color: #284C3F;
+.container-Bs .overview {
     text-align: center;
+    position: absolute;
+    top: 25%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+
+}
+
+.container-Bs .overview p {
+    color: #284C3F;;
     font-family: Montserrat;
     font-size: 1.5vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     width: 50vw;
+    margin: auto;
 }
 
 .container-Bs .overview span {
@@ -92,47 +99,44 @@ body {
 
 .container-Bs .header-3 {
     z-index: 1;
-    position: absolute;
     color: #284C3F;
     font-size: 3.5vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    top: 100vw;
-    left: 42vw;
     letter-spacing: 0.1vw;
 }
 
 .container-Bs .header-4 {
     z-index: 1;
-    position: absolute;
-    color: #284C3F;
     font-size: 3.5vw;
+    color: #284C3F;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    top: 180vw;
-    left: 39vw;
     letter-spacing: 0.1vw;
 }
 
 .container-Bs .header-5 {
     z-index: 1;
-    position: absolute;
     color: #284C3F;
     font-size: 3.5vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    top: 210vw;
-    left: 30vw;
     letter-spacing: 0.1vw;
 }
 
-.container-Bs .programs p {
+.container-Bs .programs {
+    text-align: center;
     position: absolute;
-    top: 113vw;
-    left: 27vw;
+    top: 37%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+
+}
+
+.container-Bs .programs p {
     color: #284C3F;
     text-align: left;
     font-family: Montserrat;
@@ -141,12 +145,10 @@ body {
     font-weight: 500;
     line-height: normal;
     width: 50vw;
+    margin: auto;
 }
 
 .container-Bs .programs .paragraf-2 {
-    position: absolute;
-    top: 125vw;
-    left: 27vw;
     color: #284C3F;
     text-align: left;
     font-family: Montserrat;
@@ -155,12 +157,10 @@ body {
     font-weight: 500;
     line-height: normal;
     width: 50vw;
+    margin: auto;
 }
 
 .container-Bs .programs ul {
-    position: absolute;
-    top: 110vw;
-    left: 27vw;
     color: #284C3F;
     text-align: left;
     font-family: Montserrat;
@@ -169,12 +169,10 @@ body {
     font-weight: 500;
     line-height: normal;
     width: 50vw;
+    margin: auto;
 }
 
 .container-Bs .programs .li-2 {
-    position: absolute;
-    top: 12vw;
-    left: 10w;
     color: #284C3F;
     text-align: left;
     font-family: Montserrat;
@@ -183,16 +181,22 @@ body {
     font-weight: 500;
     line-height: normal;
     width: 50vw;
+    margin: auto;
 }
 
 .container-Bs .programs span {
     font-weight: 700;
 }
 
-.container-Bs .achievements .paragraf-3 {
+.container-Bs .achievements {
+    text-align: center;
     position: absolute;
-    top: 187vw;
-    left: 24vw;
+    top: 58%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
+.container-Bs .achievements .paragraf-3 {
     color: #284C3F;
     text-align: center;
     font-family: Montserrat;
@@ -201,26 +205,31 @@ body {
     font-weight: 500;
     line-height: normal;
     width: 50vw;
+    margin: auto;
+}
+
+.container-Bs .environmental {
+    text-align: center;
+    position: absolute;
+    top: 65%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+
 }
 
 .container-Bs .environmental .paragraf-4 {
-    position: absolute;
-    top: 217vw;
-    left: 22.5vw;
     color: #284C3F;
-    text-align: left;
+    text-align: center;
     font-family: Montserrat;
     font-size: 1.5vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 70vw;
+    width: 50vw;
+    margin: auto;
 }
 
 .container-Bs .environmental .paragraf-5 {
-    position: absolute;
-    top: 199vw;
-    left: 24.5vw;
     color: #284C3F;
     text-align: center;
     font-family: Montserrat;
@@ -229,13 +238,16 @@ body {
     font-weight: 500;
     line-height: normal;
     width: 50vw;
+    margin: auto;
 }
 
 .container-Bs .tahun {
     z-index: 1;
+    text-align: center;
     position: absolute;
-    top: 24vw;
-    left: 41.5vw;
+    top: 8%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
     padding: 0.5vw 2.5vw;
     border-radius: 41px;
     background: #83A9AC;

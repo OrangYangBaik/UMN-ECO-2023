@@ -8,6 +8,13 @@
     font-family: bobbyjones;
 }
 
+h2 {
+    margin-top: 0; 
+    margin-bottom: 1vw; 
+    font-weight: auto; 
+    line-height: auto;
+}
+
 
 /* * MEDIA QUERY */
 /* @media only screen and (max-width: 1024px) {
@@ -237,11 +244,20 @@ body{
 }
 
 /* GEN-1  */
+.container-milestone .gen-1 {
+    display: flex;
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 48%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    height: 100px;
+}
+
 .container-milestone .tong-sampah {
     position: absolute;
-    width: 7%;
-    left: 17vw;
-    top: 81vw;
+    left: -6vw;
+    top: 7vw;
+    width: 10%;
 }
 
 .container-milestone .tahun{
@@ -252,12 +268,9 @@ body{
     line-height: normal;
     margin: 1vw;
     margin-bottom: 0;
-    position: absolute;
-    bottom: 3vw;
-    left: 12vw;
 }
 
-.container-milestone .gen{
+.container-milestone .arrow-gen{
     color: #FFF;
     font-family: Montserrat;
     font-size: 1.3vw;
@@ -270,9 +283,6 @@ body{
     background: #78AA96;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
-    position: absolute;
-    left: 12vw;
-    top: 0.5vw;
 }
 
 .container-milestone .arrow{
@@ -292,10 +302,7 @@ body{
 }
 
 .container-milestone .teks-gen1{
-    position: absolute;
-    top: 77vw;
-    left: 25vw;
-    width: 15%;
+    width: 35%;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 0.88vw;
@@ -315,9 +322,7 @@ body{
 
 .container-milestone .text-gen1{
     display: flex;
-    position: relative;
-    left: 0vw;
-    top: 1vw;
+    align-items: end;
     width: 50vw;
 }
 
@@ -327,11 +332,20 @@ body{
 }
 
 /* GEN-2  */
+.container-milestone .gen-2{
+    display: flex;
+    position: absolute;
+    top: 55%;  /* position the top  edge of the element at the middle of the parent */
+    left: 78%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
+
 .container-milestone .tong-sampah-2 {
     position: absolute;
-    width: 8%;
-    right: 29vw;
-    top: 87vw;
+    left: 10vw;
+    top: -1vw;
+    width: 10%;
 }
 
 .container-milestone .tahun-2{
@@ -341,28 +355,21 @@ body{
     font-weight: 500;
     line-height: normal;
     margin: 1vw;
-    margin-bottom: 0;
-    position: absolute;
-    
+    margin-bottom: 0; 
 }
 
-.container-milestone .gen-2{
+.container-milestone .arrow-gen2{
     color: #FFF;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 1.5vw;
     margin-top: 0;
     border-radius: 10px;
     background: #78AA96;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
-    position: absolute;
-    left: -1vw;
-    top: 4vw;
-
 }
 
 
@@ -374,22 +381,16 @@ body{
 }
 
 .container-milestone .header-2{
-    position: absolute;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 1.5vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    top: 3vw;
-    left: 7vw;
 }
 
 .container-milestone .teks-gen2{
-    position: absolute;
-    top: 98vw;
-    right: 23vw;
-    width: 26%;
+    width: 48%;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 0.88vw;
@@ -413,9 +414,8 @@ body{
 
 .container-milestone .text-gen2{
     display: flex;
-    position: relative;
-    left: -0.5vw;
-    bottom: 6.5vw;
+    align-items: end;
+    width: 50vw;
 }
 
 .container-milestone .garis-2{
@@ -423,12 +423,22 @@ body{
     margin: 0.3vw 0.5vw
 }
 
+
 /* GEN-3 */
+.container-milestone .gen-3 {
+    display: flex;
+    position: absolute;
+    top: 64%;  /* position the top  edge of the element at the middle of the parent */
+    left: 48%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    height: 100px;
+}
+
 .container-milestone .tong-sampah-3 {
     position: absolute;
-    width: 12%;
-    left: 25vw;
-    top: 107vw;
+    top: -1vw;
+    left: 2vw;
+    width: 15%;
 }
 
 .container-milestone .tahun-3{
@@ -439,12 +449,9 @@ body{
     line-height: normal;
     margin: 1vw;
     margin-bottom: 0;
-    position: absolute;
-    bottom: 3vw;
-    left: 12.5vw;
 }
 
-.container-milestone .gen-3{
+.container-milestone .arrow-gen3{
     color: #FFF;
     font-family: Montserrat;
     font-size: 1.3vw;
@@ -457,10 +464,6 @@ body{
     background: #78AA96;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
-    position: absolute;
-    left: 12vw;
-    top: 0.5vw;
-
 }
 
 .container-milestone .arrow-3{
@@ -480,10 +483,7 @@ body{
 }
 
 .container-milestone .teks-gen3{
-    position: absolute;
-    top: 116vw;
-    left: 23vw;
-    width: 21%;
+    width: 40%;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 0.88vw;
@@ -503,9 +503,7 @@ body{
 
 .container-milestone .text-gen3{
     display: flex;
-    position: absolute;
-    left: 2vw;
-    top: -3vw;
+    align-items: end;
     width: 50vw;
 }
 
@@ -515,11 +513,19 @@ body{
 }
 
 /* GEN-4 */
+.container-milestone .gen-4{
+    display: flex;
+    position: absolute;
+    top: 73%;  /* position the top  edge of the element at the middle of the parent */
+    left: 87%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
 .container-milestone .tong-sampah-4 {
     position: absolute;
-    width: 8%;
-    right: 24vw;
-    top: 115vw;
+    left: 8vw;
+    width: 10%;
+    top: -1vw;
 }
 
 .container-milestone .tahun-4{
@@ -530,19 +536,15 @@ body{
     line-height: normal;
     margin: 1vw;
     margin-bottom: 0;
-    position: absolute;
-    bottom: 4vw;
-    left: 1vw;
 }
 
-.container-milestone .gen-4{
+.container-milestone .arrow-gen4{
     color: #FFF;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 1.5vw;
     margin-top: 0;
     border-radius: 10px;
     background: #78AA96;
@@ -565,16 +567,10 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    position: absolute;
-    left: 9vw;
-    bottom: 0.6vw;
 }
 
 .container-milestone .teks-gen4{
-    position: absolute;
-    top: 122vw;
-    right: 16vw;
-    width: 22%;
+    width: 38%;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 0.88vw;
@@ -598,10 +594,8 @@ body{
 
 .container-milestone .text-gen4{
     display: flex;
-    position: relative;
-    left: -1.5vw;
-    top: 1vw;
-    width: 50vw
+    align-items: end;
+    width: 50vw;
 }
 
 .container-milestone .text-part-4 {
@@ -614,19 +608,23 @@ body{
 }
 
 /* GEN-5 */
+.container-milestone .gen-5{
+    display: flex;
+    position: absolute;
+    top: 82%;  /* position the top  edge of the element at the middle of the parent */
+    left: 49%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
 
 .container-milestone .tong-sampah-5 {
     position: absolute;
-    width: 10%;
-    left: 25vw;
-    top: 128vw;
+    left: 2vw;
+    top: -1vw;
+    width: 12%;
 }
 
 .container-milestone .teks-gen5{
-    position: absolute;
-    top: 139vw;
-    left: 23vw;
-    width: 13%;
+    width: 25%;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 0.88vw;
@@ -646,9 +644,7 @@ body{
 
 .container-milestone .text-gen5{
     display: flex;
-    position: absolute;
-    left: 0vw;
-    bottom: 15vw;
+    align-items: end;
     width: 50vw;
 }
 
@@ -660,12 +656,9 @@ body{
     line-height: normal;
     margin: 1vw;
     margin-bottom: 0;
-    position: absolute;
-    left: 12vw;
-    bottom: -2vw;
 }
 
-.container-milestone .gen-5{
+.container-milestone .arrow-gen5{
     color: #FFF;
     font-family: Montserrat;
     font-size: 1.3vw;
@@ -678,9 +671,6 @@ body{
     background: #78AA96;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
-    position: absolute;
-    left: 12vw;
-    top: 1.5vw;
 }
 
 .container-milestone .arrow-5{
@@ -697,8 +687,6 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    position: absolute;
-    top: 1vw;
 }
 
 .container-milestone .text-part-5 {
@@ -711,11 +699,19 @@ body{
 }
 
 /* GEN-6 */
+.container-milestone .gen-6{
+    display: flex;
+    position: absolute;
+    top: 88%;  /* position the top  edge of the element at the middle of the parent */
+    left: 75%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
 .container-milestone .tong-sampah-6 {
     position: absolute;
-    width: 6%;
-    right: 35vw;
-    top: 139vw;
+    left: 10vw;
+    top: -4vw;
+    width: 10%;
 }
 
 .container-milestone .tahun-6{
@@ -726,28 +722,20 @@ body{
     line-height: normal;
     margin: 1vw;
     margin-bottom: 0;
-    position: absolute;
-    bottom: 7vw;
-    left: -1vw;
 }
 
-.container-milestone .gen-6{
+.container-milestone .arrow-gen6{
     color: #FFF;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0.4vw;
     margin-top: 0;
     border-radius: 10px;
     background: #78AA96;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
-    position: absolute;
-    left: -0.5vw;
-    bottom: 4.5vw;
-
 }
 
 .container-milestone .arrow-6{
@@ -760,20 +748,14 @@ body{
 .container-milestone .header-6{
     color: #284C3F;
     font-family: Montserrat;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    position: absolute;
-    bottom: 4.3vw;
-    left: 6.5vw;
 }
 
 .container-milestone .teks-gen6{
-    position: absolute;
-    top: 152vw;
-    right: 21vw;
-    width: 28%;
+    width: 49%;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 0.88vw;
@@ -797,9 +779,7 @@ body{
 
 .container-milestone .text-gen6{
     display: flex;
-    position: absolute;
-    left: 0;
-    top: 5vw;
+    align-items: end;
     width: 50vw;
 }
 
@@ -809,18 +789,23 @@ body{
 }
 
 /* GEN 7 */
+.container-milestone .gen-7 {
+    display: flex;
+    position: absolute;
+    top: 102%;  /* position the top  edge of the element at the middle of the parent */
+    left: 52%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
 .container-milestone .tong-sampah-7 {
     position: absolute;
-    width: 8%;
-    left: 28vw;
-    top: 160vw;
+    left: 2vw;
+    top: -1vw;
+    width: 11%;
 }
 
 .container-milestone .teks-gen7{
-    position: absolute;
-    top: 172vw;
-    left: 23vw;
-    width: 19%;
+    width: 35%;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 0.88vw;
@@ -840,9 +825,7 @@ body{
 
 .container-milestone .text-gen7{
     display: flex;
-    position: absolute;
-    left: 3vw;
-    top: 6vw;
+    align-items: end;
     width: 50vw;
 }
 
@@ -854,28 +837,20 @@ body{
     line-height: normal;
     margin: 1vw;
     margin-bottom: 0;
-    position: absolute;
-    bottom: 8.5vw;
-    left: 10vw;
 }
 
-.container-milestone .gen-7{
+.container-milestone .arrow-gen7{
     color: #FFF;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0.4vw;
     margin-top: 0;
     border-radius: 10px;
     background: #78AA96;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
-    position: absolute;
-    bottom: 6vw;
-    left: 10vw;
-
 }
 
 .container-milestone .arrow-7{
@@ -892,9 +867,6 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    position: absolute;
-    bottom: 6vw;
-    left: 1vw;
 }
 
 .container-milestone .garis{
@@ -903,11 +875,19 @@ body{
 }
 
 /* GEN 8 */
+.container-milestone .gen-8 {
+    display: flex;
+    position: absolute;
+    top: 110%;  /* position the top  edge of the element at the middle of the parent */
+    left: 83%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
 .container-milestone .tong-sampah-8 {
     position: absolute;
-    width: 7%;
-    right: 25vw;
-    top: 179vw;
+    left: 8vw;
+    top: -1vw;
+    width: 12%;
 }
 
 .container-milestone .tahun-8{
@@ -918,27 +898,20 @@ body{
     line-height: normal;
     margin: 1vw;
     margin-bottom: 0;
-    position: absolute;
-    bottom: 8vw;
-    left: 2vw;
 }
 
-.container-milestone .gen-8{
+.container-milestone .arrow-gen8{
     color: #FFF;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 0.4vw;
     margin-top: 0;
     border-radius: 10px;
     background: #78AA96;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25), 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
-    position: absolute;
-    bottom: 5vw;
-    left: 2vw;
 }
 
 .container-milestone .arrow-8{
@@ -955,16 +928,10 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    position: absolute;
-    bottom: 5vw;
-    left: 9.5vw;
 }
 
 .container-milestone .teks-gen8{
-    position: absolute;
-    top: 189vw;
-    right: 18vw;
-    width: 25%;
+    width: 45%;
     color: #284C3F;
     font-family: Montserrat;
     font-size: 0.88vw;
@@ -988,9 +955,7 @@ body{
 
 .container-milestone .text-gen8{
     display: flex;
-    position: absolute;
-    left: 0vw;
-    top: 5vw;
+    align-items: end;
     width: 50vw;
 }
 
