@@ -1,44 +1,52 @@
-@extends('admin.template.auth')
+@extends('cms.template.app')
 
-@section('container')
-    <div id="login-admin-container" class="d-flex align-items-center justify-content-center">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-light font-weight-bold">Login User</h1>
-                @if (session('status'))
-                    <div style="color:red; font-size:0.7em; margin:auto; text-align:center; margin-bottom:5px;">
-                        {{ session('status') }}
+
+@section('custom-css')
+    <link rel="stylesheet" href="{{ asset('css/cms/page/oprecForm.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cms/page/registration.css') }}">
+@endsection
+
+@section('content')
+    <div class="row form-regis container m-auto">
+        <div class="col-md-8 m-auto mt-5">
+            <h1 class="text-light font-weight-bold">Login User</h1>
+            @if (session('status'))
+                <div style="color:red; font-size:0.7em; margin:auto; text-align:center; margin-bottom:5px;">
+                    {{ session('status') }}
+                </div>
+            @endif
+
+            <form action="/loginUser" method="POST" id="form-login">
+                @csrf
+                <h5 class="mt-3">Nama Lengkap</h5>
+                <input type="text" placeholder="eco@student.umn.ac.id"
+                    class="form-control @error('email-student') is-invalid @enderror" id="email-student"
+                    name="email-student" value="{{ old('email-student') }}">
+                @error('email-student')
+                    <div class="invalid-feedback">
+                        {{ $message }}
                     </div>
-                @endif
-
-                <form action="/loginUser" method="post" class="user">
-                    @csrf
-                    <div class="form-group">
-                        <input type="email" class="form-control form-control-user" id="email" name="email" aria-describedby="emailHelp" placeholder="Email address">
-
-                        @error('email')
-                        <div style="color:red; font-size:0.7em; margin-left:20px; margin-top:10px;">
-                            {{ $message }}
-                        </div>
-                        @enderror
-
-                        </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
-
-                                @error('password')
-                                <div style="color:red; font-size:0.7em; margin-left:20px; margin-top:10px;">
-                                    {{ $message }}
-                                </div>
-                                @enderror
-                            </div>
-                            <button type="submit" class="btn btn-user btn-block">
-                                <span class="font-weight-bold text-white">Login</span>
-                            </button>
-                        </div>
+                @enderror
+                <h5 class="mt-3">Password</h5>
+                <input type="text" placeholder="Password" class="form-control @error('password') is-invalid @enderror"
+                    id="password" name="password" value="{{ old('password') }}">
+                @error('password')
+                    <div class="invalid-feedback">
+                        {{ $message }}
                     </div>
-                </form>
-            </div>
+                @enderror
+                <button id="btn-login" type="submit" class="btn btn-primary">
+                    <span class="font-weight-bold text-white">Login</span>
+                </button>
+
+            </form>
         </div>
     </div>
+    </div>
+@endsection
+
+@section('custom-js')
+    <script src="{{ asset('js/cms/page/jquery.validate.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="{{ asset('js/cms/page/event/loginUser.js') }}"></script>
 @endsection

@@ -11,9 +11,9 @@ use App\Models\Recruitment;
 class RecruitmentController extends Controller
 {
     public function index(Team $team){
+        $ecofriends = new Recruitment;
         return view('cms.page.recruitmentForm', [
-            $ecofriends = new Recruitment,
-            'title' => 'UMN ECO 2023 - Recruitment',
+            'title' => 'Recruitment',
             'team' => $team,
             'ecofriends' => $ecofriends->getAll()
         ]);
@@ -64,5 +64,4 @@ class RecruitmentController extends Controller
     //     ];
     //     Mail::to($data['Email'])->send(new RecruitmentMail($details));
     // }
-
 }

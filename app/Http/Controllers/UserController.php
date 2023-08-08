@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -23,16 +23,26 @@ class UserController extends Controller
 
     public function registerPage()
     {
-        return view('cms.page.event.registerUser',['title' => 'Register page']);
+        $ecofriends = new User;
+        return view('cms.page.event.registerUser', [
+            'title' => 'Register',
+            'ecofriends' => $ecofriends->All(),
+        ]);
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'Name' => 'required|regex:/[a-zA-Z]+$/x',
-            'NIM' => 'required|regex:/000000(\d{5})/|unique:recruitments,NIM',
-            'Email' => ['required','email:dns','regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:recruitments,Email'],
-            'Password' => 'required'
+            'name' => 'required|regex:/[a-zA-Z]+$/x',
+            'nim' => 'required|regex:/000000(\d{5})/|unique:recruitments,NIM',
+            'email-student' => ['required','email:dns','regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:recruitments,Email'],
+            'angkatan' => 'required',
+            'fakultas' => 'required',
+            'program-studi' => 'required',
+            'instagram' => 'required|unique:recruitments,Instagram_account',
+            'id-line' => 'required|unique:recruitments,Line_id',
+            'password' => 'required',
+            'confirmation-password' => 'required|same:password'
         ]);
         $user = new User();
         $user->nama = $request->Name;

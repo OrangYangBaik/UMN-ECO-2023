@@ -30,12 +30,20 @@ Route::get('/', [HomeController::class, 'index'])->name('landing');
 Route::get('/eco-fam', [EcoFamilyController::class, 'index'])->name('eco-fam');
 Route::get('/our-team', [HomeController::class, 'ourteam'])->name('our-team');
 
+// Login & Register user
+Route::get('/register', [UserController::class, 'registerPage'])->name('registerUser')->middleware('guest:participant');
+Route::post('/register', [UserController::class, 'store']);
+Route::get('/login', [UserController::class, 'loginPage'])->name('loginUser')->middleware('guest:participant');
+Route::post('/login', [UserController::class, 'login']);
+Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser');
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboardUser')->middleware('auth:participant');
+
 // Form Recruitment
-// Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
-// Route::get('/recruitmentForm/{team:subdivisi}-sub', [RecruitmentController::class, 'index'])->name('recruitmentFormSubdivisi');
-// Route::get('/recruitmentForm/{team:name}', [RecruitmentController::class, 'index'])->name('recruitmentForm');
-// Route::post('/recruitmentForm', [RecruitmentController::class, 'store']); // database
-// Route::post('/recruitmentForm', [SheetController::class, 'store']); // sheet
+Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
+Route::get('/recruitmentForm/{team:subdivisi}-sub', [RecruitmentController::class, 'index'])->name('recruitmentFormSubdivisi');
+Route::get('/recruitmentForm/{team:name}', [RecruitmentController::class, 'index'])->name('recruitmentForm');
+Route::post('/recruitmentForm', [RecruitmentController::class, 'store']); // database
+Route::post('/recruitmentForm', [SheetController::class, 'store']); // sheet
 
 // After OPREC
 // Route::get('/oprec-thanks', [HomeController::class, 'oprecthanks'])->name('oprec-thanks');
@@ -96,15 +104,6 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/setting', [AdminController::class, 'setting'])->name('admin-setting')->middleware('auth:web');
     Route::get('/change-status', [AdminController::class, 'changeStatus'])->name('admin-setting-change-status')->middleware('auth:web');
 });
-
-// Login & Register user
-Route::get('/registerUser', [UserController::class, 'registerPage'])->name('registerUser')->middleware('guest:participant');
-Route::post('/registerUser', [UserController::class, 'store']);
-
-Route::get('/loginUser', [UserController::class, 'loginPage'])->name('loginUser')->middleware('guest:participant');
-Route::post('/loginUser', [UserController::class, 'login']);
-Route::post('/logoutUser', [UserController::class, 'logout'])->name('logoutUser');
-Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('dashboardUser')->middleware('auth:participant');
 
 
 // tes scan qr
