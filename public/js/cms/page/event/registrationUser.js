@@ -26,9 +26,13 @@ $(document).ready(function () {
         "Email harus menggunakan email student atau email dari UMN"
     );
 
-    jQuery.validator.addMethod("correct_nim_umn", function (value, element) {
-        return this.optional(element) || /^000000[0-9]+$/.test(value);
-    });
+    jQuery.validator.addMethod(
+        "correct_nim_umn",
+        function (value, element) {
+            return this.optional(element) || /^000000[0-9]+$/.test(value);
+        },
+        "NIM yang Anda masukkan salah!"
+    );
 
     jQuery.validator.addMethod(
         "unique_nim",

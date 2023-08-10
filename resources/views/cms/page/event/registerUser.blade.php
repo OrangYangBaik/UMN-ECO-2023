@@ -140,6 +140,21 @@
                 '{{ $e->nim }}',
             @endforeach
         ];
+        var email_list = [
+            @foreach ($ecofriends as $e)
+                '{{ $e->email }}',
+            @endforeach
+        ];
+        var instagram_list = [
+            @foreach ($ecofriends as $e)
+                '{{ $e->instagram }}',
+            @endforeach
+        ];
+        var line_list = [
+            @foreach ($ecofriends as $e)
+                '{{ $e->line }}',
+            @endforeach
+        ];
 
         $(".button-submit").on("click",
             function(e) {
