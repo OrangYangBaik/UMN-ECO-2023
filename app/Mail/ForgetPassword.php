@@ -28,9 +28,9 @@ class ForgetPassword extends Mailable
      */
     public function build()
     {
-        return $this->subject('VERIFICATION CODE')->view('cms.page.Downpour.forgetPassword', [
-            'full_name' => $this->full_name,
-            'token' => $this->token
-        ]);
+        // return $this->subject('VERIFICATION CODE')->view('cms.page.Downpour.forgetPassword', [
+        //     'full_name' => $this->full_name,
+        //     'token' => $this->token
+        // ]);
     }
 }

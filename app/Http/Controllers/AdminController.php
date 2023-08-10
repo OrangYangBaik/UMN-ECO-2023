@@ -11,12 +11,12 @@ use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\RecruitmentExport;
 use App\Exports\RecruitmentAllExport;
-use App\Exports\droughtExport;
-use App\Exports\downpourExport;
-use App\Exports\downpourExportAll;
-use App\Models\DownpourUser;
-use App\Models\DroughtRegistration;
-use App\Models\Drought_bingo;
+// use App\Exports\droughtExport;
+// use App\Exports\downpourExport;
+// use App\Exports\downpourExportAll;
+// use App\Models\DownpourUser;
+// use App\Models\DroughtRegistration;
+// use App\Models\Drought_bingo;
 use App\Models\Settings;
 use Illuminate\Support\Facades\DB;
 
@@ -123,19 +123,22 @@ class AdminController extends Controller
         ]);
     }
     
-    public function increaseCreditPoints(Request $request)
+    public function increaseCreditPoints(Request $request, $userId, $point)
      {
-        // Find the user based on some identifier (e.g., user ID or email)
-        // $user = User::where('id', $userId)->first();
+        $request->validate([
+            'point' => 'required|numeric',
+        ]);
+
+        $user = User::where('id', $userId)->first();
      
-        // if ($user) {
-        //     $increasePoints = 10;
-        //     $user->credit_points += $increasePoints;
-        //     $user->save();
+        if ($user) {
+            $user->credit_points += $point;
+            $user->scanned = false;
+            $user->save();
      
-        //     return response()->json(['success' => true]);
-        // } else {
-        //     return response()->json(['success' => false, 'message' => 'User not found']);
-        // }
+            return response()->json(['success' => true]);
+        } else {
+            return response()->json(['success' => false, 'message' => 'User not found']);
+        }
      }
 }
