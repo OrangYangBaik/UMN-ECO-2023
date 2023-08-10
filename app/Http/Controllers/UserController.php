@@ -44,6 +44,7 @@ class UserController extends Controller
             'password' => 'required',
             'confirmation-password' => 'required|same:password'
         ]);
+        
         $user = new User();
         $user->nama = $request->Name;
         $user->nim = $request->NIM;

@@ -9,7 +9,7 @@
 @section('content')
     <div class="row form-regis container m-auto">
         <div class="col-md-8 m-auto mt-5">
-            <form action="/registerUser" method="POST" id="form-register" style="width:80%; margin:auto">
+            <form action="/register" method="POST" id="form-register" style="width:80%; margin:auto">
                 @csrf
 
                 <h5 class="mt-3">Nama Lengkap</h5>
