@@ -17,7 +17,12 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('nama');
             $table->string('nim');
+            $table->string('angkatan');
+            $table->string('fakultas');
+            $table->string('prodi');
             $table->string('email')->unique();
+            $table->string('line');
+            $table->string('instagram');
             $table->string('password');
             $table->boolean('wehea')->default(false);
             $table->boolean('meru_betiri')->default(false);
