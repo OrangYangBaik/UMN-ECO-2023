@@ -6,7 +6,7 @@
 
 @section('content')
     @foreach ($requester as $user)
-        <form action="{{ route('add.points', ['userId' => $user->id]) }}" method="post">
+        <form action="{{ route('add.points', ['userId' => $user->id, 'point' => $point]) }}" method="post">
             @csrf
             <h3>Nama: {{ $user->nama }}</h3>
             <h3>NIM: {{ $user->nim }}</h3>

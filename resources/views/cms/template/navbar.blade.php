@@ -31,9 +31,11 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false"> {{ Auth::guard('participant')->user()->nama }}</a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('logoutUser') }}"
-                                        style="padding-right:10px;">Logout</a>
+                                <li class="menu__item">
+                                    <form id="logout-form" action="{{ route('logoutUser') }}" method="post">
+                                        @csrf
+                                        <button type="submit" class="menu__link" style="border: none; background: none; cursor: pointer;">Logout</button>
+                                    </form>
                                 </li>
                             </ul>
                         </li>
@@ -78,15 +80,11 @@
                 <a class="menu__link" href="">
                     {{ Auth::guard('participant')->user()->nama }}</a>
             </li>
-            {{-- <li class="menu__item">
-                @if (DB::table('downpour_users')->where('id', Auth::guard('downpour')->id())->value('activity_booth_1') === null)
-                    <div class="menu__link button-go-to-stamp-not-registered" style="cursor: pointer;">Stamp</div>
-                @else
-                    <a class="menu__link" href="{{ route('ticketDownpour') }}">Stamp</a>
-                @endif
-            </li> --}}
             <li class="menu__item">
-                <a class="menu__link" href="{{ route('logoutUser') }}">Logout</a>
+                <form id="logout-form" action="{{ route('logoutUser') }}" method="post">
+                    @csrf
+                    <button type="submit" class="menu__link" style="border: none; background: none; cursor: pointer;">Logout</button>
+                </form>
             </li>
         @else
             <li class="menu__item">

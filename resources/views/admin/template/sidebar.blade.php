@@ -8,12 +8,6 @@
         <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Open Recruitment">
             <a href="{{ route('dashboardOprec') }}"><img  src="{{ asset('images/home/umn-eco-logo.png')}}" alt=""></a>
         </div>
-        <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Drought">
-            <a href="{{ route('dashboardDrought') }}"><img src="{{ asset('images/drought-logo.png')}}" alt=""></a>
-        </div>
-        <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Downpour">
-            <a href="{{ route('dashboardDownpour') }}"><img src="{{ asset('images/downpour-logo.png')}}" alt=""></a>
-        </div>
         <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Features">
             <a href="{{ route('dashboardFeatures') }}"><img src="{{ asset('images/setting.png')}}" alt=""></a>
         </div>

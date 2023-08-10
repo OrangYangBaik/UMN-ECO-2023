@@ -16,7 +16,7 @@
                 </div>
             @endif
 
-            <form action="/loginUser" method="POST" id="form-login">
+            <form action="/login" method="POST" id="form-login">
                 @csrf
                 <h5 class="mt-3">Nama Lengkap</h5>
                 <input type="text" placeholder="eco@student.umn.ac.id"
@@ -28,7 +28,7 @@
                     </div>
                 @enderror
                 <h5 class="mt-3">Password</h5>
-                <input type="text" placeholder="Password" class="form-control @error('password') is-invalid @enderror"
+                <input type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror"
                     id="password" name="password" value="{{ old('password') }}">
                 @error('password')
                     <div class="invalid-feedback">
