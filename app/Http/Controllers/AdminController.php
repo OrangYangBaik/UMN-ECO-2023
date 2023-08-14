@@ -116,7 +116,7 @@ class AdminController extends Controller
         }
     }
 
-    public function verificationPoint(Request $request){
+    public function verificationPoint(){
         return view('admin.page.verificationPointAdmin', [
             'title' => 'daftar yang ngescan',
             'requester' => User::where('scanned', true)->get()

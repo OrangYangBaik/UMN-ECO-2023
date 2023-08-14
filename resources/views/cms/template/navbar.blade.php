@@ -28,13 +28,15 @@
 
                     @if (Auth::guard('participant')->user())
                         <li class="nav-item dropdown col-4 col-md-auto text-center">
+                            <?php $array = explode(' ', Auth::guard('participant')->user()->nama, 2); ?>
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                                aria-expanded="false"> {{ Auth::guard('participant')->user()->nama }}</a>
+                                aria-expanded="false"> {{ $array[0] }}</a>
                             <ul class="dropdown-menu">
                                 <li class="menu__item">
                                     <form id="logout-form" action="{{ route('logoutUser') }}" method="post">
                                         @csrf
-                                        <button type="submit" class="menu__link" style="border: none; background: none; cursor: pointer;">Logout</button>
+                                        <button type="submit" class="menu__link"
+                                            style="border: none; background: none; cursor: pointer;">Logout</button>
                                     </form>
                                 </li>
                             </ul>
@@ -83,7 +85,8 @@
             <li class="menu__item">
                 <form id="logout-form" action="{{ route('logoutUser') }}" method="post">
                     @csrf
-                    <button type="submit" class="menu__link" style="border: none; background: none; cursor: pointer;">Logout</button>
+                    <button type="submit" class="menu__link"
+                        style="border: none; background: none; cursor: pointer;">Logout</button>
                 </form>
             </li>
         @else
