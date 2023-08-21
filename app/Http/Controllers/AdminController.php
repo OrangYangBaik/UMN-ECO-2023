@@ -123,22 +123,41 @@ class AdminController extends Controller
         ]);
     }
     
-    public function increaseCreditPoints(Request $request, $userId, $point)
-     {
+    public function increaseCreditPoints(Request $request)
+    {
         $request->validate([
+            'userId' => 'required',
             'point' => 'required|numeric',
         ]);
 
-        $user = User::where('id', $userId)->first();
-     
+        $user = User::findOrFail($request->input('userId'));
+
         if ($user) {
-            $user->credit_points += $point;
+            $user->credit_points += $request->input('point');
             $user->scanned = false;
             $user->save();
-     
+
             return response()->json(['success' => true]);
         } else {
             return response()->json(['success' => false, 'message' => 'User not found']);
         }
-     }
+    }
+    // public function increaseCreditPoints(Request $request, $userId, $point)
+    //  {
+    //     $request->validate([
+    //         'point' => 'required|numeric',
+    //     ]);
+
+    //     $user = User::where('id', $userId)->first();
+     
+    //     if ($user) {
+    //         $user->credit_points += $point;
+    //         $user->scanned = false;
+    //         $user->save();
+     
+    //         return response()->json(['success' => true]);
+    //     } else {
+    //         return response()->json(['success' => false, 'message' => 'User not found']);
+    //     }
+    //  }
 }
