@@ -4,17 +4,23 @@
     src: url("{{ public('fonts/bobby-jones-soft.otf') }}") format("truetype");
 }
 
-.tahun, .tahun-2, .tahun-3, .tahun-4, .tahun-5, .tahun-6, .tahun-7, .tahun-8 {
+.tahun,
+.tahun-2,
+.tahun-3,
+.tahun-4,
+.tahun-5,
+.tahun-6,
+.tahun-7,
+.tahun-8 {
     font-family: bobbyjones;
 }
 
 h2 {
-    margin-top: 0; 
-    margin-bottom: 1vw; 
-    font-weight: auto; 
+    margin-top: 0;
+    margin-bottom: 1vw;
+    font-weight: auto;
     line-height: auto;
 }
-
 
 /* * MEDIA QUERY */
 /* @media only screen and (max-width: 1024px) {
@@ -23,19 +29,24 @@ h2 {
     }
   } */
 
-  :root{
-    --bobby-jones: 'bobby-jones-soft-regular', sans-serif;
-    --montserrat: 'Montserrat', sans-serif;
+:root {
+    --bobby-jones: "bobby-jones-soft-regular", sans-serif;
+    --montserrat: "Montserrat", sans-serif;
 }
 
-body{
-    overflow-x: hidden;
+.container-milestone {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.container-milestone::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 /* CSS MARIO */
 .container-milestone {
     width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 .container-milestone .bg-utama {
@@ -46,11 +57,11 @@ body{
     right: 0;
     width: 101vw;
     height: 60vw;
-    background: linear-gradient(180deg, #F79735 23%, #F9F1DC 100%);
+    background: linear-gradient(180deg, #f79735 23%, #f9f1dc 100%);
     /* display: none; */
 }
 
-.container-milestone  .gradasi-bg {
+.container-milestone .gradasi-bg {
     z-index: 0;
     position: absolute;
     top: -1vw;
@@ -58,7 +69,14 @@ body{
     right: 0;
     width: 101vw;
     height: 60vw;
-    background: linear-gradient(180deg, rgba(154, 205, 224, 0.90) 0%, rgba(157.25, 228.47, 255, 0.90) 0%, rgba(221, 237, 236, 0.90) 19%, rgba(255, 220.56, 129.62, 0.90) 54%, rgba(247, 176, 85, 0.90) 97%);
+    background: linear-gradient(
+        180deg,
+        rgba(154, 205, 224, 0.9) 0%,
+        rgba(157.25, 228.47, 255, 0.9) 0%,
+        rgba(221, 237, 236, 0.9) 19%,
+        rgba(255, 220.56, 129.62, 0.9) 54%,
+        rgba(247, 176, 85, 0.9) 97%
+    );
     /* display: none; */
 }
 
@@ -69,8 +87,13 @@ body{
     left: -1vw;
     right: 0;
     width: 101vw;
-    height: 250vw;
-    background: linear-gradient(180deg, #E5DBB1 0%, #B7CD85 84.38%, #B3D66B 100%);
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        #e5dbb1 0%,
+        #b7cd85 84.38%,
+        #b3d66b 100%
+    );
     /* display: none; */
 }
 
@@ -214,29 +237,72 @@ body{
 }
 /* CSS MARIO */
 
-.container-milestone .bambu-kiri{
+.container-milestone .bambu-kiri {
     width: 25%;
     position: absolute;
     left: -11vw;
-    top: 60vw
+    top: 60vw;
 }
 
+.container-milestone .bambu-kiri img {
+    width: 100%;
+}
 
-.container-milestone .bambu-kanan {
+.container-milestone .bambu-kiri-dua {
+    display: none;
+}
+
+.container-milestone .bambu-kiri-tiga {
+    display: none;
+}
+
+.container-milestone .bambu-kiri-empat {
+    display: none;
+}
+
+.container-milestone .bambu-kanan{
     width: 25%;
     position: absolute;
     right: -11vw;
-    top: 60vw
+    top: 60vw;
 }
 
-.container-milestone .sungai{
+.container-milestone .bambu-kanan-dua {
+    display: none;
+}
+
+.container-milestone .bambu-kanan-tiga {
+    display: none;
+}
+
+.container-milestone .bambu-kanan-empat {
+    display: none;
+}
+
+.container-milestone .bambu-kanan img{
+    width: 59.8%;
+}
+
+.container-milestone .bambu-kanan-dua img{
+    width: 59.8%;
+}
+
+.container-milestone .bambu-kanan-tiga img{
+    width: 59.8%;
+}
+
+.container-milestone .bambu-kanan-empat img{
+    width: 59.8%;
+}
+
+.container-milestone .sungai {
     width: 35%;
     position: relative;
     top: 53vw;
     left: 37vw;
-}  
+}
 
-.container-milestone .gps{
+.container-milestone .gps {
     width: 15%;
     position: absolute;
     top: 25vw;
@@ -247,7 +313,7 @@ body{
 .container-milestone .gen-1 {
     display: flex;
     position: absolute;
-    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    top: 50%; /* position the top  edge of the element at the middle of the parent */
     left: 48%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
     height: 100px;
@@ -260,8 +326,8 @@ body{
     width: 10%;
 }
 
-.container-milestone .tahun{
-    color: #49734D;
+.container-milestone .tahun {
+    color: #49734d;
     font-size: 3vw;
     font-style: normal;
     font-weight: 500;
@@ -270,8 +336,8 @@ body{
     margin-bottom: 0;
 }
 
-.container-milestone .arrow-gen{
-    color: #FFF;
+.container-milestone .arrow-gen {
+    color: #fff;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -280,20 +346,21 @@ body{
     margin: 0.4vw;
     margin-top: 0;
     border-radius: 10px;
-    background: #78AA96;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #78aa96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
 }
 
-.container-milestone .arrow{
+.container-milestone .arrow {
     width: 0.6vw;
     height: auto;
     margin-left: 0.5vw;
     flex-shrink: 0;
 }
 
-.container-milestone .header-1{
-    color: #284C3F;
+.container-milestone .header-1 {
+    color: #284c3f;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -301,45 +368,45 @@ body{
     line-height: normal;
 }
 
-.container-milestone .teks-gen1{
+.container-milestone .teks-gen1 {
     width: 35%;
-    color: #284C3F;
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-top: 2rem;
 }
 
-.container-milestone .teks-gen1 span{
-    color: #284C3F;
+.container-milestone .teks-gen1 span {
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.container-milestone .text-gen1{
+.container-milestone .text-gen1 {
     display: flex;
     align-items: end;
     width: 50vw;
 }
 
-.container-milestone .garis{
+.container-milestone .garis {
     width: 1.3vw;
     margin: 0.3vw 0.3vw;
 }
 
 /* GEN-2  */
-.container-milestone .gen-2{
+.container-milestone .gen-2 {
     display: flex;
     position: absolute;
-    top: 55%;  /* position the top  edge of the element at the middle of the parent */
-    left: 78%; /* position the left edge of the element at the middle of the parent */
+    top: 55%; /* position the top  edge of the element at the middle of the parent */
+    left: 80%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
 }
-
 
 .container-milestone .tong-sampah-2 {
     position: absolute;
@@ -348,18 +415,18 @@ body{
     width: 10%;
 }
 
-.container-milestone .tahun-2{
-    color: #49734D;
+.container-milestone .tahun-2 {
+    color: #49734d;
     font-size: 2.8vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     margin: 1vw;
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
-.container-milestone .arrow-gen2{
-    color: #FFF;
+.container-milestone .arrow-gen2 {
+    color: #fff;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -367,21 +434,21 @@ body{
     line-height: normal;
     margin-top: 0;
     border-radius: 10px;
-    background: #78AA96;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #78aa96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
 }
 
-
-.container-milestone .arrow-2{
+.container-milestone .arrow-2 {
     width: 0.6vw;
     height: auto;
     margin-left: 0.5vw;
     flex-shrink: 0;
 }
 
-.container-milestone .header-2{
-    color: #284C3F;
+.container-milestone .header-2 {
+    color: #284c3f;
     font-family: Montserrat;
     font-size: 1.5vw;
     font-style: normal;
@@ -389,46 +456,45 @@ body{
     line-height: normal;
 }
 
-.container-milestone .teks-gen2{
+.container-milestone .teks-gen2 {
     width: 48%;
-    color: #284C3F;
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.container-milestone .teks-gen2 span{
-    color: #284C3F;
+.container-milestone .teks-gen2 span {
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 1vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.container-milestone .teks-gen2 .italic{
+.container-milestone .teks-gen2 .italic {
     font-style: italic;
 }
 
-.container-milestone .text-gen2{
+.container-milestone .text-gen2 {
     display: flex;
     align-items: end;
     width: 50vw;
 }
 
-.container-milestone .garis-2{
+.container-milestone .garis-2 {
     width: 1.3vw;
-    margin: 0.3vw 0.5vw
+    margin: 0.3vw 0.5vw;
 }
-
 
 /* GEN-3 */
 .container-milestone .gen-3 {
     display: flex;
     position: absolute;
-    top: 64%;  /* position the top  edge of the element at the middle of the parent */
+    top: 64%; /* position the top  edge of the element at the middle of the parent */
     left: 48%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
     height: 100px;
@@ -441,8 +507,8 @@ body{
     width: 15%;
 }
 
-.container-milestone .tahun-3{
-    color: #49734D;
+.container-milestone .tahun-3 {
+    color: #49734d;
     font-size: 2.8vw;
     font-style: normal;
     font-weight: 500;
@@ -451,8 +517,8 @@ body{
     margin-bottom: 0;
 }
 
-.container-milestone .arrow-gen3{
-    color: #FFF;
+.container-milestone .arrow-gen3 {
+    color: #fff;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -461,20 +527,21 @@ body{
     margin: 0.6vw;
     margin-top: 0;
     border-radius: 10px;
-    background: #78AA96;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #78aa96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
 }
 
-.container-milestone .arrow-3{
+.container-milestone .arrow-3 {
     width: 0.6vw;
     height: auto;
     margin-left: 0.5vw;
     flex-shrink: 0;
 }
 
-.container-milestone .header-3{
-    color: #284C3F;
+.container-milestone .header-3 {
+    color: #284c3f;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -482,41 +549,41 @@ body{
     line-height: normal;
 }
 
-.container-milestone .teks-gen3{
+.container-milestone .teks-gen3 {
     width: 40%;
-    color: #284C3F;
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.container-milestone .teks-gen3 span{
-    color: #284C3F;
+.container-milestone .teks-gen3 span {
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.container-milestone .text-gen3{
+.container-milestone .text-gen3 {
     display: flex;
     align-items: end;
     width: 50vw;
 }
 
-.container-milestone .garis-3{
+.container-milestone .garis-3 {
     width: 1.3vw;
-    margin: 0.3vw 0.4vw
+    margin: 0.3vw 0.4vw;
 }
 
 /* GEN-4 */
-.container-milestone .gen-4{
+.container-milestone .gen-4 {
     display: flex;
     position: absolute;
-    top: 73%;  /* position the top  edge of the element at the middle of the parent */
+    top: 73%; /* position the top  edge of the element at the middle of the parent */
     left: 87%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
 }
@@ -528,8 +595,8 @@ body{
     top: -1vw;
 }
 
-.container-milestone .tahun-4{
-    color: #49734D;
+.container-milestone .tahun-4 {
+    color: #49734d;
     font-size: 3vw;
     font-style: normal;
     font-weight: 500;
@@ -538,8 +605,8 @@ body{
     margin-bottom: 0;
 }
 
-.container-milestone .arrow-gen4{
-    color: #FFF;
+.container-milestone .arrow-gen4 {
+    color: #fff;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -547,21 +614,21 @@ body{
     line-height: normal;
     margin-top: 0;
     border-radius: 10px;
-    background: #78AA96;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #78aa96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
-
 }
 
-.container-milestone .arrow-4{
+.container-milestone .arrow-4 {
     width: 0.6vw;
     height: auto;
     margin-left: 0.5vw;
     flex-shrink: 0;
 }
 
-.container-milestone .header-4{
-    color: #284C3F;
+.container-milestone .header-4 {
+    color: #284c3f;
     font-family: Montserrat;
     font-size: 1.5vw;
     font-style: normal;
@@ -569,30 +636,30 @@ body{
     line-height: normal;
 }
 
-.container-milestone .teks-gen4{
+.container-milestone .teks-gen4 {
     width: 38%;
-    color: #284C3F;
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.container-milestone .teks-gen4 span{
-    color: #284C3F;
+.container-milestone .teks-gen4 span {
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.container-milestone .teks-gen4 .italic{
+.container-milestone .teks-gen4 .italic {
     font-style: italic;
 }
 
-.container-milestone .text-gen4{
+.container-milestone .text-gen4 {
     display: flex;
     align-items: end;
     width: 50vw;
@@ -602,16 +669,16 @@ body{
     display: flex;
 }
 
-.container-milestone .garis-4{
+.container-milestone .garis-4 {
     width: 1.3vw;
     margin: 0.3vw 0.1vw;
 }
 
 /* GEN-5 */
-.container-milestone .gen-5{
+.container-milestone .gen-5 {
     display: flex;
     position: absolute;
-    top: 82%;  /* position the top  edge of the element at the middle of the parent */
+    top: 82%; /* position the top  edge of the element at the middle of the parent */
     left: 49%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
 }
@@ -623,33 +690,33 @@ body{
     width: 12%;
 }
 
-.container-milestone .teks-gen5{
-    width: 25%;
-    color: #284C3F;
+.container-milestone .teks-gen5 {
+    width: 30%;
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.container-milestone .teks-gen5 span{
-    color: #284C3F;
+.container-milestone .teks-gen5 span {
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.container-milestone .text-gen5{
+.container-milestone .text-gen5 {
     display: flex;
     align-items: end;
-    width: 50vw;
+    width: 55vw;
 }
 
-.container-milestone .tahun-5{
-    color: #49734D;
+.container-milestone .tahun-5 {
+    color: #49734d;
     font-size: 3vw;
     font-style: normal;
     font-weight: 500;
@@ -658,8 +725,8 @@ body{
     margin-bottom: 0;
 }
 
-.container-milestone .arrow-gen5{
-    color: #FFF;
+.container-milestone .arrow-gen5 {
+    color: #fff;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -668,20 +735,21 @@ body{
     margin: 0.4vw;
     margin-top: 0;
     border-radius: 10px;
-    background: #78AA96;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #78aa96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
 }
 
-.container-milestone .arrow-5{
+.container-milestone .arrow-5 {
     width: 0.6vw;
     height: auto;
     margin-left: 0.5vw;
     flex-shrink: 0;
 }
 
-.container-milestone .header-5{
-    color: #284C3F;
+.container-milestone .header-5 {
+    color: #284c3f;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -693,17 +761,17 @@ body{
     display: flex;
 }
 
-.container-milestone .garis-5{
+.container-milestone .garis-5 {
     width: 1.3vw;
     margin: 0.3vw 0.3vw;
 }
 
 /* GEN-6 */
-.container-milestone .gen-6{
+.container-milestone .gen-6 {
     display: flex;
     position: absolute;
-    top: 88%;  /* position the top  edge of the element at the middle of the parent */
-    left: 75%; /* position the left edge of the element at the middle of the parent */
+    top: 88%; /* position the top  edge of the element at the middle of the parent */
+    left: 77%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
 }
 
@@ -714,8 +782,8 @@ body{
     width: 10%;
 }
 
-.container-milestone .tahun-6{
-    color: #49734D;
+.container-milestone .tahun-6 {
+    color: #49734d;
     font-size: 3vw;
     font-style: normal;
     font-weight: 500;
@@ -724,8 +792,8 @@ body{
     margin-bottom: 0;
 }
 
-.container-milestone .arrow-gen6{
-    color: #FFF;
+.container-milestone .arrow-gen6 {
+    color: #fff;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -733,20 +801,21 @@ body{
     line-height: normal;
     margin-top: 0;
     border-radius: 10px;
-    background: #78AA96;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #78aa96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
 }
 
-.container-milestone .arrow-6{
+.container-milestone .arrow-6 {
     width: 0.6vw;
     height: auto;
     margin-left: 0.5vw;
     flex-shrink: 0;
 }
 
-.container-milestone .header-6{
-    color: #284C3F;
+.container-milestone .header-6 {
+    color: #284c3f;
     font-family: Montserrat;
     font-size: 1.5vw;
     font-style: normal;
@@ -754,36 +823,36 @@ body{
     line-height: normal;
 }
 
-.container-milestone .teks-gen6{
+.container-milestone .teks-gen6 {
     width: 49%;
-    color: #284C3F;
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.container-milestone .teks-gen6 span{
-    color: #284C3F;
+.container-milestone .teks-gen6 span {
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.container-milestone .teks-gen6 .italic{
+.container-milestone .teks-gen6 .italic {
     font-style: italic;
 }
 
-.container-milestone .text-gen6{
+.container-milestone .text-gen6 {
     display: flex;
     align-items: end;
     width: 50vw;
 }
 
-.container-milestone .garis-6{
+.container-milestone .garis-6 {
     width: 1.3vw;
     margin: 0.3vw 0.3vw;
 }
@@ -792,7 +861,7 @@ body{
 .container-milestone .gen-7 {
     display: flex;
     position: absolute;
-    top: 102%;  /* position the top  edge of the element at the middle of the parent */
+    top: 102%; /* position the top  edge of the element at the middle of the parent */
     left: 52%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
 }
@@ -804,33 +873,33 @@ body{
     width: 11%;
 }
 
-.container-milestone .teks-gen7{
+.container-milestone .teks-gen7 {
     width: 35%;
-    color: #284C3F;
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.container-milestone .teks-gen7 span{
-    color: #284C3F;
+.container-milestone .teks-gen7 span {
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.container-milestone .text-gen7{
+.container-milestone .text-gen7 {
     display: flex;
     align-items: end;
     width: 50vw;
 }
 
-.container-milestone .tahun-7{
-    color: #49734D;
+.container-milestone .tahun-7 {
+    color: #49734d;
     font-size: 3vw;
     font-style: normal;
     font-weight: 500;
@@ -839,8 +908,8 @@ body{
     margin-bottom: 0;
 }
 
-.container-milestone .arrow-gen7{
-    color: #FFF;
+.container-milestone .arrow-gen7 {
+    color: #fff;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -848,20 +917,21 @@ body{
     line-height: normal;
     margin-top: 0;
     border-radius: 10px;
-    background: #78AA96;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #78aa96;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
 }
 
-.container-milestone .arrow-7{
+.container-milestone .arrow-7 {
     width: 0.6vw;
     height: auto;
     margin-left: 0.5vw;
     flex-shrink: 0;
 }
 
-.container-milestone .header-7{
-    color: #284C3F;
+.container-milestone .header-7 {
+    color: #284c3f;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -869,7 +939,7 @@ body{
     line-height: normal;
 }
 
-.container-milestone .garis{
+.container-milestone .garis {
     width: 1.3vw;
     margin: 0.3vw 0.3vw;
 }
@@ -878,8 +948,8 @@ body{
 .container-milestone .gen-8 {
     display: flex;
     position: absolute;
-    top: 110%;  /* position the top  edge of the element at the middle of the parent */
-    left: 83%; /* position the left edge of the element at the middle of the parent */
+    top: 110%; /* position the top  edge of the element at the middle of the parent */
+    left: 86%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
 }
 
@@ -890,8 +960,8 @@ body{
     width: 12%;
 }
 
-.container-milestone .tahun-8{
-    color: #49734D;
+.container-milestone .tahun-8 {
+    color: #49734d;
     font-size: 3vw;
     font-style: normal;
     font-weight: 500;
@@ -900,8 +970,8 @@ body{
     margin-bottom: 0;
 }
 
-.container-milestone .arrow-gen8{
-    color: #FFF;
+.container-milestone .arrow-gen8 {
+    color: #fff;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -909,20 +979,21 @@ body{
     line-height: normal;
     margin-top: 0;
     border-radius: 10px;
-    background: #78AA96;
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25), 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    background: #78aa96;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.25);
     padding: 0.5vw 0.6vw;
 }
 
-.container-milestone .arrow-8{
+.container-milestone .arrow-8 {
     width: 0.6vw;
     height: auto;
     margin-left: 0.5vw;
     flex-shrink: 0;
 }
 
-.container-milestone .header-8{
-    color: #284C3F;
+.container-milestone .header-8 {
+    color: #284c3f;
     font-family: Montserrat;
     font-size: 1.3vw;
     font-style: normal;
@@ -930,41 +1001,1048 @@ body{
     line-height: normal;
 }
 
-.container-milestone .teks-gen8{
+.container-milestone .teks-gen8 {
     width: 45%;
-    color: #284C3F;
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.container-milestone .teks-gen8 span{
-    color: #284C3F;
+.container-milestone .teks-gen8 span {
+    color: #284c3f;
     font-family: Montserrat;
-    font-size: 0.88vw;
+    font-size: 1.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.container-milestone .teks-gen8 .italic{
+.container-milestone .teks-gen8 .italic {
     font-style: italic;
 }
 
-.container-milestone .text-gen8{
+.container-milestone .text-gen8 {
     display: flex;
     align-items: end;
     width: 50vw;
 }
 
-.container-milestone .garis-8{
+.container-milestone .garis-8 {
     width: 1.3vw;
     margin: 0.3vw 0.3vw;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
+    .container-milestone {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        max-width: 768px;
+    }
+
+    .container-milestone .bg-utama {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 768px;
+        height: 1000px;
+        background: linear-gradient(180deg, #f79735 23%, #f9f1dc 100%);
+        /* display: none; */
+    }
+
+    .container-milestone .gradasi-bg {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 768px;
+        height: 1000px;
+        background: linear-gradient(
+            180deg,
+            rgba(154, 205, 224, 0.9) 0%,
+            rgba(157.25, 228.47, 255, 0.9) 0%,
+            rgba(221, 237, 236, 0.9) 19%,
+            rgba(255, 220.56, 129.62, 0.9) 54%,
+            rgba(247, 176, 85, 0.9) 97%
+        );
+        /* display: none; */
+    }
+
+    .container-milestone .gradasi-bg-2 {
+        z-index: 0;
+        position: absolute;
+        top: 37rem;
+        left: 0;
+        right: 0;
+        width: 768px;
+        height: 3380px;
+        background: linear-gradient(
+            180deg,
+            #e5dbb1 0%,
+            #b7cd85 84.38%,
+            #b3d66b 100%
+        );
+        /* display: none; */
+    }
+
+    .container-milestone .eco-temple {
+        z-index: 4;
+        width: 450px;
+        position: absolute;
+        top: 6.1rem;
+        left: 10rem;
+    }
+
+    .container-milestone .daun-3 {
+        z-index: 6;
+        width: 165px;
+        position: absolute;
+        transform: rotate(-8deg);
+        top: 29rem;
+        left: 19rem;
+    }
+
+    .container-milestone .bush-1-belakang {
+        z-index: 5;
+        position: absolute;
+        width: 610px;
+        top: 32rem;
+        left: 5.5rem;
+    }
+
+    .container-milestone .bush-1-depan {
+        z-index: 7;
+        position: absolute;
+        width: 240px;
+        top: 33.5rem;
+        left: 17.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-2-kanan {
+        z-index: 8;
+        position: absolute;
+        width: 180px;
+        top: 29.5rem;
+        left: 29rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-2-kiri {
+        z-index: 8;
+        position: absolute;
+        width: 180px;
+        top: 29.5rem;
+        left: 8em;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-3-kanan {
+        z-index: 9;
+        position: absolute;
+        width: 280px;
+        top: 35.5rem;
+        left: 28rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-3-kiri {
+        z-index: 9;
+        position: absolute;
+        width: 280px;
+        top: 35.8rem;
+        left: 3.3rem;
+        /* display: none; */
+    }
+
+    .container-milestone .palm-tree-kanan {
+        z-index: 3;
+        position: absolute;
+        width: 170px;
+        top: 17.5rem;
+        left: 33rem;
+        transform: rotate(-3deg);
+        /* display: none; */
+    }
+
+    .container-milestone .palm-tree-kiri {
+        z-index: 3;
+        position: absolute;
+        width: 170px;
+        top: 17.5rem;
+        left: 4.5rem;
+        transform: rotate(3deg);
+        /* display: none; */
+    }
+
+    .container-milestone .rumput-laut-kanan {
+        z-index: 2;
+        position: absolute;
+        width: 115px;
+        top: 24rem;
+        left: 37.5rem;
+        transform: rotate(10deg);
+        /* display: none; */
+    }
+
+    .container-milestone .rumput-laut-kiri {
+        z-index: 2;
+        position: absolute;
+        width: 115px;
+        top: 24rem;
+        left: 3.5rem;
+        transform: rotate(-10deg);
+        /* display: none; */
+    }
+
+    .container-milestone .siluet-temple {
+        z-index: 1;
+        position: absolute;
+        width: 768px;
+        top: 14rem;
+        left: 0;
+        mix-blend-mode: multiply;
+    }
+
+    .container-milestone .bush-1-depan-kiri {
+        z-index: 3;
+        position: absolute;
+        width: 310px;
+        top: 35rem;
+        left: -11rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-depan-kanan {
+        z-index: 3;
+        position: absolute;
+        width: 310px;
+        top: 35rem;
+        left: 41rem;
+        /* display: none; */
+    }
+
+    /* CSS MARIO */
+
+    .container-milestone .bambu-kiri {
+        width: 30%;
+        position: absolute;
+        left: -7rem;
+        top: 37rem;
+    }
+
+    .container-milestone .bambu-kiri-dua {
+        width: 30%;
+        position: absolute;
+        left: -112px;
+        top: 142rem;
+        display: block;
+    }
+    
+    .container-milestone .bambu-kiri-tiga {
+        display: none;
+    }
+
+    .container-milestone .bambu-kiri-empat {
+        display: none;
+    }
+
+    .container-milestone .bambu-kanan{
+        width: 30%;
+        top: 37rem;
+        right: -15vw;
+    }
+
+    .container-milestone .bambu-kanan-dua {
+        width: 30%;
+        position: absolute;
+        right: -115px;
+        top: 142rem;
+        display: block;
+    }
+    
+    .container-milestone .bambu-kanan-tiga {
+        display: none;
+    }
+    
+    .container-milestone .bambu-kanan-empat {
+        display: none;
+    }
+
+
+    .container-milestone .sungai {
+        width: 80%;
+        position: relative;
+        top: 29rem;
+        left: 11rem;
+        opacity: 30%;
+    }
+
+    .container-milestone .gps {
+        width: 60px;
+        position: absolute;
+        top: 31rem;
+        left: 15rem;
+    }
+
+    /* GEN-1  */
+    .container-milestone .gen-1 {
+        display: flex;
+        position: absolute;
+        top: 49rem; /* position the top  edge of the element at the middle of the parent */
+        left: 24rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah {
+        position: absolute;
+        left: 3%;
+        top: 0rem;
+        width: 15%;
+    }
+
+    .container-milestone .tahun {
+        color: #49734d;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow {
+        width: 15px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-1 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen1 {
+        width: 33rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen1 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen1 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-2  */
+    .container-milestone .gen-2 {
+        display: flex;
+        position: absolute;
+        top: 74rem; /* position the top  edge of the element at the middle of the parent */
+        left: 24rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah-2 {
+        position: absolute;
+        left: 13rem;
+        top: -2rem;
+        width: 20%;
+    }
+
+    .container-milestone .tahun-2 {
+        color: #49734d;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen2 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-2 {
+        width: 15px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-2 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen2 {
+        width: 33rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen2 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen2 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen2 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-2 {
+        width: 16px;
+        margin: 0.3vw 0.5vw;
+    }
+
+    /* GEN-3 */
+    .container-milestone .gen-3 {
+        display: flex;
+        position: absolute;
+        top: 99rem; /* position the top  edge of the element at the middle of the parent */
+        left: 24rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah-3 {
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        width: 25%;
+    }
+
+    .container-milestone .tahun-3 {
+        color: #49734d;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen3 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-3 {
+        width: 15px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-3 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen3 {
+        width: 33rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen3 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen3 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-3 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-4 */
+    .container-milestone .gen-4 {
+        display: flex;
+        position: absolute;
+        top: 124rem; /* position the top  edge of the element at the middle of the parent */
+        left: 24rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-4 {
+        position: absolute;
+        left: 13rem;
+        width: 20%;
+        top: -2rem;
+    }
+
+    .container-milestone .tahun-4 {
+        color: #49734d;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen4 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-4 {
+        width: 15px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-4 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen4 {
+        width: 33rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen4 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen4 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen4 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .text-part-4 {
+        display: flex;
+    }
+
+    .container-milestone .garis-4 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* GEN-5 */
+    .container-milestone .gen-5 {
+        display: flex;
+        position: absolute;
+        top: 149rem; /* position the top  edge of the element at the middle of the parent */
+        left: 24rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-5 {
+        position: absolute;
+        left: 2rem;
+        top: -1rem;
+        width: 25%;
+    }
+
+    .container-milestone .teks-gen5 {
+        width: 33rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen5 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen5 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .tahun-5 {
+        color: #49734d;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 25px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen5 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 75%;
+    }
+
+    .container-milestone .arrow-5 {
+        width: 15px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-5 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .text-part-5 {
+        display: flex;
+    }
+
+    .container-milestone .garis-5 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-6 */
+    .container-milestone .gen-6 {
+        display: flex;
+        position: absolute;
+        top: 174rem; /* position the top  edge of the element at the middle of the parent */
+        left: 24rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-6 {
+        position: absolute;
+        left: 11rem;
+        top: -4rem;
+        width: 15%;
+    }
+
+    .container-milestone .tahun-6 {
+        color: #49734d;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen6 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-6 {
+        width: 15px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-6 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen6 {
+        width: 33rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen6 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen6 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen6 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-6 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* GEN 7 */
+    .container-milestone .gen-7 {
+        display: flex;
+        position: absolute;
+        top: 204rem; /* position the top  edge of the element at the middle of the parent */
+        left: 24rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-7 {
+        position: absolute;
+        left: 2rem;
+        top: -3rem;
+        width: 25%;
+    }
+
+    .container-milestone .teks-gen7 {
+        width: 33rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen7 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen7 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .tahun-7 {
+        color: #49734d;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 25px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen7 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 75%;
+    }
+
+    .container-milestone .arrow-7 {
+        width: 15px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-7 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .garis-7 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN 8 */
+    .container-milestone .gen-8 {
+        display: flex;
+        position: absolute;
+        top: 234rem; /* position the top  edge of the element at the middle of the parent */
+        left: 24rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-8 {
+        position: absolute;
+        left: 11rem;
+        top: -4rem;
+        width: 25%;
+    }
+
+    .container-milestone .tahun-8 {
+        color: #49734d;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen8 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25),
+            0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-8 {
+        width: 15px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-8 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen8 {
+        width: 33rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen8 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen8 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen8 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-8 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
     /* .bambu-kiri{
         min-width: 30%;
         left: -15%;
@@ -974,6 +2052,3148 @@ body{
         min-width: 30%;
         right: -15%;
     } */
-  }
+}
+
+@media only screen and (max-width: 468px) {
+    .container-milestone {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .container-milestone .bg-utama {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1000px;
+        background: linear-gradient(180deg, #f79735 23%, #f9f1dc 100%);
+        /* display: none; */
+    }
+
+    .container-milestone .gradasi-bg {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1000px;
+        background: linear-gradient(
+            180deg,
+            rgba(154, 205, 224, 0.9) 0%,
+            rgba(157.25, 228.47, 255, 0.9) 0%,
+            rgba(221, 237, 236, 0.9) 19%,
+            rgba(255, 220.56, 129.62, 0.9) 54%,
+            rgba(247, 176, 85, 0.9) 97%
+        );
+        /* display: none; */
+    }
+
+    .container-milestone .gradasi-bg-2 {
+        z-index: 0;
+        position: absolute;
+        top: 26rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2565px;
+        background: linear-gradient(
+            180deg,
+            #e5dbb1 0%,
+            #b7cd85 84.38%,
+            #b3d66b 100%
+        );
+        /* display: none; */
+    }
+
+    .container-milestone .eco-temple {
+        z-index: 4;
+        width: 280px;
+        position: absolute;
+        top: 7rem;
+        left: 6rem;
+    }
+
+    .container-milestone .daun-3 {
+        z-index: 6;
+        width: 100px;
+        position: absolute;
+        transform: rotate(-8deg);
+        top: 21.3rem;
+        left: 11.8rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-belakang {
+        z-index: 5;
+        position: absolute;
+        width: 354px;
+        top: 23rem;
+        left: 3.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-depan {
+        z-index: 7;
+        position: absolute;
+        width: 145px;
+        top: 24rem;
+        left: 11rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-2-kanan {
+        z-index: 8;
+        position: absolute;
+        width: 105px;
+        top: 21.5rem;
+        left: 17.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-2-kiri {
+        z-index: 8;
+        position: absolute;
+        width: 105px;
+        top: 21.5rem;
+        left: 5.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-3-kanan {
+        z-index: 9;
+        position: absolute;
+        width: 170px;
+        top: 25.2rem;
+        left: 16.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-3-kiri {
+        z-index: 9;
+        position: absolute;
+        width: 170px;
+        top: 25rem;
+        left: 2.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .palm-tree-kanan {
+        z-index: 3;
+        position: absolute;
+        width: 120px;
+        top: 14.3rem;
+        left: 20rem;
+        transform: rotate(-3deg);
+        /* display: none; */
+    }
+
+    .container-milestone .palm-tree-kiri {
+        z-index: 3;
+        position: absolute;
+        width: 120px;
+        top: 14.5rem;
+        left: 2.1rem;
+        transform: rotate(3deg);
+        /* display: none; */
+    }
+
+    .container-milestone .rumput-laut-kanan {
+        z-index: 2;
+        position: absolute;
+        width: 70px;
+        top: 18.5rem;
+        left: 23.5rem;
+        transform: rotate(10deg);
+        /* display: none; */
+    }
+
+    .container-milestone .rumput-laut-kiri {
+        z-index: 2;
+        position: absolute;
+        width: 70px;
+        top: 18.5rem;
+        left: 1.5rem;
+        transform: rotate(-10deg);
+        /* display: none; */
+    }
+
+    .container-milestone .siluet-temple {
+        z-index: 1;
+        position: absolute;
+        width: 468px;
+        top: 12rem;
+        left: 0;
+        mix-blend-mode: multiply;
+    }
+
+    .container-milestone .bush-1-depan-kiri {
+        z-index: 3;
+        position: absolute;
+        width: 180px;
+        top: 24.3rem;
+        left: -6.2rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-depan-kanan {
+        z-index: 3;
+        position: absolute;
+        width: 180px;
+        top: 24.3rem;
+        left: 24.1rem;
+        /* display: none; */
+    }
+
+    /* CSS MARIO */
+
+    .container-milestone .bambu-kiri {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 26rem;
+    }
+
+    .container-milestone .bambu-kiri-dua {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 79rem;
+        display: block;
+    }
+
+    .container-milestone .bambu-kiri-tiga {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 132rem;
+        display: block;
+    }
+
+    .container-milestone .bambu-kiri-empat {
+        display: none;
+    }
 
 
+    
+    .container-milestone .bambu-kanan{
+        top: 26rem;
+        width: 25%;
+        right: -11vw;
+    }
+
+    .container-milestone .bambu-kanan-dua {
+        width: 25%;
+        position: absolute;
+        right: -51px;
+        top: 79rem;
+        display: block;
+    }
+    
+    .container-milestone .bambu-kanan-tiga {
+        width: 25%;
+        position: absolute;
+        right: -51px;
+        top: 132rem;
+        display: block;
+    }
+
+    .container-milestone .bambu-kanan-empat {
+        display: none;
+    }
+
+    .container-milestone .sungai {
+        width: 100%;
+        position: relative;
+        top: 22rem;
+        left: 4rem;
+        opacity: 30%;
+    }
+
+    .container-milestone .gps {
+        width: 50px;
+        position: absolute;
+        top: 15rem;
+        left: 17rem;
+    }
+
+    /* GEN-1  */
+    .container-milestone .gen-1 {
+        display: flex;
+        position: absolute;
+        top: 37rem; /* position the top  edge of the element at the middle of the parent */
+        left: 16rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah {
+        position: absolute;
+        left: 3%;
+        top: -1rem;
+        width: 18%;
+    }
+
+    .container-milestone .tahun {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-1 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen1 {
+        width: 21rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen1 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen1 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-2  */
+    .container-milestone .gen-2 {
+        display: flex;
+        position: absolute;
+        top: 56rem; /* position the top  edge of the element at the middle of the parent */
+        left: 16rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah-2 {
+        position: absolute;
+        left: 3%;
+        top: -1rem;
+        width: 18%;
+    }
+
+    .container-milestone .tahun-2 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen2 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-2 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-2 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen2 {
+        width: 21rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen2 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen2 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen2 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-2 {
+        width: 16px;
+        margin: 0.3vw 0.5vw;
+    }
+
+    /* GEN-3 */
+    .container-milestone .gen-3 {
+        display: flex;
+        position: absolute;
+        top: 74rem; /* position the top  edge of the element at the middle of the parent */
+        left: 16rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah-3 {
+        position: absolute;
+        top: -1rem;
+        left: 1rem;
+        width: 25%;
+    }
+
+    .container-milestone .tahun-3 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen3 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-3 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-3 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen3 {
+        width: 21rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen3 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen3 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-3 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-4 */
+    .container-milestone .gen-4 {
+        display: flex;
+        position: absolute;
+        top: 94rem; /* position the top  edge of the element at the middle of the parent */
+        left: 16rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-4 {
+        position: absolute;
+        left: 8rem;
+        width: 20%;
+        top: -1rem;
+    }
+
+    .container-milestone .tahun-4 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen4 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-4 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-4 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen4 {
+        width: 21rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen4 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen4 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen4 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .text-part-4 {
+        display: flex;
+    }
+
+    .container-milestone .garis-4 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* GEN-5 */
+    .container-milestone .gen-5 {
+        display: flex;
+        position: absolute;
+        top: 112rem; /* position the top  edge of the element at the middle of the parent */
+        left: 16rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-5 {
+        position: absolute;
+        left: 2rem;
+        top: 0;
+        width: 20%;
+    }
+
+    .container-milestone .teks-gen5 {
+        width: 21rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen5 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen5 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .tahun-5 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 25px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen5 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 75%;
+    }
+
+    .container-milestone .arrow-5 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-5 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .text-part-5 {
+        display: flex;
+    }
+
+    .container-milestone .garis-5 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-6 */
+    .container-milestone .gen-6 {
+        display: flex;
+        position: absolute;
+        top: 132rem; /* position the top  edge of the element at the middle of the parent */
+        left: 16rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-6 {
+        position: absolute;
+        left: 8rem;
+        top: -2rem;
+        width: 15%;
+    }
+
+    .container-milestone .tahun-6 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen6 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-6 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-6 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen6 {
+        width: 20rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen6 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen6 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen6 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-6 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* GEN 7 */
+    .container-milestone .gen-7 {
+        display: flex;
+        position: absolute;
+        top: 152rem; /* position the top  edge of the element at the middle of the parent */
+        left: 15.5rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-7 {
+        position: absolute;
+        left: 2rem;
+        top: -1rem;
+        width: 20%;
+    }
+
+    .container-milestone .teks-gen7 {
+        width: 20rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen7 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen7 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .tahun-7 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen7 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-7 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-7 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .garis-7 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN 8 */
+    .container-milestone .gen-8 {
+        display: flex;
+        position: absolute;
+        top: 172rem; /* position the top  edge of the element at the middle of the parent */
+        left: 16rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-8 {
+        position: absolute;
+        left: 11rem;
+        top: -1rem;
+        width: 20%;
+    }
+
+    .container-milestone .tahun-8 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen8 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25),
+            0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-8 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-8 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen8 {
+        width: 21rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen8 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen8 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen8 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-8 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* .bambu-kiri{
+        min-width: 30%;
+        left: -15%;
+    }
+
+    .bambu-kanan{
+        min-width: 30%;
+        right: -15%;
+    } */
+}
+
+@media only screen and (max-width: 428px) {
+    .container-milestone {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    
+    .container-milestone .rumah-temple {
+        position: absolute;
+        left: 2px;
+    }
+
+    .container-milestone .bg-utama {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1000px;
+        background: linear-gradient(180deg, #f79735 23%, #f9f1dc 100%);
+        /* display: none; */
+    }
+
+    .container-milestone .gradasi-bg {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1000px;
+        background: linear-gradient(
+            180deg,
+            rgba(154, 205, 224, 0.9) 0%,
+            rgba(157.25, 228.47, 255, 0.9) 0%,
+            rgba(221, 237, 236, 0.9) 19%,
+            rgba(255, 220.56, 129.62, 0.9) 54%,
+            rgba(247, 176, 85, 0.9) 97%
+        );
+        /* display: none; */
+    }
+
+    .container-milestone .gradasi-bg-2 {
+        z-index: 0;
+        position: absolute;
+        top: 23rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2380px;
+        background: linear-gradient(
+            180deg,
+            #e5dbb1 0%,
+            #b7cd85 84.38%,
+            #b3d66b 100%
+        );
+        /* display: none; */
+    }
+
+    .container-milestone .eco-temple {
+        z-index: 4;
+        width: 237px;
+        position: absolute;
+        top: 8rem;
+        left: 6rem;
+    }
+
+    .container-milestone .daun-3 {
+        z-index: 6;
+    width: 90px;
+    position: absolute;
+    transform: rotate(-8deg);
+    top: 20rem;
+    left: 10.6rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-belakang {
+        z-index: 5;
+        position: absolute;
+        width: 313px;
+        top: 21.5rem;
+        left: 3.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-depan {
+        z-index: 7;
+        position: absolute;
+        width: 110px;
+        top: 22.4rem;
+        left: 10.3rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-2-kanan {
+        z-index: 8;
+        position: absolute;
+        width: 90px;
+        top: 20.3rem;
+        left: 16rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-2-kiri {
+        z-index: 8;
+        position: absolute;
+        width: 90px;
+        top: 20.3rem;
+        left: 5.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-3-kanan {
+        z-index: 9;
+    position: absolute;
+    width: 150px;
+    top: 23.3rem;
+    left: 15.3rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-3-kiri {
+        z-index: 9;
+    position: absolute;
+    width: 150px;
+    top: 23.4rem;
+    left: 2.7rem;
+        /* display: none; */
+    }
+
+    .container-milestone .palm-tree-kanan {
+        z-index: 3;
+    position: absolute;
+    width: 90px;
+    top: 14.3rem;
+    left: 18rem;
+    transform: rotate(-3deg);
+        /* display: none; */
+    }
+
+    .container-milestone .palm-tree-kiri {
+        z-index: 3;
+        position: absolute;
+        width: 90px;
+        top: 14.3rem;
+        left: 3.1rem;
+        transform: rotate(3deg);
+        /* display: none; */
+    }
+
+    .container-milestone .rumput-laut-kanan {
+        z-index: 2;
+    position: absolute;
+    width: 60px;
+    top: 17.5rem;
+    left: 20.5rem;
+    transform: rotate(10deg);
+        /* display: none; */
+    }
+
+    .container-milestone .rumput-laut-kiri {
+        z-index: 2;
+        position: absolute;
+        width: 60px;
+        top: 17.5rem;
+        left: 2.6rem;
+        transform: rotate(-10deg);
+        /* display: none; */
+    }
+
+    .container-milestone .siluet-temple {
+        z-index: 1;
+        position: absolute;
+        width: 425px;
+        top: 11.8rem;
+        left: 0;
+        mix-blend-mode: multiply;
+    }
+
+    .container-milestone .bush-1-depan-kiri {
+        z-index: 3;
+    position: absolute;
+    width: 150px;
+    top: 23rem;
+    left: -5.1rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-depan-kanan {
+        z-index: 3;
+        position: absolute;
+        width: 150px;
+        top: 22.9rem;
+        left: 23rem;
+        /* display: none; */
+    }
+
+    /* CSS MARIO */
+
+    .container-milestone .bambu-kiri {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 24rem;
+    }
+
+    .container-milestone .bambu-kiri-dua {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 72rem;
+    }
+
+    .container-milestone .bambu-kiri-tiga {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 121rem;
+    }
+
+    .container-milestone .bambu-kanan {
+        width: 25%;
+        position: absolute;
+        right: -51px;
+        top: 24rem;
+        }
+
+    .container-milestone .bambu-kanan-dua {
+        top: 72rem;
+    }
+
+    .container-milestone .bambu-kanan-tiga {
+        top: 121rem;
+    }
+
+
+    .container-milestone .sungai {
+        width: 100%;
+        position: relative;
+        top: 20rem;
+        left: 5rem;
+        opacity: 30%;
+    }
+
+    .container-milestone .gps {
+        width: 50px;
+        position: absolute;
+        top: 13rem;
+        left: 15rem;
+    }
+
+    /* GEN-1  */
+    .container-milestone .gen-1 {
+        display: flex;
+        position: absolute;
+        top: 32rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah {
+        position: absolute;
+        left: 3%;
+        top: 0;
+        width: 18%;
+    }
+
+    .container-milestone .tahun {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-1 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen1 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen1 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen1 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-2  */
+    .container-milestone .gen-2 {
+        display: flex;
+        position: absolute;
+        top: 48rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem;
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah-2 {
+        position: absolute;
+        left: 6rem;
+        top: 0;
+        width: 18%;
+    }
+
+    .container-milestone .tahun-2 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen2 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-2 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-2 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen2 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen2 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen2 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen2 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-2 {
+        width: 16px;
+        margin: 0.3vw 0.5vw;
+    }
+
+    /* GEN-3 */
+    .container-milestone .gen-3 {
+        display: flex;
+        position: absolute;
+        top: 64rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem;        
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah-3 {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        width: 25%;
+    }
+
+    .container-milestone .tahun-3 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen3 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-3 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-3 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen3 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen3 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen3 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-3 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-4 */
+    .container-milestone .gen-4 {
+        display: flex;
+        position: absolute;
+        top: 80rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-4 {
+        position: absolute;
+        left: 8rem;
+        width: 25%;
+        top: -2rem;
+    }
+
+    .container-milestone .tahun-4 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen4 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-4 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-4 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen4 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen4 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen4 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen4 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .text-part-4 {
+        display: flex;
+    }
+
+    .container-milestone .garis-4 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* GEN-5 */
+    .container-milestone .gen-5 {
+        display: flex;
+        position: absolute;
+        top: 96rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-5 {
+        position: absolute;
+        left: 2rem;
+        top: 0;
+        width: 20%;
+    }
+
+    .container-milestone .teks-gen5 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen5 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen5 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .tahun-5 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 25px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen5 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 75%;
+    }
+
+    .container-milestone .arrow-5 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-5 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .text-part-5 {
+        display: flex;
+    }
+
+    .container-milestone .garis-5 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-6 */
+    .container-milestone .gen-6 {
+        display: flex;
+        position: absolute;
+        top: 115rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-6 {
+        position: absolute;
+        left: 8rem;
+        top: -2rem;
+        width: 15%;
+    }
+
+    .container-milestone .tahun-6 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen6 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-6 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-6 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen6 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen6 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen6 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen6 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-6 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* GEN 7 */
+    .container-milestone .gen-7 {
+        display: flex;
+        position: absolute;
+        top: 133rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-7 {
+        position: absolute;
+        left: 2rem;
+        top: -1rem;
+        width: 20%;
+    }
+
+    .container-milestone .teks-gen7 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen7 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen7 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .tahun-7 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen7 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-7 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-7 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .garis-7 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN 8 */
+    .container-milestone .gen-8 {
+        display: flex;
+        position: absolute;
+        top: 154rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-8 {
+        position: absolute;
+        left: 8rem;
+        top: -1rem;
+        width: 20%;
+    }
+
+    .container-milestone .tahun-8 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen8 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25),
+            0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-8 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-8 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen8 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen8 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen8 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen8 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-8 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .container-milestone {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 1858px;
+    }
+    
+    .container-milestone .rumah-temple {
+        position: absolute;
+        left: -12px;
+    }
+
+    .container-milestone .bg-utama {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1000px;
+        background: linear-gradient(180deg, #f79735 23%, #f9f1dc 100%);
+        /* display: none; */
+    }
+
+    .container-milestone .gradasi-bg {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1000px;
+        background: linear-gradient(
+            180deg,
+            rgba(154, 205, 224, 0.9) 0%,
+            rgba(157.25, 228.47, 255, 0.9) 0%,
+            rgba(221, 237, 236, 0.9) 19%,
+            rgba(255, 220.56, 129.62, 0.9) 54%,
+            rgba(247, 176, 85, 0.9) 97%
+        );
+        /* display: none; */
+    }
+
+    .container-milestone .gradasi-bg-2 {
+        z-index: 0;
+        position: absolute;
+        top: 23rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 2380px;
+        background: linear-gradient(
+            180deg,
+            #e5dbb1 0%,
+            #b7cd85 84.38%,
+            #b3d66b 100%
+        );
+        /* display: none; */
+    }
+
+    .container-milestone .eco-temple {
+        z-index: 4;
+        width: 237px;
+        position: absolute;
+        top: 8rem;
+        left: 6rem;
+    }
+
+    .container-milestone .daun-3 {
+        z-index: 6;
+    width: 90px;
+    position: absolute;
+    transform: rotate(-8deg);
+    top: 20rem;
+    left: 10.6rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-belakang {
+        z-index: 5;
+        position: absolute;
+        width: 313px;
+        top: 21.5rem;
+        left: 3.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-depan {
+        z-index: 7;
+        position: absolute;
+        width: 110px;
+        top: 22.4rem;
+        left: 10.3rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-2-kanan {
+        z-index: 8;
+        position: absolute;
+        width: 90px;
+        top: 20.3rem;
+        left: 16rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-2-kiri {
+        z-index: 8;
+        position: absolute;
+        width: 90px;
+        top: 20.3rem;
+        left: 5.5rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-3-kanan {
+        z-index: 9;
+    position: absolute;
+    width: 150px;
+    top: 23.3rem;
+    left: 15.3rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-3-kiri {
+        z-index: 9;
+    position: absolute;
+    width: 150px;
+    top: 23.4rem;
+    left: 2.7rem;
+        /* display: none; */
+    }
+
+    .container-milestone .palm-tree-kanan {
+        z-index: 3;
+    position: absolute;
+    width: 90px;
+    top: 14.3rem;
+    left: 18rem;
+    transform: rotate(-3deg);
+        /* display: none; */
+    }
+
+    .container-milestone .palm-tree-kiri {
+        z-index: 3;
+        position: absolute;
+        width: 90px;
+        top: 14.3rem;
+        left: 3.1rem;
+        transform: rotate(3deg);
+        /* display: none; */
+    }
+
+    .container-milestone .rumput-laut-kanan {
+        z-index: 2;
+    position: absolute;
+    width: 60px;
+    top: 17.5rem;
+    left: 20.5rem;
+    transform: rotate(10deg);
+        /* display: none; */
+    }
+
+    .container-milestone .rumput-laut-kiri {
+        z-index: 2;
+        position: absolute;
+        width: 60px;
+        top: 17.5rem;
+        left: 2.6rem;
+        transform: rotate(-10deg);
+        /* display: none; */
+    }
+
+    .container-milestone .siluet-temple {
+        z-index: 1;
+        position: absolute;
+        width: 425px;
+        top: 11.8rem;
+        left: 0;
+        mix-blend-mode: multiply;
+    }
+
+    .container-milestone .bush-1-depan-kiri {
+        z-index: 3;
+    position: absolute;
+    width: 150px;
+    top: 23rem;
+    left: -5.1rem;
+        /* display: none; */
+    }
+
+    .container-milestone .bush-1-depan-kanan {
+        z-index: 3;
+        position: absolute;
+        width: 150px;
+        top: 22.9rem;
+        left: 23rem;
+        /* display: none; */
+    }
+
+    /* CSS MARIO */
+
+    .container-milestone .bambu-kiri {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 24rem;
+    }
+
+    .container-milestone .bambu-kiri-dua {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 68rem;
+    }
+
+    .container-milestone .bambu-kiri-tiga {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 112rem;
+    }
+
+    .container-milestone .bambu-kiri-empat {
+        width: 25%;
+        position: absolute;
+        left: -3rem;
+        top: 156rem;
+        display: block;
+    }
+
+    .container-milestone .bambu-kanan {
+        width: 25%;
+        position: absolute;
+        right: -51px;
+        top: 24rem;
+    }
+
+    .container-milestone .bambu-kanan-dua {
+        top: 68rem;
+    }
+
+    .container-milestone .bambu-kanan-tiga {
+        top: 112rem;
+    }
+
+    .container-milestone .bambu-kanan-empat {
+        width: 25%;
+        position: absolute;
+        right: -51px;
+        top: 156rem;
+        display: block;
+    }
+    
+    .container-milestone .bambu-kanan-empat img {
+        width: 100%;
+    }
+
+    .container-milestone .sungai {
+        width: 100%;
+        position: relative;
+        top: 20rem;
+        left: 5rem;
+        opacity: 30%;
+    }
+
+    .container-milestone .gps {
+        width: 50px;
+        position: absolute;
+        top: 13rem;
+        left: 15rem;
+    }
+
+    /* GEN-1  */
+    .container-milestone .gen-1 {
+        display: flex;
+        position: absolute;
+        top: 32rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah {
+        position: absolute;
+        left: 3%;
+        top: 0;
+        width: 18%;
+    }
+
+    .container-milestone .tahun {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-1 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen1 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen1 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen1 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-2  */
+    .container-milestone .gen-2 {
+        display: flex;
+        position: absolute;
+        top: 48rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem;
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah-2 {
+        position: absolute;
+        left: 6rem;
+        top: 0;
+        width: 18%;
+    }
+
+    .container-milestone .tahun-2 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen2 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-2 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-2 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen2 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen2 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen2 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen2 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-2 {
+        width: 16px;
+        margin: 0.3vw 0.5vw;
+    }
+
+    /* GEN-3 */
+    .container-milestone .gen-3 {
+        display: flex;
+        position: absolute;
+        top: 64rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem;        
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+
+    .container-milestone .tong-sampah-3 {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        width: 25%;
+    }
+
+    .container-milestone .tahun-3 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen3 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-3 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-3 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen3 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen3 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen3 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-3 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-4 */
+    .container-milestone .gen-4 {
+        display: flex;
+        position: absolute;
+        top: 80rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-4 {
+        position: absolute;
+        left: 8rem;
+        width: 25%;
+        top: -2rem;
+    }
+
+    .container-milestone .tahun-4 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen4 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.8vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-4 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-4 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen4 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen4 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen4 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen4 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .text-part-4 {
+        display: flex;
+    }
+
+    .container-milestone .garis-4 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* GEN-5 */
+    .container-milestone .gen-5 {
+        display: flex;
+        position: absolute;
+        top: 96rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-5 {
+        position: absolute;
+        left: 2rem;
+        top: 0;
+        width: 20%;
+    }
+
+    .container-milestone .teks-gen5 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen5 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen5 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .tahun-5 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 25px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen5 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 75%;
+    }
+
+    .container-milestone .arrow-5 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-5 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .text-part-5 {
+        display: flex;
+    }
+
+    .container-milestone .garis-5 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN-6 */
+    .container-milestone .gen-6 {
+        display: flex;
+        position: absolute;
+        top: 115rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-6 {
+        position: absolute;
+        left: 8rem;
+        top: -2rem;
+        width: 15%;
+    }
+
+    .container-milestone .tahun-6 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen6 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-6 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-6 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen6 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen6 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen6 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen6 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-6 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+
+    /* GEN 7 */
+    .container-milestone .gen-7 {
+        display: flex;
+        position: absolute;
+        top: 133rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-7 {
+        position: absolute;
+        left: 2rem;
+        top: -1rem;
+        width: 20%;
+    }
+
+    .container-milestone .teks-gen7 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen7 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .text-gen7 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .tahun-7 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen7 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-7 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-7 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .garis-7 {
+        width: 16px;
+        margin: 0.3vw 0.3vw;
+    }
+
+    /* GEN 8 */
+    .container-milestone .gen-8 {
+        display: flex;
+        position: absolute;
+        top: 154rem; /* position the top  edge of the element at the middle of the parent */
+        left: 13rem; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%);
+    }
+
+    .container-milestone .tong-sampah-8 {
+        position: absolute;
+        left: 8rem;
+        top: -1rem;
+        width: 20%;
+    }
+
+    .container-milestone .tahun-8 {
+        color: #49734d;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .container-milestone .arrow-gen8 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+        margin-right: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #78aa96;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25),
+            0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+        padding: 0.5vw 0.6vw;
+        width: 90%;
+    }
+
+    .container-milestone .arrow-8 {
+        width: 10px;
+        height: auto;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .container-milestone .header-8 {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+
+    .container-milestone .teks-gen8 {
+        width: 18rem;
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen8 span {
+        color: #284c3f;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .container-milestone .teks-gen8 .italic {
+        font-style: italic;
+    }
+
+    .container-milestone .text-gen8 {
+        display: flex;
+        align-items: end;
+        width: 85rem;
+    }
+
+    .container-milestone .garis-8 {
+        width: 16px;
+        margin: 0.3vw 0.1vw;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .container-milestone .rumah-temple {
+        position: absolute;
+        left: -30px;
+    }
+
+    .container-milestone .gen-1 {
+        left: 12rem;
+    }
+    .container-milestone .gen-2 {
+        left: 12rem;
+    }
+    .container-milestone .gen-3 {
+        left: 12rem;
+    }
+    .container-milestone .gen-4 {
+        left: 12rem;
+    }
+    .container-milestone .gen-5 {
+        left: 12rem;
+    }
+    .container-milestone .gen-6 {
+        left: 12rem;
+    }
+    .container-milestone .gen-7 {
+        left: 12rem;
+    }
+    .container-milestone .gen-8 {
+        left: 12rem;
+    }
+
+    .container-milestone .bambu-kiri-dua {
+
+        top: 65rem;
+    }
+
+    .container-milestone .bambu-kiri-tiga {
+        top: 106rem;
+    }
+
+    .container-milestone .bambu-kiri-empat {
+        top: 147rem;
+        width: 25%;
+        height: 20%;
+        position: absolute;
+        left: -3rem;
+        top: 147rem;
+        display: block;
+        overflow: hidden;
+    }
+    
+    .container-milestone .bambu-kanan-dua {
+        top: 65rem;
+    }
+
+    .container-milestone .bambu-kanan-tiga {
+        top: 106rem;
+    }
+
+    .container-milestone .bambu-kanan-empat {
+        top: 147rem;
+    }
+
+    .container-milestone .bambu-kanan-empat {
+        width: 15%;
+        height: 20%;
+        position: absolute;
+        right: -15px;
+        top: 147rem;
+        display: block;
+        overflow: hidden;
+    }
+
+    .container-milestone .bambu-kanan-empat img {
+        width: 100%;
+    }
+
+    .container-milestone .bambu-kiri-empat img {
+        width: 100%;
+    }
+
+}
