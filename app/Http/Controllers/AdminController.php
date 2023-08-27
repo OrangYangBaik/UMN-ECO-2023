@@ -98,7 +98,7 @@ class AdminController extends Controller
         $Tim->save();
     }
 
-    public function sendToAdminPage(Request $request){
+    public function sendToAdminPageMain(Request $request){
         $nama = $request->input('nama');
         $nim = $request->input('nim');
 
@@ -116,27 +116,33 @@ class AdminController extends Controller
         }
     }
 
-    public function verificationPoint(){
-        return view('admin.page.verificationPointAdmin', [
+    public function verificationPoint($boothNum){
+        return view('admin.page.verificationPointAdmin'.$boothNum, [
             'title' => 'daftar yang ngescan',
-            'requester' => User::where('scanned', true)->get()
+            'requester' => User::where('scanned', true)
+                                ->where('booth', $boothNum)
+                                ->get()
         ]);
     }
     
-    public function increaseCreditPoints(Request $request, $userId, $point)
+    public function increaseCreditPoints(Request $request)
      {
         $request->validate([
+            'point' => 'required|numeric',
+            'point' => 'required|numeric',
             'point' => 'required|numeric',
         ]);
 
         $user = User::where('id', $userId)->first();
      
         if ($user) {
-            $user->credit_points += $point;
+            $user->point += $point;
             $user->scanned = false;
+            $user->booth = 0;
             $user->save();
      
-            return response()->json(['success' => true]);
+            //return response()->json(['success' => true]);
+            return redirect(route('verificationPageMain'));
         } else {
             return response()->json(['success' => false, 'message' => 'User not found']);
         }

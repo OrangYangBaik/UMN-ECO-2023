@@ -8,6 +8,7 @@ use App\Models\Admin;
 use App\Models\Team;
 use App\Models\Team2021;
 use App\Models\Milestone;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,7 +31,7 @@ class DatabaseSeeder extends Seeder
 
         // Dummy User
         User::create([
-            'id' => '1',
+            'id' => Str::uuid(),
             'nama' => 'Kathleen Tamvan',
             'nim' => '00000012345',
             'angkatan' => '2021',
@@ -40,14 +41,50 @@ class DatabaseSeeder extends Seeder
             'line' => '12345',
             'instagram' => '12345',
             'password' => bcrypt('heheheha'),
-            'wehea' => 0,
+            'wehea' => 1,
             'meru_betiri' => 0,
             'scanned' => 0,
             'credit' => 5,
             'point' => 0,
         ]);
 
-         
+        User::create([
+            'id' => Str::uuid(),
+            'nama' => 'Gregory Kurniawan',
+            'nim' => '00000012346',
+            'angkatan' => '2022',
+            'fakultas' => 'Teknik dan Informatika',
+            'prodi' => 'Informatika',
+            'email' => 'gre@student.umn.ac.id',
+            'line' => '123455',
+            'instagram' => '123455',
+            'password' => bcrypt('password'),
+            'wehea' => 1,
+            'meru_betiri' => 0,
+            'scanned' => 1,
+            'credit' => 4,
+            'point' => 0,
+        ]);
+
+        User::create([
+            'id' => Str::uuid(),
+            'nama' => 'Gregory',
+            'nim' => '00000012347',
+            'angkatan' => '2021',
+            'fakultas' => 'Teknik dan Informatika',
+            'prodi' => 'Informatika',
+            'email' => 'greg@student.umn.ac.id',
+            'line' => '1234556',
+            'instagram' => '1234556',
+            'password' => bcrypt('password'),
+            'wehea' => 1,
+            'meru_betiri' => 0,
+            'scanned' => 1,
+            'credit' => 0,
+            'point' => 50,
+        ]);
+
+        
         // Divisi UMN ECO 2023
         Team::create([
             'name' => 'JAGAT',

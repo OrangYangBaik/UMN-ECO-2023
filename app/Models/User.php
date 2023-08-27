@@ -20,7 +20,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function kupon(){
+        return $this->hasMany(Kupon::class);
+    }
 }

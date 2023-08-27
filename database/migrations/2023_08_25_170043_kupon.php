@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Admin extends Migration
+class Kupon extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,18 @@ class Admin extends Migration
      */
     public function up()
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('kupons', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('password');
-            $table->string('email');
-            $table->timestamp('email_verified_at')->nullable();
+            $table->uuid('pemilik')->nullable();
+            $table->string('jenis');
+            $table->tinyInteger('jumlah');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('pemilik')
+                    ->references('id')
+                    ->on('users')
+                    ->onDelete('set null');
         });
     }
 
@@ -31,6 +35,6 @@ class Admin extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('kupons');
     }
 }

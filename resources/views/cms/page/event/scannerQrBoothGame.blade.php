@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML QR Scanner</title>
+    <title>QR Scanner untuk main</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -47,7 +47,7 @@
             async function performNestedAjaxCalls() {
               try {
                 //kirim ajax call pertama buat cek bener ga qrcodenya
-                const response1 = await makeAjaxRequest('/verificationAdmin/sendReq', {
+                const response1 = await makeAjaxRequest('/verificationAdmin/sendReqMain', {
                   qrcode: result,
                 });
                 //kalo qrcodenya bener bakal dikirim data user yang ngescan ke AdminController@sendToAdminPage buat dicek validasi lagi

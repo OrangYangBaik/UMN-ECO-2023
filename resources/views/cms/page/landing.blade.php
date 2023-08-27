@@ -7,7 +7,7 @@
 @section('content')
     <div id="dashboard-admin-container" style="background-color: green; z-index: 100; padding-top: 200px;">
         Selamat datang di page user
-        <a href="{{ route('scannerPage') }}">tesqr</a>
+        <a href="{{ route('scannerPageMain') }}">tesqr</a>
     </div>
 @endsection
 

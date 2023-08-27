@@ -98,7 +98,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard-admin')->middleware('auth:web');
     Route::get('/town')->middleware('auth:web');
     Route::get('/fun-walk')->middleware('auth:web');
-    Route::get('/verificationPoint', [AdminController::class, 'verificationPoint'])->name('verificationPage')->middleware('auth:web');
+    Route::get('/verificationPoint/{boothNum}', [AdminController::class, 'verificationPoint'])->name('verificationPageMain')->middleware('auth:web');
+    Route::get('/verificationKupon', [AdminController::class, 'verificationKupon'])->name('verificationPageKupon')->middleware('auth:web');
     Route::post('/addPoints/{userId}/{point}', [AdminController::class, 'increaseCreditPoints'])->name('add.points')->middleware('auth:web');
 
     // Setting Admin
@@ -107,8 +108,10 @@ Route::group(['prefix' => 'admin'], function(){
 });
 
 
-// tes scan qr
-Route::get('/scannerPage', [QrHandlerController::class, 'index'])->name('scannerPage')->middleware('auth:participant');
-Route::post('/verificationAdmin/sendReq', [QrHandlerController::class, 'sendReq']);
-Route::post('/sendDataToAdmin', [AdminController::class, 'sendToAdminPage']);
+//qr
+Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
+Route::get('/scannerPageBeliKupon', [QrHandlerController::class, 'beliKupon'])->name('scannerPageBeliKupon')->middleware('auth:participant');
+Route::post('/verificationAdmin/sendReqMain', [QrHandlerController::class, 'sendReqMain']);
+Route::post('/verificationAdmin/sendReqBeliKupon', [QrHandlerController::class, 'sendReqBeliKupon']);
+Route::post('/sendDataMainToAdmin', [AdminController::class, 'sendToAdminPageMain']);
 Route::post('/respond', [AdminController::class, 'respond']);

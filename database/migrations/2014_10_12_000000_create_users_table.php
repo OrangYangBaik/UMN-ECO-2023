@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('nama');
             $table->string('nim');
             $table->string('angkatan');
@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->boolean('wehea')->default(false);
             $table->boolean('meru_betiri')->default(false);
             $table->boolean('scanned')->default(false);
+            $table->tinyInteger('booth')->default('0');
             $table->tinyInteger('credit')->default('5');
             $table->tinyInteger('point')->default('0');
             $table->timestamp('email_verified_at')->nullable();
