@@ -12,6 +12,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'users';
+    protected $primaryKey = 'id';
+    protected $keyType = 'string';
     protected $fillable = ['nama','nim','email','password'];
     protected $hidden = [
         'credit',
@@ -20,7 +22,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function kupon(){
+        return $this->hasMany(Kupon::class);
+    }
 }

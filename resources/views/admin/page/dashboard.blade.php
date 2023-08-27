@@ -6,7 +6,7 @@
 
 @section('content')
     <div id="dashboard-admin-container text-white">Selamat datang di page admin</div>
-    <a href="{{ route('verificationPage') }}">varification page</a>
+    <a href="/verificationPoint/{{$boothNum}}">varification page</a>
 @endsection
 
 @section('custom-js')

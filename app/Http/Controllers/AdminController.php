@@ -18,6 +18,7 @@ use App\Exports\RecruitmentAllExport;
 // use App\Models\DroughtRegistration;
 // use App\Models\Drought_bingo;
 use App\Models\Settings;
+use Exception;
 use Illuminate\Support\Facades\DB;
 
 
@@ -79,9 +80,11 @@ class AdminController extends Controller
     }
 
     public function dashboard(){
+        $admin = auth()->user();
         return view('admin.page.dashboard',[
             'title' => 'Admin Dashboard',
             'teams' => Team::All(),
+            'boothNum' => $admin->booth
         ]);
     }
 
@@ -98,7 +101,7 @@ class AdminController extends Controller
         $Tim->save();
     }
 
-    public function sendToAdminPage(Request $request){
+    public function sendToAdminPageMain(Request $request){
         $nama = $request->input('nama');
         $nim = $request->input('nim');
 
@@ -116,48 +119,44 @@ class AdminController extends Controller
         }
     }
 
-    public function verificationPoint(){
-        return view('admin.page.verificationPointAdmin', [
-            'title' => 'daftar yang ngescan',
-            'requester' => User::where('scanned', true)->get()
-        ]);
+    public function verificationPoint($boothNum){
+        $admin = auth()->user();
+        if($admin->booth == $boothNum){
+            $requester = User::where('scanned', true)
+                            ->where('booth', $boothNum)
+                            ->get();
+
+            if ($requester->count() === 0) {
+                $requester = 'none';
+            }
+
+            return view('admin.page.verificationPointAdmin'.$boothNum, [
+                'title' => 'daftar yang ngescan',
+                'requester' => $requester
+            ]);
+        }else{
+            return back();
+        }
     }
     
     public function increaseCreditPoints(Request $request)
-    {
+     {
         $request->validate([
-            'userId' => 'required',
             'point' => 'required|numeric',
+            'userId' => 'required',
         ]);
 
         $user = User::findOrFail($request->input('userId'));
 
         if ($user) {
-            $user->credit_points += $request->input('point');
+            $user->point += $request->point;
             $user->scanned = false;
+            $user->booth = 0;
             $user->save();
-
-            return response()->json(['success' => true]);
+            
+            return back();
         } else {
             return response()->json(['success' => false, 'message' => 'User not found']);
         }
     }
-    // public function increaseCreditPoints(Request $request, $userId, $point)
-    //  {
-    //     $request->validate([
-    //         'point' => 'required|numeric',
-    //     ]);
-
-    //     $user = User::where('id', $userId)->first();
-     
-    //     if ($user) {
-    //         $user->credit_points += $point;
-    //         $user->scanned = false;
-    //         $user->save();
-     
-    //         return response()->json(['success' => true]);
-    //     } else {
-    //         return response()->json(['success' => false, 'message' => 'User not found']);
-    //     }
-    //  }
 }

@@ -42,6 +42,6 @@ class Milestone extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('verifications');
+        Schema::dropIfExists('milestones');
     }
 }
