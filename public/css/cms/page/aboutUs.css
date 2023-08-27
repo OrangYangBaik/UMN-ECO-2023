@@ -3,31 +3,37 @@ transisi z = 3
 objek z = 4-7
 watterfall = 2
 */
-html, body{
+html,
+body {
     overflow-x: hidden;
 }
-.main{
+.main {
     position: relative;
 }
 
-.container-fluid-footer{
-    background: #1c1434!important;
-    color: #F4ECDC !important;
+.container-fluid-footer {
+    background: #1c1434 !important;
+    color: #f4ecdc !important;
 }
 
 /*  */
 /* Section 1 */
 /*  */
 
-.section-1{
+.section-1 {
     position: relative;
     min-height: 130vh;
     overflow: visible;
-    background: rgb(137,199,196);
-    background: linear-gradient(180deg, rgba(137,199,196,1) 0%, rgba(252,244,236,1) 62%, rgba(252,244,236,1) 100%);
+    background: rgb(137, 199, 196);
+    background: linear-gradient(
+        180deg,
+        rgba(137, 199, 196, 1) 0%,
+        rgba(252, 244, 236, 1) 62%,
+        rgba(252, 244, 236, 1) 100%
+    );
 }
 
-.container-nonover{
+.container-nonover {
     overflow: hidden;
     position: absolute;
     width: 100%;
@@ -36,16 +42,16 @@ html, body{
     top: 0;
 }
 
-.eco-logo{
+.eco-logo {
     position: absolute;
     bottom: 0;
-    transform: translate(-50%,-250%);
+    transform: translate(-50%, -250%);
     left: 50%;
     width: 180px;
     opacity: 0;
 }
 
-.rock-bg-1{
+.rock-bg-1 {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -54,7 +60,7 @@ html, body{
     width: 105%;
 }
 
-.waterfall_1{
+.waterfall_1 {
     position: absolute;
     bottom: 0;
     width: 70%;
@@ -63,22 +69,20 @@ html, body{
     left: 50%;
 }
 
-.gapura-kanan{
+.gapura-kanan {
     position: absolute;
     bottom: 0;
     right: -20vh;
     width: 30%;
     z-index: 3;
-
 }
 
-.gapura-kiri{
+.gapura-kiri {
     position: absolute;
     bottom: 0;
     left: -20vh;
     width: 30%;
     z-index: 3;
-
 }
 
 .transition-bg-1 {
@@ -96,14 +100,14 @@ html, body{
 /* Section 2 */
 /*  */
 
-.section-2{
+.section-2 {
     position: relative;
     min-height: 150vh;
     overflow: visible;
     background: #1c1434;
 }
 
-.waterfall_2{
+.waterfall_2 {
     position: absolute;
     width: 30%;
     opacity: 0.4;
@@ -113,24 +117,23 @@ html, body{
     z-index: 2;
 }
 
-.section-2 .content{
+.section-2 .content {
     z-index: 10;
     color: white;
     position: relative;
     padding-top: 100px;
     text-align: justify;
-
 }
 
-.content h1{
+.content h1 {
     font-size: 1.7em;
     font-family: "Montserrat Bold";
     margin-bottom: 15px;
 }
 
-.content p{
+.content p {
     font-family: "Montserrat";
-    font-size: .9em;
+    font-size: 0.9em;
 }
 
 .transition-bg-2 {
@@ -142,7 +145,7 @@ html, body{
     z-index: 7;
 }
 
-.bg-batu-right{
+.bg-batu-right {
     position: absolute;
     transform: translate(36%, 68%);
     bottom: 0;
@@ -155,14 +158,14 @@ html, body{
 /* Section 3 */
 /*  */
 
-.section-3{
+.section-3 {
     position: relative;
     min-height: 150vh;
     overflow: hidden;
     background: #1c1434;
 }
 
-.waterfall_3{
+.waterfall_3 {
     position: absolute;
     width: 30%;
     opacity: 0.4;
@@ -172,14 +175,14 @@ html, body{
     z-index: 2;
 }
 
-.bottom-border{
+.bottom-border {
     position: absolute;
     bottom: 0;
     width: 100%;
     z-index: 5;
 }
 
-.bg-batu-left{
+.bg-batu-left {
     z-index: 4;
     position: absolute;
     width: 75%;
@@ -187,7 +190,7 @@ html, body{
     bottom: 0;
 }
 
-.section-3 .content{
+.section-3 .content {
     z-index: 10;
     color: white;
     position: relative;
@@ -195,29 +198,30 @@ html, body{
     text-align: right;
 }
 
-@media (max-width:1023px){
-    .section-1{
+@media (max-width: 1023px) {
+    .section-1 {
         min-height: 100vh;
     }
-    .content h1{
+    .content h1 {
         font-size: 1.1em;
     }
-    
-    .content p{
-        font-size: .65em;
+
+    .content p {
+        font-size: 0.65em;
     }
-    .gapura-kiri, .gapura-kanan{
+    .gapura-kiri,
+    .gapura-kanan {
         width: 28%;
     }
 }
 
-@media (max-width: 767px){
-    .content h1{
+@media (max-width: 767px) {
+    .content h1 {
         font-size: 1em;
     }
-    
-    .content p{
-        font-size: .5em;
+
+    .content p {
+        font-size: 0.5em;
     }
 }
 
@@ -225,43 +229,42 @@ html, body{
 /* Mobile */
 /*  */
 
-@media (max-width: 767px){
-    .section-1{
+@media (max-width: 767px) {
+    .section-1 {
         min-height: 110vh;
     }
 
-    
-    .rock-bg-1{
+    .rock-bg-1 {
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 20%);
         z-index: 1;
         width: 105%;
     }
-    
-    .waterfall_1{
+
+    .waterfall_1 {
         width: 70%;
         z-index: 2;
         transform: translate(-50%, 30%);
         left: 50%;
     }
-    
-    .gapura-kanan{
+
+    .gapura-kanan {
         right: -30vh;
         width: 50%;
     }
-    
-    .gapura-kiri{
+
+    .gapura-kiri {
         left: -30vh;
         width: 50%;
     }
-    
+
     .transition-bg-1 {
         transform: translate(-50%, 69%);
         left: 50%;
         width: 210%;
     }
-    
+
     /* end  */
 
     .waterfall_2 {
@@ -269,27 +272,25 @@ html, body{
         transform: translate(20%, -50%);
     }
 
-
-
-    .content h1{
+    .content h1 {
         font-size: 1.1em;
         font-family: "Montserrat Bold";
         margin-bottom: 15px;
     }
-    
-    .content p{
+
+    .content p {
         font-family: "Montserrat";
-        font-size: .7em;
+        font-size: 0.7em;
     }
 
-    .transition-bg-2{
+    .transition-bg-2 {
         transform: translate(-50%, 63%);
         left: 50%;
         width: 240%;
         z-index: 7;
     }
 
-    .bg-batu-right{
+    .bg-batu-right {
         transform: translate(-10%, 49%);
         left: 50%;
         width: 125%;
@@ -301,20 +302,26 @@ html, body{
     }
 }
 
-@media (max-width:400px){
-    .section-1, .section-2, .section-3{
+@media (max-width: 400px) {
+    .section-1,
+    .section-2,
+    .section-3 {
         min-height: 100vh;
     }
 }
 
-@media (min-height:714px ) and (max-width:1023px){
-    .section-1, .section-2, .section-3{
+@media (min-height: 714px) and (max-width: 1023px) {
+    .section-1,
+    .section-2,
+    .section-3 {
         min-height: 90vh;
     }
 }
 
-@media (min-height:932px) and (max-width:1023px){
-    .section-1, .section-2, .section-3{
+@media (min-height: 932px) and (max-width: 1023px) {
+    .section-1,
+    .section-2,
+    .section-3 {
         min-height: 70vh;
     }
 }

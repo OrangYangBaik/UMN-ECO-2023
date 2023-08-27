@@ -8,7 +8,11 @@ use App\Models\Team;
 class HomeController extends Controller
 {
     public function index(){
-        return view('cms.page.newlanding', ['title' => 'Home'] );
+        return view('cms.page.homePage', ['title' => 'ECO Treasure Map'] );
+    }
+
+    public function aboutus(){
+        return view('cms.page.aboutUs', ['title' => 'About Us'] );
     }
 
     public function ourteam(){

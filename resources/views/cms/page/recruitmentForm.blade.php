@@ -307,8 +307,6 @@
             </form>
         </div>
     </div>
-
-    @include('cms.template.footer')
 @endsection
 
 @section('custom-js')

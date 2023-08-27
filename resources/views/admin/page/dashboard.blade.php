@@ -5,8 +5,10 @@
 @endsection
 
 @section('content')
-    <div id="dashboard-admin-container text-white">Selamat datang di page admin</div>
-    <a href="/verificationPoint/{{$boothNum}}">varification page</a>
+    <div class="container text-white">
+        <div id="dashboard-admin-container text-white">Selamat datang di page admin</div>
+        <a href="/admin/verificationPoint/{{ $boothNum }}">varification page</a>
+    </div>
 @endsection
 
 @section('custom-js')

@@ -15,7 +15,7 @@ class UserController extends Controller
 {
     public function dashboard()
     {
-        return view('cms.page.landing',['title' => 'User Dashboard']);
+        return view('cms.page.homePage',['title' => 'User Dashboard']);
     }
 
     public function loginPage()
@@ -91,6 +91,6 @@ class UserController extends Controller
 
         request()->session()->regenerateToken();
 
-        return redirect(route('loginUser'));
+        return redirect(route('homepage'));
     }
 }

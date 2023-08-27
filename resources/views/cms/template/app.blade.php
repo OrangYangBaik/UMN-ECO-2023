@@ -17,8 +17,15 @@
             src: url("{{ asset('fonts/bobby-jones-soft.otf') }}") format("truetype");
         }
 
-        .tahun, .tahun-2, .tahun-3, .tahun-4, .tahun-5, .tahun-6, .tahun-7, .tahun-8{
-            font-family: bobbyjones; 
+        .tahun,
+        .tahun-2,
+        .tahun-3,
+        .tahun-4,
+        .tahun-5,
+        .tahun-6,
+        .tahun-7,
+        .tahun-8 {
+            font-family: bobbyjones;
         }
     </style>
     <!-- Bootstrap 5 -->
@@ -54,6 +61,7 @@
 
     @yield('content')
 
+    @include('cms.template.footer')
     <!-- Javascript -->
     <!-- Popper js  -->
     {{-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
