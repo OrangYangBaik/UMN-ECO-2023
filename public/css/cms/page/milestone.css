@@ -87,7 +87,7 @@ h2 {
     left: -1vw;
     right: 0;
     width: 101vw;
-    height: 100%;
+    height: 93%;
     background: linear-gradient(
         180deg,
         #e5dbb1 0%,
@@ -239,9 +239,11 @@ h2 {
 
 .container-milestone .bambu-kiri {
     width: 25%;
+    height: 93%;
     position: absolute;
     left: -11vw;
     top: 60vw;
+    overflow: hidden;
 }
 
 .container-milestone .bambu-kiri img {
@@ -262,9 +264,15 @@ h2 {
 
 .container-milestone .bambu-kanan{
     width: 25%;
+    height: 93%;
     position: absolute;
     right: -11vw;
     top: 60vw;
+    overflow: hidden;
+}
+
+.container-milestone .bambu-kanan img {
+    width: 100%;
 }
 
 .container-milestone .bambu-kanan-dua {
@@ -297,8 +305,9 @@ h2 {
 
 .container-milestone .sungai {
     width: 35%;
+    height: 50%;
     position: relative;
-    top: 53vw;
+    top: 46vw;
     left: 37vw;
 }
 
@@ -5161,7 +5170,6 @@ h2 {
         height: 20%;
         position: absolute;
         left: -3rem;
-        top: 147rem;
         display: block;
         overflow: hidden;
     }
@@ -5172,10 +5180,6 @@ h2 {
 
     .container-milestone .bambu-kanan-tiga {
         top: 106rem;
-    }
-
-    .container-milestone .bambu-kanan-empat {
-        top: 147rem;
     }
 
     .container-milestone .bambu-kanan-empat {

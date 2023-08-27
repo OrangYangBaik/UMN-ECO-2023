@@ -8,10 +8,10 @@
     <div class="container-Bs">
         <!-- <img src="{{ asset('images/milestoneBs/') }}awan kiri.svg" alt="" /> -->
         <div class="temple">
-            <img src="{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.svg') }}" />
+            <img src="{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.png') }}" />
         </div>
         <div class="temple-dua">
-            <img src="{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.svg') }}" />
+            <img src="{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.png') }}" />
         </div>
         <style>
         @media only screen and (max-width: 468px){
