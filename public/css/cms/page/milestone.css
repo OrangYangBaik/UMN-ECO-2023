@@ -307,7 +307,6 @@ h2 {
 
 .container-milestone .sungai {
     width: 48%;
-    height: 48%;
     position: relative;
     top: 49vw;
     left: 30vw;
@@ -1049,6 +1048,7 @@ h2 {
 @media only screen and (max-width: 768px) {
     .container-milestone {
         max-width: 768px;
+        overflow-y: scroll;
     }
 
     .container-milestone .bg-utama {
@@ -1072,7 +1072,7 @@ h2 {
         left: 0;
         right: 0;
         width: 768px;
-        height: 3380px;
+        height: 3406px;
         /* display: none; */
     }
 
@@ -1885,6 +1885,7 @@ h2 {
     }
 
     .container-milestone .bambu-kiri-dua {
+        position: absolute;
         width: 25%;
         left: -3rem;
         top: 79rem;
@@ -1892,6 +1893,7 @@ h2 {
     }
 
     .container-milestone .bambu-kiri-tiga {
+        position: absolute;
         width: 25%;
         left: -3rem;
         top: 132rem;
@@ -1918,6 +1920,7 @@ h2 {
     }
     
     .container-milestone .bambu-kanan-tiga {
+        position: absolute;
         width: 25%;
         right: -51px;
         top: 132rem;
@@ -3051,7 +3054,7 @@ h2 {
         left: 0;
         right: 0;
         width: 100%;
-        height: 2380px;
+        height: 2386px;
     }
 
     .container-milestone .eco-temple {
@@ -3166,10 +3169,13 @@ h2 {
     }
 
     .container-milestone .bambu-kiri-empat {
+        position: absolute;
         width: 25%;
+        height: 13%;
         left: -3rem;
         top: 156rem;
         display: block;
+        overflow: hidden;
     }
 
     .container-milestone .bambu-kanan {
@@ -3187,10 +3193,13 @@ h2 {
     }
 
     .container-milestone .bambu-kanan-empat {
-        width: 25%;
-        right: -51px;
+        position: absolute;
+        height: 13%;
+        width: 13%;
+        right: -5px;
         top: 156rem;
         display: block;
+        overflow: hidden;
     }
     
     .container-milestone .bambu-kanan-empat img {
