@@ -10,6 +10,52 @@
         <div class="temple">
             <img src="{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.svg') }}" />
         </div>
+        <div class="temple-dua">
+            <img src="{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.svg') }}" />
+        </div>
+        <style>
+        @media only screen and (max-width: 468px){
+                .temple::after {
+                    content: "";
+                    background-image: url('{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.svg') }}');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute; /* Position the pseudo-element absolutely */
+                    top: 96rem;
+                    left: 0;
+                    width: 608px; 
+                    height: 100%;
+      }
+            }
+
+        @media only screen and (max-width: 425px){
+                .temple::after {
+                    content: "";
+                    background-image: url('{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.svg') }}');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute; /* Position the pseudo-element absolutely */
+                    top: 80rem;
+                    left: 0;
+                    width: 608px; 
+                    height: 100%;
+      }
+            }
+
+        @media only screen and (max-width: 425px){
+                .temple::after {
+                    content: "";
+                    background-image: url('{{ asset('images/milestoneBs/Bank Sampah Gen 5 Tample.svg') }}');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute; /* Position the pseudo-element absolutely */
+                    top: 74rem;
+                    left: 0;
+                    width: 608px; 
+                    height: 100%;
+      }
+            }
+        </style>
         <div class="header-1">
             <h2>{{ $milestone->nama_organisasi }}</h2>
         </div>
@@ -54,7 +100,7 @@
             <p class="paragraf-4">{{ $milestone->environmental_outcomes }}
             </p>
         </div>
-        <div class="jembatan">
+        <!-- <div class="jembatan">
             <img src="{{ asset('images/milestoneBs/Jembatan.svg') }}" />
         </div>
         <div class="bush-kiri">
@@ -77,7 +123,7 @@
         </div>
         <div class="tanaman-menjalar-tengah">
             <img src="{{ asset('images/milestoneBs/Tanaman Menjalar tengah.svg') }}" />
-        </div>
+        </div> -->
     </div>
 @endsection
 

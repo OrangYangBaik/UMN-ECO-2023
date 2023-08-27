@@ -12,6 +12,7 @@
         <!-- <div>
             <img class="gif-temple" src="assets/GIF TEMPLE 1 REVISI.gif" />
         </div> -->
+        <div class="rumah-temple">
         <div class="eco-temple">
             <img src="{{ asset('images/milestone/ECO Tample.svg') }}" />
         </div>
@@ -32,7 +33,6 @@
         </div>
         <div class="bush-2-kanan">
             <img src="{{ asset('images/milestone/Bush 2 kanan.svg') }}" /> 
-            <!-- Kanannya beda sama yang di figma -->
         </div>
         <div class="bush-2-kiri">
             <img src="{{ asset('images/milestone/Bush 2 kiri.svg') }}" />
@@ -58,10 +58,29 @@
         <div class="siluet-temple">
             <img src="{{ asset('images/milestone/Siluet tample.svg') }}" />
         </div>
+        </div>
         <div class="bambu-kiri">
             <img src="{{ asset('images/milestone/Dekorasi kiri.svg') }}" alt="">
         </div>
+        <div class="bambu-kiri-dua">
+            <img src="{{ asset('images/milestone/Dekorasi kiri.svg') }}" alt="">
+        </div>
+        <div class="bambu-kiri-tiga">
+            <img src="{{ asset('images/milestone/Dekorasi kiri.svg') }}" alt="">
+        </div> 
+        <div class="bambu-kiri-empat">
+            <img src="{{asset('images/milestone/Dekorasi kiri.svg') }}" alt="">
+        </div>
         <div class="bambu-kanan">
+            <img src="{{ asset('images/milestone/Dekorasi kanan.svg') }}" alt="">
+        </div> 
+        <div class="bambu-kanan-dua">
+            <img src="{{ asset('images/milestone/Dekorasi kanan.svg') }}" alt="">
+        </div> 
+        <div class="bambu-kanan-tiga">
+            <img src="{{ asset('images/milestone/Dekorasi kanan.svg') }}" alt="">
+        </div>
+        <div class="bambu-kanan-empat">
             <img src="{{ asset('images/milestone/Dekorasi kanan.svg') }}" alt="">
         </div>
         <div class="sungai">
@@ -70,7 +89,7 @@
          </div>
         <div class="background-2"></div>
         <div class="gen-1">
-            <div class="tong-sampah">
+                <div class="tong-sampah">
                     <img src="{{ asset('images/milestone/Trash can.svg') }}" alt="">
                 </div>
                 <div class="teks-gen1">
@@ -137,7 +156,7 @@
                 </p>
             </div>
         </div>
-        <div class="gen-5">
+       <div class="gen-5">
             <div class="tong-sampah-5">
                     <img src="{{ asset('images/milestone/Plant.svg') }}" alt="">
                 </div>
@@ -154,7 +173,7 @@
                     </p>
                 </div>
         </div>
-        <div class="gen-6">
+         <div class="gen-6">
             <div class="tong-sampah-6">
                     <img src="{{ asset('images/milestone/Rubbish bin.svg') }}" alt="">
                 </div>
@@ -188,7 +207,7 @@
                     </p>
                 </div>
         </div>
-        <div class="gen-8">
+        <div class="gen-8"> 
             <div class="tong-sampah-8">
                     <img src="{{ asset('images/milestone/Bottle Container.svg') }}" alt="">
                 </div>
@@ -205,7 +224,7 @@
                     </p>
                 </div>
             </div>
-    </div>
+    </div> 
 @endsection
 
 
