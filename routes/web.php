@@ -98,7 +98,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard-admin')->middleware('auth:web');
     Route::get('/town')->middleware('auth:web');
     Route::get('/fun-walk')->middleware('auth:web');
-    Route::get('/verificationPoint', [AdminController::class, 'verificationPoint'])->name('verificationPage')->middleware('auth:web');
+    Route::get('/verificationPoint/{boothNum}', [AdminController::class, 'verificationPoint'])->name('verificationPage')->middleware('auth:web');
     // Route::post('/addPoints/{userId}/{point}', [AdminController::class, 'increaseCreditPoints'])->name('add.points')->middleware('auth:web');
     Route::post('/addPoints', [AdminController::class, 'increaseCreditPoints'])->name('addPoints')->middleware('auth:web');
 

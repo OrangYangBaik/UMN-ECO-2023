@@ -24,8 +24,33 @@ class DatabaseSeeder extends Seeder
 
         // User Admin
         Admin::create([
-            'name' => 'Admin',
-            'email' => 'admin@umn.ac.id',
+            'name' => 'AdminArcade1',
+            'email' => 'adminarcade1@umn.ac.id',
+            'booth' => 1,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminArcade2',
+            'email' => 'adminarcade2@umn.ac.id',
+            'booth' => 2,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminArcade3',
+            'email' => 'adminarcade3@umn.ac.id',
+            'booth' => 3,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminArcade4',
+            'email' => 'adminarcade4@umn.ac.id',
+            'booth' => 4,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminArcade5',
+            'email' => 'adminarcade5@umn.ac.id',
+            'booth' => 5,
             'password' => bcrypt('nirmalabentalaumneco2023')
         ]);
 
@@ -64,6 +89,7 @@ class DatabaseSeeder extends Seeder
             'scanned' => 1,
             'credit' => 4,
             'point' => 0,
+            'booth' => 1
         ]);
 
         User::create([
@@ -82,6 +108,7 @@ class DatabaseSeeder extends Seeder
             'scanned' => 1,
             'credit' => 0,
             'point' => 50,
+            'booth' => 2
         ]);
 
         
