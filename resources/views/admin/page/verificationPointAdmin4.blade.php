@@ -16,8 +16,8 @@
                     <h3>Nama: {{ $user->nama }}</h3>
                     <h3>NIM: {{ $user->nim }}</h3>
                     <label for="point">Poin tambahan:</label>
-                    <input type="number" name="point" id="point" class="point-input">
-                    <button class="acc-button" type="submit">Approve</button>
+                    <input type="number" name="point" id="point" class="point-input text-dark" />
+                    <button class="acc-button text-dark" type="submit">Approve</button>
                 </form>
             @endforeach
         @endif
