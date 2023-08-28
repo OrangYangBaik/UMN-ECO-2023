@@ -235,7 +235,7 @@
                             alt=""></h2>
                     <div class="gen-tahun7">
                         <h2 class="tahun-7"> 2022</h2>
-                        <a href={{ route('2nd-gen-bank-sampah') }} style="text-decoration: none;">
+                        <a href={{ route('2nd-gen-umn-eco') }} style="text-decoration: none;">
                             <h2 class="arrow-gen7">Gen 2 <img class="arrow-7"
                                     src="{{ asset('images/milestone/Arrow.svg') }}" alt=""></h2>
                         </a>
@@ -258,7 +258,7 @@
                 <div class="text-gen8">
                     <div class="gen-tahun8">
                         <h2 class="tahun-8"> 2023</h2>
-                        <a href={{ route('3rd-gen-bank-sampah') }} style="text-decoration: none;">
+                        <a href={{ route('3rd-gen-umn-eco') }} style="text-decoration: none;">
                             <h2 class="arrow-gen8">Gen 3 <img class="arrow-8"
                                     src="{{ asset('images/milestone/Arrow.svg') }}" alt=""></h2>
                         </a>

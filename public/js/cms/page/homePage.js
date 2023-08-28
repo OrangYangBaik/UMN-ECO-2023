@@ -17,7 +17,7 @@ $(document).ready(function () {
     });
 
     var hoverSound = $("#hover-sound")[0];
-    $(".hoverable-obj" || ".nav-link").hover(
+    $(".hoverable-obj, .nav-link").hover(
         function () {
             hoverSound.currentTime = 5;
             hoverSound.play();
