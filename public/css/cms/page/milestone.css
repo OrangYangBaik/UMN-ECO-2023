@@ -1,7 +1,11 @@
-/* /public/css/custom.css */
 @font-face {
     font-family: bobbyjones;
     src: url("{{ public('fonts/bobby-jones-soft.otf') }}") format("truetype");
+}
+
+:root {
+    --bobby-jones: "bobby-jones-soft-regular", sans-serif;
+    --montserrat: "Montserrat", sans-serif;
 }
 
 .tahun,
@@ -36,7 +40,7 @@ h2 {
 
 /* .container-milestone {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    /*scrollbar-width: none; 
+/*scrollbar-width: none; 
 } */
 /*.container-milestone::-webkit-scrollbar { 
     display: none; */
@@ -264,7 +268,7 @@ h2 {
     display: none;
 }
 
-.container-milestone .bambu-kanan{
+.container-milestone .bambu-kanan {
     width: 25%;
     height: 93%;
     position: absolute;
@@ -289,19 +293,19 @@ h2 {
     display: none;
 }
 
-.container-milestone .bambu-kanan img{
+.container-milestone .bambu-kanan img {
     width: 59.8%;
 }
 
-.container-milestone .bambu-kanan-dua img{
+.container-milestone .bambu-kanan-dua img {
     width: 59.8%;
 }
 
-.container-milestone .bambu-kanan-tiga img{
+.container-milestone .bambu-kanan-tiga img {
     width: 59.8%;
 }
 
-.container-milestone .bambu-kanan-empat img{
+.container-milestone .bambu-kanan-empat img {
     width: 59.8%;
 }
 
@@ -1211,7 +1215,7 @@ h2 {
         top: 142rem;
         display: block;
     }
-    
+
     .container-milestone .bambu-kiri-tiga {
         display: none;
     }
@@ -1220,7 +1224,7 @@ h2 {
         display: none;
     }
 
-    .container-milestone .bambu-kanan{
+    .container-milestone .bambu-kanan {
         width: 30%;
         top: 37rem;
         right: -15vw;
@@ -1233,15 +1237,14 @@ h2 {
         top: 142rem;
         display: block;
     }
-    
+
     .container-milestone .bambu-kanan-tiga {
         display: none;
     }
-    
+
     .container-milestone .bambu-kanan-empat {
         display: none;
     }
-
 
     .container-milestone .sungai {
         width: 80%;
@@ -1298,7 +1301,7 @@ h2 {
     }
 
     .container-milestone .teks-gen1 {
-        width: 33rem;;
+        width: 33rem;
         font-size: 20px;
         font-weight: 500;
     }
@@ -1904,9 +1907,7 @@ h2 {
         display: none;
     }
 
-
-    
-    .container-milestone .bambu-kanan{
+    .container-milestone .bambu-kanan {
         top: 26rem;
         width: 25%;
         right: -11vw;
@@ -1918,7 +1919,7 @@ h2 {
         top: 79rem;
         display: block;
     }
-    
+
     .container-milestone .bambu-kanan-tiga {
         position: absolute;
         width: 25%;
@@ -1969,7 +1970,7 @@ h2 {
         font-size: 16px;
         margin-left: 13px;
         margin-bottom: 10px;
-        border-radius: 10px;     
+        border-radius: 10px;
         padding: 0.8vw 0.6vw;
         width: 90%;
     }
@@ -2084,7 +2085,7 @@ h2 {
 
     .container-milestone .arrow-gen3 {
         font-size: 16px;
-        font-weight: 700; 
+        font-weight: 700;
         margin-left: 13px;
         margin-bottom: 10px;
         padding: 0.5vw 0.6vw;
@@ -2168,10 +2169,8 @@ h2 {
     }
 
     .container-milestone .text-gen4 {
-
         width: 85rem;
     }
-
 
     .container-milestone .garis-4 {
         width: 16px;
@@ -2184,7 +2183,7 @@ h2 {
         left: 16rem; /* position the left edge of the element at the middle of the parent */
     }
 
-    .container-milestone .tong-sampah-5 {        
+    .container-milestone .tong-sampah-5 {
         left: 2rem;
         top: 0;
         width: 20%;
@@ -2409,7 +2408,7 @@ h2 {
     } */
 }
 
-@media only screen and (max-width: 428px) {  
+@media only screen and (max-width: 428px) {
     .container-milestone .rumah-temple {
         position: absolute;
         left: 2px;
@@ -2494,9 +2493,9 @@ h2 {
     }
 
     .container-milestone .palm-tree-kanan {
-    width: 90px;
-    top: 14.3rem;
-    left: 18rem;
+        width: 90px;
+        top: 14.3rem;
+        left: 18rem;
     }
 
     .container-milestone .palm-tree-kiri {
@@ -2506,9 +2505,9 @@ h2 {
     }
 
     .container-milestone .rumput-laut-kanan {
-    width: 60px;
-    top: 17.5rem;
-    left: 20.5rem;
+        width: 60px;
+        top: 17.5rem;
+        left: 20.5rem;
     }
 
     .container-milestone .rumput-laut-kiri {
@@ -2526,9 +2525,9 @@ h2 {
     }
 
     .container-milestone .bush-1-depan-kiri {
-    width: 150px;
-    top: 23rem;
-    left: -5.1rem;
+        width: 150px;
+        top: 23rem;
+        left: -5.1rem;
         /* display: none; */
     }
 
@@ -2563,7 +2562,7 @@ h2 {
         width: 25%;
         right: -51px;
         top: 24rem;
-        }
+    }
 
     .container-milestone .bambu-kanan-dua {
         top: 72rem;
@@ -2572,7 +2571,6 @@ h2 {
     .container-milestone .bambu-kanan-tiga {
         top: 121rem;
     }
-
 
     .container-milestone .sungai {
         width: 100%;
@@ -2700,7 +2698,7 @@ h2 {
     /* GEN-3 */
     .container-milestone .gen-3 {
         top: 64rem; /* position the top  edge of the element at the middle of the parent */
-        left: 13rem;       
+        left: 13rem;
     }
 
     .container-milestone .tong-sampah-3 {
@@ -2788,7 +2786,7 @@ h2 {
     }
 
     .container-milestone .teks-gen4 {
-        width: 18rem;     
+        width: 18rem;
         font-size: 14px;
     }
 
@@ -2919,7 +2917,6 @@ h2 {
     .container-milestone .gen-7 {
         top: 133rem; /* position the top  edge of the element at the middle of the parent */
         left: 13rem; /* position the left edge of the element at the middle of the parent */
-
     }
 
     .container-milestone .tong-sampah-7 {
@@ -3103,7 +3100,6 @@ h2 {
         width: 150px;
         top: 23.4rem;
         left: 2.7rem;
-  
     }
 
     .container-milestone .palm-tree-kanan {
@@ -3201,7 +3197,7 @@ h2 {
         display: block;
         overflow: hidden;
     }
-    
+
     .container-milestone .bambu-kanan-empat img {
         width: 100%;
     }
@@ -3234,7 +3230,7 @@ h2 {
 
     .container-milestone .tahun {
         font-size: 34px;
-        font-weight: 500;       
+        font-weight: 500;
         margin-left: 20px;
         margin-bottom: 0;
     }
@@ -3316,7 +3312,6 @@ h2 {
     .container-milestone .teks-gen2 {
         width: 18rem;
         font-size: 14px;
-
     }
 
     .container-milestone .teks-gen2 span {
@@ -3335,7 +3330,7 @@ h2 {
     /* GEN-3 */
     .container-milestone .gen-3 {
         top: 64rem; /* position the top  edge of the element at the middle of the parent */
-        left: 13rem;        
+        left: 13rem;
         height: 100px;
     }
 
@@ -3541,8 +3536,6 @@ h2 {
         font-size: 14px;
     }
 
-
-
     .container-milestone .text-gen6 {
         width: 85rem;
     }
@@ -3693,7 +3686,6 @@ h2 {
     }
 
     .container-milestone .bambu-kiri-dua {
-
         top: 65rem;
     }
 
@@ -3710,7 +3702,7 @@ h2 {
         display: block;
         overflow: hidden;
     }
-    
+
     .container-milestone .bambu-kanan-dua {
         top: 65rem;
     }
@@ -3736,5 +3728,4 @@ h2 {
     .container-milestone .bambu-kiri-empat img {
         width: 100%;
     }
-
 }

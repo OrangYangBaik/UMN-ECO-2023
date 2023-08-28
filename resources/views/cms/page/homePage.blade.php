@@ -7,10 +7,13 @@
 
 @section('content')
     <div id="homepage-container">
-        <audio id="hover-sound" src="{{ asset('sound/lembarankertas.mp3') }}"></audio>
+        <audio id="hover-sound" src="{{ asset('sound/lembarankertas-cut.mp3') }}"></audio>
         @include('cms.page.preEvent.jnanaSanka')
         <div class="hoverable-obj garis-putus">
             <img id="garis-putus-1" src="{{ asset('images/treasureMap/garis-putus.png') }}" alt="Garis Putus" />
+        </div>
+        <div class="hoverable-obj garis-putus">
+            <img id="garis-putus-2" src="{{ asset('images/treasureMap/garis-putus-mobile.png') }}" alt="Garis Putus" />
         </div>
         <div class="hoverable-obj jnana-sanka">
             <img src="{{ asset('images/treasureMap/jnana-sanka.png') }}" alt="Jnana Sanka" />
