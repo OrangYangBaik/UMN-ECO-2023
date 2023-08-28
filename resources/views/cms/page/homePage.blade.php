@@ -10,25 +10,25 @@
         <audio id="hover-sound" src="{{ asset('sound/lembarankertas-cut.mp3') }}"></audio>
         @include('cms.page.preEvent.jnanaSanka')
         <div class="hoverable-obj garis-putus">
-            <img id="garis-putus-1" src="{{ asset('images/treasureMap/garis-putus.png') }}" alt="Garis Putus" />
+            <img id="garis-putus-1" src="{{ asset('images/treasureMap/garis-putus.svg') }}" alt="Garis Putus" />
         </div>
         <div class="hoverable-obj garis-putus">
-            <img id="garis-putus-2" src="{{ asset('images/treasureMap/garis-putus-mobile.png') }}" alt="Garis Putus" />
+            <img id="garis-putus-2" src="{{ asset('images/treasureMap/garis-putus-mobile.svg') }}" alt="Garis Putus" />
         </div>
         <div class="hoverable-obj jnana-sanka">
-            <img src="{{ asset('images/treasureMap/jnana-sanka.png') }}" alt="Jnana Sanka" />
+            <img src="{{ asset('images/treasureMap/jnana-sanka.svg') }}" alt="Jnana Sanka" />
         </div>
         <div class="hoverable-obj nawasena">
-            <img src="{{ asset('images/treasureMap/nawasena.png') }}" alt="Nawasena" />
+            <img src="{{ asset('images/treasureMap/nawasena.svg') }}" alt="Nawasena" />
         </div>
         <div class="hoverable-obj wehea">
-            <img src="{{ asset('images/treasureMap/wehea.png') }}" alt="Hidden City in Wehea" />
+            <img src="{{ asset('images/treasureMap/wehea.svg') }}" alt="Hidden City in Wehea" />
         </div>
         <div class="hoverable-obj eco-patra">
-            <img src="{{ asset('images/treasureMap/eco-patra.png') }}" alt="Eco Patra" />
+            <img src="{{ asset('images/treasureMap/eco-patra.svg') }}" alt="Eco Patra" />
         </div>
         <div class="hoverable-obj meru-betiri">
-            <img src="{{ asset('images/treasureMap/meru-betiri.png') }}" alt="Gate of Meru Betiri" />
+            <img src="{{ asset('images/treasureMap/meru-betiri.svg') }}" alt="Gate of Meru Betiri" />
         </div>
         {{-- <a href="{{ route('scannerPage') }}">tesqr</a> --}}
     </div>
