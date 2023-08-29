@@ -26,7 +26,8 @@ use App\Http\Controllers\UserController;
 // WEB UTAMA UMN ECO 2023
 
 // Route Halaman Utama
-Route::get('/', [HomeController::class, 'index'])->name('landing');
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
+Route::get('/about-us', [HomeController::class, 'aboutus'])->name('about-us');
 Route::get('/eco-fam', [EcoFamilyController::class, 'index'])->name('eco-fam');
 Route::get('/our-team', [HomeController::class, 'ourteam'])->name('our-team');
 
@@ -64,7 +65,7 @@ Route::group(['prefix' => 'fun-walk'], function() {
 
 // Milestone
 Route::group(['prefix' => 'milestone'], function() {
-    Route::get('/', [MilestoneController::class, 'index'])->name('milestone-landing');
+    Route::get('/', [MilestoneController::class, 'index'])->name('milestone');
     Route::group(['prefix' => 'bank-sampah'], function() {
         Route::get('/gen-1', [MilestoneController::class, 'firstGenBS'])->name('1st-gen-bank-sampah');
         Route::get('/gen-2', [MilestoneController::class, 'secGenBS'])->name('2nd-gen-bank-sampah');
@@ -98,7 +99,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard-admin')->middleware('auth:web');
     Route::get('/town')->middleware('auth:web');
     Route::get('/fun-walk')->middleware('auth:web');
-    Route::get('/verificationPoint/{boothNum}', [AdminController::class, 'verificationPoint'])->name('verificationPage')->middleware('auth:web');
+    Route::get('/verificationPoint/{boothNum}', [AdminController::class, 'verificationPoint'])->middleware('auth:web');
     // Route::post('/addPoints/{userId}/{point}', [AdminController::class, 'increaseCreditPoints'])->name('add.points')->middleware('auth:web');
     Route::post('/addPoints', [AdminController::class, 'increasePoints'])->name('addPoints')->middleware('auth:web');
 
@@ -108,7 +109,7 @@ Route::group(['prefix' => 'admin'], function(){
 });
 
 
-//qr
+// QR
 Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
 Route::get('/scannerPageBeliKupon', [QrHandlerController::class, 'beliKupon'])->name('scannerPageBeliKupon')->middleware('auth:participant');
 Route::post('/verificationAdmin/sendReqMain', [QrHandlerController::class, 'sendReqMain']);

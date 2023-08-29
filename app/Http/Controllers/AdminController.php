@@ -121,13 +121,15 @@ class AdminController extends Controller
                             ->get();
 
             if ($requester->count() === 0) {
-                $requester = 'none';
+                $requester = [];
             }
 
             return view('admin.page.verificationPointAdmin'.$boothNum, [
-                'title' => 'daftar yang ngescan',
-                'requester' => $requester
+                'title' => 'Daftar yang Ngescan',
+                'requester' => $requester,
+                'boothNum' => $boothNum,
             ]);
+            
         }else{
             return back();
         }

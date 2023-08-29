@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>QR Scanner untuk main</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js"
+        integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>QR Scanner</h1>
     <div id="reader" width="600px"></div>
-    
+
     <script>
-      function makeAjaxRequest(url, data) {
-        return new Promise((resolve, reject) => {
-          $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
+        function makeAjaxRequest(url, data) {
+            return new Promise((resolve, reject) => {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                $.ajax({
+                    url: url,
+                    method: 'POST',
+                    data: data,
+                    success: resolve,
+                    error: reject
+                });
             });
+        }
 
-          $.ajax({
-            url: url,
-            method: 'POST',
-            data: data,
-            success: resolve,
-            error: reject
-          });
+        const scanner = new Html5QrcodeScanner('reader', {
+            qrbox: {
+                width: 250,
+                height: 250,
+            },
+            fps: 20,
         });
-      }
 
-      const scanner = new Html5QrcodeScanner('reader', {
-        qrbox: {
-            width: 250,
-            height: 250,
-        },
-        fps: 20,
-      });
+        scanner.render(success, error);
 
-      scanner.render(success, error);
-
-      let ajaxSent = false; 
+        let ajaxSent = false;
 
       function success(result) {
         if (!ajaxSent) { 
@@ -63,7 +67,7 @@
                     document.getElementById('reader').remove();
                     alert(response2.message);
                     //ini routenya (buat redirect) kalo dia udh ngescan dan bener datanya 
-                    window.location.href = "{{ route('landing') }}";
+                    window.location.href = "{{ route('homepage') }}";
                   }else {
                     alert(response1.message);
                   }
@@ -78,9 +82,10 @@
         }
       }
 
-      function error(err) {
-        console.error(err);
-      }
+        function error(err) {
+            console.error(err);
+        }
     </script>
-  </body>
+</body>
+
 </html>

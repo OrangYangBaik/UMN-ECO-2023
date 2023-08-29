@@ -879,7 +879,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Milestone::create([
-            'nama_organisasi' => 'BANK SAMPAH GEN',
+            'nama_organisasi' => 'BANK SAMPAH',
             'gen' => '2',
             'tahun' => '2017',
             'overview' => 'Pada tahun 2017, Bank Sampah kembali hadir mempersembahkan Spread Awareness About Cleanliness (S.P.A.R.C) yang merupakan sebuah kegiatan kerja sama Bank Sampah Gen 2 bersama dengan beberapa sekolah seperti SMPN 14 Tangsel, SMPN 19 Tangsel, hingga SMP Yaspita yang didokumentasikan serta dijadikan puncak dari acara Open Seminar Transparansi.',

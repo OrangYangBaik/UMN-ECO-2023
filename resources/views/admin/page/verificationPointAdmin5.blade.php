@@ -5,17 +5,23 @@
 @endsection
 
 @section('content')
-    @foreach ($requester as $user)
-        <form class="points-form text-white" action="/admin/addPoints" method="post">
-            @csrf
-            <input type="hidden" name="userId" value="{{ $user->id }}">
-            <h3>Nama: {{ $user->nama }}</h3>
-            <h3>NIM: {{ $user->nim }}</h3>
-            <label for="point">Poin tambahan:</label>
-            <input type="number" name="point" id="point" class="point-input">
-            <button class="acc-button" type="submit">Approve</button>
-        </form>
-    @endforeach
+    <div style="min-height: 100vh;">
+        @if (empty($requester))
+            <div class="text-white">No Data</div>
+        @else
+            @foreach ($requester as $user)
+                <form class="points-form text-white" action="/admin/addPoints" method="post">
+                    @csrf
+                    <input type="hidden" name="userId" value="{{ $user->id }}">
+                    <h3>Nama: {{ $user->nama }}</h3>
+                    <h3>NIM: {{ $user->nim }}</h3>
+                    <label for="point">Poin tambahan:</label>
+                    <input type="number" name="point" id="point" class="point-input text-dark" />
+                    <button class="acc-button text-dark" type="submit">Approve</button>
+                </form>
+            @endforeach
+        @endif
+    </div>
 @endsection
 
 @section('custom-js')

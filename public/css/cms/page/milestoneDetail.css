@@ -3,16 +3,20 @@
     src: url("{{ asset('fonts/bobby-jones-soft.otf') }}") format("truetype");
 }
 
-.tahun, .tahun-2, .tahun-3, .tahun-4, .tahun-5, .tahun-6, .tahun-7, .tahun-8 {
+.tahun,
+.tahun-2,
+.tahun-3,
+.tahun-4,
+.tahun-5,
+.tahun-6,
+.tahun-7,
+.tahun-8 {
     font-family: bobbyjones;
 }
 
-h2 {all: unset;
-font-family: bobbyjones;}
-
-body {
-    overflow-x: hidden;
-    margin: 0px;
+h2 {
+    all: unset;
+    font-family: bobbyjones;
 }
 
 .container-Bs {
@@ -20,261 +24,82 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw;
-    height: 342vw;
-    background: linear-gradient(180deg, #9ACDE0 0%, rgba(221, 237, 236, 0.90) 18.23%, #FFDD82 57.81%, #FFDE82 68.75%, #F79735 100%);
-}
-
-/* .gradasi-bg {
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100vw;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #9ACDE0 0%, rgba(221, 237, 236, 0.90) 18.23%, #FFDD82 57.81%, #FFDE82 68.75%, #F79735 100%);
-} */
-
-.container-Bs .awan-kiri{
-    position: absolute;
     width: 100%;
-    top: 10vw;
-    left: 10vw;
+    height: 341.55vw;
+    background: linear-gradient(
+        180deg,
+        #9acde0 0%,
+        #ddedec 10%,
+        #ffdd82 50%,
+        #ffde82 65%,
+        #f79735 100%
+    );
+    overflow-x: hidden;
 }
 
-.container-Bs .header-1 {
-    z-index: 1;
-    text-align: center;
+.container-Bs .awan {
+    opacity: 0.7;
+}
+
+.container-Bs .awan-kiri-1 {
     position: absolute;
-    top: 5%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
-    color: #F9F8DC;
-    font-size: 5vw !important;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 41px;
-    background: #458B95;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 0.5vw 2vw;
-    letter-spacing: 0.5vw;
+    top: 2.5%;
+    left: 5%;
 }
-
-.container-Bs .header-2 {
-    z-index: 1;
-    color: #284C3F;
-    font-size: 3.5vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.1vw;
-}
-
-.container-Bs .overview {
-    text-align: center;
+.container-Bs .awan-kiri-2 {
     position: absolute;
-    top: 25%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
-
+    top: 33.3%;
+    left: 5%;
 }
-
-.container-Bs .overview p {
-    color: #284C3F;;
-    font-family: Montserrat;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 50vw;
-    margin: auto;
-}
-
-.container-Bs .overview span {
-    font-weight: 700;
-}
-
-.container-Bs .header-3 {
-    z-index: 1;
-    color: #284C3F;
-    font-size: 3.5vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.1vw;
-}
-
-.container-Bs .header-4 {
-    z-index: 1;
-    font-size: 3.5vw;
-    color: #284C3F;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.1vw;
-}
-
-.container-Bs .header-5 {
-    z-index: 1;
-    color: #284C3F;
-    font-size: 3.5vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.1vw;
-}
-
-.container-Bs .programs {
-    text-align: center;
+.container-Bs .awan-kiri-3 {
     position: absolute;
-    top: 37%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
-
+    top: 66.6%;
+    left: 5%;
 }
-
-.container-Bs .programs p {
-    color: #284C3F;
-    text-align: left;
-    font-family: Montserrat;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 50vw;
-    margin: auto;
-}
-
-.container-Bs .programs .paragraf-2 {
-    color: #284C3F;
-    text-align: left;
-    font-family: Montserrat;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 50vw;
-    margin: auto;
-}
-
-.container-Bs .programs ul {
-    color: #284C3F;
-    text-align: left;
-    font-family: Montserrat;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 50vw;
-    margin: auto;
-}
-
-.container-Bs .programs .li-2 {
-    color: #284C3F;
-    text-align: left;
-    font-family: Montserrat;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 50vw;
-    margin: auto;
-}
-
-.container-Bs .programs span {
-    font-weight: 700;
-}
-
-.container-Bs .achievements {
-    text-align: center;
+.container-Bs .awan-kiri-4 {
     position: absolute;
-    top: 58%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 5%;
 }
 
-.container-Bs .achievements .paragraf-3 {
-    color: #284C3F;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 50vw;
-    margin: auto;
-}
-
-.container-Bs .environmental {
-    text-align: center;
+.container-Bs .awan-kanan-1 {
     position: absolute;
-    top: 65%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
-
+    top: 7.5%;
+    right: 5%;
 }
-
-.container-Bs .environmental .paragraf-4 {
-    color: #284C3F;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    width: 50vw;
-    margin: auto;
-}
-
-.container-Bs .environmental .paragraf-5 {
-    color: #284C3F;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 50vw;
-    margin: auto;
-}
-
-.container-Bs .tahun {
-    z-index: 1;
-    text-align: center;
+.container-Bs .awan-kanan-2 {
     position: absolute;
-    top: 8%;  /* position the top  edge of the element at the middle of the parent */
-    left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%);
-    padding: 0.5vw 2.5vw;
-    border-radius: 41px;
-    background: #83A9AC;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: #F9F8DC;
-    text-align: center;
-    font-size: 3.5vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.5vw;
+    top: 25%;
+    right: 5%;
 }
-
-.container-Bs .tahun h2 {
-    margin: 0;
+.container-Bs .awan-kanan-3 {
+    position: absolute;
+    top: 50%;
+    right: 5%;
 }
-
-.container-Bs .header-1 h2 {
-    margin: 0;
+.container-Bs .awan-kanan-4 {
+    position: absolute;
+    top: 75%;
+    right: 5%;
 }
 
 .container-Bs .temple {
     z-index: 0;
     position: absolute;
-    width: 130%;
-    top: 7vw;
-    left: -15vw;
+    width: 130vw;
+    top: 2%;
+    left: -15%;
+    opacity: 0.8;
+}
+
+.container-Bs .temple img {
+    width: 100%;
+}
+
+#temple-2,
+#temple-3,
+#temple-4 {
+    display: none;
 }
 
 .container-Bs .jembatan {
@@ -291,7 +116,6 @@ body {
     width: 38%;
     left: -10vw;
     top: 35.5vw;
-    /* display: none; */
 }
 
 .container-Bs .bush-kanan {
@@ -300,7 +124,6 @@ body {
     width: 38%;
     right: -10vw;
     top: 35.5vw;
-    /* display: none; */
 }
 
 .container-Bs .daun-merah-kiri {
@@ -309,7 +132,6 @@ body {
     width: 34%;
     left: 5vw;
     top: 31vw;
-    /* display: none; */
 }
 
 .container-Bs .daun-merah-kanan {
@@ -318,7 +140,6 @@ body {
     width: 34%;
     right: 5vw;
     top: 31vw;
-    /* display: none; */
 }
 
 .container-Bs .tanaman-menjalar-kiri {
@@ -335,7 +156,6 @@ body {
     width: 33%;
     right: -1vw;
     top: 49vw;
-    /* display: none; */
 }
 
 .container-Bs .tanaman-menjalar-tengah {
@@ -344,5 +164,502 @@ body {
     width: 22%;
     left: 38vw;
     top: 48.5vw;
-    /* display: none; */
+}
+
+.container-Bs
+    :where(
+        .programs p,
+        .overview p,
+        .achievements p,
+        .environmental p,
+        .programs ul,
+
+    ) {
+    text-align: justify;
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: normal;
+    color: #284c3f;
+}
+
+.container-Bs
+    :where(
+        .programs span,
+        .overview span,
+        .achievements span,
+        .environmental span
+    ) {
+    font-weight: 700;
+}
+
+.container-Bs
+    :where(.programs h2, .overview h2, .achievements h2, .environmental h2) {
+    text-align: center;
+}
+
+.container-Bs .header-1 {
+    width: 50vw;
+}
+
+.container-Bs .tahun {
+    width: 150px;
+}
+
+.container-Bs :where(.header-1, .tahun) {
+    font-size: 3rem;
+    padding: 10px 20px;
+    border-radius: 41px;
+    color: #f9f8dc;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-Bs .header-1 {
+    top: 5%;
+    background: #458b95;
+}
+
+.container-Bs .tahun {
+    top: 7.5%;
+    background: #83a9ac;
+}
+
+.container-Bs .header-2 {
+    font-size: 2rem;
+    color: #284c3f;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+}
+
+.container-Bs :where(.overview, .programs, .environmental, .achievements) {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-Bs .programs ul {
+    margin-top: 10px;
+}
+
+.container-Bs .programs span {
+    font-weight: 700;
+}
+
+.container-Bs .overview {
+    top: 22.5%;
+}
+
+@media only screen and (min-width: 1441px) {
+    .container-Bs #programs-2016 {
+        top: 25.5%;
+    }
+    .container-Bs #achievements-2016 {
+        top: 35%;
+    }
+    .container-Bs #environmental-2016 {
+        top: 38%;
+    }
+
+    .container-Bs #programs-2017 {
+        top: 25.5%;
+    }
+    .container-Bs #achievements-2017 {
+        top: 40.5%;
+    }
+    .container-Bs #environmental-2017 {
+        top: 43.5%;
+    }
+
+    .container-Bs #programs-2018 {
+        top: 25%;
+    }
+    .container-Bs #achievements-2018 {
+        top: 39%;
+    }
+    .container-Bs #environmental-2018 {
+        top: 42%;
+    }
+
+    .container-Bs #programs-2019 {
+        top: 25%;
+    }
+    .container-Bs #achievements-2019 {
+        top: 33%;
+    }
+    .container-Bs #environmental-2019 {
+        top: 36%;
+    }
+
+    .container-Bs #programs-2020 {
+        top: 25.5%;
+    }
+    .container-Bs #achievements-2020 {
+        top: 42.5%;
+    }
+    .container-Bs #environmental-2020 {
+        top: 55%;
+    }
+
+    .container-Bs #programs-2021 {
+        top: 27.5%;
+    }
+    .container-Bs #achievements-2021 {
+        top: 55%;
+    }
+    .container-Bs #environmental-2021 {
+        top: 61%;
+    }
+
+    .container-Bs #programs-2022 {
+        top: 26%;
+    }
+    .container-Bs #achievements-2022 {
+        top: 42%;
+    }
+    .container-Bs #environmental-2022 {
+        top: 55%;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .container-Bs :where(.header-1, .tahun) {
+        font-size: 2rem;
+    }
+    .container-Bs #programs-2016 {
+        top: 28%;
+    }
+    .container-Bs #achievements-2016 {
+        top: 55%;
+    }
+    .container-Bs #environmental-2016 {
+        top: 61%;
+    }
+
+    .container-Bs #programs-2017 {
+        top: 28%;
+    }
+    .container-Bs #achievements-2017 {
+        top: 55%;
+    }
+    .container-Bs #environmental-2017 {
+        top: 60%;
+    }
+
+    .container-Bs #programs-2018 {
+        top: 27%;
+    }
+    .container-Bs #achievements-2018 {
+        top: 55%;
+    }
+    .container-Bs #environmental-2018 {
+        top: 60%;
+    }
+
+    .container-Bs #programs-2019 {
+        top: 27%;
+    }
+    .container-Bs #achievements-2019 {
+        top: 40%;
+    }
+    .container-Bs #environmental-2019 {
+        top: 55%;
+    }
+
+    .container-Bs #programs-2020 {
+        top: 27%;
+    }
+    .container-Bs #achievements-2020 {
+        top: 57%;
+    }
+    .container-Bs #environmental-2020 {
+        top: 63%;
+    }
+
+    .container-Bs #programs-2021 {
+        top: 32%;
+    }
+    .container-Bs #achievements-2021 {
+        top: 80%;
+    }
+    .container-Bs #environmental-2021 {
+        top: 90%;
+    }
+
+    .container-Bs #programs-2022 {
+        top: 28.5%;
+    }
+    .container-Bs #achievements-2022 {
+        top: 58%;
+    }
+    .container-Bs #environmental-2022 {
+        top: 64%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container-Bs :where(.header-1, .tahun) {
+        font-size: 1.5rem;
+    }
+    .container-Bs #programs-2016 {
+        top: 30%;
+    }
+    .container-Bs #achievements-2016 {
+        top: 56%;
+    }
+    .container-Bs #environmental-2016 {
+        top: 64%;
+    }
+
+    .container-Bs #programs-2017 {
+        top: 31%;
+    }
+    .container-Bs #achievements-2017 {
+        top: 71.5%;
+    }
+    .container-Bs #environmental-2017 {
+        top: 78.5%;
+    }
+
+    .container-Bs #programs-2018 {
+        top: 28%;
+    }
+    .container-Bs #achievements-2018 {
+        top: 65%;
+    }
+    .container-Bs #environmental-2018 {
+        top: 72.5%;
+    }
+
+    .container-Bs #programs-2019 {
+        top: 29%;
+    }
+    .container-Bs #achievements-2019 {
+        top: 55%;
+    }
+    .container-Bs #environmental-2019 {
+        top: 65%;
+    }
+
+    .container-Bs #programs-2020 {
+        top: 30%;
+    }
+    .container-Bs #achievements-2020 {
+        top: 80%;
+    }
+    .container-Bs #environmental-2020 {
+        top: 90%;
+    }
+
+    .container-Bs #programs-2021 {
+        top: 18%;
+    }
+    .container-Bs #achievements-2021 {
+        top: 60.5%;
+    }
+    .container-Bs #environmental-2021 {
+        top: 69.5%;
+    }
+
+    .container-Bs #programs-2022 {
+        top: 32%;
+    }
+    .container-Bs #achievements-2022 {
+        top: 80%;
+    }
+    .container-Bs #environmental-2022 {
+        top: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container-Bs {
+        height: 676.2vw;
+    }
+
+    .container-Bs :where(.header-1, .tahun) {
+        font-size: 1rem;
+    }
+    .container-Bs .header-1 {
+        width: 60vw;
+        top: 2.75%;
+    }
+    .container-Bs .tahun {
+        width: 100px;
+        top: 4.25%;
+    }
+    .container-Bs .overview {
+        top: 10.5%;
+    }
+
+    .container-Bs #programs-2016 {
+        top: 17.5%;
+    }
+    .container-Bs #achievements-2016 {
+        top: 38%;
+    }
+    .container-Bs #environmental-2016 {
+        top: 45%;
+    }
+
+    .container-Bs #programs-2017 {
+        top: 18.5%;
+    }
+    .container-Bs #achievements-2017 {
+        top: 53.5%;
+    }
+    .container-Bs #environmental-2017 {
+        top: 59%;
+    }
+
+    .container-Bs #programs-2018 {
+        top: 15%;
+    }
+    .container-Bs #achievements-2018 {
+        top: 45%;
+    }
+    .container-Bs #environmental-2018 {
+        top: 51.5%;
+    }
+
+    .container-Bs #programs-2019 {
+        top: 16.5%;
+    }
+    .container-Bs #achievements-2019 {
+        top: 33.5%;
+    }
+    .container-Bs #environmental-2019 {
+        top: 40%;
+    }
+
+    .container-Bs #programs-2020 {
+        top: 16.5%;
+    }
+    .container-Bs #achievements-2020 {
+        top: 61%;
+    }
+    .container-Bs #environmental-2020 {
+        top: 78%;
+    }
+
+    .container-Bs #programs-2021 {
+        top: 15%;
+    }
+    .container-Bs #achievements-2021 {
+        top: 52.5%;
+    }
+    .container-Bs #environmental-2021 {
+        top: 64%;
+    }
+
+    .container-Bs #programs-2022 {
+        top: 19%;
+    }
+    .container-Bs #achievements-2022 {
+        top: 63%;
+    }
+    .container-Bs #environmental-2022 {
+        top: 76%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container-Bs #temple-2 {
+        display: block;
+        top: 50%;
+    }
+    .container-Bs {
+        height: 1325.5vw;
+    }
+
+    .container-Bs .header-1 {
+        top: 0.8% !important;
+    }
+
+    .container-Bs .tahun {
+        top: 2.5% !important;
+    }
+
+    .container-Bs .overview {
+        top: 5.5%;
+    }
+
+    .container-Bs #programs-2016 {
+        top: 15%;
+    }
+    .container-Bs #achievements-2016 {
+        top: 43%;
+    }
+    .container-Bs #environmental-2016 {
+        top: 51%;
+    }
+
+    .container-Bs #programs-2017 {
+        top: 16%;
+    }
+    .container-Bs #achievements-2017 {
+        top: 64%;
+    }
+    .container-Bs #environmental-2017 {
+        top: 71%;
+    }
+
+    .container-Bs #programs-2018 {
+        top: 15%;
+    }
+    .container-Bs #achievements-2018 {
+        top: 56%;
+    }
+    .container-Bs #environmental-2018 {
+        top: 64%;
+    }
+
+    .container-Bs #programs-2019 {
+        top: 16.5%;
+    }
+    .container-Bs #achievements-2019 {
+        top: 41%;
+    }
+    .container-Bs #environmental-2019 {
+        top: 48%;
+    }
+
+    .container-Bs #programs-2020 {
+        top: 16.5%;
+    }
+    .container-Bs #achievements-2020 {
+        top: 80%;
+    }
+    .container-Bs #environmental-2020 {
+        top: 91%;
+    }
+
+    .container-Bs #programs-2021 {
+        top: 14.5%;
+    }
+    .container-Bs #achievements-2021 {
+        top: 79%;
+    }
+    .container-Bs #environmental-2021 {
+        top: 93%;
+    }
+
+    .container-Bs #programs-2022 {
+        top: 17.5%;
+    }
+    .container-Bs #achievements-2022 {
+        top: 78%;
+    }
+    .container-Bs #environmental-2022 {
+        top: 89%;
+    }
 }

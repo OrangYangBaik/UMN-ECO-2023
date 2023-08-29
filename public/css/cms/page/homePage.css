@@ -1,0 +1,248 @@
+#homepage-container {
+    background: linear-gradient(
+        180deg,
+        #9de4ff 5%,
+        #ddedec 15%,
+        #ffdd82 50%,
+        #f7b055 75%
+    );
+    overflow-x: hidden;
+}
+
+#homepage-container
+    :where(
+        .jnana-sanka img,
+        .nawasena img,
+        .wehea img,
+        .eco-patra img,
+        .meru-betiri img
+    ) {
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+#homepage-container
+    :where(
+        .jnana-sanka img:hover,
+        .nawasena img:hover,
+        .eco-patra img:hover,
+        .meru-betiri img:hover
+    ) {
+    transform: scale(1.2);
+}
+
+#homepage-container .wehea img:hover {
+    transform: scale(1.1) translate(-50%, -50%);
+}
+
+#homepage-container .garis-putus img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #homepage-container .jnana-sanka img {
+        position: absolute;
+        bottom: 17.5%;
+        left: 0;
+        height: auto;
+        width: 350px;
+    }
+
+    #homepage-container .nawasena img {
+        position: absolute;
+        top: 15%;
+        left: 7.5%;
+        height: auto;
+        width: 325px;
+    }
+
+    #homepage-container .wehea img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 450px;
+    }
+
+    #homepage-container .eco-patra img {
+        position: absolute;
+        bottom: 22.5%;
+        right: 10%;
+        height: auto;
+        width: 280px;
+    }
+
+    #homepage-container .meru-betiri img {
+        position: absolute;
+        top: 10%;
+        right: 2.5%;
+        height: auto;
+        width: 450px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #homepage-container .jnana-sanka img {
+        position: absolute;
+        width: 250px;
+        height: auto;
+        bottom: 25%;
+        left: 0;
+    }
+
+    #homepage-container .nawasena img {
+        position: absolute;
+        width: 225px;
+        height: auto;
+        left: 12.5%;
+        top: 22.5%;
+    }
+
+    #homepage-container .wehea img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 350px;
+    }
+
+    #homepage-container .eco-patra img {
+        position: absolute;
+        bottom: 30%;
+        right: 12.5%;
+        height: auto;
+        width: 180px;
+    }
+
+    #homepage-container .meru-betiri img {
+        position: absolute;
+        top: 15%;
+        right: 2.5%;
+        height: auto;
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #homepage-container {
+        padding: 25rem 7.5rem;
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    #garis-putus-2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #garis-putus-1 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    #homepage-container {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        padding: 12rem 4rem;
+        overflow-x: hidden;
+    }
+
+    #homepage-container .jnana-sanka img {
+        position: absolute;
+        width: 325px;
+        height: auto;
+        top: 12.5%;
+        left: 0;
+    }
+
+    #homepage-container .nawasena img {
+        position: absolute;
+        width: 375px;
+        height: auto;
+        top: 12.5%;
+        right: 2.5%;
+    }
+
+    #homepage-container .wehea img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 500px;
+    }
+
+    #homepage-container .eco-patra img {
+        position: absolute;
+        bottom: 15%;
+        left: 0;
+        height: auto;
+        width: 275px;
+    }
+
+    #homepage-container .meru-betiri img {
+        position: absolute;
+        bottom: 7.5%;
+        right: 0;
+        height: auto;
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    #homepage-container {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+        padding: 10rem 2rem;
+        overflow-x: hidden;
+    }
+
+    #homepage-container .jnana-sanka img {
+        position: absolute;
+        width: 175px;
+        height: auto;
+        top: 15%;
+        left: -5%;
+    }
+
+    #homepage-container .nawasena img {
+        position: absolute;
+        width: 180px;
+        height: auto;
+        top: 15%;
+        right: 0;
+    }
+
+    #homepage-container .wehea img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 325px;
+    }
+
+    #homepage-container .eco-patra img {
+        position: absolute;
+        bottom: 17.5%;
+        left: 0;
+        height: auto;
+        width: 150px;
+    }
+
+    #homepage-container .meru-betiri img {
+        position: absolute;
+        bottom: 10%;
+        right: -20%;
+        height: auto;
+        width: 325px;
+    }
+}
