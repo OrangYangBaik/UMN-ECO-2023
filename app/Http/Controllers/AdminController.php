@@ -6,21 +6,16 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Team;
+use \Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\RecruitmentExport;
 use App\Exports\RecruitmentAllExport;
-// use App\Exports\droughtExport;
-// use App\Exports\downpourExport;
-// use App\Exports\downpourExportAll;
-// use App\Models\DownpourUser;
-// use App\Models\DroughtRegistration;
-// use App\Models\Drought_bingo;
+use App\Models\Kupon;
 use App\Models\Settings;
 use Exception;
 use Illuminate\Support\Facades\DB;
-
 
 class AdminController extends Controller
 {
@@ -108,7 +103,6 @@ class AdminController extends Controller
         $user = User::where('nama', $nama)
                 ->where('nim', $nim)
                 ->first();
-
         if ($user) {
             $msg = 'data sudah terkirim';
             return response()->json(['message' => $msg, 'success' => true]);
@@ -139,7 +133,7 @@ class AdminController extends Controller
         }
     }
     
-    public function increaseCreditPoints(Request $request)
+    public function increasePoints(Request $request)
      {
         $request->validate([
             'point' => 'required|numeric',
@@ -154,7 +148,31 @@ class AdminController extends Controller
             $user->booth = 0;
             $user->save();
             
-            return back();
+            //return back();
+            return response()->json(['success' => true, 'message' => 'bisa']);
+        } else {
+            return response()->json(['success' => false, 'message' => 'User not found']);
+        }
+    }
+
+    public function deductPoints(Request $request)
+     {
+        $request->validate([
+            'point' => 'required|numeric',
+            'userId' => 'required',
+        ]);
+
+        $user = User::findOrFail($request->input('userId'));
+
+        if ($user) {
+            if($user->point < $request->point){
+                return response()->json(['success' => false, 'message' => 'maaf poin kamu tidak mencukupi']);
+            }
+            $user->point -= $request->point;
+            $user->save();
+            
+            //return back();
+            return response()->json(['success' => true, 'message' => 'bisa']);
         } else {
             return response()->json(['success' => false, 'message' => 'User not found']);
         }

@@ -16,8 +16,9 @@ class Kupon extends Migration
         Schema::create('kupons', function (Blueprint $table) {
             $table->id();
             $table->uuid('pemilik')->nullable();
-            $table->string('jenis');
-            $table->tinyInteger('jumlah');
+            $table->tinyInteger('atasan');
+            $table->tinyInteger('bawahan');
+            $table->tinyInteger('aksesoris');
             $table->rememberToken();
             $table->timestamps();
 

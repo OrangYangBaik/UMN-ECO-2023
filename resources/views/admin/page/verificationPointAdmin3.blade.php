@@ -6,7 +6,7 @@
 
 @section('content')
     @foreach ($requester as $user)
-        <form class="points-form text-white" action="/addPoints" method="post">
+        <form class="points-form text-white" action="/admin/addPoints" method="post">
             @csrf
             <input type="hidden" name="userId" value="{{ $user->id }}">
             <h3>Nama: {{ $user->nama }}</h3>

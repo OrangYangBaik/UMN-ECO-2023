@@ -54,7 +54,7 @@
                 if (response1.success) {
                   alert(response1.message);
                   // ini dikirimnya
-                  const response2 = await makeAjaxRequest('/sendDataToAdmin', {
+                  const response2 = await makeAjaxRequest('/sendDataMainToAdmin', {
                     nama : response1.nama,
                     nim : response1.nim
                   });

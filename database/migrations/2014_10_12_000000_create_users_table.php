@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration
             $table->boolean('scanned')->default(false);
             $table->tinyInteger('booth')->default('0');
             $table->tinyInteger('credit')->default('5');
-            $table->tinyInteger('point')->default('0');
+            $table->integer('point')->default('0');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

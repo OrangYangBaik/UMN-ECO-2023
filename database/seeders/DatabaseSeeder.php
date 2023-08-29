@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
 
-        // User Admin
+        // User Admin Arcade
         Admin::create([
             'name' => 'AdminArcade1',
             'email' => 'adminarcade1@umn.ac.id',
@@ -54,6 +54,54 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('nirmalabentalaumneco2023')
         ]);
 
+        // User Admin Merchandise
+        Admin::create([
+            'name' => 'AdminMerchandise1',
+            'email' => 'adminmerchandise1@umn.ac.id',
+            'booth' => 1,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminMerchandise2',
+            'email' => 'adminmerchandise2@umn.ac.id',
+            'booth' => 2,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminMerchandise3',
+            'email' => 'adminmerchandise3@umn.ac.id',
+            'booth' => 3,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
+        // User Admin Side Quest
+        Admin::create([
+            'name' => 'AdminSideQuest1',
+            'email' => 'adminsidequest1@umn.ac.id',
+            'booth' => 1,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminSideQuest2',
+            'email' => 'adminsidequest2@umn.ac.id',
+            'booth' => 2,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminSideQuest3',
+            'email' => 'adminsidequest3@umn.ac.id',
+            'booth' => 3,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+       
+        // User Admin Kupon
+        Admin::create([
+            'name' => 'AdminKupon1',
+            'email' => 'adminkupon1@umn.ac.id',
+            'booth' => 1,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
         // Dummy User
         User::create([
             'id' => Str::uuid(),
@@ -69,7 +117,7 @@ class DatabaseSeeder extends Seeder
             'wehea' => 1,
             'meru_betiri' => 0,
             'scanned' => 0,
-            'credit' => 5,
+            'credit' => 100,
             'point' => 0,
         ]);
 

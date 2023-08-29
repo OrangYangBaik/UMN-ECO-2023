@@ -9,7 +9,8 @@ class Kupon extends Model
 {
     use HasFactory;
     protected $table = 'kupons';
-    
+    protected $primaryKey = 'id';
+    protected $keyType = 'string';
 
     protected $guarded = [
         'id', 'timestamps'
