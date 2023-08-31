@@ -45,42 +45,42 @@
 
         let ajaxSent = false;
 
-        function success(result) {
-            if (!ajaxSent) {
-                ajaxSent = true;
-                async function performNestedAjaxCalls() {
-                    try {
-                        //kirim ajax call pertama buat cek bener ga qrcodenya
-                        const response1 = await makeAjaxRequest('/verificationAdmin/sendReqMain', {
-                            qrcode: result,
-                        });
-                        //kalo qrcodenya bener bakal dikirim data user yang ngescan ke AdminController@sendToAdminPage buat dicek validasi lagi
-                        if (response1.success) {
-                            alert(response1.message);
-                            // ini dikirimnya
-                            const response2 = await makeAjaxRequest('/sendDataToAdmin', {
-                                nama: response1.nama,
-                                nim: response1.nim
-                            });
-                            if (response2.success) {
-                                scanner.clear();
-                                document.getElementById('reader').remove();
-                                alert(response2.message);
-                                //ini routenya (buat redirect) kalo dia udh ngescan dan bener datanya 
-                                window.location.href = "{{ route('homepage') }}";
-                            } else {
-                                alert(response1.message);
-                            }
-                        } else {
-                            alert(response1.message);
-                        }
-                    } catch (error) {
-                        console.error('An error occurred:', error);
-                    }
+      function success(result) {
+        if (!ajaxSent) { 
+            ajaxSent = true;
+            async function performNestedAjaxCalls() {
+              try {
+                //kirim ajax call pertama buat cek bener ga qrcodenya
+                const response1 = await makeAjaxRequest('/verificationAdmin/sendReqMain', {
+                  qrcode: result,
+                });
+                //kalo qrcodenya bener bakal dikirim data user yang ngescan ke AdminController@sendToAdminPage buat dicek validasi lagi
+                if (response1.success) {
+                  alert(response1.message);
+                  // ini dikirimnya
+                  const response2 = await makeAjaxRequest('/sendDataMainToAdmin', {
+                    nama : response1.nama,
+                    nim : response1.nim
+                  });
+                  if (response2.success){
+                    scanner.clear();
+                    document.getElementById('reader').remove();
+                    alert(response2.message);
+                    //ini routenya (buat redirect) kalo dia udh ngescan dan bener datanya 
+                    window.location.href = "{{ route('homepage') }}";
+                  }else {
+                    alert(response1.message);
+                  }
+                } else {
+                  alert(response1.message);
                 }
-                performNestedAjaxCalls();
+              } catch (error) {
+                console.error('An error occurred:', error);
+              }
             }
+            performNestedAjaxCalls();
         }
+      }
 
         function error(err) {
             console.error(err);

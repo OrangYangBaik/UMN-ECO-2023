@@ -9,6 +9,7 @@ use App\Models\User;
 use Exception;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Support\Facades\Http;
+use \Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class UserController extends Controller
@@ -51,6 +52,7 @@ class UserController extends Controller
             ]);
     
             $user = new User();
+            $user->id = Str::uuid();
             $user->nama = $request->name;
             $user->nim = $request->nim;
             $user->email = $request->input('email-student');

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
 
-        // User Admin
+        // User Admin Arcade
         Admin::create([
             'name' => 'AdminArcade1',
             'email' => 'adminarcade1@umn.ac.id',
@@ -54,6 +54,68 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('nirmalabentalaumneco2023')
         ]);
 
+        // User Admin Merchandise
+        Admin::create([
+            'name' => 'AdminMerchandise1',
+            'email' => 'adminmerchandise1@umn.ac.id',
+            'booth' => 1,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminMerchandise2',
+            'email' => 'adminmerchandise2@umn.ac.id',
+            'booth' => 2,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminMerchandise3',
+            'email' => 'adminmerchandise3@umn.ac.id',
+            'booth' => 3,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
+        // User Admin Side Quest
+        Admin::create([
+            'name' => 'AdminSideQuest1',
+            'email' => 'adminsidequest1@umn.ac.id',
+            'booth' => 1,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminSideQuest2',
+            'email' => 'adminsidequest2@umn.ac.id',
+            'booth' => 2,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+        Admin::create([
+            'name' => 'AdminSideQuest3',
+            'email' => 'adminsidequest3@umn.ac.id',
+            'booth' => 3,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+       
+        // User Admin Kupon
+        Admin::create([
+            'name' => 'AdminDapatKupon1',
+            'email' => 'admindapatkupon1@umn.ac.id',
+            'booth' => 1,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
+        Admin::create([
+            'name' => 'AdminDapatKupon2',
+            'email' => 'admindapatkupon2@umn.ac.id',
+            'booth' => 2,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
+        Admin::create([
+            'name' => 'AdminDapatKupon3',
+            'email' => 'admindapatkupon3@umn.ac.id',
+            'booth' => 3,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
         // Dummy User
         User::create([
             'id' => Str::uuid(),
@@ -68,9 +130,16 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('heheheha'),
             'wehea' => 1,
             'meru_betiri' => 0,
-            'scanned' => 0,
-            'credit' => 5,
+            'scanned_arcade' => 1,
+            'scanned_merchandise' => 1,
+            'scanned_dapat_kupon' => 1,
+            'scanned_tukar_kupon' => 1,
+            'booth_merchandise' => 1,
+            'booth_dapat_kupon' => 2,
+            'booth_tukar_kupon' => 3,
+            'credit' => 100,
             'point' => 0,
+            'booth_arcade' => 1
         ]);
 
         User::create([
@@ -86,10 +155,16 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
             'wehea' => 1,
             'meru_betiri' => 0,
-            'scanned' => 1,
+            'scanned_arcade' => 1,
+            'scanned_merchandise' => 0,
+            'scanned_dapat_kupon' => 0,
+            'scanned_tukar_kupon' => 0,
+            'booth_merchandise' => 0,
+            'booth_dapat_kupon' => 0,
+            'booth_tukar_kupon' => 0,
             'credit' => 4,
             'point' => 0,
-            'booth' => 1
+            'booth_arcade' => 1
         ]);
 
         User::create([
@@ -105,10 +180,16 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
             'wehea' => 1,
             'meru_betiri' => 0,
-            'scanned' => 1,
+            'scanned_arcade' => 1,
+            'scanned_merchandise' => 0,
+            'scanned_dapat_kupon' => 1,
+            'scanned_tukar_kupon' => 1,
+            'booth_merchandise' => 0,
+            'booth_dapat_kupon' => 2,
+            'booth_tukar_kupon' => 3,
             'credit' => 0,
             'point' => 50,
-            'booth' => 2
+            'booth_arcade' => 2
         ]);
 
         

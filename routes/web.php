@@ -96,12 +96,15 @@ Route::post('/registerAdmin', [AdminController::class, 'store']);
 
 // Halaman utama admin
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard-admin')->middleware('auth:web');
+    Route::get('/dashboardArcade', [AdminController::class, 'dashboardArcade'])->name('dashboard-admin-arcade')->middleware('auth:web');
+    Route::get('/dashboardDapatKupon', [AdminController::class, 'dashboardDapatKupon'])->name('dashboard-admin-kupon')->middleware('auth:web');
     Route::get('/town')->middleware('auth:web');
     Route::get('/fun-walk')->middleware('auth:web');
     Route::get('/verificationPoint/{boothNum}', [AdminController::class, 'verificationPoint'])->middleware('auth:web');
+    Route::get('/verificationKupon/{boothNum}', [AdminController::class, 'verificationKupon'])->middleware('auth:web');
     // Route::post('/addPoints/{userId}/{point}', [AdminController::class, 'increaseCreditPoints'])->name('add.points')->middleware('auth:web');
-    Route::post('/addPoints', [AdminController::class, 'increaseCreditPoints'])->name('addPoints')->middleware('auth:web');
+    Route::post('/addPoints', [AdminController::class, 'increasePoints'])->name('addPoints')->middleware('auth:web');
+    Route::post('/addKupons', [AdminController::class, 'increaseKupons'])->name('addKupons')->middleware('auth:web');
 
     // Setting Admin
     Route::get('/setting', [AdminController::class, 'setting'])->name('admin-setting')->middleware('auth:web');
@@ -111,8 +114,9 @@ Route::group(['prefix' => 'admin'], function(){
 
 // QR
 Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
-Route::get('/scannerPageBeliKupon', [QrHandlerController::class, 'beliKupon'])->name('scannerPageBeliKupon')->middleware('auth:participant');
+Route::get('/scannerPageDapatKupon', [QrHandlerController::class, 'dapatKupon'])->name('scannerPageDapatKupon')->middleware('auth:participant');
 Route::post('/verificationAdmin/sendReqMain', [QrHandlerController::class, 'sendReqMain']);
-Route::post('/verificationAdmin/sendReqBeliKupon', [QrHandlerController::class, 'sendReqBeliKupon']);
+Route::post('/verificationAdmin/sendReqDapatKupon', [QrHandlerController::class, 'sendReqDapatKupon']);
 Route::post('/sendDataMainToAdmin', [AdminController::class, 'sendToAdminPageMain']);
+Route::post('/sendDataDapatKuponToAdmin', [AdminController::class, 'sendToAdminPageDapatKupon']);
 Route::post('/respond', [AdminController::class, 'respond']);
