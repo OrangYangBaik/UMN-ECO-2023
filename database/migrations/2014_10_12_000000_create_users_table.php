@@ -26,8 +26,14 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->boolean('wehea')->default(false);
             $table->boolean('meru_betiri')->default(false);
-            $table->boolean('scanned')->default(false);
-            $table->tinyInteger('booth')->default('0');
+            $table->boolean('scanned_arcade')->default(false);
+            $table->boolean('scanned_dapat_kupon')->default(false);
+            $table->boolean('scanned_tukar_kupon')->default(false);
+            $table->boolean('scanned_merchandise')->default(false);
+            $table->tinyInteger('booth_merchandise')->default('0');
+            $table->tinyInteger('booth_dapat_kupon')->default('0');
+            $table->tinyInteger('booth_tukar_kupon')->default('0');
+            $table->tinyInteger('booth_arcade')->default('0');
             $table->tinyInteger('credit')->default('5');
             $table->integer('point')->default('0');
             $table->timestamp('email_verified_at')->nullable();

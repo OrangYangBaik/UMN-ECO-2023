@@ -6,16 +6,10 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Team;
-use \Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\RecruitmentExport;
-use App\Exports\RecruitmentAllExport;
 use App\Models\Kupon;
-use App\Models\Settings;
-use Exception;
-use Illuminate\Support\Facades\DB;
+use \Illuminate\Support\Str;
 
 class AdminController extends Controller
 {
@@ -34,7 +28,15 @@ class AdminController extends Controller
 
         if(Auth::guard('web')->attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended('/admin/dashboard');
+
+            $user = auth()->user();
+            $email = $user->email;
+            if(str_contains($email, 'arcade')){
+                return redirect()->intended('/admin/dashboardArcade');
+            }else if(str_contains($email, 'dapatkupon')){
+                return redirect()->intended('/admin/dashboardDapatKupon');
+            }
+            
         }
 
         return back()->with('status', 'Invalid login details');
@@ -74,9 +76,18 @@ class AdminController extends Controller
         else return back()->with('status', 'Invalid login details');
     }
 
-    public function dashboard(){
+    public function dashboardArcade(){
         $admin = auth()->user();
-        return view('admin.page.dashboard',[
+        return view('admin.page.dashboardArcade',[
+            'title' => 'Admin Dashboard',
+            'teams' => Team::All(),
+            'boothNum' => $admin->booth
+        ]);
+    }
+
+    public function dashboardDapatKupon(){
+        $admin = auth()->user();
+        return view('admin.page.dashboardDapatKupon',[
             'title' => 'Admin Dashboard',
             'teams' => Team::All(),
             'boothNum' => $admin->booth
@@ -97,12 +108,34 @@ class AdminController extends Controller
     }
 
     public function sendToAdminPageMain(Request $request){
+        //cuma validasi doang si sbnrnya
+        $nama = $request->input('nama');
+        $nim = $request->input('nim');
+        dd("tes");
+
+        $user = User::where('nama', $nama)
+                ->where('nim', $nim)
+                ->first();
+
+        if ($user) {
+            $msg = 'data sudah terkirim';
+            return response()->json(['message' => $msg, 'success' => true]);
+        } else {
+            $msg = 'data anda tidak dapat ditemukan';
+            return response()->json(['message' => $msg, 'success' => false]);
+
+        }
+    }
+
+    public function sendToAdminPageDapatKupon(Request $request){
+        //cuma validasi doang si sbnrnya
         $nama = $request->input('nama');
         $nim = $request->input('nim');
 
         $user = User::where('nama', $nama)
                 ->where('nim', $nim)
                 ->first();
+
         if ($user) {
             $msg = 'data sudah terkirim';
             return response()->json(['message' => $msg, 'success' => true]);
@@ -116,8 +149,8 @@ class AdminController extends Controller
     public function verificationPoint($boothNum){
         $admin = auth()->user();
         if($admin->booth == $boothNum){
-            $requester = User::where('scanned', true)
-                            ->where('booth', $boothNum)
+            $requester = User::where('scanned_arcade', true)
+                            ->where('booth_arcade', $boothNum)
                             ->get();
 
             if ($requester->count() === 0) {
@@ -134,9 +167,31 @@ class AdminController extends Controller
             return back();
         }
     }
+
+    public function verificationKupon($boothNum){
+        $admin = auth()->user();
+        if($admin->booth == $boothNum){
+            $requester = User::where('scanned_dapat_kupon', true)
+                            ->where('booth_dapat_kupon', $boothNum)
+                            ->get();
+
+            if ($requester->count() === 0) {
+                $requester = [];
+            }
+
+            return view('admin.page.verificationDapatKuponAdmin'.$boothNum, [
+                'title' => 'Daftar yang Ngescan',
+                'requester' => $requester,
+                'boothNum' => $boothNum,
+            ]);
+            
+        }else{
+            return back();
+        }
+    }
     
     public function increasePoints(Request $request)
-     {
+    {
         $request->validate([
             'point' => 'required|numeric',
             'userId' => 'required',
@@ -146,7 +201,7 @@ class AdminController extends Controller
 
         if ($user) {
             $user->point += $request->point;
-            $user->scanned = false;
+            $user->scanned_arcade = false;
             $user->booth = 0;
             $user->save();
             
@@ -171,6 +226,38 @@ class AdminController extends Controller
                 return response()->json(['success' => false, 'message' => 'maaf poin kamu tidak mencukupi']);
             }
             $user->point -= $request->point;
+            $user->save();
+            
+            //return back();
+            return response()->json(['success' => true, 'message' => 'bisa']);
+        } else {
+            return response()->json(['success' => false, 'message' => 'User not found']);
+        }
+    }
+
+    public function IncreaseKupons(Request $request)
+     {
+        $data = $request->validate([
+            'jumlah_atasan' => 'required|numeric',
+            'jumlah_bawahan' => 'required|numeric',
+            'jumlah_aksesoris' => 'required|numeric',
+            'userId' => 'required',
+        ]);
+
+        $user = User::findOrFail($request->input('userId'));
+
+        if ($user) {
+            Kupon::unguard();
+            Kupon::create([
+                'id' => Str::uuid(),
+                'pemilik' => $user->id,
+                'atasan' => $request->jumlah_atasan,
+                'bawahan' => $request->jumlah_bawahan,
+                'aksesoris' => $request->jumlah_aksesoris,
+            ]);
+            Kupon::reguard();
+            $user->scanned_dapat_kupon = 0;
+            $user->booth_dapat_kupon = 0;
             $user->save();
             
             //return back();

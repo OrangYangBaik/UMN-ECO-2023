@@ -7,7 +7,7 @@
 @section('content')
     <div class="container text-white">
         <div id="dashboard-admin-container text-white">Selamat datang di page admin</div>
-        <a href="/admin/verificationPoint/{{ $boothNum }}">varification page</a>
+        <a href="/admin/verificationKupon/{{ $boothNum }}">verification page</a>
     </div>
 @endsection
 
