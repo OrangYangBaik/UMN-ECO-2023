@@ -75,8 +75,8 @@ Route::group(['prefix' => 'milestone'], function() {
     });
     Route::group(['prefix' => 'umn-eco'], function() {
         Route::get('/gen-1', [MilestoneController::class, 'firstGenECO'])->name('1st-gen-umn-eco');
-        Route::get('/gen-2', [MilestoneController::class, 'secGenECO'])->name('2st-gen-umn-eco');
-        Route::get('/gen-3', [MilestoneController::class, 'thirdGenECO'])->name('3st-gen-umn-eco');
+        Route::get('/gen-2', [MilestoneController::class, 'secGenECO'])->name('2nd-gen-umn-eco');
+        Route::get('/gen-3', [MilestoneController::class, 'thirdGenECO'])->name('3rd-gen-umn-eco');
     });
 });
 
