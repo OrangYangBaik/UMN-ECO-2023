@@ -240,4 +240,87 @@ class QrHandlerController extends Controller
             }
         }
     }
+
+    public function sendReqTukarPoint(Request $request){
+        $merch1 = "tukarpoint1";
+        $merch2 = "tukarpoint2";
+        $merch3 = "tukarpoint3";
+
+        if (Auth::guard('participant')->check()){
+            $user = Auth::guard('participant')->user();
+            if (user->scanned_merchandise == 0 && user->booth_merchandise == 0){
+                if (strcmp($request->input('qrcode'),$merch1)===0){
+                    if($user->point>0){
+                        $userNama = $user->nama;
+                        $userNim = $user->nim;
+                        $user->scanned_merchandise = true;
+                        $user->booth_merchandise = 1;
+                        $user->save();
+                        return response()->json([
+                            'success' => true,
+                            'message' => 'Mohon tunggu transaksi sedang diproses',
+                            'nama' => $userNama,
+                            'nim' => $userNim,
+                        ]);
+                    }
+                    else{
+                        return response()->json([
+                            'success' => false,
+                            'message' => 'Insufficient points'
+                        ]);
+                    }
+                }
+                else if(strcmp($request->input('qrcode'),$merch2)===0){
+                    if($user->point>0){
+                        $userNama = $user->nama;
+                        $userNim = $user->nim;
+                        $user->scanned_merchandise = true;
+                        $user->booth_merchandise = 2;
+                        $user->save();
+                        return response()->json([
+                            'success' => true,
+                            'message' => 'Mohon tunggu transaksi sedang diproses',
+                            'nama' => $userNama,
+                            'nim' => $userNim,
+                        ]);
+                    }
+                    else{
+                        return response()->json([
+                            'success' => false,
+                            'message' => 'Insufficient points'
+                        ]);
+                    }
+                }
+                else if(strcmp($request->input('qrcode'),$merch3)===0){
+                    if($user->point>0){
+                        $userNama = $user->nama;
+                        $userNim = $user->nim;
+                        $user->scanned_merchandise = true;
+                        $user->booth_merchandise = 3;
+                        $user->save();
+                        return response()->json([
+                            'success' => true,
+                            'message' => 'Mohon tunggu transaksi sedang diproses',
+                            'nama' => $userNama,
+                            'nim' => $userNim,
+                        ]);
+                    }
+                    else{
+                        return response()->json([
+                            'success' => false,
+                            'message' => 'Insufficient points'
+                        ]);
+                    }
+                }
+                else{
+                    return response()->json([
+                        'success' => false,
+                        'messgae' => 'Anda sudah scan QR code'
+                    ]);
+                }
+            }
+
+
+        }
+    }   
 }

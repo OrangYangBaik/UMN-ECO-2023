@@ -73,14 +73,6 @@ class UserController extends Controller
         
     }
 
-    public function ecoPatra(Request $request){
-        try{
-            $request->validate([
-                
-            ])
-        }
-    }
-
     public function login(Request $request)
     {   
         $credentials = $request->validate([
