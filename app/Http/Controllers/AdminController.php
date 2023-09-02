@@ -146,6 +146,24 @@ class AdminController extends Controller
         }
     }
 
+    public function sendToAdminPageTukarPoint(Request $request){
+        $nama = $request->input('nama');
+        $nim = $request->input('nim');
+        
+        $user = User::where('nama',$nama)
+                ->where('nim',$nim)
+                ->first();
+
+                if($user){
+                    $msg = 'data sudah terkirim';
+                    return response()->json(['message' => $msg, 'success' => true]);
+                }
+                else{
+                    $msg = 'data anda tidak dapat ditemukan';
+                    return response()->json(['message' => $msg, 'success' => false]); 
+                }
+    }
+
     public function verificationPoint($boothNum){
         $admin = auth()->user();
         if($admin->booth == $boothNum){
@@ -191,7 +209,7 @@ class AdminController extends Controller
     }
     
     public function increasePoints(Request $request)
-    {
+        {
         $request->validate([
             'point' => 'required|numeric',
             'userId' => 'required',
