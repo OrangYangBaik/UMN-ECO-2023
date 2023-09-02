@@ -89,7 +89,6 @@ h2 {
     width: 130vw;
     top: 2%;
     left: -15%;
-    opacity: 0.8;
 }
 
 .container-Bs .temple img {
@@ -407,6 +406,18 @@ h2 {
 }
 
 @media only screen and (max-width: 1024px) {
+    .container-Bs
+        :where(
+            .programs p,
+            .overview p,
+            .achievements p,
+            .environmental p,
+            .programs ul,
+
+        ) {
+        text-shadow: 2px 2px white;
+    }
+
     .container-Bs :where(.header-1, .tahun) {
         font-size: 1.5rem;
     }

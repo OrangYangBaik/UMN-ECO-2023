@@ -6,8 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EcoFamilyController;
 use App\Http\Controllers\RecruitmentController;
 use App\Http\Controllers\SheetController;
-use App\Http\Controllers\TownController;
-use App\Http\Controllers\FunWalkController;
+use App\Http\Controllers\WeheaController;
+use App\Http\Controllers\MeruBetiriController;
 use App\Http\Controllers\MilestoneController;
 use App\Http\Controllers\QrHandlerController;
 use App\Http\Controllers\UserController;
@@ -40,25 +40,25 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser')->m
 Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboardUser')->middleware('auth:participant');
 
 // Form Recruitment
-Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
-Route::get('/recruitmentForm/{team:subdivisi}-sub', [RecruitmentController::class, 'index'])->name('recruitmentFormSubdivisi');
-Route::get('/recruitmentForm/{team:name}', [RecruitmentController::class, 'index'])->name('recruitmentForm');
-Route::post('/recruitmentForm', [RecruitmentController::class, 'store']); // database
-Route::post('/recruitmentForm', [SheetController::class, 'store']); // sheet
+// Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
+// Route::get('/recruitmentForm/{team:subdivisi}-sub', [RecruitmentController::class, 'index'])->name('recruitmentFormSubdivisi');
+// Route::get('/recruitmentForm/{team:name}', [RecruitmentController::class, 'index'])->name('recruitmentForm');
+// Route::post('/recruitmentForm', [RecruitmentController::class, 'store']); // database
+// Route::post('/recruitmentForm', [SheetController::class, 'store']); // sheet
 
 // After OPREC
 // Route::get('/oprec-thanks', [HomeController::class, 'oprecthanks'])->name('oprec-thanks');
 
-// ECO Town
-Route::group(['prefix' => 'town'], function() {
-    Route::get('/', [TownController::class, 'index'])->name('town-landing');
-    Route::get('/register');
+// Wehea
+Route::group(['prefix' => 'wehea'], function() {
+    Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing');
+    Route::post('/register');
     Route::get('/info');
 });
 
-// ECO Fun Walk
-Route::group(['prefix' => 'fun-walk'], function() {
-    Route::get('/', [FunWalkController::class, 'index'])->name('fun-walk-landing');
+// Meru Betiri
+Route::group(['prefix' => 'meru-betiri'], function() {
+    Route::get('/', [MeruBetiriController::class, 'index'])->name('meru-betiri-landing');
     Route::get('/register');
     Route::get('/info');
 });
@@ -98,7 +98,7 @@ Route::post('/registerAdmin', [AdminController::class, 'store']);
 Route::group(['prefix' => 'admin'], function(){
     Route::get('/dashboardArcade', [AdminController::class, 'dashboardArcade'])->name('dashboard-admin-arcade')->middleware('auth:web');
     Route::get('/dashboardDapatKupon', [AdminController::class, 'dashboardDapatKupon'])->name('dashboard-admin-kupon')->middleware('auth:web');
-    Route::get('/town')->middleware('auth:web');
+    Route::get('/wehea')->middleware('auth:web');
     Route::get('/fun-walk')->middleware('auth:web');
     Route::get('/verificationPoint/{boothNum}', [AdminController::class, 'verificationPoint'])->middleware('auth:web');
     Route::get('/verificationKupon/{boothNum}', [AdminController::class, 'verificationKupon'])->middleware('auth:web');

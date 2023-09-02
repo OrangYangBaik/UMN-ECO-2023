@@ -11,6 +11,9 @@
             <source src="{{ asset('sound/lembarankertas-cut.mp3') }}" type="audio/mpeg">
         </audio>
         @include('cms.page.preEvent.jnanaSanka')
+        <div class="hoverable-obj maskot-nala">
+            <img id="maskot-nala" src="{{ asset('images/treasureMap/nala-maskot.svg') }}" alt="Maskot Nala" />
+        </div>
         <div class="hoverable-obj garis-putus">
             <img id="garis-putus-1" src="{{ asset('images/treasureMap/garis-putus.svg') }}" alt="Garis Putus" />
         </div>
