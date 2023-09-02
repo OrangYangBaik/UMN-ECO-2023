@@ -28,11 +28,13 @@ class CreateUsersTable extends Migration
             $table->boolean('meru_betiri')->default(false);
             $table->boolean('scanned_arcade')->default(false);
             $table->boolean('scanned_dapat_kupon')->default(false);
+            $table->boolean('scanned_dapat_credit')->default(false);
             $table->boolean('scanned_tukar_kupon')->default(false);
             $table->boolean('scanned_merchandise')->default(false);
             $table->tinyInteger('booth_merchandise')->default('0');
             $table->tinyInteger('booth_dapat_kupon')->default('0');
             $table->tinyInteger('booth_tukar_kupon')->default('0');
+            $table->tinyInteger('booth_dapat_credit')->default('0');
             $table->tinyInteger('booth_arcade')->default('0');
             $table->tinyInteger('credit')->default('5');
             $table->integer('point')->default('0');

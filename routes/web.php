@@ -37,7 +37,7 @@ Route::post('/register', [UserController::class, 'store']);
 Route::get('/login', [UserController::class, 'loginPage'])->name('loginUser')->middleware('guest:participant');
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser')->middleware('auth:participant');
-Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboardUser')->middleware('auth:participant');
+//Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboardUser')->middleware('auth:participant');
 
 // Form Recruitment
 // Route::get('/recruitmentForm/JAGAT', [HomeController::class, 'disableJagat']);
@@ -98,13 +98,16 @@ Route::post('/registerAdmin', [AdminController::class, 'store']);
 Route::group(['prefix' => 'admin'], function(){
     Route::get('/dashboardArcade', [AdminController::class, 'dashboardArcade'])->name('dashboard-admin-arcade')->middleware('auth:web');
     Route::get('/dashboardDapatKupon', [AdminController::class, 'dashboardDapatKupon'])->name('dashboard-admin-kupon')->middleware('auth:web');
+    Route::get('/dashboardDapatCredit', [AdminController::class, 'dashboardDapatCredit'])->name('dashboard-admin-credit')->middleware('auth:web');
     Route::get('/wehea')->middleware('auth:web');
     Route::get('/fun-walk')->middleware('auth:web');
     Route::get('/verificationPoint/{boothNum}', [AdminController::class, 'verificationPoint'])->middleware('auth:web');
     Route::get('/verificationKupon/{boothNum}', [AdminController::class, 'verificationKupon'])->middleware('auth:web');
+    Route::get('/verificationCredit/{boothNum}', [AdminController::class, 'verificationCredit'])->middleware('auth:web');
     // Route::post('/addPoints/{userId}/{point}', [AdminController::class, 'increaseCreditPoints'])->name('add.points')->middleware('auth:web');
     Route::post('/addPoints', [AdminController::class, 'increasePoints'])->name('addPoints')->middleware('auth:web');
     Route::post('/addKupons', [AdminController::class, 'increaseKupons'])->name('addKupons')->middleware('auth:web');
+    Route::post('/addCredits', [AdminController::class, 'increaseCredits'])->name('addCredits')->middleware('auth:web');
 
     // Setting Admin
     Route::get('/setting', [AdminController::class, 'setting'])->name('admin-setting')->middleware('auth:web');
@@ -115,8 +118,11 @@ Route::group(['prefix' => 'admin'], function(){
 // QR
 Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
 Route::get('/scannerPageDapatKupon', [QrHandlerController::class, 'dapatKupon'])->name('scannerPageDapatKupon')->middleware('auth:participant');
+Route::get('/scannerPageDapatCredit', [QrHandlerController::class, 'dapatCredit'])->name('scannerPageDapatCredit')->middleware('auth:participant');
 Route::post('/verificationAdmin/sendReqMain', [QrHandlerController::class, 'sendReqMain']);
 Route::post('/verificationAdmin/sendReqDapatKupon', [QrHandlerController::class, 'sendReqDapatKupon']);
+Route::post('/verificationAdmin/sendReqDapatCredit', [QrHandlerController::class, 'sendReqDapatCredit']);
 Route::post('/sendDataMainToAdmin', [AdminController::class, 'sendToAdminPageMain']);
 Route::post('/sendDataDapatKuponToAdmin', [AdminController::class, 'sendToAdminPageDapatKupon']);
+Route::post('/sendDataDapatCreditToAdmin', [AdminController::class, 'sendToAdminPageDapatCredit']);
 Route::post('/respond', [AdminController::class, 'respond']);

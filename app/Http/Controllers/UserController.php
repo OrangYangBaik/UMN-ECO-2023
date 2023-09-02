@@ -82,7 +82,7 @@ class UserController extends Controller
 
         if(Auth::guard('participant')->attempt(['email' => $request->input('email-student'), 'password' => $request->password])){
             $request->session()->regenerate();
-            return redirect((route('dashboardUser')));
+            return redirect((route('homepage')));
         }else return back()->with('status', 'Invalid login details');
     }
 

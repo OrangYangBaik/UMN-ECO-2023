@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <div class="container" style="marin-top: 100px;">
+    <div class="container" style="padding-top: 100px;">
         <form action="/wehea/register" method="post">
             @csrf
             <button type="submit">Join Wehea</button>

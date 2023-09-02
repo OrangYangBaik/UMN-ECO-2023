@@ -19,9 +19,13 @@ class QrHandlerController extends Controller
         return view('cms.page.event.scannerQrBoothDapatKupon');
     }
 
+    public function dapatCredit()
+    {
+        return view('cms.page.event.scannerQrBoothDapatCredit');
+    }
+
     public function sendReqMain(Request $request)
     {
-        dd("halo");
         //proses masukin ke db data yang scan
         $arcade1 = 'weheaarcade1';
         $arcade2 = 'weheaarcade2';
@@ -241,14 +245,75 @@ class QrHandlerController extends Controller
         }
     }
 
+    public function sendReqDapatCredit(Request $request){
+        $credit1 = "weheadptcredit1";
+        $credit2 = "weheadptcredit2";
+        $credit3 = "weheadptcredit3";
+
+        if (Auth::guard('participant')->check()) {
+            $user = Auth::guard('participant')->user();
+            if($user->wehea == true && $user->booth_dapat_credit == 0){
+                if(strcmp($request->input('qrcode'), $credit1) === 0){
+                    $userNama = $user->nama;
+                    $userNim = $user->nim;
+    
+                    $user->scanned_dapat_credit = true;
+                    $user->booth_dapat_kupon = 1;
+    
+                    //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
+                    $user->save();
+    
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Mohon tunggu transaksi sedang diproses',
+                        'nama' => $userNama,
+                        'nim' => $userNim,
+                    ]);
+                }else if(strcmp($request->input('qrcode'), $credit2) === 0){
+                    $userNama = $user->nama;
+                    $userNim = $user->nim;
+    
+                    $user->scanned_dapat_credit = true;
+                    $user->booth_dapat_credit = 2;
+    
+                    //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
+                    $user->save();
+    
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Mohon tunggu transaksi sedang diproses',
+                        'nama' => $userNama,
+                        'nim' => $userNim,
+                    ]);
+                }else if(strcmp($request->input('qrcode'), $credit3) === 0){
+                    $userNama = $user->nama;
+                    $userNim = $user->nim;
+    
+                    $user->scanned_dapat_credit = true;
+                    $user->booth_dapat_credit = 3;
+    
+                    //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
+                    $user->save();
+    
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Mohon tunggu transaksi sedang diproses',
+                        'nama' => $userNama,
+                        'nim' => $userNim,
+                    ]);
+                }
+            }
+        }
+    }
+
     public function sendReqTukarPoint(Request $request){
-        $merch1 = "tukarpoint1";
-        $merch2 = "tukarpoint2";
-        $merch3 = "tukarpoint3";
+        $merch1 = "weheatukarpoint1";
+        $merch2 = "weheatukarpoint2";
+        $merch3 = "weheatukarpoint3";
 
         if (Auth::guard('participant')->check()){
             $user = Auth::guard('participant')->user();
-            if (user->scanned_merchandise == 0 && user->booth_merchandise == 0){
+            if ($user->scanned_merchandise == 0 && $user->booth_merchandise == 0){
                 if (strcmp($request->input('qrcode'),$merch1)===0){
                     if($user->point>0){
                         $userNama = $user->nama;

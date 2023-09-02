@@ -9,6 +9,7 @@ use App\Models\Team;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Kupon;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use \Illuminate\Support\Str;
 
 class AdminController extends Controller
@@ -35,6 +36,8 @@ class AdminController extends Controller
                 return redirect()->intended('/admin/dashboardArcade');
             }else if(str_contains($email, 'dapatkupon')){
                 return redirect()->intended('/admin/dashboardDapatKupon');
+            }else if(str_contains($email, 'sidequest')){
+                return redirect()->intended('/admin/dashboardDapatCredit');
             }
             
         }
@@ -94,6 +97,15 @@ class AdminController extends Controller
         ]);
     }
 
+    public function dashboardDapatCredit(){
+        $admin = auth()->user();
+        return view('admin.page.dashboardDapatCredit',[
+            'title' => 'Admin Dashboard',
+            'teams' => Team::All(),
+            'boothNum' => $admin->booth
+        ]);
+    }
+
     public function setting(){
         return view('admin.page.setting',[
             'title' => 'Admin Setting',
@@ -111,7 +123,6 @@ class AdminController extends Controller
         //cuma validasi doang si sbnrnya
         $nama = $request->input('nama');
         $nim = $request->input('nim');
-        dd("tes");
 
         $user = User::where('nama', $nama)
                 ->where('nim', $nim)
@@ -128,6 +139,25 @@ class AdminController extends Controller
     }
 
     public function sendToAdminPageDapatKupon(Request $request){
+        //cuma validasi doang si sbnrnya
+        $nama = $request->input('nama');
+        $nim = $request->input('nim');
+
+        $user = User::where('nama', $nama)
+                ->where('nim', $nim)
+                ->first();
+
+        if ($user) {
+            $msg = 'data sudah terkirim';
+            return response()->json(['message' => $msg, 'success' => true]);
+        } else {
+            $msg = 'data anda tidak dapat ditemukan';
+            return response()->json(['message' => $msg, 'success' => false]);
+
+        }
+    }
+
+    public function sendToAdminPageDapatCredit(Request $request){
         //cuma validasi doang si sbnrnya
         $nama = $request->input('nama');
         $nim = $request->input('nim');
@@ -186,7 +216,8 @@ class AdminController extends Controller
         }
     }
 
-    public function verificationKupon($boothNum){
+    public function verificationKupon($boothNum)
+    {
         $admin = auth()->user();
         if($admin->booth == $boothNum){
             $requester = User::where('scanned_dapat_kupon', true)
@@ -207,9 +238,53 @@ class AdminController extends Controller
             return back();
         }
     }
+
+    public function verificationCredit($boothNum)
+    {
+        $admin = auth()->user();
+        if($admin->booth == $boothNum){
+            $requester = User::where('scanned_dapat_credit', true)
+                            ->where('booth_dapat_credit', $boothNum)
+                            ->get();
+
+            if ($requester->count() === 0) {
+                $requester = [];
+            }
+
+            return view('admin.page.verificationCreditAdmin'.$boothNum, [
+                'title' => 'Daftar yang Ngescan',
+                'requester' => $requester,
+                'boothNum' => $boothNum,
+            ]);
+            
+        }else{
+            return back();
+        }
+    }
     
+    public function increaseCredits(Request $request)
+    {
+        $request->validate([
+            'credit' => 'required|numeric',
+            'userId' => 'required',
+        ]);
+
+        $user = User::findOrFail($request->input('userId'));
+
+        if ($user) {
+            $user->credit += $request->credit;
+            $user->scanned_dapat_credit = false;
+            $user->booth_dapat_credit = 0;
+            $user->save();
+            
+            return back();
+        } else {
+            return response()->json(['success' => false, 'message' => 'User not found']);
+        }
+    }
+
     public function increasePoints(Request $request)
-        {
+    {
         $request->validate([
             'point' => 'required|numeric',
             'userId' => 'required',
@@ -254,37 +329,43 @@ class AdminController extends Controller
     }
 
     public function IncreaseKupons(Request $request)
-     {
-        $data = $request->validate([
-            'jumlah_atasan' => 'required|numeric',
-            'jumlah_bawahan' => 'required|numeric',
-            'jumlah_aksesoris' => 'required|numeric',
-            'userId' => 'required',
-        ]);
-
-        $user = User::findOrFail($request->input('userId'));
-
-        if ($user->kupon() == null) {
-            Kupon::unguard();
-            Kupon::create([
-                'id' => Str::uuid(),
-                'pemilik' => $user->id,
-                'atasan' => $request->jumlah_atasan,
-                'bawahan' => $request->jumlah_bawahan,
-                'aksesoris' => $request->jumlah_aksesoris,
+    {
+        try{
+            $data = $request->validate([
+                'jumlah_atasan' => 'required|numeric',
+                'jumlah_bawahan' => 'required|numeric',
+                'jumlah_aksesoris' => 'required|numeric',
+                'userId' => 'required',
             ]);
-            Kupon::reguard();
+
+            $user = User::where('id', $request->userId)->first();
+            if ($user->kupon->first() == null) {
+                Kupon::unguard();
+                Kupon::insert([
+                    'id' => Str::uuid(),
+                    'pemilik' => $user->id,
+                    'atasan' => $request->jumlah_atasan,
+                    'bawahan' => $request->jumlah_bawahan,
+                    'aksesoris' => $request->jumlah_aksesoris,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ]);
+                Kupon::reguard();
+            } else if($user->kupon->first() != null){
+                $kupon = $user->kupon->first();
+                $kupon->atasan += $request->jumlah_atasan;
+                $kupon->bawahan += $request->jumlah_bawahan;
+                $kupon->aksesoris += $request->jumlah_aksesoris;
+                $kupon->updated_at = now();
+
+                $kupon->save();
+            }
             $user->scanned_dapat_kupon = 0;
             $user->booth_dapat_kupon = 0;
             $user->save();
             
-            //return back();
-            return response()->json(['success' => true, 'message' => 'bisa']);
-        } else if($user->kupon()){
-            $user->kupon()->atasan += $request->jumlah_atasan;
-            $user->kupon()->credit += $request->jumlah_bawahan;
-            $user->kupon()->aksesoris += $request->jumlah_aksesoris;
-        }else{
+            return back();
+        }catch(ModelNotFoundException $e){
             return response()->json(['success' => false, 'message' => 'User not found']);
         }
     }

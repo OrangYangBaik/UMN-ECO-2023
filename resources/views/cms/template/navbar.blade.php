@@ -30,7 +30,7 @@
                         <a class="nav-link" href="{{ route('milestone') }}">Milestone</a>
                     </li>
 
-                    {{-- @if (Auth::guard('participant')->user())
+                    @if (Auth::guard('participant')->user())
                         <li class="nav-item dropdown col-auto text-center">
                             <?php $array = explode(' ', Auth::guard('participant')->user()->nama, 2); ?>
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -51,7 +51,7 @@
                         <li class="nav-item col-auto text-center">
                             <a class="nav-link" href="{{ route('loginUser') }}">Login</a>
                         </li>
-                    @endif --}}
+                    @endif
                 </div>
             </ul>
         </div>

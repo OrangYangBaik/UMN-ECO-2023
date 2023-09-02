@@ -23,6 +23,6 @@ class User extends Authenticatable
     ];
 
     public function kupon(){
-        return $this->hasMany(Kupon::class);
+        return $this->hasMany(Kupon::class, 'pemilik', 'id');
     }
 }
