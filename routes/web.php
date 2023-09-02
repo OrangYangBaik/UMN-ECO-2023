@@ -49,14 +49,14 @@ Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboardU
 // After OPREC
 // Route::get('/oprec-thanks', [HomeController::class, 'oprecthanks'])->name('oprec-thanks');
 
-// ECO Town
+// Wehea
 Route::group(['prefix' => 'wehea'], function() {
     Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing');
     Route::post('/register');
     Route::get('/info');
 });
 
-// ECO Fun Walk
+// Meru Betiri
 Route::group(['prefix' => 'meru-betiri'], function() {
     Route::get('/', [MeruBetiriController::class, 'index'])->name('meru-betiri-landing');
     Route::get('/register');
