@@ -246,7 +246,7 @@ class AdminController extends Controller
 
         $user = User::findOrFail($request->input('userId'));
 
-        if ($user) {
+        if ($user->kupon() == null) {
             Kupon::unguard();
             Kupon::create([
                 'id' => Str::uuid(),
@@ -262,7 +262,11 @@ class AdminController extends Controller
             
             //return back();
             return response()->json(['success' => true, 'message' => 'bisa']);
-        } else {
+        } else if($user->kupon()){
+            $user->kupon()->atasan += $request->jumlah_atasan;
+            $user->kupon()->credit += $request->jumlah_bawahan;
+            $user->kupon()->aksesoris += $request->jumlah_aksesoris;
+        }else{
             return response()->json(['success' => false, 'message' => 'User not found']);
         }
     }
