@@ -6,6 +6,7 @@
 @section('content')
     <div class="container">
         <form action="/wehea/register" method="post">
+            @csrf
             <button type="submit">Join Wehea</button>
         </form>
     </div>

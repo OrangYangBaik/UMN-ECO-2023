@@ -51,9 +51,9 @@ Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboardU
 
 // Wehea
 Route::group(['prefix' => 'wehea'], function() {
-    Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing');
-    Route::post('/register');
-    Route::get('/info');
+    Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing')->middleware('auth:participant');
+    Route::post('/register', [WeheaController::class, 'register']);
+    //Route::get('/info');
 });
 
 // Meru Betiri
