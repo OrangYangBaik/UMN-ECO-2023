@@ -100,16 +100,19 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/dashboardDapatKupon', [AdminController::class, 'dashboardDapatKupon'])->name('dashboard-admin-kupon')->middleware('auth:web');
     Route::get('/dashboardKurangKupon', [AdminController::class, 'dashboardKurangKupon'])->name('dashboard-admin--kurang-kupon')->middleware('auth:web');
     Route::get('/dashboardDapatCredit', [AdminController::class, 'dashboardDapatCredit'])->name('dashboard-admin-credit')->middleware('auth:web');
+    Route::get('/dashboardMerchandise', [AdminController::class, 'dashboardMerchandise'])->name('dashboard-merchandise')->middleware('auth:web');
     Route::get('/wehea')->middleware('auth:web');
     Route::get('/fun-walk')->middleware('auth:web');
     Route::get('/verificationPoint/{boothNum}', [AdminController::class, 'verificationPoint'])->middleware('auth:web');
     Route::get('/verificationKupon/{boothNum}', [AdminController::class, 'verificationKupon'])->middleware('auth:web');
     Route::get('/verificationDecreaseKupon/{boothNum}', [AdminController::class, 'verificationDecreaseKupon'])->middleware('auth:web');
+    Route::get('/verificationMerchandise/{boothNum}', [AdminController::class, 'verificationMerchandise'])->middleware('auth:web');
     Route::get('/verificationCredit/{boothNum}', [AdminController::class, 'verificationCredit'])->middleware('auth:web');
     // Route::post('/addPoints/{userId}/{point}', [AdminController::class, 'increaseCreditPoints'])->name('add.points')->middleware('auth:web');
     Route::post('/addPoints', [AdminController::class, 'increasePoints'])->name('addPoints')->middleware('auth:web');
     Route::post('/addKupons', [AdminController::class, 'increaseKupons'])->name('addKupons')->middleware('auth:web');
     Route::post('/addCredits', [AdminController::class, 'increaseCredits'])->name('addCredits')->middleware('auth:web');
+    Route::post('/deductPoints', [AdminController::class, 'deductPoints'])->name('deductPoints')->middleware('auth:web');
     Route::post('/decreaseKupons', [AdminController::class, 'decreaseKupons'])->name('decreaseKupons')->middleware('auth:web');
     // Setting Admin
     Route::get('/setting', [AdminController::class, 'setting'])->name('admin-setting')->middleware('auth:web');
@@ -122,12 +125,15 @@ Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scan
 Route::get('/scannerPageDapatKupon', [QrHandlerController::class, 'dapatKupon'])->name('scannerPageDapatKupon')->middleware('auth:participant');
 Route::get('/scannerPageKurangKupon', [QrHandlerController::class, 'kurangKupon'])->name('scannerPageKurangKupon')->middleware('auth:participant');
 Route::get('/scannerPageDapatCredit', [QrHandlerController::class, 'dapatCredit'])->name('scannerPageDapatCredit')->middleware('auth:participant');
+Route::get('/scannerPageMerchandise', [QrHandlerController::class, 'merchandise'])->name('scannerPageMerchandise')->middleware('auth:participant');
 Route::post('/verificationAdmin/sendReqMain', [QrHandlerController::class, 'sendReqMain']);
 Route::post('/verificationAdmin/sendReqDapatKupon', [QrHandlerController::class, 'sendReqDapatKupon']);
 Route::post('/verificationAdmin/sendReqKurangKupon', [QrHandlerController::class, 'sendReqKurangKupon']);
 Route::post('/verificationAdmin/sendReqDapatCredit', [QrHandlerController::class, 'sendReqDapatCredit']);
+Route::post('/verificationAdmin/sendReqMerchandise', [QrHandlerController::class, 'sendReqMerchandise']);
 Route::post('/sendDataMainToAdmin', [AdminController::class, 'sendToAdminPageMain']);
 Route::post('/sendDataDapatKuponToAdmin', [AdminController::class, 'sendToAdminPageDapatKupon']);
 Route::post('/sendDataKurangKuponToAdmin', [AdminController::class, 'sendToAdminPageKurangKupon']);
 Route::post('/sendDataDapatCreditToAdmin', [AdminController::class, 'sendToAdminPageDapatCredit']);
+Route::post('/sendDataMerchandiseToAdmin', [AdminController::class, 'sendToAdminPageMerchandise']);
 Route::post('/respond', [AdminController::class, 'respond']);

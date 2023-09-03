@@ -29,6 +29,11 @@ class QrHandlerController extends Controller
         return view('cms.page.event.scannerQrBoothDapatCredit');
     }
 
+    public function merchandise()
+    {
+        return view('cms.page.event.scannerQrBoothMerchandise');
+    }
+
     public function sendReqMain(Request $request)
     {
         //proses masukin ke db data yang scan
@@ -372,7 +377,7 @@ class QrHandlerController extends Controller
         }
     }
 
-    public function sendReqTukarPoint(Request $request){
+    public function sendReqMerchandise(Request $request){
         $merch1 = "weheatukarpoint1";
         $merch2 = "weheatukarpoint2";
         $merch3 = "weheatukarpoint3";

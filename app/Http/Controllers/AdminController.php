@@ -39,7 +39,11 @@ class AdminController extends Controller
                 return redirect()->intended('/admin/dashboardDapatKupon');
             }else if(str_contains($email, 'sidequest')){
                 return redirect()->intended('/admin/dashboardDapatCredit');
-            }else if(str_contains($email, 'kurang')){
+            }
+            else if(str_contains($email,'merchandise')){
+                return redirect()->intended('/admin/dashboardMerchandise');
+            }
+            else if(str_contains($email, 'kurang')){
                 return redirect()->intended('/admin/dashboardKurangKupon');
             }
             
@@ -108,6 +112,16 @@ class AdminController extends Controller
             'boothNum' => $admin->booth
         ]);
     }
+
+    public function dashboardMerchandise(){
+        $admin = auth()->user();
+        return view('admin.page.dashboardMerchandise',[
+            'title' => 'Admin Dashboard',
+            'teams' => Team::All(),
+            'boothNum' => $admin->booth
+        ]);
+    }
+
 
     public function dashboardDapatCredit(){
         $admin = auth()->user();
@@ -207,20 +221,22 @@ class AdminController extends Controller
         }
     }
 
-    public function sendToAdminPageTukarPoint(Request $request){
+    public function sendToAdminPageMerchandise(Request $request){
+        //cuma validasi doang si sbnrnya
         $nama = $request->input('nama');
         $nim = $request->input('nim');
-        
-        $user = User::where('nama',$nama)
-                ->where('nim',$nim)
+
+        $user = User::where('nama', $nama)
+                ->where('nim', $nim)
                 ->first();
 
-        if($user){
+        if ($user) {
             $msg = 'data sudah terkirim';
             return response()->json(['message' => $msg, 'success' => true]);
-        } else{
+        } else {
             $msg = 'data anda tidak dapat ditemukan';
-            return response()->json(['message' => $msg, 'success' => false]); 
+            return response()->json(['message' => $msg, 'success' => false]);
+
         }
     }
 
@@ -264,6 +280,29 @@ class AdminController extends Controller
                 'boothNum' => $boothNum,
             ]);
             
+        }else{
+            return back();
+        }
+    }
+        
+    public function verificationMerchandise($boothNum)
+    {
+        $admin = auth()->user();
+        if($admin->booth == $boothNum){
+            $requester = User::where('scanned_merchandise', true)
+                            ->where('booth_merchandise', $boothNum)
+                            ->get();
+
+            if ($requester->count() === 0) {
+                $requester = [];
+            }
+
+            return view('admin.page.verificationMerchandiseAdmin'.$boothNum, [
+                'title' => 'Daftar yang Ngescan',
+                'requester' => $requester,
+                'boothNum' => $boothNum,
+            ]);
+
         }else{
             return back();
         }
@@ -371,6 +410,8 @@ class AdminController extends Controller
                 return redirect()->back()->with('error', 'Poin anda tidak mencukupi');
             }
             $user->point -= $request->point;
+            $user->scanned_merchandise = 0;
+            $user->booth_merchandise = 0;
             $user->save();
             
             return back();
