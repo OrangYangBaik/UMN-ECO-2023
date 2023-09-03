@@ -9,6 +9,7 @@
             @csrf
             <button type="submit">Join Wehea</button>
         </form>
+        <a href="/wehea/info">View Info</a>
     </div>
 @endsection
 

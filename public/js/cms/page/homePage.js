@@ -26,4 +26,8 @@ $(document).ready(function () {
             hoverSound.pause();
         }
     );
+
+    $(".wehea").click(function () {
+        location.href = "/wehea";
+    });
 });

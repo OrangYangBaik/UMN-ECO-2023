@@ -29,7 +29,8 @@ class UserController extends Controller
             $bawahan = $kupon->bawahan;
             $aksesoris = $kupon->aksesoris;
 
-            return view('....',[
+            return view('cms.page.wehea.weheaInfo',[
+                "title" => "Tai Lu Gre",
                 'nama' => $nama,
                 'nim' => $nim,
                 'credit' => $credit,
@@ -44,7 +45,8 @@ class UserController extends Controller
         $bawahan = 0;
         $aksesoris = 0;
 
-        return view('....',[
+        return view('cms.page.wehea.weheaInfo',[
+            "title" => "Tai Lu Gre",
             'nama' => $nama,
             'nim' => $nim,
             'credit' => $credit,
