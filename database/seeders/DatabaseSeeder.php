@@ -94,7 +94,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('nirmalabentalaumneco2023')
         ]);
        
-        // User Admin Kupon
+        // User Admin Dapat Kupon
         Admin::create([
             'name' => 'AdminDapatKupon1',
             'email' => 'admindapatkupon1@umn.ac.id',
@@ -112,6 +112,28 @@ class DatabaseSeeder extends Seeder
         Admin::create([
             'name' => 'AdminDapatKupon3',
             'email' => 'admindapatkupon3@umn.ac.id',
+            'booth' => 3,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
+        // User Admin Kurang Kupon
+        Admin::create([
+            'name' => 'AdminKurangKupon1',
+            'email' => 'adminkurangkupon1@umn.ac.id',
+            'booth' => 1,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
+        Admin::create([
+            'name' => 'AdminKurangKupon2',
+            'email' => 'adminkurangkupon2@umn.ac.id',
+            'booth' => 2,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
+        Admin::create([
+            'name' => 'AdminKurangKupon3',
+            'email' => 'adminkurangkupon3@umn.ac.id',
             'booth' => 3,
             'password' => bcrypt('nirmalabentalaumneco2023')
         ]);

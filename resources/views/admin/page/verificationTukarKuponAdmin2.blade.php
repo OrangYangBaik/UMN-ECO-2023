@@ -6,11 +6,16 @@
 
 @section('content')
     <div style="min-height: 100vh;">
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         @if (empty($requester))
             <div class="text-white">No Data</div>
         @else
             @foreach ($requester as $user)
-                <form class="points-form text-white" action="/admin/addKupons" method="post">
+                <form class="points-form text-white" action="/admin/decreaseKupons" method="post">
                     @csrf
                     <input type="hidden" name="userId" value="{{ $user->id }}">
                     <h3>Nama: {{ $user->nama }}</h3>

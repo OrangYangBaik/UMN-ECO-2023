@@ -14,6 +14,11 @@ class QrHandlerController extends Controller
         return view('cms.page.event.scannerQrBoothGame');
     }
 
+    public function kurangKupon()
+    {
+        return view('cms.page.event.scannerQrBoothKurangKupon');
+    }
+
     public function dapatKupon()
     {
         return view('cms.page.event.scannerQrBoothDapatKupon');
@@ -244,6 +249,67 @@ class QrHandlerController extends Controller
             }
         }
     }
+    
+    public function sendReqKurangKupon(Request $request){
+        $kupon1 = "weheakrgkupon1";
+        $kupon2 = "weheakrgkupon2";
+        $kupon3 = "weheakrgkupon3";
+
+        if (Auth::guard('participant')->check()) {
+            $user = Auth::guard('participant')->user();
+            if($user->wehea == true && $user->booth_tukar_kupon == 0){
+                if(strcmp($request->input('qrcode'), $kupon1) === 0){
+                    $userNama = $user->nama;
+                    $userNim = $user->nim;
+    
+                    $user->scanned_tukar_kupon = true;
+                    $user->booth_tukar_kupon = 1;
+    
+                    //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
+                    $user->save();
+    
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Mohon tunggu transaksi sedang diproses',
+                        'nama' => $userNama,
+                        'nim' => $userNim,
+                    ]);
+                }else if(strcmp($request->input('qrcode'), $kupon2) === 0){
+                    $userNama = $user->nama;
+                    $userNim = $user->nim;
+    
+                    $user->scanned_tukar_kupon = true;
+                    $user->booth_tukar_kupon = 2;
+    
+                    //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
+                    $user->save();
+    
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Mohon tunggu transaksi sedang diproses',
+                        'nama' => $userNama,
+                        'nim' => $userNim,
+                    ]);
+                }else if(strcmp($request->input('qrcode'), $kupon3) === 0){
+                    $userNama = $user->nama;
+                    $userNim = $user->nim;
+    
+                    $user->scanned_tukar_kupon = true;
+                    $user->booth_tukar_kupon = 3;
+    
+                    //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
+                    $user->save();
+    
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Mohon tunggu transaksi sedang diproses',
+                        'nama' => $userNama,
+                        'nim' => $userNim,
+                    ]);
+                }
+            }
+        }
+    }
 
     public function sendReqDapatCredit(Request $request){
         $credit1 = "weheadptcredit1";
@@ -384,8 +450,6 @@ class QrHandlerController extends Controller
                     ]);
                 }
             }
-
-
         }
     }   
 }

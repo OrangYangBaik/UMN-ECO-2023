@@ -6,6 +6,11 @@
 
 @section('content')
     <div style="min-height: 100vh;">
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         @if (empty($requester))
             <div class="text-white">No Data</div>
         @else
