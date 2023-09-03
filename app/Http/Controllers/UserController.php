@@ -13,7 +13,47 @@ use \Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class UserController extends Controller
-{
+{   
+    public function getAllUserInfo(){
+        $user = Auth::guard('participant')->user();
+
+        $nama = $user->nama;
+        $nim = $user->nim;
+        $credit = $user->credit;
+        $point = $user->point;
+
+        $kupon = $user->kupon->first();
+        
+        if($kupon){
+            $atasan = $kupon->atasan;
+            $bawahan = $kupon->bawahan;
+            $aksesoris = $kupon->aksesoris;
+
+            return view('....',[
+                'nama' => $nama,
+                'nim' => $nim,
+                'credit' => $credit,
+                'point' => $point,
+                'atasan' => $atasan,
+                'bawahan' => $bawahan,
+                'aksesoris' => $aksesoris,
+            ]);
+        }
+
+        $atasan = 0;
+        $bawahan = 0;
+        $aksesoris = 0;
+
+        return view('....',[
+            'nama' => $nama,
+            'nim' => $nim,
+            'credit' => $credit,
+            'point' => $point,
+            'atasan' => $atasan,
+            'bawahan' => $bawahan,
+            'aksesoris' => $aksesoris,
+        ]);
+    }
     public function dashboard()
     {
         return view('cms.page.homePage',['title' => 'User Dashboard']);
