@@ -49,7 +49,7 @@
                 async function performNestedAjaxCalls() {
                     try {
                         //kirim ajax call pertama buat cek bener ga qrcodenya
-                        const response1 = await makeAjaxRequest('/verificationAdmin/sendReqDapatCredit', {
+                        const response1 = await makeAjaxRequest('/verificationAdmin/sendReqMain', {
                             qrcode: result,
                         });
                         //kalo qrcodenya bener bakal dikirim data user yang ngescan ke AdminController@sendToAdminPage buat dicek validasi lagi
