@@ -4,30 +4,45 @@
 @endsection
 
 @section('content')
-    <div class="container" style="padding: 100px 0 50px 0;">
+    <div class="d-flex align-items-center flex-column container" style="padding: 100px 0 50px 0;">
+
+        <div class="mb-3">
+            <button class="btn btn-primary" style="width: 300px;">
+                <a href="/wehea/info" class="text-decoration-none text-white">View my info</a>
+            </button>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" style="width: 300px;">
+                <a href="/scannerPageMain" class="text-decoration-none text-white">Scan QR Code Arcade</a>
+            </button>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" style="width: 300px;">
+                <a href="/scannerPageDapatKupon" class="text-decoration-none text-white">Scan QR Code Get Kupon</a>
+            </button>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" style="width: 300px;">
+                <a href="/scannerPageKurangKupon" class="text-decoration-none text-white">Scan QR Code Tukar Kupon</a>
+            </button>
+
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" style="width: 300px;">
+                <a href="/scannerPageDapatCredit" class="text-decoration-none text-white">Scan QR Code Side Quest</a>
+            </button>
+
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" style="width: 300px;">
+                <a href="/scannerPageMerchandise" class="text-decoration-none text-white">Scan QR Code Merchandise</a>
+            </button>
+        </div>
         <form action="/wehea/register" method="post">
             @csrf
-            <button type="submit" class="btn btn-primary my-3">Join Wehea</button>
+            <button type="submit" class="btn btn-primary" style="width: 300px;">Join Wehea</button>
         </form>
-        <div class="mb-3">
-            <a href="/wehea/info">View my info</a>
-        </div>
-        <div>
-            <a href="/scannerPageMain">Scan QR Code Arcade</a>
-        </div>
-        <div>
-            <a href="/scannerPageDapatKupon">Scan QR Code Get Kupon</a>
-        </div>
-        <div>
-            <a href="/scannerPageKurangKupon">Scan QR Code Tukar Kupon</a>
-        </div>
-        <div>
-            <a href="/scannerPageDapatCredit">Scan QR Code Side Quest</a>
-        </div>
-        <div>
-            <a href="/scannerPageMerchandise">Scan QR Code Merchandise</a>
-        </div>
-    </div>
+
     </div>
 @endsection
 

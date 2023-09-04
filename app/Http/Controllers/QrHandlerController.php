@@ -11,27 +11,27 @@ class QrHandlerController extends Controller
 {
     public function main()
     {
-        return view('cms.page.event.scannerQrBoothGame', ['title' => 'Main QR Scanner Page']);
+        return view('cms.page.event.scannerQrBoothGame', ['title' => 'QR Scanner Page Arcade']);
     }
 
     public function kurangKupon()
     {
-        return view('cms.page.event.scannerQrBoothKurangKupon');
+        return view('cms.page.event.scannerQrBoothKurangKupon', ['title' => 'QR Scanner Tukar Kupon']);
     }
 
     public function dapatKupon()
     {
-        return view('cms.page.event.scannerQrBoothDapatKupon');
+        return view('cms.page.event.scannerQrBoothDapatKupon',  ['title' => 'QR Scanner Get Coupon']);
     }
 
     public function dapatCredit()
     {
-        return view('cms.page.event.scannerQrBoothDapatCredit');
+        return view('cms.page.event.scannerQrBoothDapatCredit',  ['title' => 'QR Scanner Side Quest']);
     }
 
     public function merchandise()
     {
-        return view('cms.page.event.scannerQrBoothMerchandise');
+        return view('cms.page.event.scannerQrBoothMerchandise',  ['title' => 'QR Scanner Merchandise']);
     }
 
     public function sendReqMain(Request $request)

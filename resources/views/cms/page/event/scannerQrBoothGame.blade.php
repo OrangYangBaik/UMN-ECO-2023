@@ -1,7 +1,7 @@
 @extends('cms.template.app')
 
 @section('custom-css')
-    <link rel="stylesheet" href="{{ asset('css/cms/page/wehea/scannerQRBoothGame.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cms/page/wehea/scannerQRBooth.css') }}">
 @endsection
 
 @section('content')

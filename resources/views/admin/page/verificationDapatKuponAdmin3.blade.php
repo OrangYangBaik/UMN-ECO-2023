@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div style="min-height: 100vh;">
+    <div style="min-height: 100vh;" class="container">
         @if (empty($requester))
             <div class="text-white">No Data</div>
         @else

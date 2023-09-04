@@ -116,7 +116,6 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('nirmalabentalaumneco2023')
         ]);
 
-        // User Admin Kurang Kupon
         Admin::create([
             'name' => 'AdminKurangKupon1',
             'email' => 'adminkurangkupon1@umn.ac.id',
