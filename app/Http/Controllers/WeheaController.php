@@ -9,7 +9,11 @@ use Illuminate\Http\Request;
 class WeheaController extends Controller
 {
     public function index(){
-        return view('cms.page.wehea.balaiKota',['title'=>'Join Wehea']);
+        $user = auth()->user();
+        return view('cms.page.wehea.balaiKota',[
+            'title'=>'Join Wehea',
+            'isJoin' => $user->wehea
+        ]);
     }
 
     public function register(){
