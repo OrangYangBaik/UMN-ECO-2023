@@ -1,0 +1,36 @@
+.scanner-qr-booth-game-container {
+    padding: 100px 10px;
+    background: linear-gradient(180deg, #ffdd82 50%, #f7b055 75%);
+}
+
+.scanner-qr-booth-game-container :where(#reader, #reader__header_message) {
+    border: none !important;
+}
+
+.scanner-qr-booth-game-container #reader video {
+    width: 100% !important;
+}
+
+.scanner-qr-booth-game-container
+    :where(
+        #html5-qrcode-button-camera-stop,
+        #html5-qrcode-button-camera-start,
+        #html5-qrcode-button-camera-permission,
+        #html5-qrcode-button-file-selection
+    ) {
+    padding: 5px 20px !important;
+    background-color: blue !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.scanner-qr-booth-game-container #html5-qrcode-anchor-scan-type-change {
+    margin-top: 10px !important;
+    color: white !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+}

@@ -44,6 +44,12 @@
     <link rel="stylesheet" href="{{ asset('css/cms/base/jquery/jquery-ui.css') }}">
     <!-- Animate -->
     <link rel="stylesheet" href="{{ asset('css/cms/base/animate/animate.css') }}">
+    {{-- QR Scanner --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js"
+        integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Custom CSS -->
     @yield('custom-css')

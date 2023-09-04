@@ -11,7 +11,7 @@ class QrHandlerController extends Controller
 {
     public function main()
     {
-        return view('cms.page.event.scannerQrBoothGame');
+        return view('cms.page.event.scannerQrBoothGame', ['title' => 'Main QR Scanner Page']);
     }
 
     public function kurangKupon()

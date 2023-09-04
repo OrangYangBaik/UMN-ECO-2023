@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="row form-regis container m-auto">
+    <div class="row form-regis container m-auto py-5">
         <div class="col-md-8 m-auto mt-5">
             <h1 class="text-light font-weight-bold">Login User</h1>
             @if (session('status'))
@@ -35,10 +35,11 @@
                         {{ $message }}
                     </div>
                 @enderror
-                <button id="btn-login" type="submit" class="btn btn-primary">
+                <button id="btn-login" type="submit" class="btn btn-primary my-3">
                     <span class="font-weight-bold text-white">Login</span>
                 </button>
 
+                <p>Doesn't have an account? <a href="/register">Register</a></p>
             </form>
         </div>
     </div>

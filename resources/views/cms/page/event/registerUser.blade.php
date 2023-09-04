@@ -7,7 +7,7 @@
 
 
 @section('content')
-    <div class="row form-regis container m-auto">
+    <div class="row form-regis container m-auto py-5">
         <div class="col-md-8 m-auto mt-5">
             <form action="/register" method="POST" id="form-register" style="width:80%; margin:auto">
                 @csrf
@@ -120,7 +120,8 @@
                     </div>
                 @enderror
 
-                <button type="submit" class="button-submit">daftar</button>
+                <button type="submit" class="button-submit btn btn-primary my-3">Daftar</button>
+                <p>Already have an account? <a href="/login">Login</a></p>
             </form>
         </div>
     </div>

@@ -4,12 +4,17 @@
 @endsection
 
 @section('content')
-    <div class="container" style="padding-top: 100px;">
+    <div class="container" style="padding: 100px 0 50px 0;">
         <form action="/wehea/register" method="post">
             @csrf
-            <button type="submit">Join Wehea</button>
+            <button type="submit" class="btn btn-primary my-3">Join Wehea</button>
         </form>
-        <a href="/wehea/info">View Info</a>
+        <div class="mb-3">
+            <a href="/wehea/info">View my info</a>
+        </div>
+        <div>
+            <a href="/scannerPageMain">Scan QR Code</a>
+        </div>
     </div>
 @endsection
 
