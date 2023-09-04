@@ -38,11 +38,12 @@
                 <a href="/scannerPageMerchandise" class="text-decoration-none text-white">Scan QR Code Merchandise</a>
             </button>
         </div>
-        <form action="/wehea/register" method="post">
-            @csrf
-            <button type="submit" class="btn btn-primary" style="width: 300px;">Join Wehea</button>
-        </form>
-
+        @if ($isJoin == 0)
+            <form action="/wehea/register" method="post">
+                @csrf
+                <button type="submit" class="btn btn-primary" style="width: 300px;">Join Wehea</button>
+            </form>
+        @endif
     </div>
 @endsection
 
