@@ -13,8 +13,21 @@
             <a href="/wehea/info">View my info</a>
         </div>
         <div>
-            <a href="/scannerPageMain">Scan QR Code</a>
+            <a href="/scannerPageMain">Scan QR Code Arcade</a>
         </div>
+        <div>
+            <a href="/scannerPageDapatKupon">Scan QR Code Get Kupon</a>
+        </div>
+        <div>
+            <a href="/scannerPageKurangKupon">Scan QR Code Tukar Kupon</a>
+        </div>
+        <div>
+            <a href="/scannerPageDapatCredit">Scan QR Code Side Quest</a>
+        </div>
+        <div>
+            <a href="/scannerPageMerchandise">Scan QR Code Merchandise</a>
+        </div>
+    </div>
     </div>
 @endsection
 
