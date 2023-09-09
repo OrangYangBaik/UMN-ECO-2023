@@ -80,6 +80,11 @@ Route::group(['prefix' => 'milestone'], function() {
     });
 });
 
+//Nawasena
+Route::get('/pengumpulanNawasena', [SheetController::class, 'pengumpulanNawasenaGet'])->name('nawasena');
+Route::post('/pengumpulanNawasena', [SheetController::class, 'pengumpulanNawasena'])->name('nawasena.post');
+Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink');
+Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post');
 //-------------------------------------------------------------------------------------------------------------------------
 
 
