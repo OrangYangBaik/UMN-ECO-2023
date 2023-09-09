@@ -99,39 +99,7 @@ class SheetController extends Controller
         return redirect('/oprec-thanks');
     }
 
-    public function pengumpulanNawasenaGet(Request $request){
-        return view('cms.page.nawasena.pengumpulanNawasena');
-    }
-
-    public function pengumpulanNawasena(Request $request){
-
-        $user = Auth::guard('participant')->user();
-        $request->validate([
-            'bukti' => 'required|image|mimes:jpeg,png,jpg,svg|max:1024'
-        ]);
-
-        if($user){
-
-            try {
-                $date = date("Y-m-d",time());
-                $imageName = $user->nama.'-'.$date.'.'.$request->bukti->extension();
-        
-                // Save the image to a custom directory in the storage directory
-                Storage::disk('local')->put('nawasena/' . $imageName, file_get_contents($request->bukti->path()));
-
-                return back()
-                    ->with('success', 'Image uploaded successfully')
-                    ->with('nawasena', $imageName);
-            } catch (\Exception $e) {
-                // Handle any exceptions here
-                return back()
-                    ->with('error', 'Error uploading image: ' . $e->getMessage());
-            }
-        }
-        else{
-            return redirect('/login');
-        }
-    }
+    
 
     public function pengumpulanLinkNawasenaGet(Request $request){
         return view('cms.page.nawasena.pengumpulanLinkNawasena');
@@ -160,4 +128,16 @@ class SheetController extends Controller
             return redirect('/login');
         }
     }
+
+/*    public function getImageNawasena($filename)
+    {
+        // Ensure the file exists in storage
+        if (Storage::disk('public')->exists('nawasena' . $filename)) {
+            $path = Storage::disk('public')->path('nawasena' . $filename);
+            return response()->file($path);
+        } else {
+            abort(404); // Image not found
+        }
+    }
+*/   
 }

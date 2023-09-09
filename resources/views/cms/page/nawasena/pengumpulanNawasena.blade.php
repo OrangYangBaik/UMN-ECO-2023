@@ -17,7 +17,7 @@
             <button type="button" class="close" data-dismiss="alert">×</button>
                 <strong>{{ $message }}</strong>
         </div>
-        <img src="nawasena{{ Session::get('bukti') }}"> 
+        <img src="pengumpulanNawasena{{ Session::get('bukti') }}"> 
         <!-- ^ Ini harusnya nampilin image yang di-upload, cmn masih gak ditampilin -->
         @endif
     

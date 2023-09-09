@@ -11,6 +11,7 @@ use App\Http\Controllers\MeruBetiriController;
 use App\Http\Controllers\MilestoneController;
 use App\Http\Controllers\QrHandlerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NawasenaController;
 
 /*{{  }}
 |--------------------------------------------------------------------------
@@ -81,10 +82,11 @@ Route::group(['prefix' => 'milestone'], function() {
 });
 
 //Nawasena
-Route::get('/pengumpulanNawasena', [SheetController::class, 'pengumpulanNawasenaGet'])->name('nawasena');
-Route::post('/pengumpulanNawasena', [SheetController::class, 'pengumpulanNawasena'])->name('nawasena.post');
+Route::get('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasenaGet'])->name('nawasena');
+Route::post('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasena'])->name('nawasena.post');
 Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink');
 Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post');
+//Route::get('/nawasenaFetchImage/{filename}', SheetController::class, 'getImageNawasena')->name('nawasena.fetchImage');
 //-------------------------------------------------------------------------------------------------------------------------
 
 
