@@ -122,7 +122,7 @@
     justify-content: center;
     align-items: center;
     transition: opacity 0.3s ease;
-    z-index: 9999;
+    z-index: 99999999999;
 }
 
 .nawasena-form-overlay-container .overlay-content {
@@ -142,7 +142,7 @@
     color: #1f576f;
 }
 
-.nawasena-form-overlay-container .overlay-content-body p {
+.nawasena-form-overlay-container .overlay-content-body #petunjuk-teks {
     margin-bottom: 25px;
 }
 
@@ -193,7 +193,7 @@
     display: none;
 }
 
-#nawasena-container label {
+#nawasena-container #input-gambar {
     position: absolute;
     top: 0;
     right: 0;
@@ -206,17 +206,29 @@
     cursor: pointer;
 }
 
-#nawasena-container label:hover {
+#upload-image-icon {
+    width: 40px;
+    height: 40px;
+}
+
+#nawasena-container #input-gambar:hover {
     background-color: #8bdfcb;
 }
 
-@media only screen and (max-width: 767px) {
-    .jnana-overlay-container .overlay-content {
-        width: 80vw;
-    }
+#nawasena-container #anggota-kelompok {
+    width: 75%;
+    margin: auto;
+}
+
+#nawasena-container textarea {
+    border: 3px solid #1f576f;
 }
 
 @media only screen and (max-width: 767px) {
+    .nawasena-form-overlay-container .overlay-content {
+        width: 80vw;
+    }
+
     #nawasena-container {
         flex-direction: column-reverse;
         padding-top: 50px;
@@ -229,6 +241,15 @@
     .nawasena-ebook,
     .nawasena-reg {
         margin: 20px auto;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .nawasena-reg-submit-ss {
+        margin: 25px auto;
+        width: 80%;
+        padding: 15px;
+        font-size: 1rem;
     }
 }
 
@@ -260,5 +281,27 @@
 
     #nawasena-container .nawasena-instructor {
         margin-top: -25px;
+    }
+
+    #nawasena-container #input-gambar {
+        font-size: 0.8rem;
+    }
+
+    #nawasena-container .input-image-section {
+        position: relative;
+        margin: 10px auto;
+        width: 150px;
+        height: 30px;
+        border: 1.5px dashed #1f576f;
+    }
+
+    #upload-image-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #nawasena-container #petunjuk-kelompok {
+        font-size: 0.75rem;
+        margin-top: 30px;
     }
 }

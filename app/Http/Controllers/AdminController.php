@@ -122,7 +122,6 @@ class AdminController extends Controller
         ]);
     }
 
-
     public function dashboardDapatCredit(){
         $admin = auth()->user();
         return view('admin.page.dashboardDapatCredit',[

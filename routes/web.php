@@ -60,7 +60,6 @@ Route::group(['prefix' => 'nawasena'], function() {
     //Route::get('/nawasenaFetchImage/{filename}', SheetController::class, 'getImageNawasena')->name('nawasena.fetchImage');
 });
 
-
 // Wehea
 Route::group(['prefix' => 'wehea'], function() {
     Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing')->middleware('auth:participant');
@@ -92,6 +91,8 @@ Route::group(['prefix' => 'milestone'], function() {
     });
 });
 
+
+Route::get('/hehe', [NawasenaController::class, 'showRegistered']);
 //-------------------------------------------------------------------------------------------------------------------------
 
 

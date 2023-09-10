@@ -17,6 +17,10 @@ class NawasenaController extends Controller
     public function index(){
         return view('cms.page.nawasena.homePageNawasena', ['title'=>'Nawasena']);
     }
+    
+    public function showRegistered(){
+        return view('admin.page.nawasena.showRegisteredUser', ['title' => 'Nawasena Registered User']);
+    }
 
     public function pengumpulanNawasenaGet(){
         return view('cms.page.nawasena.pengumpulanNawasena');

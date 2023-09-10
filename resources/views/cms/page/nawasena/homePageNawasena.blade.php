@@ -58,20 +58,30 @@
                         <h1>PENDAFTARAN</h1>
                     </div>
                     <div class="overlay-content-body">
-                        <p>Silakan unggah bukti pembayaran untuk pendaftaran acara Nawasena UMN ECO
+                        <p id="petunjuk-teks">Silakan unggah bukti pembayaran untuk pendaftaran acara Nawasena UMN ECO
                             2023!</p>
                         <form id="submit-ss" method="POST" enctype="multipart/form-data"
                             action="{{ route('nawasena.post') }}">
                             @csrf
                             <div class="input-image-section">
                                 <input id="ss-pembayaran" type="file" name="bukti" />
-                                <label for="ss-pembayaran">
-                                    <img src="{{ asset('images/nawasena/add image.svg') }}" alt="Upload Image Icon"
-                                        style="width: 40px; height: 40px;" />
+                                <label id="input-gambar" for="ss-pembayaran">
+                                    <img id="upload-image-icon" src="{{ asset('images/nawasena/add image.svg') }}"
+                                        alt="Upload Image Icon" />
                                     Choose a Photo
                                 </label>
                             </div>
                             <div id="uploaded-file-name"></div>
+
+                            <div class="input-anggota-section">
+                                <p>
+                                    <label id="petunjuk-kelompok" for="anggota-kelompok">
+                                        Anggota: (isi jika mendaftar secara kelompok)
+                                    </label>
+                                </p>
+                                <textarea id="anggota-kelompok"
+                                    placeholder="1. Kathleen - 00000012345&#10;2. Ruth - 00000067890&#10;3. Wijaya - 00000054321"></textarea>
+                            </div>
                             <div id="error-message" style="color: red; margin-top: 25px;"></div>
                             <button type="submit" class="nawasena-reg-submit-ss">
                                 DAFTAR SEKARANG
