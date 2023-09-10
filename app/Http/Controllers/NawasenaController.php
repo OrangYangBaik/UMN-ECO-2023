@@ -14,18 +14,25 @@ use SheetDB\SheetDB;
 
 class NawasenaController extends Controller
 {
-public function pengumpulanNawasenaGet(Request $request){
+    public function index(){
+        return view('cms.page.nawasena.homePageNawasena', ['title'=>'Nawasena']);
+    }
+
+    public function pengumpulanNawasenaGet(){
         return view('cms.page.nawasena.pengumpulanNawasena');
     }
 
     public function pengumpulanNawasena(Request $request){
-
         $user = Auth::guard('participant')->user();
-        $request->validate([
-            'bukti' => 'required|image|mimes:jpeg,png,jpg,svg|max:1024'
-        ]);
-
         if($user){
+            $request->validate([
+                'bukti' => 'required|image|mimes:jpeg,png,jpg,svg|max:1024'
+            ], [
+                'bukti.required' => 'Mohon pilih gambar untuk diunggah!',
+                'bukti.image' => 'Unggahan harus berupa gambar!',
+                'bukti.mimes' => 'Format gambar harus berupa jpeg, png, jpg, or svg!',
+                'bukti.max' => 'Ukuran gambar tidak boleh lebih dari 1mb!'
+            ]);
 
             try {
                 $date = date("Y-m-d",time());

@@ -1,0 +1,75 @@
+.register-form {
+    background-color: #be8760;
+}
+
+.register-form h5,
+.register-title {
+    font-family: bobbyjones;
+}
+
+.register-title {
+    text-align: center;
+    font-size: 4rem !important;
+    color: #d0c5a9;
+    margin-bottom: 50px;
+}
+
+.register-form h5 {
+    color: #23434d;
+}
+
+.register-form :where(input, select) {
+    border: 2px solid #23434d;
+    outline: none;
+}
+
+.form {
+    padding-top: 20px;
+    padding-bottom: 2%;
+}
+
+.has-error .form-control,
+.form-control.error {
+    background-color: #ffc0a4;
+    border-color: #eb5e28;
+}
+
+label.error:not(.form-control) {
+    color: white;
+    font-size: 0.9em;
+}
+
+.register-form .register-button-container button {
+    cursor: pointer;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #d0c5a9;
+    color: #23434d;
+}
+
+.register-form .register-button-container button,
+.register-form .register-button-container button:focus,
+.register-form .register-button-container button:active {
+    border: 2px solid #23434d;
+    outline: none;
+}
+
+#login-link {
+    color: #23434d;
+    text-decoration: none;
+}
+
+#login-link:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 450px) {
+    .register-title {
+        font-size: 3rem !important;
+    }
+}

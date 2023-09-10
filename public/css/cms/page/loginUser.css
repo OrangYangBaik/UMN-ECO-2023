@@ -1,0 +1,84 @@
+.login-form {
+    width: 100%;
+    background-color: #be8760;
+}
+
+.form {
+    padding-top: 20px;
+    padding-bottom: 2%;
+}
+
+.has-error .form-control,
+.form-control.error {
+    background-color: #ffc0a4;
+    border-color: #eb5e28;
+}
+
+label.error:not(.form-control) {
+    color: white;
+    font-size: 0.9em;
+}
+
+.login-form h5,
+.login-title {
+    font-family: bobbyjones;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 4rem !important;
+    color: #d0c5a9;
+    margin-bottom: 50px;
+}
+
+.login-form h5 {
+    color: #23434d;
+}
+
+.login-form .error {
+    color: red;
+}
+
+.login-form :where(input[type="text"], input[type="password"]) {
+    border: 2px solid #23434d;
+    outline: none;
+}
+
+.login-form .login-button-container {
+    margin-top: 15px;
+}
+
+.login-form .login-button-container button {
+    cursor: pointer;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #d0c5a9;
+    color: #23434d;
+}
+
+.login-form .login-button-container button,
+.login-form .login-button-container button:focus,
+.login-form .login-button-container button:active {
+    border: 2px solid #23434d;
+    outline: none;
+}
+
+#register-link {
+    color: #23434d;
+    text-decoration: none;
+}
+
+#register-link:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 450px) {
+    .login-title {
+        font-size: 3rem !important;
+    }
+}

@@ -16,17 +16,6 @@
             font-family: bobbyjones;
             src: url("{{ asset('fonts/bobby-jones-soft.otf') }}") format("truetype");
         }
-
-        .tahun,
-        .tahun-2,
-        .tahun-3,
-        .tahun-4,
-        .tahun-5,
-        .tahun-6,
-        .tahun-7,
-        .tahun-8 {
-            font-family: bobbyjones;
-        }
     </style>
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="{{ asset('css/cms/base/bootstrap/bootstrap.min.css') }}">

@@ -35,7 +35,13 @@
         <div class="hoverable-obj meru-betiri">
             <img src="{{ asset('images/treasureMap/meru-betiri.svg') }}" alt="Gate of Meru Betiri" />
         </div>
-        {{-- <a href="{{ route('scannerPage') }}">tesqr</a> --}}
+
+        <!-- Overlay Container -->
+        <div class="overlay-container">
+            <div class="overlay-content">
+                <img id="overlay-image" />
+            </div>
+        </div>
     </div>
 @endsection
 
