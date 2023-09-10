@@ -49,7 +49,16 @@
      
             </div>
         </form>
-    
+        <Form>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="deskripsi">Deskripsi</label>
+                    <input type="text" name="deskripsi" class="form-control">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </Form>
       </div>
     </div>
 </div>

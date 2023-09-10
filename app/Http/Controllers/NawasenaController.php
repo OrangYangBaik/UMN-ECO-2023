@@ -30,7 +30,8 @@ class NawasenaController extends Controller
         $user = Auth::guard('participant')->user();
         if($user){
             $request->validate([
-                'bukti' => 'required|image|mimes:jpeg,png,jpg,svg|max:1024'
+                'bukti' => 'required|image|mimes:jpeg,png,jpg,svg|max:1024',
+                'deskripsi' => ''
             ], [
                 'bukti.required' => 'Mohon pilih gambar untuk diunggah!',
                 'bukti.image' => 'Unggahan harus berupa gambar!',
@@ -40,15 +41,17 @@ class NawasenaController extends Controller
 
             try {
                 $date = date("Y-m-d",time());
-                $imageName = $user->nama.'-'.$date.'.'.$request->bukti->extension();
+                $imageName = 'nawasena/'.$user->nama.'-'.$date.'.'.$request->bukti->extension();
                 
                 $nama = $user->nama;
+                $deskripsi = $request->deskripsi;
                 $nim = $user->nim;
                 $email = $user->email;
                 $angkatan = $user->angkatan;
-                $jurusan = $user->jurusan;
-                $instagram_account = $user->instagram_account;
-                $line_id = $user->line_id;
+                $jurusan = $user->prodi;
+                $instagram = $user->instagram;
+                $line = $user->line;
+                
                 // Save the image to a custom directory in the storage directory
                 
                 $sheetdb = new SheetDB('bsxkj2qx222h0');
@@ -61,7 +64,14 @@ class NawasenaController extends Controller
                     $sheetdb->create([
                         'id' => 'INCREMENT',
                         'Nama' => $nama,
-                        'Bukti' => $imageName
+                        'NIM' => $nim,
+                        'Email' => $email,
+                        'Angkatan' => $angkatan,
+                        'Jurusan' => $jurusan,
+                        'Instagram' => $instagram,
+                        'Line' => $line,
+                        'Bukti' => $imageName,
+                        'Deskripsi' => $deskripsi,
                     ]);
 /* Database on progress (masih eror)
                     $data = [
