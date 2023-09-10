@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\Recruitment;
 use App\Models\Team;
+use App\models\Nawasena;
 use SheetDB\SheetDB;
 
 class NawasenaController extends Controller
@@ -28,11 +30,52 @@ public function pengumpulanNawasenaGet(Request $request){
             try {
                 $date = date("Y-m-d",time());
                 $imageName = $user->nama.'-'.$date.'.'.$request->bukti->extension();
-        
+                
+                $nama = $user->nama;
+                $nim = $user->nim;
+                $email = $user->email;
+                $angkatan = $user->angkatan;
+                $jurusan = $user->jurusan;
+                $instagram_account = $user->instagram_account;
+                $line_id = $user->line_id;
                 // Save the image to a custom directory in the storage directory
-                //$request->bukti->public_path('nawasena/')->move($imageName);
-                Storage::disk('local')->put('nawasena/' . $imageName, file_get_contents($request->bukti->path()));
-
+                
+                $sheetdb = new SheetDB('bsxkj2qx222h0');
+                if($sheetdb->search(['Nama'=>$user->nama])){
+                    return back()
+                        ->with('error', 'User sudah submit bukti!' . $e->getMessage());
+                    //$sheetdb->update('Nama',$user->nama, ['Bukti'=>$imageName]);
+                }
+                else{
+                    $sheetdb->create([
+                        'id' => 'INCREMENT',
+                        'Nama' => $nama,
+                        'Bukti' => $imageName
+                    ]);
+/* Database on progress (masih eror)
+                    $data = [
+                        'Name' => $nama,
+                        'NIM' => $nim,
+                        'Email' => $email,
+                        'Angkatan' => $angkatan,
+                        'Jurusan' => $jurusan,
+                        'Instagram_account' => $instagram_account,
+                        'Line_id' => $line_id,
+                        'image' => $imageName,
+                    ];
+                    try {
+                        Nawasena::create($data);
+                        // Or: $nawasena = new Nawasena($data); $nawasena->save();
+                    } catch (\Exception $e) {
+                        dd($e->getMessage()); // Print the error message for debugging
+                    } 
+*/
+                }
+                $request->bukti->move('nawasena/',$imageName);
+                
+                //Storage::disk('local')->put('nawasena/' . $imageName, file_get_contents($request->bukti->path()));     buat masuk ke storage/app/nawasena, gabisa difetch
+                
+                //Kalo image gak muncul, coba php artisan storage:link
                 return back()
                     ->with('success', 'Image uploaded successfully')
                     ->with('nawasena', $imageName);

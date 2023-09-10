@@ -115,11 +115,20 @@ class SheetController extends Controller
             $date = date("Y-m-d",time());
             $link = $request->link;
             $sheetdb = new SheetDB('bsxkj2qx222h0');
+            if($sheetdb->search(['Nama'=>$user->nama])){
+                $sheetdb->update('Nama',$user->nama, ['Link'=>$link]);
+            }
+            else{
+                return back()
+                    ->with('error', 'Error uploading link: User not found');
+            }
+/*
             $sheetdb->create([
                 'id' => 'INCREMENT',
                 'Nama' => $user->nama,
                 'Link' => $link
             ]);
+*/
             return back()
                 ->with('success', 'Link uploaded successfully')
                 ->with('nawasenaLink', $link);
