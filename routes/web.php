@@ -53,10 +53,10 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser')->m
 // Nawasena
 Route::group(['prefix' => 'nawasena'], function() {
     Route::get('/', [NawasenaController::class, 'index'])->name('nawasena-landing');
-    Route::get('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasenaGet'])->name('nawasena');
-    Route::post('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasena'])->name('nawasena.post');
-    Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink');
-    Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post');
+    // Route::get('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasenaGet'])->name('nawasena')->middleware('auth:participant');
+    Route::post('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasena'])->name('nawasena.post')->middleware('auth:participant');
+    Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink')->middleware('auth:participant');
+    Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post')->middleware('auth:participant');
     //Route::get('/nawasenaFetchImage/{filename}', SheetController::class, 'getImageNawasena')->name('nawasena.fetchImage');
 });
 
@@ -91,8 +91,6 @@ Route::group(['prefix' => 'milestone'], function() {
     });
 });
 
-
-Route::get('/hehe', [NawasenaController::class, 'showRegistered']);
 //-------------------------------------------------------------------------------------------------------------------------
 
 

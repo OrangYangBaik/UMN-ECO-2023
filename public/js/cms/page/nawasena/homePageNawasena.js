@@ -20,13 +20,12 @@ $(document).ready(function () {
 
     $("#ss-pembayaran").change(function () {
         const fileName = $(this).val().split("\\").pop(); // Extract the file name from the input value
-        $("#uploaded-file-name").text("Uploaded file: " + fileName);
+        $("#uploaded-file-name").text(fileName);
     });
 
     $("#submit-ss").submit(function (e) {
         e.preventDefault();
         var formData = new FormData(this);
-
         $.ajax({
             type: "POST",
             url: "/nawasena/pengumpulanNawasena",
@@ -34,12 +33,31 @@ $(document).ready(function () {
             processData: false,
             contentType: false,
             success: function (response) {
-                console.log(response);
+                if (response.redirect) {
+                    window.location.href = response.redirect;
+                } else {
+                    if (response.status === "error") {
+                        $("#success-message").hide();
+                        $("#success-message").text("");
+                        $("#error-message").text(response.message);
+                        $("#error-message").show();
+                        $("#link-grup").show();
+                    } else if (response.status === "success") {
+                        $("#error-message").hide();
+                        $("#error-message").text("");
+                        $("#success-message").text(response.message);
+                        $("#success-message").show();
+                        $("#link-grup").show();
+                    }
+                    $("#link-grup").attr("href", response.link);
+                    $("#link-grup").show();
+                }
             },
             error: function (xhr, status, error) {
-                var errors = xhr.responseJSON.errors;
+                var errors = xhr.responseJSON?.errors;
                 if (errors) {
                     $("#error-message").text(errors?.bukti[0]);
+                    $("#error-message").show();
                 }
             },
         });

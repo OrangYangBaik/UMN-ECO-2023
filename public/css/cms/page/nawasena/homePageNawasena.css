@@ -10,6 +10,7 @@
 .nawasena-outer {
     background-color: #e1e8ea;
     width: 100%;
+    position: relative;
 }
 
 #nawasena-container {
@@ -19,6 +20,28 @@
     margin: auto;
 }
 
+#nawasena-container .dekorasi-nawasena-img {
+    position: absolute;
+}
+
+#botol-hijau {
+    top: 10%;
+    right: 5%;
+    width: 200px;
+}
+
+#botol {
+    top: 10%;
+    right: 15%;
+    width: 200px;
+}
+
+#kresek-putih {
+    top: 10%;
+    right: 25%;
+    width: 200px;
+}
+
 #nawasena-container :where(.nawasena-left, .nawasena-right) {
     flex: 50%;
     padding: 10px;
@@ -26,6 +49,7 @@
 
 .nawasena-heading h1 {
     font-size: 4rem !important;
+    color: #ed927b;
 }
 
 .nawasena-desc {
@@ -250,6 +274,14 @@
         width: 80%;
         padding: 15px;
         font-size: 1rem;
+    }
+
+    #nawasena-container textarea::placeholder {
+        font-size: 0.75rem;
+    }
+
+    #nawasena-container :where(#error-message, #success-message, #link-grup) {
+        font-size: 0.75rem;
     }
 }
 

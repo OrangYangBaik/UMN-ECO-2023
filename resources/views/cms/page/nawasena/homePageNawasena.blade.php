@@ -7,6 +7,18 @@
 @section('content')
     <div class="nawasena-outer">
         <div id="nawasena-container">
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="botol-hijau" src="{{ asset('images/nawasena/Botol ijo.svg') }}"
+                    alt="Botol Hijau" />
+            </div>
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="botol" src="{{ asset('images/nawasena/Botol.svg') }}"
+                    alt="Botol" />
+            </div>
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="kresek-putih" src="{{ asset('images/nawasena/Kresek putih.svg') }}"
+                    alt="Kresek Putih" />
+            </div>
             <div class="nawasena-left">
                 <div class="nawasena-heading">
                     <h1>APA ITU THE MAKING OF NAWASENA?</h1>
@@ -58,8 +70,7 @@
                         <h1>PENDAFTARAN</h1>
                     </div>
                     <div class="overlay-content-body">
-                        <p id="petunjuk-teks">Silakan unggah bukti pembayaran untuk pendaftaran acara Nawasena UMN ECO
-                            2023!</p>
+                        <p id="petunjuk-teks">Unggah bukti pembayaran</p>
                         <form id="submit-ss" method="POST" enctype="multipart/form-data"
                             action="{{ route('nawasena.post') }}">
                             @csrf
@@ -72,17 +83,25 @@
                                 </label>
                             </div>
                             <div id="uploaded-file-name"></div>
-
-                            <div class="input-anggota-section">
-                                <p>
-                                    <label id="petunjuk-kelompok" for="anggota-kelompok">
-                                        Anggota: (isi jika mendaftar secara kelompok)
-                                    </label>
-                                </p>
-                                <textarea id="anggota-kelompok"
-                                    placeholder="1. Kathleen - 00000012345&#10;2. Ruth - 00000067890&#10;3. Wijaya - 00000054321"></textarea>
+                            <div class="input-anggota-section" style="margin-top: 20px;">
+                                <textarea id="anggota-kelompok" name="deskripsi"
+                                    placeholder="1. Kathleen - 00000012345 - kathleen@student.umn.ac.id - DKV - 2022&#10;2. Ruth - 00000067890 - ruth@student.umn.ac.id - DKV - 2022&#10;3. Wijaya - 00000054321 - wijaya@student.umn.ac.id - DKV - 2022"></textarea>
                             </div>
-                            <div id="error-message" style="color: red; margin-top: 25px;"></div>
+                            <small style="font-style: italic;">*Jika berkelompok, isi data seluruh anggota. Format wajib
+                                sesuai dengan
+                                contoh</small>
+                            <div>
+                                <small style="font-size: .5rem;">[Nomor] - [Nama Lengkap] - [NIM] - [Email Student] -
+                                    [Program Studi] - [Angkatan]</small>
+                            </div>
+
+                            <div id="error-message" style="color: red; margin-top: 25px; display: none;">
+                            </div>
+                            <div id="success-message" style="color: green; margin-top: 25px; display:none;"></div>
+                            <a id="link-grup" href="" target="_blank"
+                                style="display: none; color: #1f576f; cursor: pointer; font-weight: bold;">Bergabung
+                                ke
+                                grup</a>
                             <button type="submit" class="nawasena-reg-submit-ss">
                                 DAFTAR SEKARANG
                             </button>
