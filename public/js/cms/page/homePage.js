@@ -17,15 +17,29 @@ $(document).ready(function () {
     // });
 
     var hoverSound = $("#hover-sound")[0];
-    $(".hoverable-obj, .nav-link").hover(
-        function () {
-            hoverSound.currentTime = 5;
-            hoverSound.play();
-        },
-        function () {
-            hoverSound.pause();
+    var playPromise;
+
+    function playHoverSound() {
+        if (hoverSound.paused || hoverSound.ended) {
+            hoverSound.currentTime = 0;
+            playPromise = hoverSound.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch((error) => {
+                    // Auto-play was prevented, but we ignore the error and continue playing.
+                });
+            }
         }
-    );
+    }
+
+    function pauseHoverSound() {
+        hoverSound.pause();
+    }
+
+    $(".hoverable-obj, .nav-link").on({
+        mouseenter: playHoverSound,
+        mouseleave: pauseHoverSound,
+    });
 
     $(".nawasena").click(function () {
         const overlayImage = $("#overlay-image");
@@ -43,7 +57,7 @@ $(document).ready(function () {
         }, 3000);
     });
 
-    $(".wehea").click(function () {
-        location.href = "/wehea";
-    });
+    // $(".wehea").click(function () {
+    //     location.href = "/wehea";
+    // });
 });
