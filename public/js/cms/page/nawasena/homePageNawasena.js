@@ -33,31 +33,66 @@ $(document).ready(function () {
             processData: false,
             contentType: false,
             success: function (response) {
+                console.log(response);
                 if (response.redirect) {
                     window.location.href = response.redirect;
-                } else {
-                    if (response.status === "error") {
-                        $("#success-message").hide();
-                        $("#success-message").text("");
-                        $("#error-message").text(response.message);
-                        $("#error-message").show();
-                        $("#link-grup").show();
-                    } else if (response.status === "success") {
-                        $("#error-message").hide();
-                        $("#error-message").text("");
-                        $("#success-message").text(response.message);
-                        $("#success-message").show();
-                        $("#link-grup").show();
-                    }
-                    $("#link-grup").attr("href", response.link);
-                    $("#link-grup").show();
+                    // } else {
+                    //     if (response.status === "error") {
+                    //         // $("#success-message").hide();
+                    //         // $("#success-message").text("");
+                    //         $(".error-message").text(response.message);
+                    //         $(".error-message").show();
+                    //         // $("#link-grup").show();
+                    //         // } else if (response.status === "success") {
+                    //         //     $("#error-message").hide();
+                    //         //     $("#error-message").text("");
+                    //         //     $("#success-message").text(response.message);
+                    //         //     $("#success-message").show();
+                    //         //     $("#link-grup").show();
+                    //         // }
+                    //     }
+                    //     // $("#link-grup").attr("href", response.link);
+                    //     // $("#link-grup").show();
                 }
             },
             error: function (xhr, status, error) {
-                var errors = xhr.responseJSON?.errors;
-                if (errors) {
-                    $("#error-message").text(errors?.bukti[0]);
-                    $("#error-message").show();
+                if (xhr.status === 401) {
+                    window.location.href = "/login";
+                } else {
+                    var availError = xhr.responseJSON?.errors;
+                    if (availError) {
+                        $(".error-message").text(availError.bukti[0]);
+                        $(".error-message").show();
+                    }
+                }
+            },
+        });
+    });
+
+    $("#submit-karya").submit(function (e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+        $.ajax({
+            type: "POST",
+            url: "/nawasena/pengumpulanLinkNawasena",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                console.log(response);
+                if (response.status === "success") {
+                    location.reload();
+                }
+            },
+            error: function (xhr, status, error) {
+                if (xhr.status === 401) {
+                    window.location.href = "/login";
+                } else {
+                    var availError = xhr.responseJSON?.errors;
+                    if (availError) {
+                        $(".error-message").text(availError.link[0]);
+                        $(".error-message").show();
+                    }
                 }
             },
         });

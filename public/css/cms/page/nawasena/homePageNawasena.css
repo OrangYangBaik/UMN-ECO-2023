@@ -170,7 +170,8 @@
     margin-bottom: 25px;
 }
 
-.nawasena-reg-submit-ss {
+.nawasena-reg-submit-ss,
+.nawasena-reg-submit-karya {
     cursor: pointer;
     margin: 25px auto;
     display: flex;
@@ -186,10 +187,13 @@
 
 .nawasena-reg,
 .nawasena-reg-submit-ss,
+.nawasena-reg-submit-karya,
 .nawasena-reg:active,
 .nawasena-reg-submit-ss:active,
+.nawasena-reg-submit-karya:active,
 .nawasena-reg:focus,
-.nawasena-reg-submit-ss:focus {
+.nawasena-reg-submit-ss:focus,
+.nawasena-reg-submit-karya:focus {
     border: none;
     outline: none;
 }
@@ -239,13 +243,14 @@
     background-color: #8bdfcb;
 }
 
-#nawasena-container #anggota-kelompok {
+#nawasena-container :where(#anggota-kelompok, #karya-link) {
     width: 75%;
     margin: auto;
 }
 
 #nawasena-container textarea {
     border: 3px solid #1f576f;
+    padding: 3px 8px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -285,7 +290,8 @@
 }
 
 @media only screen and (max-width: 575px) {
-    .nawasena-reg-submit-ss {
+    .nawasena-reg-submit-ss,
+    .nawasena-reg-submit-karya {
         margin: 25px auto;
         width: 80%;
         padding: 15px;

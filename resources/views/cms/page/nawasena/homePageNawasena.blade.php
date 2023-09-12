@@ -51,7 +51,12 @@
                     </div>
                 </a>
 
-                <button type="button" class="nawasena-reg" {{-- @if (true) disabled style="opacity: 0.6;" @endif> --}}>DAFTAR SEKARANG</button>
+                @if ($isSubmitted == true)
+                    <button type="button" class="nawasena-reg"
+                        @if ($isSubmittedLink == true) style="opacity: 0.6" disabled @endif>KUMPUL KARYA</button>
+                @else
+                    <button type="button" class="nawasena-reg">DAFTAR SEKARANG</button>
+                @endif
             </div>
             <div class="nawasena-right">
                 <div class="nawasena-chat-bubble">
@@ -70,42 +75,63 @@
                         <h1>PENDAFTARAN</h1>
                     </div>
                     <div class="overlay-content-body">
-                        <p id="petunjuk-teks">Unggah bukti pembayaran</p>
-                        <form id="submit-ss" method="POST" enctype="multipart/form-data"
-                            action="{{ route('nawasena.post') }}">
-                            @csrf
-                            <div class="input-image-section">
-                                <input id="ss-pembayaran" type="file" name="bukti" />
-                                <label id="input-gambar" for="ss-pembayaran">
-                                    <img id="upload-image-icon" src="{{ asset('images/nawasena/add image.svg') }}"
-                                        alt="Upload Image Icon" />
-                                    Choose a Photo
-                                </label>
-                            </div>
-                            <div id="uploaded-file-name"></div>
-                            <div class="input-anggota-section" style="margin-top: 20px;">
-                                <textarea id="anggota-kelompok" name="deskripsi"
-                                    placeholder="1. Kathleen - 00000012345 - kathleen@student.umn.ac.id - DKV - 2022&#10;2. Ruth - 00000067890 - ruth@student.umn.ac.id - DKV - 2022&#10;3. Wijaya - 00000054321 - wijaya@student.umn.ac.id - DKV - 2022"></textarea>
-                            </div>
-                            <small style="font-style: italic;">*Jika berkelompok, isi data seluruh anggota. Format wajib
-                                sesuai dengan
-                                contoh</small>
-                            <div>
-                                <small style="font-size: .5rem;">[Nomor] - [Nama Lengkap] - [NIM] - [Email Student] -
-                                    [Program Studi] - [Angkatan]</small>
-                            </div>
+                        <p id="petunjuk-teks">
+                            @if ($isSubmitted == true)
+                                Unggah link google drive
+                            @else
+                                Unggah bukti pembayaran
+                            @endif
+                        </p>
+                        @if ($isSubmitted == true)
+                            <form id="submit-karya" method="POST" enctype="multipart/form-data"
+                                action="{{ route('nawasenaLink.post') }}">
+                                @csrf
+                                <textarea id="karya-link" name="link" placeholder="https://drive.google.com"></textarea>
 
-                            <div id="error-message" style="color: red; margin-top: 25px; display: none;">
-                            </div>
-                            <div id="success-message" style="color: green; margin-top: 25px; display:none;"></div>
-                            <a id="link-grup" href="" target="_blank"
-                                style="display: none; color: #1f576f; cursor: pointer; font-weight: bold;">Bergabung
-                                ke
-                                grup</a>
-                            <button type="submit" class="nawasena-reg-submit-ss">
-                                DAFTAR SEKARANG
-                            </button>
-                        </form>
+                                <div class="error-message" style="color: red; margin-top: 25px; display: none;">
+                                </div>
+
+                                <button type="submit" class="nawasena-reg-submit-karya">
+                                    KUMPUL KARYA
+                                </button>
+                            </form>
+                        @else
+                            <form id="submit-ss" method="POST" enctype="multipart/form-data"
+                                action="{{ route('nawasena.post') }}">
+                                @csrf
+                                <div class="input-image-section">
+                                    <input id="ss-pembayaran" type="file" name="bukti" />
+                                    <label id="input-gambar" for="ss-pembayaran">
+                                        <img id="upload-image-icon" src="{{ asset('images/nawasena/add image.svg') }}"
+                                            alt="Upload Image Icon" />
+                                        Choose a Photo
+                                    </label>
+                                </div>
+                                <div id="uploaded-file-name"></div>
+                                <div class="input-anggota-section" style="margin-top: 20px;">
+                                    <textarea id="anggota-kelompok" name="deskripsi"
+                                        placeholder="1. Kathleen - 00000012345 - kathleen@student.umn.ac.id - DKV - 2022&#10;2. Ruth - 00000067890 - ruth@student.umn.ac.id - DKV - 2022&#10;3. Wijaya - 00000054321 - wijaya@student.umn.ac.id - DKV - 2022"></textarea>
+                                </div>
+                                <small style="font-style: italic;">*Jika berkelompok, isi data seluruh anggota. Format wajib
+                                    sesuai dengan
+                                    contoh</small>
+                                <div>
+                                    <small style="font-size: .5rem;">[Nomor] - [Nama Lengkap] - [NIM] - [Email Student] -
+                                        [Program Studi] - [Angkatan]</small>
+                                </div>
+
+                                <div class="error-message" style="color: red; margin-top: 25px; display: none;">
+                                </div>
+                                {{-- <div id="success-message" style="color: green; margin-top: 25px; display:none;"></div>
+                                <a id="link-grup" href="" target="_blank"
+                                    style="display: none; color: #1f576f; cursor: pointer; font-weight: bold;">Bergabung
+                                    ke
+                                    grup</a> --}}
+                                <button type="submit" class="nawasena-reg-submit-ss">
+                                    DAFTAR SEKARANG
+                                </button>
+                            </form>
+                        @endif
                     </div>
                 </div>
             </div>

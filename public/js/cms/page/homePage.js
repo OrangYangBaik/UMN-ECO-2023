@@ -36,7 +36,7 @@ $(document).ready(function () {
         hoverSound.pause();
     }
 
-    $(".hoverable-obj, .nav-link").on({
+    $(".hoverable-obj").on({
         mouseenter: playHoverSound,
         mouseleave: pauseHoverSound,
     });

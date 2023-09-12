@@ -58,6 +58,7 @@ Route::group(['prefix' => 'nawasena'], function() {
     Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink')->middleware('auth:participant');
     Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post')->middleware('auth:participant');
     //Route::get('/nawasenaFetchImage/{filename}', SheetController::class, 'getImageNawasena')->name('nawasena.fetchImage');
+    Route::get('/thanks', [NawasenaController::class, 'nawasenaThanks'])->name('nawasena-thanks');
 });
 
 // Wehea

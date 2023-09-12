@@ -10,11 +10,6 @@
         <div class="row container m-auto py-5">
             <div class="col-md-8 m-auto mt-5">
                 <h1 class="login-title">WELCOME TO NAWASENA</h1>
-                @if (session('status'))
-                    <div style="color:red; font-size:0.7em; margin:auto; text-align:center; margin-bottom:5px;">
-                        {{ session('status') }}
-                    </div>
-                @endif
 
                 <form action="/login" method="POST" id="form-login">
                     @csrf
@@ -37,6 +32,11 @@
                         </div>
                     @enderror
 
+                    @if (session('status'))
+                        <div style="color:red; margin:10px 0;">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     <div class="login-button-container">
                         <button type="submit">
                             Login
