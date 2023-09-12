@@ -107,7 +107,7 @@ class UserController extends Controller
             $user->line = $request->input('id-line');
             $user->password = Hash::make($request->input('password'));
             $user->save();
-            return view('cms.page.event.loginUser', ['title' => 'login page']);
+            return view('cms.page.event.loginUser', ['title' => 'Login']);
         }catch(Exception $e){
             return response()->json([
                 'status' => 500,
