@@ -1,0 +1,377 @@
+.nawasena-heading h1,
+.nawasena-ebook,
+.nawasena-reg,
+.nawasena-chat-bubble,
+.nawasena-form-overlay-container h1,
+.nawasena-reg-submit-ss {
+    font-family: bobbyjones;
+}
+
+.nawasena-outer {
+    background-color: #e1e8ea;
+    width: 100%;
+    position: relative;
+}
+
+#nawasena-container {
+    padding: 150px 50px 0;
+    display: flex;
+    width: 95vw;
+    margin: auto;
+}
+
+#nawasena-container .dekorasi-nawasena-img {
+    position: absolute;
+}
+
+#botol-hijau {
+    top: 10%;
+    right: 5%;
+    width: 200px;
+}
+
+#botol {
+    top: 10%;
+    right: 15%;
+    width: 200px;
+}
+
+#kresek-putih {
+    top: 10%;
+    right: 25%;
+    width: 200px;
+}
+
+#nawasena-container :where(.nawasena-left, .nawasena-right) {
+    flex: 50%;
+    padding: 10px;
+}
+
+.nawasena-heading h1 {
+    font-size: 4rem !important;
+    color: #ed927b;
+}
+
+.nawasena-desc {
+    text-align: justify;
+    color: #1f576f;
+}
+
+.nawasena-date {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 30px 0 50px;
+}
+
+.nawasena-date div {
+    margin-left: 10px;
+}
+
+.nawasena-ebook {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    width: 80%;
+    padding: 50px 0;
+    border-radius: 50px;
+    height: 75px;
+    font-size: 1.5rem;
+    background: linear-gradient(to bottom right, #d0c5a9, white 80%);
+    color: #1f576f;
+}
+
+.nawasena-reg {
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 50px 0;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #75afbe, #a7c2ab);
+    color: white;
+    height: 75px;
+    font-size: 1.5rem;
+}
+
+.nawasena-chat-bubble {
+    position: relative;
+    border: 5px solid #40e0d0;
+    box-shadow: 2px 10px 5px lightgray;
+    color: #1f576f;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 100px auto 0;
+    max-width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.nawasena-chat-bubble::before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 20%;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #40e0d0;
+}
+
+#nawasena-container .nawasena-instructor {
+    position: relative;
+    z-index: 20;
+    margin-top: -75px;
+}
+
+#nawasena-container #maskot-nala {
+    transform: scaleX(-1);
+    width: 115%;
+}
+
+.nawasena-form-overlay-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 99999999999;
+}
+
+.nawasena-form-overlay-container .overlay-content {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 60vw;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 0px 8px #1f576f;
+    background-color: white;
+    animation: fadeIn 0.3s ease;
+    text-align: center;
+}
+
+.nawasena-form-overlay-container h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #1f576f;
+}
+
+.nawasena-form-overlay-container .overlay-content-body #petunjuk-teks {
+    margin-bottom: 25px;
+}
+
+.nawasena-reg-submit-ss,
+.nawasena-reg-submit-karya {
+    cursor: pointer;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 20px;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #75afbe, #a7c2ab);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nawasena-reg,
+.nawasena-reg-submit-ss,
+.nawasena-reg-submit-karya,
+.nawasena-reg:active,
+.nawasena-reg-submit-ss:active,
+.nawasena-reg-submit-karya:active,
+.nawasena-reg:focus,
+.nawasena-reg-submit-ss:focus,
+.nawasena-reg-submit-karya:focus {
+    border: none;
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#nawasena-container .input-image-section {
+    position: relative;
+    margin: 20px auto;
+    width: 250px;
+    height: 60px;
+    border: 3px dashed #1f576f;
+}
+
+#nawasena-container input[type="file"] {
+    display: none;
+}
+
+#nawasena-container #input-gambar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#upload-image-icon {
+    width: 40px;
+    height: 40px;
+}
+
+#nawasena-container #input-gambar:hover {
+    background-color: #8bdfcb;
+}
+
+#nawasena-container :where(#anggota-kelompok, #karya-link) {
+    width: 75%;
+    margin: auto;
+}
+
+#nawasena-container textarea {
+    border: 3px solid #1f576f;
+    padding: 3px 8px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nawasena-form-overlay-container .overlay-content {
+        width: 80vw;
+    }
+
+    #nawasena-container {
+        flex-direction: column-reverse;
+        padding-top: 50px;
+    }
+
+    .nawasena-date {
+        justify-content: center;
+    }
+
+    .nawasena-ebook,
+    .nawasena-reg {
+        margin: 20px auto;
+    }
+
+    #botol-hijau {
+        top: 10%;
+        right: 0;
+    }
+
+    #botol {
+        top: 10%;
+        left: 0;
+    }
+
+    #kresek-putih {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .nawasena-reg-submit-ss,
+    .nawasena-reg-submit-karya {
+        margin: 25px auto;
+        width: 80%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    #nawasena-container textarea::placeholder {
+        font-size: 0.75rem;
+    }
+
+    #nawasena-container :where(#error-message, #success-message, #link-grup) {
+        font-size: 0.75rem;
+    }
+
+    #botol-hijau {
+        top: 50%;
+    }
+
+    #botol {
+        top: 40%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #nawasena-container {
+        padding-top: 25px;
+        width: 100%;
+    }
+
+    .nawasena-heading h1 {
+        font-size: 2rem !important;
+    }
+
+    .nawasena-chat-bubble {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .nawasena-date {
+        font-size: initial;
+    }
+
+    .nawasena-ebook,
+    .nawasena-reg {
+        width: 100%;
+        font-size: initial;
+        padding: 10px;
+    }
+
+    #nawasena-container .nawasena-instructor {
+        margin-top: -25px;
+    }
+
+    #nawasena-container #input-gambar {
+        font-size: 0.8rem;
+    }
+
+    #nawasena-container .input-image-section {
+        position: relative;
+        margin: 10px auto;
+        width: 150px;
+        height: 30px;
+        border: 1.5px dashed #1f576f;
+    }
+
+    #upload-image-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    #nawasena-container #petunjuk-kelompok {
+        font-size: 0.75rem;
+        margin-top: 30px;
+    }
+
+    #botol-hijau {
+        top: 40%;
+    }
+
+    #botol {
+        top: 35%;
+    }
+}

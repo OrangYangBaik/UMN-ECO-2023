@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Page Title -->
     <title>{{ $title }}</title>
@@ -15,17 +16,6 @@
         @font-face {
             font-family: bobbyjones;
             src: url("{{ asset('fonts/bobby-jones-soft.otf') }}") format("truetype");
-        }
-
-        .tahun,
-        .tahun-2,
-        .tahun-3,
-        .tahun-4,
-        .tahun-5,
-        .tahun-6,
-        .tahun-7,
-        .tahun-8 {
-            font-family: bobbyjones;
         }
     </style>
     <!-- Bootstrap 5 -->
@@ -49,7 +39,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js"
         integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Custom CSS -->
     @yield('custom-css')

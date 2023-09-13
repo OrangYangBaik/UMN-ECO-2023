@@ -1,13 +1,3 @@
-@font-face {
-    font-family: bobbyjones;
-    src: url("{{ public('fonts/bobby-jones-soft.otf') }}") format("truetype");
-}
-
-:root {
-    --bobby-jones: "bobby-jones-soft-regular", sans-serif;
-    --montserrat: "Montserrat", sans-serif;
-}
-
 .tahun,
 .tahun-2,
 .tahun-3,
@@ -25,25 +15,6 @@ h2 {
     font-weight: auto;
     line-height: auto;
 }
-
-/* * MEDIA QUERY */
-/* @media only screen and (max-width: 1024px) {
-    .bambu-kiri{
-        min-width: 30%;
-    }
-  } */
-
-:root {
-    --bobby-jones: "bobby-jones-soft-regular", sans-serif;
-    --montserrat: "Montserrat", sans-serif;
-}
-
-/* .container-milestone {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-/*scrollbar-width: none; 
-} */
-/*.container-milestone::-webkit-scrollbar { 
-    display: none; */
 
 /* CSS MARIO */
 .container-milestone {

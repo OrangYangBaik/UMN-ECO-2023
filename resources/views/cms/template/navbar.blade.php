@@ -84,7 +84,7 @@
             <a class="menu__link" href="{{ route('milestone') }}">Milestone</a>
         </li>
 
-        {{-- @if (Auth::guard('participant')->user())
+        @if (Auth::guard('participant')->user())
             <li class="menu__item">
                 <a class="menu__link" href="">
                     {{ Auth::guard('participant')->user()->nama }}</a>
@@ -100,6 +100,6 @@
             <li class="menu__item">
                 <a class="menu__link" href="{{ route('loginUser') }}">Login</a>
             </li>
-        @endif --}}
+        @endif
     </ul>
 </nav>

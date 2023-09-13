@@ -56,10 +56,11 @@ class UserController extends Controller
             'aksesoris' => $aksesoris,
         ]);
     }
-    public function dashboard()
-    {
-        return view('cms.page.homePage',['title' => 'User Dashboard']);
-    }
+
+    // public function dashboard()
+    // {
+    //     return view('cms.page.homePage',['title' => 'User Dashboard']);
+    // }
 
     public function loginPage()
     {
@@ -82,7 +83,8 @@ class UserController extends Controller
         try{
             $request->validate([
                 'name' => 'required|regex:/[a-zA-Z]+$/x',
-                'nim' => 'required|regex:/000000(\d{5})/|unique:recruitments,NIM',
+                // 'nim' => 'required|regex:/000000(\d{5})/|unique:recruitments,NIM',
+                'nim' => 'required|unique:recruitments,NIM',
                 'email-student' => ['required','email:dns','regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:recruitments,Email'],
                 'angkatan' => 'required',
                 'fakultas' => 'required',
@@ -105,7 +107,7 @@ class UserController extends Controller
             $user->line = $request->input('id-line');
             $user->password = Hash::make($request->input('password'));
             $user->save();
-            return view('cms.page.event.loginUser', ['title' => 'login page']);
+            return view('cms.page.event.loginUser', ['title' => 'Login']);
         }catch(Exception $e){
             return response()->json([
                 'status' => 500,
@@ -125,7 +127,7 @@ class UserController extends Controller
         if(Auth::guard('participant')->attempt(['email' => $request->input('email-student'), 'password' => $request->password])){
             $request->session()->regenerate();
             return redirect((route('homepage')));
-        }else return back()->with('status', 'Invalid login details');
+        }else return back()->with('status', 'Email dan/atau password salah!');
     }
 
     public function logout(){

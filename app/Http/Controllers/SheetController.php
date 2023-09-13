@@ -99,28 +99,34 @@ class SheetController extends Controller
         return redirect('/oprec-thanks');
     }
 
-    
-
-    public function pengumpulanLinkNawasenaGet(Request $request){
-        return view('cms.page.nawasena.pengumpulanLinkNawasena');
-    }
+    // public function pengumpulanLinkNawasenaGet(Request $request){
+    //     return view('cms.page.nawasena.pengumpulanLinkNawasena');
+    // }
 
     public function pengumpulanLinkNawasena(Request $request){
         $user = Auth::guard('participant')->user();
-        $request->validate([
-            'link' => 'required|url'
-        ]);
 
         if($user){
-            $date = date("Y-m-d",time());
+            $request->validate([
+                'link' => 'required|url'
+            ], [
+                'link.required' => 'Link Google Drive wajib diisi!',
+                'link.url' => 'Link yang Anda masukkan tidak valid!'
+            ]);
+
+            // $date = date("Y-m-d",time());
             $link = $request->link;
             $sheetdb = new SheetDB('bsxkj2qx222h0');
             if($sheetdb->search(['Nama'=>$user->nama])){
                 $sheetdb->update('Nama',$user->nama, ['Link'=>$link]);
             }
             else{
-                return back()
-                    ->with('error', 'Error uploading link: User not found');
+                // return back()
+                //     ->with('error', 'Error uploading link: User not found');
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Pengguna tidak ditemukan!',
+                ]);
             }
 /*
             $sheetdb->create([
@@ -129,12 +135,16 @@ class SheetController extends Controller
                 'Link' => $link
             ]);
 */
-            return back()
-                ->with('success', 'Link uploaded successfully')
-                ->with('nawasenaLink', $link);
+            // return back()
+            //     ->with('success', 'Link uploaded successfully')
+            //     ->with('nawasenaLink', $link);
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Berhasil mengunggah link!',
+            ]);
         }
         else{
-            return redirect('/login');
+            return response()->json(['redirect' => route('loginUser')]);
         }
     }
 

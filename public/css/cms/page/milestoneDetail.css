@@ -1,8 +1,3 @@
-@font-face {
-    font-family: bobbyjones;
-    src: url("{{ asset('fonts/bobby-jones-soft.otf') }}") format("truetype");
-}
-
 .tahun,
 .tahun-2,
 .tahun-3,

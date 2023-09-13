@@ -50,6 +50,17 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser')->m
 // After OPREC
 // Route::get('/oprec-thanks', [HomeController::class, 'oprecthanks'])->name('oprec-thanks');
 
+// Nawasena
+Route::group(['prefix' => 'nawasena'], function() {
+    Route::get('/', [NawasenaController::class, 'index'])->name('nawasena-landing');
+    // Route::get('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasenaGet'])->name('nawasena')->middleware('auth:participant');
+    Route::post('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasena'])->name('nawasena.post')->middleware('auth:participant');
+    Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink')->middleware('auth:participant');
+    Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post')->middleware('auth:participant');
+    //Route::get('/nawasenaFetchImage/{filename}', SheetController::class, 'getImageNawasena')->name('nawasena.fetchImage');
+    Route::get('/thanks', [NawasenaController::class, 'nawasenaThanks'])->name('nawasena-thanks');
+});
+
 // Wehea
 Route::group(['prefix' => 'wehea'], function() {
     Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing')->middleware('auth:participant');
@@ -81,12 +92,6 @@ Route::group(['prefix' => 'milestone'], function() {
     });
 });
 
-//Nawasena
-Route::get('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasenaGet'])->name('nawasena');
-Route::post('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasena'])->name('nawasena.post');
-Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink');
-Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post');
-//Route::get('/nawasenaFetchImage/{filename}', SheetController::class, 'getImageNawasena')->name('nawasena.fetchImage');
 //-------------------------------------------------------------------------------------------------------------------------
 
 
