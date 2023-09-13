@@ -108,28 +108,34 @@ class AdminController extends Controller
 
     public function dashboardKurangKupon(){
         $admin = auth()->user();
+        $allUser = User::all();
         return view('admin.page.dashboardKurangKupon',[
             'title' => 'Admin Dashboard',
             'teams' => Team::All(),
-            'boothNum' => $admin->booth
+            'boothNum' => $admin->booth,
+            'allUser' => $allUser
         ]);
     }
 
     public function dashboardMerchandise(){
         $admin = auth()->user();
+        $allUser = User::all();
         return view('admin.page.dashboardMerchandise',[
             'title' => 'Admin Dashboard',
             'teams' => Team::All(),
-            'boothNum' => $admin->booth
+            'boothNum' => $admin->booth,
+            'allUser' => $allUser
         ]);
     }
 
     public function dashboardDapatCredit(){
         $admin = auth()->user();
+        $allUser = User::all();
         return view('admin.page.dashboardDapatCredit',[
             'title' => 'Admin Dashboard',
             'teams' => Team::All(),
-            'boothNum' => $admin->booth
+            'boothNum' => $admin->booth,
+            'allUser' => $allUser
         ]);
     }
 
