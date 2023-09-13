@@ -65,7 +65,7 @@ class UserController extends Controller
     public function loginPage()
     {
         return view('cms.page.event.loginUser',[
-            'title' => 'login page',
+            'title' => 'Login',
         ]);
     }
 
