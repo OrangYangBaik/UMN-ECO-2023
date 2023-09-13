@@ -137,6 +137,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('nirmalabentalaumneco2023')
         ]);
 
+        Admin::create([
+            'name' => 'Admin',
+            'email' => 'admin@umn.ac.id',
+            'booth' => 0,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
+
         // Dummy User
         User::create([
             'id' => Str::uuid(),

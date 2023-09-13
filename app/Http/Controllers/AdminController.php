@@ -387,7 +387,7 @@ class AdminController extends Controller
         if ($user) {
             $user->point += $request->point;
             $user->scanned_arcade = false;
-            $user->booth = 0;
+            $user->booth_arcade = 0;
             $user->save();
             
             return back();

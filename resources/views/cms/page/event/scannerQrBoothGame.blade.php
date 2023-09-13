@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="scanner-qr-booth-game-container">
-        <h1 class="mb-2 text-center">QR Scanner</h1>
+        <h1 class="mb-2 text-center">Arcade</h1>
         <div id="reader"></div>
     </div>
 @endsection
