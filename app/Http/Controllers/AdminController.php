@@ -97,11 +97,13 @@ class AdminController extends Controller
 
     public function dashboardDapatKupon(){
         $admin = auth()->user();
+        $allUser = User::all();
         return view('admin.page.dashboardDapatKupon',[
             'title' => 'Admin Dashboard',
             'teams' => Team::All(),
-            'boothNum' => $admin->booth
-        ]);
+            'boothNum' => $admin->booth,
+            'allUser' => $allUser
+        ]); 
     }
 
     public function dashboardKurangKupon(){

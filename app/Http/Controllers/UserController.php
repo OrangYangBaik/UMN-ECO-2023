@@ -27,7 +27,7 @@ class UserController extends Controller
         if($kupon){
             $atasan = $kupon->atasan;
             $bawahan = $kupon->bawahan;
-            $aksesoris = $kupon->aksesoris;
+            //$aksesoris = $kupon->aksesoris;
 
             return view('cms.page.wehea.weheaInfo',[
                 "title" => "My Info",
@@ -37,13 +37,13 @@ class UserController extends Controller
                 'point' => $point,
                 'atasan' => $atasan,
                 'bawahan' => $bawahan,
-                'aksesoris' => $aksesoris,
+                //'aksesoris' => $aksesoris,
             ]);
         }
 
         $atasan = 0;
         $bawahan = 0;
-        $aksesoris = 0;
+        //$aksesoris = 0;
 
         return view('cms.page.wehea.weheaInfo',[
             "title" => "My Info",
@@ -53,14 +53,14 @@ class UserController extends Controller
             'point' => $point,
             'atasan' => $atasan,
             'bawahan' => $bawahan,
-            'aksesoris' => $aksesoris,
+            //'aksesoris' => $aksesoris,
         ]);
     }
 
-    // public function dashboard()
-    // {
-    //     return view('cms.page.homePage',['title' => 'User Dashboard']);
-    // }
+    public function dashboard()
+    {
+        return view('cms.page.homePage',['title' => 'User Dashboard']);
+    }
 
     public function loginPage()
     {
