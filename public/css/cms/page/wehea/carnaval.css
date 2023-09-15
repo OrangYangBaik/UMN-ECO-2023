@@ -1,0 +1,390 @@
+body {
+    margin: 0;
+    overflow-x: auto;
+  }
+  
+  .container_carnaval {
+    position: relative;
+    min-height: 100vh;
+    /* background-color: red; */
+    z-index: 10;
+    width: 100vw;
+    min-width: 1440px;
+  }
+  
+  .background-1 {
+    z-index: 1;
+    background-color: #d4d4d4;
+    background-size: contain;
+    width: 100%;
+    min-height: 610px;
+    position: absolute;
+  }
+  
+  .background-2 {
+    z-index: 0;
+    background-color: #fef0e3;
+    background-size: contain;
+    width: 100%;
+    min-height: 1070px;
+    position: absolute;
+  }
+  
+  .dekor1-1-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 450px;
+    top: -30px;
+    left: 0px;
+  }
+  
+  .dekor1-2-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 450px;
+    transform: rotate3d(0, 0, 1, 6deg);
+    top: -70px;
+    left: 500px;
+    /* display: none; */
+  }
+  
+  .dekor4-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 450px;
+    top: -80px;
+    left: 990px;
+  }
+  
+  .salinan-balon-1-carnaval {
+    z-index: 3;
+    position: absolute;
+    width: 350px;
+    top: 200px;
+    left: -30px;
+  }
+  
+  .salinan-balon-2-carnaval {
+    z-index: 3;
+    position: absolute;
+    width: 400px;
+    top: 110px;
+    left: 720px;
+  }
+  
+  .balon-nala-carnaval {
+    z-index: 1;
+    position: absolute;
+    width: 550px;
+    top: 0px;
+    left: 320px;
+  }
+  
+  .confetti-1-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 200px;
+    top: 50px;
+    left: 0px;
+  }
+  
+  .confetti-2-carnaval {
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    top: 280px;
+    left: -100px;
+  }
+  
+  .confetti-3-carnaval {
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    top: 100px;
+    left: 300px;
+  }
+  
+  .confetti-4-carnaval {
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    top: 90px;
+    left: 680px;
+  }
+  
+  .confetti-5-carnaval {
+    z-index: 1;
+    position: absolute;
+    width: 180px;
+    top: 310px;
+    left: 920px;
+  }
+  
+  .ferris-wheel-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 350px;
+    top: 210px;
+    left: 1090px;
+  }
+  
+  .market-makanan-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 280px;
+    top: 455px;
+    left: 848px;
+    /* display: none; */
+  }
+  
+  .market-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 240px;
+    top: 555px;
+    left: 970px;
+    /* display: none; */
+  }
+  
+  .carousel-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 405px;
+    top: 650px;
+    left: 1030px;
+    /* display: none; */
+  }
+  
+  .carnaval-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 550px;
+    top: 230px;
+    left: 27px;
+    /* display: none; */
+  }
+  
+  .swing-carnaval {
+    z-index: 2;
+    position: absolute;
+    width: 480px;
+    top: 500px;
+    left: -135px;
+    /* display: none; */
+  }
+  
+  .tenda-biru-muda-carnaval {
+    z-index: 3;
+    position: absolute;
+    transform: rotateY(180deg);
+    width: 320px;
+    top: 570px;
+    left: 360px;
+    /* display: none; */
+  }
+  
+  .tenda-biru-tua-carnaval {
+    z-index: 3;
+    position: absolute;
+    width: 320px;
+    top: 650px;
+    left: 720px;
+    /* display: none; */
+  }
+  
+  .tenda-kuning-carnaval {
+    z-index: 2;
+    position: absolute;
+    transform: rotateY(180deg);
+    width: 320px;
+    top: 490px;
+    left: 510px;
+    /* display: none; */
+  }
+  
+  .tenda-merah-carnaval {
+    z-index: 4;
+    position: absolute;
+    transform: rotateY(180deg);
+    width: 320px;
+    top: 650px;
+    left: 210px;
+    /* display: none; */
+  }
+  
+  .tenda-oren-carnaval {
+    z-index: 3;
+    position: absolute;
+    width: 320px;
+    top: 745px;
+    left: 845px;
+    /* display: none; */
+  }
+  
+  @media only screen and (min-width: 1441px) {
+    .container_carnaval {
+      width: 100vw;
+      min-width: 1440px;
+    }
+  
+    .background-1 {
+      min-height: 35vw;
+    }
+  
+    .background-2 {
+      min-height: 63vw;
+    }
+  
+    .dekor1-1-carnaval {
+      width: 27vw;
+      top: -2vw;
+      /* display: none; */
+    }
+  
+    .dekor1-2-carnaval {
+      width: 27vw;
+      top: -3.2vw;
+      left: 40vw;
+      /* display: none; */
+    }
+  
+    .dekor4-carnaval {
+      width: 27vw;
+      top: -4.5vw;
+      left: 73vw;
+      /* display: none; */
+    }
+  
+    .salinan-balon-1-carnaval {
+      width: 23vw;
+      top: 9vw;
+      left: 1vw;
+      /* display: none; */
+    }
+  
+    .salinan-balon-2-carnaval {
+      width: 25vw;
+      top: 10vw;
+      left: 50vw;
+      /* display: none; */
+    }
+  
+    .balon-nala-carnaval {
+      width: 30vw;
+      top: 0vw;
+      left: 28vw;
+      /* display: none; */
+    }
+  
+    .confetti-1-carnaval {
+      width: 12vw;
+      top: 5vw;
+      left: 0;
+      /* display: none; */
+    }
+  
+    .confetti-2-carnaval {
+      width: 12vw;
+      top: 20vw;
+      left: -1.5vw;
+      /* display: none; */
+    }
+  
+    .confetti-3-carnaval {
+      width: 9vw;
+      top: 7vw;
+      left: 25vw;
+      /* display: none; */
+    }
+  
+    .confetti-4-carnaval {
+      width: 9vw;
+      top: 10vw;
+      left: 50vw;
+      /* display: none; */
+    }
+  
+    .confetti-5-carnaval {
+      width: 9vw;
+      top: 20vw;
+      left: 65vw;
+      /* display: none; */
+    }
+  
+    .ferris-wheel-carnaval {
+      width: 23%;
+      top: 8vw;
+      left: 77vw;
+      /* display: none; */
+    }
+  
+    .market-makanan-carnaval {
+      width: 17%;
+      top: 25.1vw;
+      left: 62.8vw;
+      /* display: none; */
+    }
+  
+    .market-carnaval {
+      width: 16%;
+      top: 30.5vw;
+      left: 70vw;
+      /* display: none; */
+    }
+  
+    .carousel-carnaval {
+      width: 23%;
+      top: 37vw;
+      left: 77vw;
+      /* display: none; */
+    }
+  
+    .carnaval-carnaval {
+      width: 35%;
+      top: 11vw;
+      left: 4vw;
+      /* display: none; */
+    }
+  
+    .swing-carnaval {
+      width: 31%;
+      top: 28vw;
+      left: -7vw;
+      /* display: none; */
+    }
+  
+    .tenda-biru-muda-carnaval {
+      width: 23%;
+      top: 32vw;
+      left: 25.5vw;
+      /* display: none; */
+    }
+  
+    .tenda-biru-tua-carnaval {
+      width: 23%;
+      top: 35vw;
+      left: 51vw;
+      /* display: none; */
+    }
+  
+    .tenda-kuning-carnaval {
+      width: 23%;
+      top: 26.5vw;
+      left: 36vw;
+      /* display: none; */
+    }
+  
+    .tenda-merah-carnaval {
+      width: 23%;
+      top: 38vw;
+      left: 15vw;
+      /* display: none; */
+    }
+  
+    .tenda-oren-carnaval {
+      width: 23%;
+      top: 42vw;
+      left: 60vw;
+      /* display: none; */
+    }
+  }
