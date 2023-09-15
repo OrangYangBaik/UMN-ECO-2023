@@ -66,6 +66,7 @@ Route::group(['prefix' => 'wehea'], function() {
     Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing')->middleware('auth:participant');
     Route::post('/register', [WeheaController::class, 'register']);
     Route::get('/info', [UserController::class, 'getAllUserInfo']);
+    Route::get('/carnaval', [WeheaController::class, 'ngasal']);
 });
 
 // Meru Betiri

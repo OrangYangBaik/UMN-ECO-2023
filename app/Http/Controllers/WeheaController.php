@@ -23,4 +23,10 @@ class WeheaController extends Controller
 
         return redirect(route('homepage'));
     }
+
+    public function ngasal(){
+        return view('cms.page.wehea.carnaval',[
+            'title'=>'carnaval',
+        ]);
+    }
 }
