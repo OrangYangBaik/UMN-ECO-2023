@@ -88,10 +88,12 @@ class AdminController extends Controller
 
     public function dashboardArcade(){
         $admin = auth()->user();
+        $allUser = User::all();
         return view('admin.page.dashboardArcade',[
             'title' => 'Admin Dashboard',
             'teams' => Team::All(),
-            'boothNum' => $admin->booth
+            'boothNum' => $admin->booth,
+            'allUser' => $allUser
         ]);
     }
 
