@@ -1,0 +1,21 @@
+#balai-kota-container {
+    background-color: #b6d172;
+    padding: 100px 0 50px 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+.wehea-pict {
+    position: absolute;
+}
+
+.wehea-balai-kota {
+    width: 574px;
+    right: 200px;
+}
+
+@media only screen and (min-width: 1441px) {
+    #balai-kota-container {
+        background-color: red !important;
+    }
+}

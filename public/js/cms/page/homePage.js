@@ -57,7 +57,7 @@ $(document).ready(function () {
         }, 3000);
     });
 
-    // $(".wehea").click(function () {
-    //     location.href = "/wehea";
-    // });
+    $(".wehea").click(function () {
+        location.href = "/wehea";
+    });
 });
