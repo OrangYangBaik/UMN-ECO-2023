@@ -57,7 +57,19 @@ $(document).ready(function () {
         }, 3000);
     });
 
-    $(".wehea").click(function () {
-        location.href = "/wehea";
-    });
+    // $(".wehea").click(function () {
+    //     const overlayImage = $("#overlay-image");
+    //     const weheaImageSrc = $(this).find("img").attr("src");
+    //     const weheaImageAlt = $(this).find("img").attr("alt");
+
+    //     overlayImage.attr("src", weheaImageSrc);
+    //     overlayImage.attr("alt", weheaImageAlt);
+
+    //     $("body").css("overflow", "hidden");
+    //     $(".overlay-container").css("display", "flex");
+
+    //     setTimeout(function () {
+    //         window.location.href = "/wehea";
+    //     }, 3000);
+    // });
 });

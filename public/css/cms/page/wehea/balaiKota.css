@@ -1,8 +1,18 @@
+body {
+    overflow-x: hidden;
+}
+
+#balai-kota-outer {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+}
+
 #balai-kota-container {
     background-color: #b6d172;
-    padding: 100px 0 50px 0;
     position: relative;
-    min-height: 100vh;
+    height: 900px;
+    width: 1440px;
 }
 
 .wehea-pict {
@@ -11,11 +21,386 @@
 
 .wehea-balai-kota {
     width: 574px;
-    right: 200px;
+    top: 10px;
+    right: 215px;
+    z-index: 0;
+}
+
+.wehea-air-mancur {
+    width: 462px;
+    top: 300px;
+    left: 460px;
+    z-index: 1;
+}
+
+.wehea-nala-balai-kota {
+    width: 369px;
+    top: 500px;
+    left: 280px;
+    z-index: 2;
+}
+
+.wehea-papan-pengumuman {
+    width: 365px;
+    top: 400px;
+    left: 80px;
+    z-index: 1;
+}
+
+.wehea-tong-sampah {
+    width: 433px;
+    top: 275px;
+    left: 235px;
+    z-index: 1;
+}
+
+.wehea-lampu {
+    width: 660px;
+    top: 85px;
+    left: 45px;
+    z-index: 1;
+}
+
+.wehea-bangku-1 {
+    width: 291px;
+    top: 225px;
+    left: 385px;
+    z-index: 0;
+    transform: scaleX(-1);
+}
+
+.wehea-bangku-2 {
+    width: 291px;
+    top: 425px;
+    right: 240px;
+    z-index: 1;
+}
+
+.wehea-burung {
+    width: 246px;
+    right: 315px;
+    top: 535px;
+    z-index: 1;
+}
+
+.wehea-kukang {
+    width: 248px;
+    right: 190px;
+    top: 600px;
+    z-index: 1;
+}
+
+.wehea-kucing {
+    width: 251px;
+    right: 140px;
+    top: 490px;
+    z-index: 1;
+}
+
+.wehea-tooltip-burung,
+.wehea-tooltip-kucing,
+.wehea-tooltip-kukang {
+    width: 107px;
+}
+
+.wehea-tooltip-burung {
+    right: 415px;
+    top: 450px;
+    z-index: 1;
+}
+
+.wehea-tooltip-kucing {
+    right: 215px;
+    top: 400px;
+    z-index: 1;
+}
+
+.wehea-tooltip-kukang {
+    right: 90px;
+    top: 700px;
+    z-index: 1;
+}
+
+.wehea-papan-pengumuman,
+.wehea-air-mancur,
+.wehea-burung,
+.wehea-kucing,
+.wehea-kukang,
+.wehea-tooltip-burung,
+.wehea-tooltip-kucing,
+.wehea-tooltip-kukang {
+    cursor: pointer;
+}
+
+.wehea-papan-pengumuman:hover,
+.wehea-air-mancur:hover,
+.wehea-burung:hover,
+.wehea-kucing:hover,
+.wehea-kukang:hover {
+    filter: drop-shadow(0 0 20px black);
+}
+
+.chat-box-balai-kota-container {
+    position: absolute;
+    color: #1f576f;
+    display: none;
+    user-select: none;
+}
+
+.chat-box-burung,
+.chat-box-kucing {
+    width: 227px;
+    height: 114px;
+}
+
+.chat-box-burung {
+    right: 350px;
+    top: 435px;
+    z-index: 1;
+}
+
+.chat-box-kucing {
+    right: 90px;
+    top: 400px;
+    z-index: 1;
+}
+
+.chat-box-kukang {
+    width: 171px;
+    height: 142px;
+    right: 50px;
+    top: 675px;
+    z-index: 1;
+}
+
+.chat-box-air-mancur {
+    width: 300px;
+}
+
+.chat-box-balai-kota {
+    position: relative;
+    border: 3px solid #1f576f;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.triangle-burung,
+.triangle-kucing {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-color: #1f576f transparent transparent transparent;
+    bottom: -10px;
+}
+
+.triangle-kukang,
+.triangle-air-mancur {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #1f576f;
+    left: -10px;
+    top: 50%;
+    transform: scaleX(-1);
+}
+
+.triangle-air-mancur {
+    top: 10%;
+}
+
+.triangle-burung {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.triangle-kucing {
+    left: 20%;
 }
 
 @media only screen and (min-width: 1441px) {
+    #balai-kota-outer {
+        overflow-x: auto;
+        width: 100vw;
+    }
+
     #balai-kota-container {
-        background-color: red !important;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .wehea-balai-kota {
+        /* 574px, 10px, 215px */
+        width: 40vw;
+        top: 0;
+        right: 10%;
+    }
+
+    .wehea-air-mancur {
+        /* 462px, 300px, 460px */
+        width: 32.2vw;
+        top: 35%;
+        left: 35%;
+    }
+
+    .wehea-nala-balai-kota {
+        /* 369px, 500px, 280px */
+        width: 25.9vw;
+        top: 55%;
+        left: 20%;
+    }
+
+    .wehea-papan-pengumuman {
+        /* 365px, 400px, 80px */
+        width: 25.5vw;
+        top: 40%;
+        left: 5%;
+    }
+
+    .wehea-tong-sampah {
+        /* 433px, 275px, 235px */
+        width: 30.2vw;
+        top: 27%;
+        left: 16%;
+    }
+
+    .wehea-lampu {
+        /* 660px, 85px, 45px */
+        width: 46vw;
+        top: 10%;
+        left: 2.5%;
+    }
+
+    .wehea-bangku-1 {
+        /* 291px, 225px, 385px */
+        width: 20.2vw;
+        top: 20%;
+        left: 30%;
+    }
+
+    .wehea-bangku-2 {
+        /* 291px, 425px, 240px */
+        width: 20.2vw;
+        top: 50%;
+        right: 15%;
+    }
+
+    .wehea-burung {
+        /* 246px, 535px, 315px*/
+        width: 17.2vw;
+        top: 62.5%;
+        right: 20%;
+    }
+
+    .wehea-kukang {
+        /* 248px, 600px, 190px */
+        width: 17.3vw;
+        top: 68%;
+        right: 9%;
+    }
+
+    .wehea-kucing {
+        /* 251px, 490px, 140px */
+        width: 17.5vw;
+        top: 57.5%;
+        right: 8%;
+    }
+
+    .wehea-tooltip-burung,
+    .wehea-tooltip-kucing,
+    .wehea-tooltip-kukang {
+        /* 107px */
+        width: 7.5vw;
+    }
+
+    .wehea-tooltip-burung {
+        /* 450px, 415px */
+        top: 55%;
+        right: 25%;
+    }
+
+    .wehea-tooltip-kucing {
+        /* 215px, 400px */
+        top: 50%;
+        right: 12.5%;
+    }
+
+    .wehea-tooltip-kukang {
+        /* 700px, 90px */
+        top: 80%;
+        right: 3%;
+    }
+
+    .chat-box-burung,
+    .chat-box-kucing {
+        /* 227px, 114px */
+        width: 15.9vw;
+        height: 5.938vw;
+    }
+
+    .chat-box-burung {
+        /* 435px, 350px */
+        top: 55%;
+        right: 21%;
+    }
+
+    .chat-box-kucing {
+        /* 400px, 90px */
+        top: 50%;
+        right: 5%;
+    }
+
+    .chat-box-kukang {
+        /* 171px, 142px, 675px, 50px */
+        width: 12vw;
+        height: 7.396vw;
+        top: 80%;
+        right: 0;
+    }
+
+    .chat-box-balai-kota {
+        position: relative;
+        border: 3px solid #1f576f;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+
+    .triangle-burung,
+    .triangle-kucing {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 0;
+        border-color: #1f576f transparent transparent transparent;
+        bottom: -10px;
+    }
+
+    .triangle-kukang {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #1f576f;
+        left: -10px;
+        top: 50%;
+        transform: scaleX(-1);
+    }
+
+    .triangle-burung {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .triangle-kucing {
+        left: 20%;
     }
 }

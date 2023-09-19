@@ -10,9 +10,23 @@ class WeheaController extends Controller
 {
     public function index(){
         $user = auth()->user();
+        $credit = $user->credit;
+        $point = $user->point;
+        $kupon = $user->kupon->first();
+        $atasan = 0;
+        $bawahan = 0;
+        if($kupon){
+            $atasan = $kupon->atasan;
+            $bawahan = $kupon->bawahan;
+        }
+
         return view('cms.page.wehea.balaiKota',[
-            'title'=>'Join Wehea',
-            'isJoin' => $user->wehea
+            'title'=>'Hidden City in Wehea',
+            'isJoin' => $user->wehea,
+            'credit' => $credit,
+            'point' => $point,
+            'atasan' => $atasan,
+            'bawahan' => $bawahan,
         ]);
     }
 

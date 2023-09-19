@@ -1,0 +1,379 @@
+.wehea-floating-icon {
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.wehea-point-section:hover,
+.wehea-credit-section:hover,
+.wehea-coupon-section:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.wehea-point-section,
+.wehea-credit-section {
+    top: 100px;
+    width: 142px;
+    height: 36px;
+    padding: 5px;
+    border-radius: 30px;
+    border: 3px solid #1f576f;
+    background-color: #e1e8ea;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.wehea-point-section {
+    left: 2.5%;
+}
+
+.wehea-credit-section {
+    left: 15%;
+}
+
+.wehea-point-section img,
+.wehea-credit-section img,
+.wehea-coupon-section img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 5px;
+}
+
+.wehea-coupon-section {
+    top: 100px;
+    left: 27.5%;
+    width: 188px;
+    height: 36px;
+    padding: 5px;
+    border-radius: 30px;
+    border: 3px solid #1f576f;
+    background-color: #7db6c2;
+    color: #1f576f;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.wehea-navigation-section {
+    top: 100px;
+    right: 2.5%;
+    background-color: #e1e8ea;
+    border: 3px solid #1f576f;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    padding: 0 15px;
+}
+
+.wehea-navigation-section select {
+    width: 384px;
+    height: 43px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #1f576f;
+}
+
+.wehea-navigation-section :where(select:focus, select:active) {
+    outline: none;
+}
+
+.wehea-scanner-section {
+    left: 2.5%;
+    cursor: pointer;
+}
+
+.wehea-scanner-section img {
+    width: 64px;
+}
+
+.scanner-merchandise,
+.scanner-tukar-kupon,
+.scanner-dapat-kupon,
+.scanner-quest,
+.scanner-arcade {
+    display: none;
+}
+
+.scanner-utama {
+    bottom: 50px;
+}
+
+.scanner-merchandise {
+    bottom: 135px;
+}
+
+.scanner-tukar-kupon {
+    bottom: 220px;
+}
+
+.scanner-dapat-kupon {
+    bottom: 305px;
+}
+
+.scanner-quest {
+    bottom: 390px;
+}
+
+.scanner-arcade {
+    bottom: 475px;
+}
+
+.wehea-scanner-fading {
+    opacity: 0;
+    animation: fadeInFromBottom 400ms ease-in-out forwards;
+}
+
+.wehea-scanner-fading:nth-child(5) {
+    animation-delay: 0ms;
+}
+
+.wehea-scanner-fading:nth-child(4) {
+    animation-delay: 100ms;
+}
+
+.wehea-scanner-fading:nth-child(3) {
+    animation-delay: 200ms;
+}
+
+.wehea-scanner-fading:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.wehea-scanner-fading:nth-child(1) {
+    animation-delay: 400ms;
+}
+
+.floating-chatbox-balai-kota-container {
+    color: #1f576f;
+    display: none;
+    user-select: none;
+}
+
+.floating-chatbox-balai-kota {
+    position: relative;
+    border: 3px solid #1f576f;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 157px;
+    height: 147px;
+    text-align: justify;
+}
+
+.floating-chatbox-point {
+    top: 130px;
+    left: 2.5%;
+}
+
+.floating-chatbox-credit {
+    top: 130px;
+    left: 16%;
+}
+
+.floating-chatbox-kupon {
+    top: 130px;
+    left: 30%;
+}
+
+.floating-chatbox-kupon .floating-chatbox-balai-kota {
+    height: 77px !important;
+}
+
+.triangle-kupon,
+.triangle-point,
+.triangle-credit {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #1f576f transparent transparent transparent;
+    top: -10px;
+    left: 15%;
+    transform: scaleY(-1);
+}
+
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .wehea-credit-section {
+        left: 19%;
+    }
+
+    .wehea-coupon-section {
+        left: 35%;
+    }
+
+    .wehea-navigation-section select {
+        width: 324px;
+    }
+
+    .floating-chatbox-credit {
+        left: 19%;
+    }
+
+    .floating-chatbox-kupon {
+        left: 35%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .wehea-point-section,
+    .wehea-credit-section,
+    .wehea-coupon-section,
+    .wehea-navigation-section {
+        font-size: 1rem;
+    }
+
+    .wehea-point-section img,
+    .wehea-credit-section img,
+    .wehea-coupon-section img {
+        width: 20px;
+        height: 20px;
+        margin: 0 6px 0 3px;
+    }
+
+    .wehea-point-section,
+    .wehea-credit-section {
+        width: 102px;
+    }
+
+    .wehea-coupon-section {
+        width: 158px;
+    }
+
+    .wehea-credit-section {
+        left: 19%;
+    }
+
+    .wehea-coupon-section {
+        left: 35%;
+    }
+
+    .wehea-navigation-section select {
+        width: 274px;
+    }
+
+    .floating-chatbox-point .floating-chatbox-balai-kota,
+    .floating-chatbox-credit .floating-chatbox-balai-kota {
+        width: 137px !important;
+    }
+
+    .floating-chatbox-credit {
+        left: 21%;
+    }
+
+    .floating-chatbox-kupon {
+        left: 39%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .wehea-scanner-section {
+        bottom: 20px !important;
+    }
+
+    .scanner-merchandise {
+        left: 4%;
+    }
+
+    .scanner-tukar-kupon {
+        left: 10.5%;
+    }
+
+    .scanner-dapat-kupon {
+        left: 17%;
+    }
+
+    .scanner-quest {
+        left: 23.5%;
+    }
+
+    .scanner-arcade {
+        left: 30%;
+    }
+
+    @keyframes fadeInFromBottom {
+        from {
+            opacity: 0;
+            transform: translateX(0);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(100%);
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .wehea-navigation-section {
+        top: auto;
+        bottom: 55px !important;
+        right: 2.5%;
+    }
+
+    .wehea-navigation-section select {
+        width: 184px;
+    }
+
+    .wehea-point-section img,
+    .wehea-credit-section img,
+    .wehea-coupon-section img {
+        width: 20px;
+        height: 20px;
+        margin: 0 6px 0 3px;
+    }
+
+    .wehea-point-section,
+    .wehea-credit-section {
+        width: 92px;
+    }
+
+    .wehea-coupon-section {
+        width: 138px;
+    }
+
+    .wehea-credit-section {
+        left: 32.5%;
+    }
+
+    .wehea-coupon-section {
+        right: 2.5%;
+        left: auto;
+    }
+
+    .floating-chatbox-point .floating-chatbox-balai-kota,
+    .floating-chatbox-credit .floating-chatbox-balai-kota {
+        width: 107px !important;
+        height: 190px !important;
+    }
+
+    .floating-chatbox-kupon .floating-chatbox-balai-kota {
+        width: 137px;
+    }
+
+    .floating-chatbox-point {
+        left: 0;
+    }
+
+    .floating-chatbox-credit {
+        left: 30%;
+    }
+
+    .floating-chatbox-kupon {
+        left: auto;
+        right: 0;
+    }
+}
