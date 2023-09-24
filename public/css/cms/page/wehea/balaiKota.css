@@ -173,10 +173,6 @@ body {
     z-index: 1;
 }
 
-.chat-box-air-mancur {
-    width: 300px;
-}
-
 .chat-box-balai-kota {
     position: relative;
     border: 3px solid #1f576f;
@@ -221,6 +217,175 @@ body {
 
 .triangle-kucing {
     left: 20%;
+}
+
+.balai-kota-air-mancur-overlay,
+.balai-kota-papan-pengumuman-overlay {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    animation: fade-in 400ms ease-in-out;
+}
+
+.balai-kota-air-mancur-content {
+    position: relative;
+    width: 90%;
+    height: 80%;
+}
+
+.wehea-token-nala {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    left: 0;
+}
+
+.wehea-air-mancur-2D {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 688px;
+    height: 688px;
+    filter: drop-shadow(-2px 0 1px black);
+}
+
+.wehea-air-mancur-2D img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.chat-box-air-mancur {
+    width: 300px;
+    top: 100px;
+    left: 150px;
+    text-align: justify;
+}
+
+.balai-kota-papan-pengumuman-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wehea-papan-pengumuman-2D {
+    position: absolute;
+    top: 50px;
+    width: 1729px;
+    height: 1230.33px;
+}
+
+.wehea-papan-pengumuman-2D img,
+.wehea-poster-carbon-footprint img,
+.wehea-poster-event-open img,
+.wehea-poster-meru-betiri img,
+.wehea-poster-daftar-wehea img,
+.wehea-poster-sukses-daftar-wehea img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.wehea-poster-carbon-footprint {
+    position: absolute;
+    top: 550px;
+    right: 550px;
+    width: 115px;
+    height: 125px;
+}
+
+.wehea-poster-event-open {
+    position: absolute;
+    top: 285px;
+    left: 400px;
+    width: 320px;
+    height: 360px;
+}
+
+.wehea-poster-meru-betiri {
+    position: absolute;
+    top: 285px;
+    right: 375px;
+    width: 300px;
+}
+
+.wehea-poster-daftar-wehea,
+.wehea-poster-sukses-daftar-wehea {
+    position: absolute;
+    top: 550px;
+    right: 375px;
+    width: 115px;
+    height: 125px;
+}
+
+.wehea-poster-carbon-footprint:hover,
+.wehea-poster-event-open:hover,
+.wehea-poster-meru-betiri:hover,
+.wehea-poster-daftar-wehea:hover,
+.wehea-poster-sukses-daftar-wehea:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px black);
+}
+
+.balai-kota-back-button-container {
+    position: absolute;
+}
+
+.balai-kota-back-button-container button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #d0c5a9;
+    color: #23434d;
+}
+
+.balai-kota-back-button-container button,
+.balai-kota-back-button-container button:focus,
+.balai-kota-back-button-container button:active {
+    border: 2px solid #23434d;
+    outline: none;
+}
+
+.back-button-papan-pengumuman {
+    bottom: 25px;
+    right: 25px;
+}
+
+.back-button-air-mancur {
+    bottom: 100px;
+    right: 100px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @media only screen and (min-width: 1441px) {
@@ -402,5 +567,104 @@ body {
 
     .triangle-kucing {
         left: 20%;
+    }
+
+    .balai-kota-air-mancur-content {
+        position: relative;
+        width: 90%;
+        height: 80%;
+    }
+
+    .wehea-token-nala {
+        position: absolute;
+        width: 8.333vw;
+        height: 8.333vw;
+        top: 100px;
+        left: 0;
+    }
+
+    .wehea-air-mancur-2D {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 47.778vw;
+        height: 47.778vw;
+        filter: drop-shadow(-2px 0 1px black);
+    }
+
+    .wehea-air-mancur-2D img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .chat-box-air-mancur {
+        width: 20.833vw;
+        font-size: 1.2vw;
+        top: 100px;
+        left: 150px;
+        text-align: justify;
+    }
+
+    .balai-kota-papan-pengumuman-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .wehea-papan-pengumuman-2D {
+        position: absolute;
+        top: 50px;
+        width: 118vw;
+        height: 80vw;
+    }
+
+    .wehea-papan-pengumuman-2D img,
+    .wehea-poster-carbon-footprint img,
+    .wehea-poster-event-open img,
+    .wehea-poster-meru-betiri img,
+    .wehea-poster-daftar-wehea img,
+    .wehea-poster-sukses-daftar-wehea img {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .wehea-poster-carbon-footprint {
+        position: absolute;
+        top: 38.194vw;
+        right: 38.194vw;
+        width: 7.986vw;
+        height: 8.681vw;
+    }
+
+    .wehea-poster-event-open {
+        position: absolute;
+        top: 19.792vw;
+        left: 27.778vw;
+        width: 22.222vw;
+        height: 25vw;
+    }
+
+    .wehea-poster-meru-betiri {
+        position: absolute;
+        top: 19.792vw;
+        right: 26.042vw;
+        width: 20.833vw;
+    }
+
+    .wehea-poster-daftar-wehea,
+    .wehea-poster-sukses-daftar-wehea {
+        position: absolute;
+        top: 38.194vw;
+        right: 26.042vw;
+        width: 7.986vw;
+        height: 8.681vw;
+    }
+
+    .balai-kota-back-button-container button {
+        width: 10.417vw;
+        font-size: 1.2vw;
     }
 }

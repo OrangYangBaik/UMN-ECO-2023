@@ -1,7 +1,7 @@
 .wehea-floating-icon {
     position: fixed;
     box-sizing: border-box;
-    z-index: 3;
+    z-index: 4;
 }
 
 .wehea-point-section:hover,
@@ -92,11 +92,13 @@
 .scanner-tukar-kupon,
 .scanner-dapat-kupon,
 .scanner-quest,
-.scanner-arcade {
+.scanner-arcade,
+.scanner-close {
     display: none;
 }
 
-.scanner-utama {
+.scanner-utama,
+.scanner-close {
     bottom: 50px;
 }
 
@@ -104,20 +106,45 @@
     bottom: 135px;
 }
 
+.scanner-merchandise:hover {
+    background-color: yellow;
+    border-radius: 15px;
+}
+
 .scanner-tukar-kupon {
     bottom: 220px;
+}
+
+.scanner-tukar-kupon:hover {
+    background-color: skyblue;
+    border-radius: 15px;
 }
 
 .scanner-dapat-kupon {
     bottom: 305px;
 }
 
+.scanner-dapat-kupon:hover {
+    background-color: lightgreen;
+    border-radius: 15px;
+}
+
 .scanner-quest {
     bottom: 390px;
 }
 
+.scanner-quest:hover {
+    background-color: #bd9a7a;
+    border-radius: 15px;
+}
+
 .scanner-arcade {
     bottom: 475px;
+}
+
+.scanner-arcade:hover {
+    background-color: #faa0a0;
+    border-radius: 15px;
 }
 
 .wehea-scanner-fading {
@@ -125,20 +152,24 @@
     animation: fadeInFromBottom 400ms ease-in-out forwards;
 }
 
-.wehea-scanner-fading:nth-child(5) {
+.wehea-scanner-fading:nth-child(6) {
     animation-delay: 0ms;
 }
 
+.wehea-scanner-fading:nth-child(5) {
+    animation-delay: 80ms;
+}
+
 .wehea-scanner-fading:nth-child(4) {
-    animation-delay: 100ms;
+    animation-delay: 160ms;
 }
 
 .wehea-scanner-fading:nth-child(3) {
-    animation-delay: 200ms;
+    animation-delay: 240ms;
 }
 
 .wehea-scanner-fading:nth-child(2) {
-    animation-delay: 300ms;
+    animation-delay: 320ms;
 }
 
 .wehea-scanner-fading:nth-child(1) {
@@ -204,6 +235,28 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .scanner-merchandise {
+        left: 4% !important;
+    }
+
+    .scanner-tukar-kupon {
+        left: 10.5% !important;
+    }
+
+    .scanner-dapat-kupon {
+        left: 17% !important;
+    }
+
+    .scanner-quest {
+        left: 23.5% !important;
+    }
+
+    .scanner-arcade {
+        left: 30% !important;
     }
 }
 
@@ -286,23 +339,27 @@
     }
 
     .scanner-merchandise {
-        left: 4%;
+        left: 5.5%;
     }
 
     .scanner-tukar-kupon {
-        left: 10.5%;
+        left: 14.5%;
     }
 
     .scanner-dapat-kupon {
-        left: 17%;
-    }
-
-    .scanner-quest {
         left: 23.5%;
     }
 
+    .scanner-quest {
+        left: 32.5%;
+    }
+
     .scanner-arcade {
-        left: 30%;
+        left: 41.5%;
+    }
+
+    .scanner-close {
+        left: -30px;
     }
 
     @keyframes fadeInFromBottom {

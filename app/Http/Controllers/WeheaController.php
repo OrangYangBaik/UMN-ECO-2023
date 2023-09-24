@@ -9,7 +9,16 @@ use Illuminate\Http\Request;
 class WeheaController extends Controller
 {
     public function index(){
-        $user = auth()->user();
+        $user = Auth::guard('participant')->user();
+        
+        if(!$user){
+            return view('cms.page.wehea.balaiKota',[
+                'title'=>'Hidden City in Wehea',
+                'user' => $user,
+                'isJoin' => false,
+            ]);
+        }
+
         $credit = $user->credit;
         $point = $user->point;
         $kupon = $user->kupon->first();
@@ -22,6 +31,7 @@ class WeheaController extends Controller
 
         return view('cms.page.wehea.balaiKota',[
             'title'=>'Hidden City in Wehea',
+            'user' => $user,
             'isJoin' => $user->wehea,
             'credit' => $credit,
             'point' => $point,
@@ -31,16 +41,25 @@ class WeheaController extends Controller
     }
 
     public function register(){
+        if (!Auth::guard('participant')->check()) {
+            return response()->json(['status' => 'restricted']);
+        }
+    
+        // User is authenticated, proceed with registration
         $user = Auth::guard('participant')->user();
         $user->wehea = 1;
         $user->save();
-
-        return redirect(route('homepage'));
+    
+        return response()->json(['status' => 'success']);
     }
 
     public function ngasal(){
         return view('cms.page.wehea.carnaval',[
             'title'=>'carnaval',
         ]);
+    }
+
+    public function restricted(){
+        return view('cms.page.wehea.notLoggedInWehea', ["title" => "Wehea Restricted"]);
     }
 }

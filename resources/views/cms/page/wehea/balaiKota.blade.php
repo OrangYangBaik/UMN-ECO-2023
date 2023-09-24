@@ -117,20 +117,67 @@
 
 
             <div class="balai-kota-air-mancur-overlay">
-                <img src="{{ asset('images/wehea/balaiKota/token nala.svg') }}" alt="Token Nala" />
-                <div class="chat-box-balai-kota-container chat-box-air-mancur" style="display: block;">
-                    <div class="chat-box-balai-kota">
-                        <div class="triangle-air-mancur"></div>
-                        <div> Rangkaian Main Event pertama dari UMN ECO 2023 adalah Hidden City in Wehea. Hidden City in
-                            Wehea adalah
-                            kota tersembunyi yang ada di tengah hutan lindung Wehea. Penduduk kota Wehea menerapkan pola
-                            hidup yang
-                            berkelanjutan dan kebetulan sedang mengadakan festival! Ayo ikuti Perjalanan menelusuri rahasia
-                            Hidden
-                            City in Wehea.</div>
+                <div class="balai-kota-air-mancur-content">
+                    <div class="wehea-token-nala">
+                        <img src="{{ asset('images/wehea/balaiKota/token nala.svg') }}" alt="Token Nala" />
+                    </div>
+                    <div class="wehea-air-mancur-2D">
+                        <img src="{{ asset('images/wehea/balaiKota/2D/Ioo.png') }}" alt="Air Mancur 2D" />
+                    </div>
+                    <div class="chat-box-balai-kota-container chat-box-air-mancur" style="display: block;">
+                        <div class="chat-box-balai-kota">
+                            <div class="triangle-air-mancur"></div>
+                            <div> Rangkaian Main Event pertama dari UMN ECO 2023 adalah Hidden City in Wehea. Hidden City in
+                                Wehea adalah
+                                kota tersembunyi yang ada di tengah hutan lindung Wehea. Penduduk kota Wehea menerapkan pola
+                                hidup yang
+                                berkelanjutan dan kebetulan sedang mengadakan festival! Ayo ikuti Perjalanan menelusuri
+                                rahasia
+                                Hidden
+                                City in Wehea.</div>
+                        </div>
+                    </div>
+                    <div class="balai-kota-back-button-container back-button-air-mancur">
+                        <button type="button">
+                            Kembali
+                        </button>
                     </div>
                 </div>
             </div>
+
+            <div class="balai-kota-papan-pengumuman-overlay">
+                <div class="balai-kota-papan-pengumuman-content">
+                    <div class="wehea-papan-pengumuman-2D">
+                        <img src="{{ asset('images/wehea/balaiKota/2D/Io.png') }}" alt="Papan Pengumuman 2D" />
+                    </div>
+                    <div class="wehea-poster-carbon-footprint">
+                        <img src="{{ asset('images/wehea/balaiKota/poster-carbon-footprint.png') }}"
+                            alt="Poster Carbon Footprint" />
+                    </div>
+                    <div class="wehea-poster-event-open">
+                        <img src="{{ asset('images/wehea/balaiKota/poster-event-open.png') }}" alt="Poster Event Open" />
+                    </div>
+                    <div class="wehea-poster-meru-betiri">
+                        <img src="{{ asset('images/treasureMap/meru-betiri.svg') }}" alt="Poster Meru Betiri" />
+                    </div>
+                    @if ($isJoin == false)
+                        <div class="wehea-poster-daftar-wehea">
+                            <img src="{{ asset('images/wehea/balaiKota/poster-daftar.png') }}" alt="Poster Daftar Wehea" />
+                        </div>
+                    @else
+                        <div class="wehea-poster-sukses-daftar-wehea">
+                            <img src="{{ asset('images/wehea/balaiKota/poster-sukses-terdaftar.png') }}"
+                                alt="Poster Sukses Daftar" />
+                        </div>
+                    @endif
+                </div>
+                <div class="balai-kota-back-button-container back-button-papan-pengumuman">
+                    <button type="button">
+                        Kembali
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 @endsection

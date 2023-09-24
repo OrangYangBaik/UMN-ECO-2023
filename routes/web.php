@@ -63,10 +63,19 @@ Route::group(['prefix' => 'nawasena'], function() {
 
 // Wehea
 Route::group(['prefix' => 'wehea'], function() {
-    Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing')->middleware('auth:participant');
-    Route::post('/register', [WeheaController::class, 'register']);
-    Route::get('/info', [UserController::class, 'getAllUserInfo']);
-    Route::get('/carnival', [WeheaController::class, 'ngasal'])->name('carnival-landing')->middleware('auth:participant');
+    Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing');
+    Route::post('/register', [WeheaController::class, 'register'])->middleware('auth:participant');
+    // Route::get('/info', [UserController::class, 'getAllUserInfo'])->middleware('auth:participant');
+    Route::get('/carnival', [WeheaController::class, 'ngasal'])->name('carnival-landing');
+
+    // QR
+    Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
+    Route::get('/scannerPageDapatKupon', [QrHandlerController::class, 'dapatKupon'])->name('scannerPageDapatKupon')->middleware('auth:participant');
+    Route::get('/scannerPageKurangKupon', [QrHandlerController::class, 'kurangKupon'])->name('scannerPageKurangKupon')->middleware('auth:participant');
+    Route::get('/scannerPageDapatCredit', [QrHandlerController::class, 'dapatCredit'])->name('scannerPageDapatCredit')->middleware('auth:participant');
+    Route::get('/scannerPageMerchandise', [QrHandlerController::class, 'merchandise'])->name('scannerPageMerchandise')->middleware('auth:participant');
+
+    Route::get('/restricted', [WeheaController::class, 'restricted'])->name('wehea-restricted');
 });
 
 // Meru Betiri
@@ -132,13 +141,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/change-status', [AdminController::class, 'changeStatus'])->name('admin-setting-change-status')->middleware('auth:web');
 });
 
-
-// QR
-Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
-Route::get('/scannerPageDapatKupon', [QrHandlerController::class, 'dapatKupon'])->name('scannerPageDapatKupon')->middleware('auth:participant');
-Route::get('/scannerPageKurangKupon', [QrHandlerController::class, 'kurangKupon'])->name('scannerPageKurangKupon')->middleware('auth:participant');
-Route::get('/scannerPageDapatCredit', [QrHandlerController::class, 'dapatCredit'])->name('scannerPageDapatCredit')->middleware('auth:participant');
-Route::get('/scannerPageMerchandise', [QrHandlerController::class, 'merchandise'])->name('scannerPageMerchandise')->middleware('auth:participant');
+// QR Data
 Route::post('/verificationAdmin/sendReqMain', [QrHandlerController::class, 'sendReqMain']);
 Route::post('/verificationAdmin/sendReqDapatKupon', [QrHandlerController::class, 'sendReqDapatKupon']);
 Route::post('/verificationAdmin/sendReqKurangKupon', [QrHandlerController::class, 'sendReqKurangKupon']);

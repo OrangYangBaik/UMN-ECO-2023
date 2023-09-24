@@ -1,10 +1,27 @@
 .scanner-qr-booth-game-container {
     padding: 100px 10px;
-    background: linear-gradient(180deg, #ffdd82 50%, #f7b055 75%);
+    background-color: #d0c5a9;
+    font-family: bobbyjones;
+}
+
+.scanner-qr-booth-game-container h1 {
+    color: #1f576f;
+}
+
+.scanner-qr-booth-game-container #reader__scan_region img {
+    display: none;
 }
 
 .scanner-qr-booth-game-container :where(#reader, #reader__header_message) {
     border: none !important;
+}
+
+.scanner-qr-booth-game-container #reader__dashboard_section {
+    color: #1f576f !important;
+}
+
+.scanner-qr-booth-game-container #reader__dashboard_section_csr + div div {
+    margin-top: 20px !important;
 }
 
 .scanner-qr-booth-game-container #reader video {
@@ -18,19 +35,33 @@
         #html5-qrcode-button-camera-permission,
         #html5-qrcode-button-file-selection
     ) {
+    width: 292px !important;
     padding: 5px 20px !important;
-    background-color: blue !important;
-    color: white !important;
+    background-color: white !important;
+    color: #1f576f !important;
     border: none !important;
-    border-radius: 10px !important;
+    border-radius: 50px !important;
+    box-shadow: 5px 5px 15px gray;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: auto;
 }
 
 .scanner-qr-booth-game-container #html5-qrcode-anchor-scan-type-change {
-    margin-top: 10px !important;
-    color: white !important;
+    margin-top: 30px !important;
+    margin-left: 15px;
+    color: #1f576f !important;
     display: inline-block !important;
     cursor: pointer !important;
+}
+
+#booth-scanner-arcade-logo,
+#booth-scanner-side-quest-logo,
+#booth-scanner-dapat-kupon-logo,
+#booth-scanner-kurang-kupon-logo,
+#booth-scanner-merchandise-logo {
+    display: block !important;
+    width: 250px;
+    margin: 0 auto 25px;
 }
