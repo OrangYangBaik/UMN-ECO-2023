@@ -67,6 +67,7 @@ Route::group(['prefix' => 'wehea'], function() {
     Route::post('/register', [WeheaController::class, 'register'])->middleware('auth:participant');
     // Route::get('/info', [UserController::class, 'getAllUserInfo'])->middleware('auth:participant');
     Route::get('/carnival', [WeheaController::class, 'ngasal'])->name('carnival-landing');
+    Route::get('/gedungkesenian', [WeheaController::class, 'ngasal2'])->name('gedung-kesenian-landing');
 
     // QR
     Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
