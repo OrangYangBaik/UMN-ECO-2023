@@ -63,6 +63,7 @@ Route::group(['prefix' => 'nawasena'], function() {
 
 // Wehea
 Route::group(['prefix' => 'wehea'], function() {
+<<<<<<< Updated upstream
     Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing');
     Route::post('/register', [WeheaController::class, 'register'])->middleware('auth:participant');
     // Route::get('/info', [UserController::class, 'getAllUserInfo'])->middleware('auth:participant');
@@ -76,6 +77,13 @@ Route::group(['prefix' => 'wehea'], function() {
     Route::get('/scannerPageMerchandise', [QrHandlerController::class, 'merchandise'])->name('scannerPageMerchandise')->middleware('auth:participant');
 
     Route::get('/restricted', [WeheaController::class, 'restricted'])->name('wehea-restricted');
+=======
+    Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing')->middleware('auth:participant');
+    Route::post('/register', [WeheaController::class, 'register']);
+    Route::get('/info', [UserController::class, 'getAllUserInfo']);
+    Route::get('/carnaval', [WeheaController::class, 'ngasal']);
+    Route::get('/gedungkesenian', [WeheaController::class, 'ngasal2']);
+>>>>>>> Stashed changes
 });
 
 // Meru Betiri

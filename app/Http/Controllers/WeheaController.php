@@ -59,6 +59,12 @@ class WeheaController extends Controller
         ]);
     }
 
+    public function ngasal2(){
+        return view('cms.page.wehea.gedungkesenian',[
+            'title'=>'gedungkesenian',
+        ]);
+    }
+
     public function restricted(){
         return view('cms.page.wehea.notLoggedInWehea', ["title" => "Wehea Restricted"]);
     }
