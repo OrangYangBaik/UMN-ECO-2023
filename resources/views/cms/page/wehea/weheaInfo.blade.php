@@ -62,10 +62,10 @@
                 <span class="ticket-label">Kupon Bawahan: {{ $bawahan }}</span>
 
             </div>
-            <div class="ticket-item">
+            {{-- <div class="ticket-item">
                 <span class="ticket-label">Kupon Aksesoris: {{ $aksesoris }}</span>
 
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection
