@@ -2,7 +2,6 @@
 
 @section('custom-css')
     <link rel="stylesheet" href="{{ asset('css/cms/page/wehea/balaiKota.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cms/page/wehea/floatingIcons.css') }}">
 @endsection
 
 @section('content')
@@ -184,5 +183,4 @@
 
 @section('custom-js')
     <script src="{{ asset('js/cms/page/wehea/balaiKota.js') }}"></script>
-    <script src="{{ asset('js/cms/page/wehea/floatingIcons.js') }}"></script>
 @endsection

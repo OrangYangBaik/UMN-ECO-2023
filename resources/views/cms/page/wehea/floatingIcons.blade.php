@@ -2,6 +2,7 @@
     $currentUrl = url()->current();
     $urlSegments = explode('/', $currentUrl);
     $lastParameter = end($urlSegments);
+    $decodedParam = urldecode($lastParameter);
 @endphp
 
 @if ($user)
@@ -28,7 +29,7 @@
             @if ($lastParameter == 'wehea')
                 BALAI KOTA
             @else
-                {{ strtoupper($lastParameter) }}
+                {{ strtoupper($decodedParam) }}
             @endif
         </option>
         @if ($lastParameter != 'wehea')

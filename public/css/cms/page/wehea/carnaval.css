@@ -1,29 +1,24 @@
-html {
-  overflow-x: hidden;
-}
-
 body {
-  margin: 0;
+    overflow-x: hidden;
 }
 
 .outer-container-carnaval {
-  overflow-x: auto;
-  /* overflow-y: hidden; */
-  width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
 }
 
 .container-carnaval {
-  position: relative;
-  height: 100vh;
-  /* background-color: red; */
-  width: 1440px;
+    position: relative;
+    height: 850px;
+    width: 1440px;
 }
 
 .background-carnaval {
-  position: absolute;
-  width: 100%;
-  top: -130px;
-  left: 0;
+    position: absolute;
+    width: 100%;
+    top: -130px;
+    left: 0;
 }
 
 /* .background-1 {
@@ -45,39 +40,39 @@ body {
 } */
 
 .dekor1-1-carnaval {
-  z-index: 2;
-  position: absolute;
-  width: 400px;
-  top: -30px;
-  left: 0px;
-  /* display: none; */
+    /* z-index: 2; */
+    position: absolute;
+    width: 400px;
+    top: -30px;
+    left: 0px;
+    /* display: none; */
 }
 
 .dekor1-2-carnaval {
-  z-index: 2;
-  position: absolute;
-  width: 380px;
-  transform: rotate3d(0, 0, 1, 6deg);
-  top: -70px;
-  left: 510px;
-  /* display: none; */
+    /* z-index: 2; */
+    position: absolute;
+    width: 380px;
+    transform: rotate3d(0, 0, 1, 6deg);
+    top: -70px;
+    left: 510px;
+    /* display: none; */
 }
 
 .dekor4-carnaval {
-  z-index: 2;
-  position: absolute;
-  width: 400px;
-  top: -80px;
-  left: 1040px;
+    /* z-index: 2; */
+    position: absolute;
+    width: 400px;
+    top: -80px;
+    left: 1040px;
 }
 
 .full-confetti-carnaval {
-  z-index: 10;
-  position: absolute;
-  width: 1250px;
-  top: 0;
-  left: 60px;
-  /* display: none; */
+    z-index: 2;
+    position: absolute;
+    width: 1250px;
+    top: 0;
+    left: 60px;
+    /* display: none; */
 }
 
 /* .salinan-balon-1-carnaval {
@@ -153,349 +148,362 @@ body {
 } */
 
 .ferris-wheel-carnaval {
-  z-index: 2;
-  position: absolute;
-  width: 350px;
-  top: 120px;
-  left: 1090px;
-  /* display: none; */
+    /* z-index: 2; */
+    position: absolute;
+    width: 350px;
+    top: 120px;
+    left: 1090px;
+    /* display: none; */
 }
 
 .market-makanan-carnaval {
-  z-index: 2;
-  position: absolute;
-  width: 290px;
-  top: 360px;
-  left: 620px;
-  /* display: none; */
+    /* z-index: 2; */
+    position: absolute;
+    width: 290px;
+    top: 360px;
+    left: 620px;
+    /* display: none; */
 }
 
 .market-carnaval {
-  z-index: 3;
-  position: absolute;
-  width: 240px;
-  top: 450px;
-  left: 720px;
-  /* display: none; */
+    /* z-index: 3; */
+    position: absolute;
+    width: 240px;
+    top: 450px;
+    left: 720px;
+    /* display: none; */
 }
 
 .carousel-carnaval {
-  z-index: 6;
-  position: absolute;
-  width: 363px;
-  top: 530px;
-  left: 1060px;
-  /* display: none; */
+    z-index: 3;
+    position: absolute;
+    width: 363px;
+    top: 530px;
+    left: 1060px;
+    /* display: none; */
 }
 
 .carnaval-carnaval {
-  z-index: 1;
-  position: absolute;
-  width: 530px;
-  top: 40px;
-  left: 290px;
-  /* display: none; */
+    /* z-index: 1; */
+    position: absolute;
+    width: 530px;
+    top: 40px;
+    left: 290px;
+    /* display: none; */
 }
 
 .swing-carnaval {
-  z-index: 2;
-  position: absolute;
-  width: 450px;
-  top: 10px;
-  left: 670px;
-  /* display: none */
+    /* z-index: 2; */
+    position: absolute;
+    width: 450px;
+    top: 10px;
+    left: 670px;
+    /* display: none */
 }
 
 .tenda-biru-muda-carnaval {
-  z-index: 5;
-  position: absolute;
-  width: 320px;
-  top: 530px;
-  left: 940px;
-  /* display: none; */
+    z-index: 2;
+    position: absolute;
+    width: 320px;
+    top: 530px;
+    left: 940px;
+    /* display: none; */
 }
 
 .tenda-biru-tua-carnaval {
-  z-index: 4;
-  position: absolute;
-  width: 320px;
-  top: 430px;
-  left: 820px;
-  /* display: none; */
+    /* z-index: 4; */
+    position: absolute;
+    width: 320px;
+    top: 430px;
+    left: 820px;
+    /* display: none; */
 }
 
 .tenda-kuning-carnaval {
-  z-index: 2;
-  position: absolute;
-  transform: rotateY(180deg);
-  width: 320px;
-  top: 350px;
-  left: 290px;
-  /* display: none; */
+    /* z-index: 2; */
+    position: absolute;
+    transform: rotateY(180deg);
+    width: 320px;
+    top: 350px;
+    left: 290px;
+    /* display: none; */
 }
 
 .tenda-merah-carnaval {
-  z-index: 4;
-  position: absolute;
-  transform: rotateY(180deg);
-  width: 320px;
-  top: 510px;
-  left: -20px;
-  /* display: none; */
+    z-index: 1;
+    position: absolute;
+    transform: rotateY(180deg);
+    width: 320px;
+    top: 510px;
+    left: -20px;
+    /* display: none; */
 }
 
 .tenda-oren-carnaval {
-  z-index: 3;
-  position: absolute;
-  transform: rotateY(180deg);
-  width: 320px;
-  top: 430px;
-  left: 135px;
-  /* display: none; */
+    /* z-index: 3; */
+    position: absolute;
+    transform: rotateY(180deg);
+    width: 320px;
+    top: 430px;
+    left: 135px;
+    /* display: none; */
 }
-
 
 /* tanda seru */
 
-.tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-carnaval {
-  z-index: 5;
-  width: 99px;
-  height: 95px;
-  padding: 0px 16px 30px 16px;
-  text-align: center;
-  border-radius: 12px;
-  border: 3px solid var(--Black, #1B1B1B);
-  background: var(--White, #FFF);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
+.tanda-seru-merah-carnaval,
+.tanda-seru-oren-carnaval,
+.tanda-seru-kuning-carnaval,
+.tanda-seru-biru-tua-carnaval,
+.tanda-seru-biru-carnaval {
+    z-index: 2;
+    width: 99px;
+    height: 95px;
+    padding: 0px 16px 30px 16px;
+    text-align: center;
+    border-radius: 12px;
+    border: 3px solid var(--Black, #1b1b1b);
+    background: var(--White, #fff);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
 }
 
-.tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-carnaval span {
-  font-family: Bobby Jones Soft;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 88px; /* 137.5% */
-  letter-spacing: 1px;
+.tanda-seru-merah-carnaval,
+.tanda-seru-oren-carnaval,
+.tanda-seru-kuning-carnaval,
+.tanda-seru-biru-tua-carnaval,
+.tanda-seru-biru-carnaval span {
+    font-family: Bobby Jones Soft;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 88px; /* 137.5% */
+    letter-spacing: 1px;
 }
 
 .bottom-beak {
-  z-index: 3;
-  width: 25px;
-  position: absolute;
-  top: 89px;
-  left: 36px;
+    /* z-index: 3; */
+    width: 25px;
+    position: absolute;
+    top: 89px;
+    left: 36px;
 }
 
 .tanda-seru-merah-carnaval {
-  z-index: 3;
-  position: absolute;
-  top: 418px;
-  left: 24px;
-  color: #fa0505;
+    /* z-index: 3; */
+    position: absolute;
+    top: 418px;
+    left: 24px;
+    color: #fa0505;
 }
 
 .tanda-seru-oren-carnaval {
-  z-index: 3;
-  position: absolute;
-  top: 328px;
-  left: 173px;
-  color: #E77919;
+    /* z-index: 3; */
+    position: absolute;
+    top: 328px;
+    left: 173px;
+    color: #e77919;
 }
 
 .tanda-seru-kuning-carnaval {
-  z-index: 3;
-  position: absolute;
-  top: 281px;
-  left: 341px;
-  color: #EDBC23;
+    /* z-index: 3; */
+    position: absolute;
+    top: 281px;
+    left: 341px;
+    color: #edbc23;
 }
 
 .tanda-seru-biru-tua-carnaval {
-  z-index: 3;
-  position: absolute;
-  top: 344px;
-  left: 939px;
-  color: #275280;
+    /* z-index: 3; */
+    position: absolute;
+    top: 344px;
+    left: 939px;
+    color: #275280;
 }
 
 .tanda-seru-biru-carnaval {
-  z-index: 3;
-  position: absolute;
-  top: 429px;
-  left: 1106px;
-  color: #76A9BA;
+    /* z-index: 3; */
+    position: absolute;
+    top: 429px;
+    left: 1106px;
+    color: #76a9ba;
 }
 
 .nala-carnival {
-  z-index: 3;
-  width: 344px;
-  position: absolute;
-  top: 589px;
-  left: 589px;  
+    /* z-index: 3; */
+    width: 344px;
+    position: absolute;
+    top: 589px;
+    left: 589px;
 }
 
-
 @media only screen and (min-width: 1441px) {
-  .container-carnaval {
-    width: 100%;
-  }
+    .container-carnaval {
+        width: 100%;
+    }
 
-  .background-carnaval {
-    width: 100%;
-    top: -9vw;
-  }
+    .background-carnaval {
+        width: 100%;
+        top: -9vw;
+    }
 
-  .dekor1-1-carnaval {
-    width: 26vw;
-    top: -2vw;
-    /* display: none; */
-  }
+    .dekor1-1-carnaval {
+        width: 26vw;
+        top: -2vw;
+        /* display: none; */
+    }
 
-  .dekor1-2-carnaval {
-    width: 25vw;
-    top: -4vw;
-    left: 37vw;
-    /* display: none; */
-  }
+    .dekor1-2-carnaval {
+        width: 25vw;
+        top: -4vw;
+        left: 37vw;
+        /* display: none; */
+    }
 
-  .dekor4-carnaval {
-    width: 26vw;
-    top: -4.5vw;
-    left: 74vw;
-    /* display: none; */
-  }
+    .dekor4-carnaval {
+        width: 26vw;
+        top: -4.5vw;
+        left: 74vw;
+        /* display: none; */
+    }
 
-  .full-confetti-carnaval {
-    width: 87vw;
-    top: 0;
-    left: 0;
-  }
+    .full-confetti-carnaval {
+        width: 87vw;
+        top: 0;
+        left: 0;
+    }
 
-  .ferris-wheel-carnaval {
-    width: 25%;
-    top: 8vw;
-    left: 75vw;
-    /* display: none; */
-  }
+    .ferris-wheel-carnaval {
+        width: 25%;
+        top: 8vw;
+        left: 75vw;
+        /* display: none; */
+    }
 
-  .market-makanan-carnaval {
-    width: 19%;
-    top: 25.5vw;
-    left: 41.5vw;
-    /* display: none; */
-  }
+    .market-makanan-carnaval {
+        width: 19%;
+        top: 25.5vw;
+        left: 41.5vw;
+        /* display: none; */
+    }
 
-  .market-carnaval {
-    width: 16%;
-    top: 31.5vw;
-    left: 48.5vw;
-    /* display: none; */
-  }
+    .market-carnaval {
+        width: 16%;
+        top: 31.5vw;
+        left: 48.5vw;
+        /* display: none; */
+    }
 
-  .carousel-carnaval {
-    width: 27%;
-    top: 36.3vw;
-    left: 73vw;
-    /* display: none; */
-  }
+    .carousel-carnaval {
+        width: 27%;
+        top: 36.3vw;
+        left: 73vw;
+        /* display: none; */
+    }
 
-  .carnaval-carnaval {
-    width: 36%;
-    top: 3vw;
-    left: 20.5vw;
-    /* display: none; */
-  }
+    .carnaval-carnaval {
+        width: 36%;
+        top: 3vw;
+        left: 20.5vw;
+        /* display: none; */
+    }
 
-  .swing-carnaval {
-    width: 33%;
-    top: 1vw;
-    left: 46vw;
-    /* display: none; */
-  }
+    .swing-carnaval {
+        width: 33%;
+        top: 1vw;
+        left: 46vw;
+        /* display: none; */
+    }
 
-  .tenda-biru-muda-carnaval {
-    width: 23%;
-    top: 36.5vw;
-    left: 64vw;
-    /* display: none; */
-  }
+    .tenda-biru-muda-carnaval {
+        width: 23%;
+        top: 36.5vw;
+        left: 64vw;
+        /* display: none; */
+    }
 
-  .tenda-biru-tua-carnaval {
-    width: 23%;
-    top: 29.5vw;
-    left: 55.5vw;
-    /* display: none; */
-  }
+    .tenda-biru-tua-carnaval {
+        width: 23%;
+        top: 29.5vw;
+        left: 55.5vw;
+        /* display: none; */
+    }
 
-  .tenda-kuning-carnaval {
-    width: 23%;
-    top: 23vw;
-    left: 20vw;
-    /* display: none; */
-  }
+    .tenda-kuning-carnaval {
+        width: 23%;
+        top: 23vw;
+        left: 20vw;
+        /* display: none; */
+    }
 
-  .tenda-merah-carnaval {
-    width: 23%;
-    top: 35vw;
-    left: -2vw;
-    /* display: none; */
-  }
+    .tenda-merah-carnaval {
+        width: 23%;
+        top: 35vw;
+        left: -2vw;
+        /* display: none; */
+    }
 
-  .tenda-oren-carnaval {
-    width: 23%;
-    top: 29vw;
-    left: 9vw;
-    /* display: none; */
-  }
+    .tenda-oren-carnaval {
+        width: 23%;
+        top: 29vw;
+        left: 9vw;
+        /* display: none; */
+    }
 
-  .nala-carnival {
-    width: 24%;
-    top: 41vw;
-    left: 40vw;
-  }
+    .nala-carnival {
+        width: 24%;
+        top: 41vw;
+        left: 40vw;
+    }
 
-  .bottom-beak {
-    width: 25%;
-    top: 5.8vw;
-    left: 2.5vw;
-  }
+    .bottom-beak {
+        width: 25%;
+        top: 5.8vw;
+        left: 2.5vw;
+    }
 
-  .tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-carnaval {
-    width: 7%;
-    height: 7%;
-    padding: 0px 1vw 2vw 1vw;
-    border-radius: 0.8vw;
-    border: 0.3vw solid var(--Black, #1B1B1B);
-  }
-  
-  .tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-carnaval span {
-    font-size: 5vw;
-    line-height: 6vw;
-  }
+    .tanda-seru-merah-carnaval,
+    .tanda-seru-oren-carnaval,
+    .tanda-seru-kuning-carnaval,
+    .tanda-seru-biru-tua-carnaval,
+    .tanda-seru-biru-carnaval {
+        width: 7%;
+        height: 7%;
+        padding: 0px 1vw 2vw 1vw;
+        border-radius: 0.8vw;
+        border: 0.3vw solid var(--Black, #1b1b1b);
+    }
 
-  .tanda-seru-merah-carnaval {
-    top: 31vw;
-    left: 2vw;
-  }
-  
-  .tanda-seru-oren-carnaval {
-    top: 25vw;
-    left: 12vw;
-  }
-  
-  .tanda-seru-kuning-carnaval {
-    top: 20vw;
-    left: 22vw;
-  }
-  
-  .tanda-seru-biru-tua-carnaval {
-    top: 26vw;
-    left: 66vw;
-  }
-  
-  .tanda-seru-biru-carnaval {
-    top: 32vw;
-    left: 76vw;
-  }
+    .tanda-seru-merah-carnaval,
+    .tanda-seru-oren-carnaval,
+    .tanda-seru-kuning-carnaval,
+    .tanda-seru-biru-tua-carnaval,
+    .tanda-seru-biru-carnaval span {
+        font-size: 5vw;
+        line-height: 6vw;
+    }
 
+    .tanda-seru-merah-carnaval {
+        top: 31vw;
+        left: 2vw;
+    }
+
+    .tanda-seru-oren-carnaval {
+        top: 25vw;
+        left: 12vw;
+    }
+
+    .tanda-seru-kuning-carnaval {
+        top: 20vw;
+        left: 22vw;
+    }
+
+    .tanda-seru-biru-tua-carnaval {
+        top: 26vw;
+        left: 66vw;
+    }
+
+    .tanda-seru-biru-carnaval {
+        top: 32vw;
+        left: 76vw;
+    }
 }
