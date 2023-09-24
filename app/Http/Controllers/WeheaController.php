@@ -116,6 +116,17 @@ class WeheaController extends Controller
             'bawahan' => $bawahan,
         ]);
     }
+    public function pasarWehea(){
+        return view('cms.page.wehea.pasar',[
+            'title' =>'pasar',
+        ]);
+    }
+
+    public function fashionWehea(){
+        return view('cms.page.wehea.fashion',[
+            'title' => 'fashion',
+        ]);
+    }
 
     public function restricted(){
         return view('cms.page.wehea.notLoggedInWehea', ["title" => "Wehea - Restricted"]);

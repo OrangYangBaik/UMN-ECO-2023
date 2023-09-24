@@ -66,6 +66,9 @@ Route::group(['prefix' => 'wehea'], function() {
     Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing');
     Route::post('/register', [WeheaController::class, 'register'])->middleware('auth:participant');
     // Route::get('/info', [UserController::class, 'getAllUserInfo'])->middleware('auth:participant');
+    Route::get('/carnival', [WeheaController::class, 'ngasal'])->name('carnival-landing');
+    Route::get('/fashion',[WeheaController::class, 'fashionWehea'])->name('fashion-landing');
+    Route::get('/pasar',[WeheaController::class,'pasarWehea'])->name('pasar-landing');
     Route::get('/carnival', [WeheaController::class, 'carnival'])->name('carnival-landing');
     Route::get('/gedung kesenian', [WeheaController::class, 'gedungKesenian'])->name('gedung-kesenian-landing');
 
@@ -77,6 +80,7 @@ Route::group(['prefix' => 'wehea'], function() {
     Route::get('/scannerPageMerchandise', [QrHandlerController::class, 'merchandise'])->name('scannerPageMerchandise')->middleware('auth:participant');
 
     Route::get('/restricted', [WeheaController::class, 'restricted'])->name('wehea-restricted');
+    
 });
 
 // Meru Betiri
