@@ -2,10 +2,10 @@ $(document).ready(function () {
     $("#locationSelect").on("change", function () {
         const selectedValue = this.value;
         const redirectUrls = {
-            1: "balai_kota.html",
-            2: "carnival.html",
+            1: "/wehea",
+            2: "/wehea/carnival",
             3: "toko_baju.html",
-            4: "gedung_kesenian.html",
+            4: "/wehea/gedung kesenian",
             5: "pasar.html",
         };
         if (selectedValue in redirectUrls) {

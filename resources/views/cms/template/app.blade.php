@@ -42,6 +42,9 @@
 
     <!-- Custom CSS -->
     @yield('custom-css')
+
+    {{-- Floating Icon Wehea --}}
+    <link rel="stylesheet" href="{{ asset('css/cms/page/wehea/floatingIcons.css') }}">
 </head>
 
 <body>
@@ -93,6 +96,9 @@
     </script>
     <!-- Custom JS -->
     @yield('custom-js')
+
+    {{-- Floating Icon Wehea --}}
+    <script src="{{ asset('js/cms/page/wehea/floatingIcons.js') }}"></script>
 </body>
 
 </html>

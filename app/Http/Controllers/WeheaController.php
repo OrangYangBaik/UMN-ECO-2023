@@ -53,9 +53,67 @@ class WeheaController extends Controller
         return response()->json(['status' => 'success']);
     }
 
-    public function ngasal(){
+    public function carnival(){
+        $user = Auth::guard('participant')->user();
+        
+        if(!$user){
+            return view('cms.page.wehea.carnaval',[
+                'title'=>'Wehea - Carnival',
+                'user' => $user,
+                'isJoin' => false,
+            ]);
+        }
+
+        $credit = $user->credit;
+        $point = $user->point;
+        $kupon = $user->kupon->first();
+        $atasan = 0;
+        $bawahan = 0;
+        if($kupon){
+            $atasan = $kupon->atasan;
+            $bawahan = $kupon->bawahan;
+        }
+
         return view('cms.page.wehea.carnaval',[
-            'title'=>'carnaval',
+            'title'=>'Wehea - Carnival',
+            'user' => $user,
+            'isJoin' => $user->wehea,
+            'credit' => $credit,
+            'point' => $point,
+            'atasan' => $atasan,
+            'bawahan' => $bawahan,
+        ]);
+    }
+
+    public function gedungKesenian(){
+        $user = Auth::guard('participant')->user();
+        
+        if(!$user){
+            return view('cms.page.wehea.gedungKesenian',[
+                'title'=>'Wehea - Gedung Kesenian',
+                'user' => $user,
+                'isJoin' => false,
+            ]);
+        }
+
+        $credit = $user->credit;
+        $point = $user->point;
+        $kupon = $user->kupon->first();
+        $atasan = 0;
+        $bawahan = 0;
+        if($kupon){
+            $atasan = $kupon->atasan;
+            $bawahan = $kupon->bawahan;
+        }
+
+        return view('cms.page.wehea.gedungKesenian',[
+            'title'=>'Wehea - Gedung Kesenian',
+            'user' => $user,
+            'isJoin' => $user->wehea,
+            'credit' => $credit,
+            'point' => $point,
+            'atasan' => $atasan,
+            'bawahan' => $bawahan,
         ]);
     }
     public function pasarWehea(){
@@ -71,6 +129,6 @@ class WeheaController extends Controller
     }
 
     public function restricted(){
-        return view('cms.page.wehea.notLoggedInWehea', ["title" => "Wehea Restricted"]);
+        return view('cms.page.wehea.notLoggedInWehea', ["title" => "Wehea - Restricted"]);
     }
 }
