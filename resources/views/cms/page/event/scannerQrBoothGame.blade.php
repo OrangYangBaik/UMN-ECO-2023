@@ -74,7 +74,7 @@
                                 document.getElementById('reader').remove();
                                 alert(response2.message);
                                 //ini routenya (buat redirect) kalo dia udh ngescan dan bener datanya 
-                                window.location.href = "{{ route('homepage') }}";
+                                window.location.href = "{{ route('wehea-landing') }}";
                             } else {
                                 alert(response1.message);
                             }
