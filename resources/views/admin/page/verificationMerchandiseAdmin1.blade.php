@@ -21,7 +21,7 @@
                         <input type="hidden" name="userId" value="{{ $user->id }}">
                         <h3>Nama: {{ $user->nama }}</h3>
                         <h3>NIM: {{ $user->nim }}</h3>
-                        <label for="point">Jumlah kupon atasan:</label>
+                        <label for="point">Jumlah pengurangan point:</label>
                         <input type="number" name="point" id="point" class="point-input text-dark" />
                         <button class="acc-button text-dark" type="submit">Approve</button>
                     </form>

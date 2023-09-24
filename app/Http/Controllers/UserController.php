@@ -27,7 +27,6 @@ class UserController extends Controller
         if($kupon){
             $atasan = $kupon->atasan;
             $bawahan = $kupon->bawahan;
-            //$aksesoris = $kupon->aksesoris;
 
             return view('cms.page.wehea.weheaInfo',[
                 "title" => "My Info",
@@ -37,13 +36,11 @@ class UserController extends Controller
                 'point' => $point,
                 'atasan' => $atasan,
                 'bawahan' => $bawahan,
-                //'aksesoris' => $aksesoris,
             ]);
         }
 
         $atasan = 0;
         $bawahan = 0;
-        //$aksesoris = 0;
 
         return view('cms.page.wehea.weheaInfo',[
             "title" => "My Info",
@@ -53,7 +50,6 @@ class UserController extends Controller
             'point' => $point,
             'atasan' => $atasan,
             'bawahan' => $bawahan,
-            //'aksesoris' => $aksesoris,
         ]);
     }
 
@@ -83,12 +79,11 @@ class UserController extends Controller
         try{
             $request->validate([
                 'name' => 'required|regex:/[a-zA-Z]+$/x',
-                // 'nim' => 'required|regex:/000000(\d{5})/|unique:recruitments,NIM',
-                'nim' => 'required|unique:recruitments,NIM',
-                'email-student' => ['required','email:dns','regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:recruitments,Email'],
-                'angkatan' => 'required',
-                'fakultas' => 'required',
-                'program-studi' => 'required',
+                'nim' => 'nullable|unique:recruitments,NIM',
+                'email-student' => ['nullable','email:dns','regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:recruitments,Email'],
+                'angkatan' => 'nullable',
+                'fakultas' => 'nullable',
+                'program-studi' => 'nullable',
                 'instagram' => 'required|unique:recruitments,Instagram_account',
                 'id-line' => 'required|unique:recruitments,Line_id',
                 'password' => 'required',

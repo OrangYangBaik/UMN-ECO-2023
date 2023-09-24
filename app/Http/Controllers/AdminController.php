@@ -59,7 +59,7 @@ class AdminController extends Controller
 
         request()->session()->regenerateToken();
 
-        return redirect(route('homepage'));
+        return redirect('/loginAdmin');
     }
 
     public function register(){
@@ -88,10 +88,12 @@ class AdminController extends Controller
 
     public function dashboardArcade(){
         $admin = auth()->user();
+        $allUser = User::all();
         return view('admin.page.dashboardArcade',[
             'title' => 'Admin Dashboard',
             'teams' => Team::All(),
-            'boothNum' => $admin->booth
+            'boothNum' => $admin->booth,
+            'allUser' => $allUser
         ]);
     }
 

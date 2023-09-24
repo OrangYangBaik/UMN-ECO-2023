@@ -19,6 +19,30 @@
                 <img class="dekorasi-nawasena-img" id="kresek-putih" src="{{ asset('images/nawasena/Kresek putih.svg') }}"
                     alt="Kresek Putih" />
             </div>
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="kresek-merah" src="{{ asset('images/nawasena/Kresek merah.svg') }}"
+                    alt="Kresek Merah" />
+            </div>
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="kardus" src="{{ asset('images/nawasena/Kardus.svg') }}"
+                    alt="Kardus" />
+            </div>
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="kotak-susu" src="{{ asset('images/nawasena/Kotak susu.svg') }}"
+                    alt="Kotak Susu" />
+            </div>
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="kaleng-ijo" src="{{ asset('images/nawasena/Kaleng ijo.svg') }}"
+                    alt="Kaleng Ijo" />
+            </div>
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="kaleng-merah" src="{{ asset('images/nawasena/Kaleng merah.svg') }}"
+                    alt="Kaleng Merah" />
+            </div>
+            <div class="dekorasi-nawasena">
+                <img class="dekorasi-nawasena-img" id="lantai-kayu"
+                    src="{{ asset('images/nawasena/lantai kayu (alternatif).svg') }}" alt="Lantai Kayu" />
+            </div>
             <div class="nawasena-left">
                 <div class="nawasena-heading">
                     <h1>APA ITU THE MAKING OF NAWASENA?</h1>
@@ -46,7 +70,7 @@
                 <a href="https://drive.google.com/drive/folders/1-IVYjXMyT3cHttveTFE75tUom-uv3b-j" target="_blank"
                     style="display: block; text-decoration: none;">
                     <div class="nawasena-ebook">
-                        <img src="{{ asset('images/nawasena/book.svg') }}" alt="EBook Icon" />
+                        <img src="{{ asset('images/nawasena/Vector.svg') }}" alt="EBook Icon" />
                         <div>AKSES E-BOOK</div>
                     </div>
                 </a>
@@ -112,7 +136,8 @@
                                     <textarea id="anggota-kelompok" name="deskripsi"
                                         placeholder="1. Kathleen - 00000012345 - kathleen@student.umn.ac.id - DKV - 2022&#10;2. Ruth - 00000067890 - ruth@student.umn.ac.id - DKV - 2022&#10;3. Wijaya - 00000054321 - wijaya@student.umn.ac.id - DKV - 2022"></textarea>
                                 </div>
-                                <small style="font-style: italic;">*Jika berkelompok, isi data seluruh anggota. Format wajib
+                                <small style="font-style: italic;">*Jika berkelompok, isi data seluruh anggota. Format
+                                    wajib
                                     sesuai dengan
                                     contoh</small>
                                 <div>

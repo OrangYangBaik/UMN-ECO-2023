@@ -6,13 +6,21 @@
 
 @section('content')
     <div class="scanner-qr-booth-game-container">
-        <h1 class="mb-2 text-center">Fashion</h1>
+        <h1 class="mb-2 text-center">SWISH & DONATE</h1>
         <div id="reader"></div>
     </div>
 @endsection
 
 @section('custom-js')
     <script>
+        $(document).ready(function() {
+            $("<img src='{{ asset('images/wehea/upload.svg') }}' alt='Upload Icon'/>").insertBefore(
+                "#html5-qrcode-anchor-scan-type-change");
+            $("#reader__scan_region").append(
+                "<img id='booth-scanner-arcade-logo' src='{{ asset('images/wehea/scanner dapat kupon.svg') }}' alt='Swish and Donate Scanner Logo'/>"
+            );
+        });
+
         function makeAjaxRequest(url, data) {
             return new Promise((resolve, reject) => {
                 $.ajaxSetup({

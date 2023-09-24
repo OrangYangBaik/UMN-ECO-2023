@@ -14,6 +14,7 @@ class User extends Authenticatable
     protected $table = 'users';
     protected $primaryKey = 'id';
     protected $keyType = 'string';
+    protected $with = 'kupon';
     protected $fillable = ['nama','nim','email','password'];
     protected $hidden = [
         'credit',

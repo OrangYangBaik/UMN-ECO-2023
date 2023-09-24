@@ -1,0 +1,129 @@
+.wehea-restricted-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b5d172;
+    margin: 0;
+    padding: 0;
+}
+
+.wehea-restricted-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gerbang-wehea {
+    width: 100%;
+}
+
+.penjaga-nala-wehea {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.chat-box-restricted-wehea-container {
+    width: 300px;
+    position: absolute;
+    color: #1f576f;
+    user-select: none;
+    top: 70%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+}
+
+.chat-box-restricted-wehea {
+    position: relative;
+    border: 3px solid #1f576f;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.triangle-restricted-wehea {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #1f576f;
+    left: -10px;
+    bottom: 20%;
+    transform: scaleX(-1);
+}
+
+.wehea-restricted-container a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #23434d;
+}
+
+.wehea-restricted-container button {
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #9e6a46;
+    color: white;
+}
+
+.wehea-restricted-container button,
+.wehea-restricted-container button:focus,
+.wehea-restricted-container button:active {
+    border: none;
+    outline: none;
+}
+
+@media only screen and (min-width: 1280px) {
+    .chat-box-restricted-wehea-container {
+        width: 27vw;
+    }
+
+    .chat-box-restricted-wehea {
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .chat-box-restricted-wehea-container {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .wehea-restricted-container {
+        padding-bottom: 300px;
+    }
+
+    .chat-box-restricted-wehea-container {
+        width: 300px;
+        top: auto;
+        bottom: -320px;
+        left: 50%;
+    }
+
+    .triangle-restricted-wehea {
+        border-width: 10px 10px 0 10px;
+        border-color: #1f576f transparent transparent transparent;
+        top: -10px;
+        left: 15%;
+        transform: scaleY(-1);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .wehea-restricted-container {
+        padding-bottom: 0;
+        align-items: stretch;
+    }
+}

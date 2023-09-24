@@ -48,24 +48,16 @@
         <div class="ticket">
             <div class="ticket-item">
                 <span class="ticket-label">Kredit: {{ $credit }}</span>
-
             </div>
             <div class="ticket-item">
                 <span class="ticket-label">Point: {{ $point }}</span>
-
             </div>
             <div class="ticket-item">
                 <span class="ticket-label">Kupon Atasan: {{ $atasan }}</span>
-
             </div>
             <div class="ticket-item">
                 <span class="ticket-label">Kupon Bawahan: {{ $bawahan }}</span>
-
             </div>
-            {{-- <div class="ticket-item">
-                <span class="ticket-label">Kupon Aksesoris: {{ $aksesoris }}</span>
-
-            </div> --}}
         </div>
     </div>
 @endsection
