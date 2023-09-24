@@ -1,49 +1,48 @@
-.container-fashion{
+.container-fashion {
     background-image: url(../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1440px;
     min-height: 100vh;
 }
+
 @media screen and (min-width: 1440px) {
-    .container-fashion{
+    .container-fashion {
         background-image: url(../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png);
         background-repeat: no-repeat;
         background-size: 100vw;
     }
-    
 }
 
-.manekin1{
+.manekin1 {
     position: absolute;
     width: 250px;
     top: 150px;
     left: 400px;
     z-index: 0;
 }
-.manekin2{
+.manekin2 {
     position: absolute;
     width: 250px;
     top: 100px;
     left: 520px;
     z-index: 2;
 }
-.manekin3{
-
+.manekin3 {
     position: absolute;
     width: 250px;
     top: 155px;
     left: 640px;
     z-index: 2;
 }
-.lukisan{
+.lukisan {
     position: absolute;
     width: 250px;
     top: 100px;
     left: 40px;
     z-index: 2;
 }
-.rakBaju{
+.rakBaju {
     transform: rotate(3deg);
     position: absolute;
     width: 350px;
@@ -52,25 +51,23 @@
     z-index: 1;
 }
 
-.cermin{
+.cermin {
     transform: rotate(3deg);
     position: absolute;
     width: 350px;
     top: 140px;
     left: 165px;
-    
 }
 
-.nala{
-   transform: scaleX(-1);
+.nala {
+    transform: scaleX(-1);
     position: absolute;
     width: 280px;
     top: 240px;
     left: 300px;
 }
 
-.baju{
-    
+.baju {
     position: absolute;
     width: 400px;
     top: 350px;
@@ -78,15 +75,14 @@
     z-index: 3;
 }
 
-.celana{
-    
+.celana {
     position: absolute;
     width: 400px;
     top: 250px;
     left: 850px;
     z-index: 2;
 }
-.dress{
+.dress {
     position: absolute;
     width: 400px;
     top: 300px;

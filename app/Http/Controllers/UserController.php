@@ -80,7 +80,8 @@ class UserController extends Controller
             $request->validate([
                 'name' => 'required|regex:/[a-zA-Z]+$/x',
                 'nim' => 'nullable|unique:recruitments,NIM',
-                'email-student' => ['nullable','email:dns','regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:recruitments,Email'],
+                // 'email-student' => ['nullable','email:dns','regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:recruitments,Email'],
+                'email-student' => ['nullable','email:dns', 'unique:recruitments,Email'],
                 'angkatan' => 'nullable',
                 'fakultas' => 'nullable',
                 'program-studi' => 'nullable',

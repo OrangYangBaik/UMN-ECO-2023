@@ -116,15 +116,68 @@ class WeheaController extends Controller
             'bawahan' => $bawahan,
         ]);
     }
+
     public function pasarWehea(){
+        $user = Auth::guard('participant')->user();
+        
+        if(!$user){
+            return view('cms.page.wehea.pasar',[
+                'title'=>'Wehea - Fleamarket',
+                'user' => $user,
+                'isJoin' => false,
+            ]);
+        }
+
+        $credit = $user->credit;
+        $point = $user->point;
+        $kupon = $user->kupon->first();
+        $atasan = 0;
+        $bawahan = 0;
+        if($kupon){
+            $atasan = $kupon->atasan;
+            $bawahan = $kupon->bawahan;
+        }
+
         return view('cms.page.wehea.pasar',[
-            'title' =>'pasar',
+            'title'=>'Wehea - Fleamarket',
+            'user' => $user,
+            'isJoin' => $user->wehea,
+            'credit' => $credit,
+            'point' => $point,
+            'atasan' => $atasan,
+            'bawahan' => $bawahan,
         ]);
     }
 
     public function fashionWehea(){
+        $user = Auth::guard('participant')->user();
+        
+        if(!$user){
+            return view('cms.page.wehea.fashion',[
+                'title'=>'Wehea - Fashion',
+                'user' => $user,
+                'isJoin' => false,
+            ]);
+        }
+
+        $credit = $user->credit;
+        $point = $user->point;
+        $kupon = $user->kupon->first();
+        $atasan = 0;
+        $bawahan = 0;
+        if($kupon){
+            $atasan = $kupon->atasan;
+            $bawahan = $kupon->bawahan;
+        }
+
         return view('cms.page.wehea.fashion',[
-            'title' => 'fashion',
+            'title'=>'Wehea - Fashion',
+            'user' => $user,
+            'isJoin' => $user->wehea,
+            'credit' => $credit,
+            'point' => $point,
+            'atasan' => $atasan,
+            'bawahan' => $bawahan,
         ]);
     }
 

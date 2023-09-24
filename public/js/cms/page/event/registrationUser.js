@@ -97,26 +97,26 @@ $(document).ready(function () {
                 name_validation: true,
             },
             nim: {
-                required: true,
+                // required: true,
                 digits: true,
-                minlength: 11,
-                maxlength: 11,
+                // minlength: 11,
+                // maxlength: 11,
                 // correct_nim_umn: true,
                 unique_nim: true,
             },
             "email-student": {
                 required: true,
-                correct_email_student: true,
+                // correct_email_student: true,
                 unique_email: true,
             },
             angkatan: {
-                required: true,
+                // required: true,
             },
             fakultas: {
-                required: true,
+                // required: true,
             },
             "program-studi": {
-                required: true,
+                // required: true,
             },
             instagram: {
                 required: true,

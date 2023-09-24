@@ -4,9 +4,9 @@ $(document).ready(function () {
         const redirectUrls = {
             1: "/wehea",
             2: "/wehea/carnival",
-            3: "toko_baju.html",
+            3: "/wehea/fashion",
             4: "/wehea/gedung kesenian",
-            5: "pasar.html",
+            5: "/wehea/fleamarket",
         };
         if (selectedValue in redirectUrls) {
             window.location.href = redirectUrls[selectedValue];
