@@ -1,24 +1,16 @@
-.body{
-    margin: 0;
-    overflow-x: auto;
-}
 
+.pasar-outer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+}
 .container-pasar{
     background-image: url(../../../../images/wehea/Pasar/bg-lantai-pasar.png);
     background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
     background-size: 100%;
-    min-height: 105vh;
-    min-width: 1490px;
-}
-@media screen and (min-width: 1440px) {
-    .container-fashion{
-        background-image: url(../../../../images/wehea/Pasar/bg-lantai-pasar.png);
-        background-repeat: no-repeat;
-        background-size: 100vw;
-    }
-    
+    height: 800px;
+    width: 1440px;
+    position: relative;
 }
 
 
@@ -26,8 +18,8 @@
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
-    width: 250px;
-    top: 295px;
+    width: 300px;
+    top: 305px;
     left: -40px;
     /* xxx */
 
@@ -36,18 +28,18 @@
     transform: scaleX(-1);
     z-index: 3;
     position: absolute;
-    width: 150px;
-    top: 365px;
-    left: 100px;
+    width: 160px;
+    top: 385px;
+    left: 120px;
 }
 
 .labu2-pasar{
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
-    width: 180px;
-    top: 300px;
-    left: 100px;
+    width: 190px;
+    top: 317px;
+    left: 127px;
 }
 
 .mangga-pasar{
@@ -55,25 +47,25 @@
     z-index: 4;
     position: absolute;
     width: 200px;
-    top: 325px;
-    left: 180px;
-
+    top: 340px;
+    left: 201px;
+    
 }
 
 .apelIjo-pasar{
     z-index: 2;
     position: absolute;
     width: 200px;
-    top: 270px;
-    left: 240px;
+    top: 266px;
+    left: 279px;
 }
 
 .apel-pasar{
     z-index: 2;
     position: absolute;
     width: 215px;
-    top: 220px;
-    left: 270px;
+    top: 233px;
+    left: 329px;
 }
 
 .pasar-buah-pasar{
@@ -81,8 +73,8 @@
     z-index: 1;
     position: absolute;
     width: 300px;
-    top: 200px;
-    left: 100px;
+    top: 207px;
+    left: 142px;
 }
 
 .terong-pasar{
@@ -91,8 +83,8 @@
     z-index: 2;
     position: absolute;
     width: 260px;
-    top: 150px;
-    left: 300px;
+    top: 162px;
+    left: 359px;
 }
 
 
@@ -102,16 +94,16 @@
 .tenda-merah-kanan-pasar{
     z-index: 2;
     position: absolute;
-    width: 350px;
+    width:300px;
     top: 340px;
     left: 1150px;
-
+    
 }
 .labu-kanan-pasar{
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
-    width: 305px;
+    width: 255px;
     top: 150px;
     left: 65px;
 }
@@ -120,7 +112,7 @@
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
-    width: 185px;
+    width: 135px;
     top: 315px;
     left: 108px;
 }
@@ -128,16 +120,16 @@
 .mangga-kanan-pasar{
     z-index: 3;
     position: absolute;
-    width: 195px;
+    width: 145px;
     top: 495px;
     left: 1153px;
-
+    
 }
 
 .apelIjo-kanan-pasar{
     z-index: 2;
     position: absolute;
-    width: 167px;
+    width: 117px;
     top: 455px;
     left: 1125px;
 }
@@ -145,21 +137,21 @@
 .apel-kanan-pasar{
     z-index: 2;
     position: absolute;
-    width: 170px;
+    width: 120px;
     top: 390px;
     left: 1030px;
 }
 
 .arto{
     position: absolute;
-    width: 550px;
+    width: 500px;
     top: 80px;
     left: 700px;
 }
 .pasar-buah-kanan-pasar{
     z-index: 1;
     position: absolute;
-    width: 350px;
+    width: 300px;
     top: 275px;
     left: 1035px;
 }
@@ -169,7 +161,7 @@
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
-    width: 350px;
+    width: 300px;
     top: 50px;
     left: 405px;
 }
@@ -178,7 +170,7 @@
     z-index: 2;
     transform: scaleX(-1);
     position: absolute;
-    width: 230px;
+    width: 180px;
     top: 470px;
     left: 1305px;
 
@@ -186,7 +178,7 @@
 .market1{
     z-index: 2;
     position: absolute;
-    width: 300px;
+    width: 250px;
     top: 40px;
     left: 460px;
 }
@@ -194,7 +186,7 @@
 .market2{
     z-index: 2;
     position: absolute;
-    width: 350px;
+    width: 300px;
     top: 80px;
     left: 580px;
 }
@@ -202,14 +194,14 @@
 .merch1{
     z-index: 3;
     width: 200px;
-    top: 300px;
+    top: 250px;
     left: 700px;
     position: absolute;
 }
 .merch2{
     z-index: 3;
     width: 200px;
-    top: 330px;
+    top: 280px;
     left: 730px;
     position: absolute;
 }
@@ -220,4 +212,16 @@
     top: 450px;
     left: 780px;
     position: absolute;
+}
+
+@media screen and (min-width: 1441px) {
+    .container-fashion{
+        background-image: url(../../../../images/wehea/Pasar/bg-lantai-pasar.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    
 }
