@@ -5,7 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="container-fashion">
+<div class="fashion-outer">
+<div class="container-fashion">
         <div class="manekin1">
             <img src="{{ asset('images/wehea/fashion/Fashion/Manekin.svg') }}">
         </div>
@@ -36,8 +37,8 @@
         <div class="dress">
             <img src="{{ asset('images/wehea/fashion/Fashion/Dress.svg') }}">
         </div>
-
-    </div>
+        </div>  
+</div>
 @endsection
 
 @section('custom-js')

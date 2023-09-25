@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <div class="pasar-outer">
     <div class="container-pasar">
         <div class="labu-pasar">
             <img src="{{ asset('images/wehea/Pasar/Labu.svg') }}" />
@@ -64,16 +65,17 @@
         <img src="{{ asset('images/wehea/Pasar/Nala balai kota.svg') }}" />
     </div>
     <div class="market1">
-        <img src="{{ asset('images/wehea/Pasar/Market.svg') }}" />
+        <img src="{{ asset('images/wehea/Pasar/Market .svg') }}" />
     </div>
     <div class="market2">
-        <img src="{{ asset('images/wehea/Pasar/Market.svg') }}" />
+        <img src="{{ asset('images/wehea/Pasar/Market .svg') }}" />
     </div>
     <div class="arto">
         <img src="{{ asset('images/wehea/Pasar/Arto.svg') }}" />
     </div>
     <div class="tanda-seru1">
         <span>!</span>
+    </div>
     </div>
     </div>
 @endsection
