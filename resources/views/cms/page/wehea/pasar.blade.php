@@ -44,7 +44,7 @@
         <div class="tenda-merah-kanan-pasar">
             <img src="{{ asset('images/wehea/Pasar/pasarBuah2.svg') }}" />
         </div>
-    </div>
+
 
     <div class="apel-kanan-pasar">
         <img src="{{ asset('images/wehea/Pasar/Apel.svg') }}" />
@@ -75,6 +75,7 @@
     </div>
     <div class="tanda-seru1">
         <span>!</span>
+    </div>
     </div>
     </div>
     </div>
