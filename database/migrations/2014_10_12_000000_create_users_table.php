@@ -38,6 +38,7 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('booth_arcade')->default('0');
             $table->tinyInteger('credit')->default('5');
             $table->integer('point')->default('0');
+            $table->boolena('skkm')->default('0');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

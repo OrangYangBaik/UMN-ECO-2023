@@ -397,6 +397,11 @@ class AdminController extends Controller
             $user->point += $request->point;
             $user->scanned_arcade = false;
             $user->booth_arcade = 0;
+
+            if($user->point >= 1000){
+                $user->skkm = 1;
+            }
+            
             $user->save();
             
             return back();
