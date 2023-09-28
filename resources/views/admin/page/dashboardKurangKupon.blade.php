@@ -26,7 +26,7 @@
 @section('content')
     <div class="container text-white">
         <h1>Welcome to Admin Dashboard</h1>
-        <a href="/admin/verificationPoint/{{ $boothNum }}"
+        <a href="/admin/verificationDecreaseKupon/{{ $boothNum }}"
             style="display: inline-block; margin: 20px 0; color: white;">Wehea Admin
             Control Page</a>
         <table style="margin-bottom: 20px;">

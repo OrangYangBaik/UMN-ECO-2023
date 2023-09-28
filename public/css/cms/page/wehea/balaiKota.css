@@ -99,8 +99,22 @@ body {
 
 .wehea-tooltip-burung,
 .wehea-tooltip-kucing,
-.wehea-tooltip-kukang {
+.wehea-tooltip-kukang,
+.wehea-tooltip-2-air-mancur,
+.wehea-tooltip-2-papan-pengumuman {
     width: 107px;
+}
+
+.wehea-tooltip-2-papan-pengumuman {
+    left: 200px;
+    top: 350px;
+    z-index: 1;
+}
+
+.wehea-tooltip-2-air-mancur {
+    left: 625px;
+    top: 225px;
+    z-index: 1;
 }
 
 .wehea-tooltip-burung {
@@ -128,7 +142,9 @@ body {
 .wehea-kukang,
 .wehea-tooltip-burung,
 .wehea-tooltip-kucing,
-.wehea-tooltip-kukang {
+.wehea-tooltip-kukang,
+.wehea-tooltip-2-air-mancur,
+.wehea-tooltip-2-papan-pengumuman {
     cursor: pointer;
 }
 
@@ -370,6 +386,32 @@ body {
     right: 100px;
 }
 
+#ebook-fashion-balai-kota {
+    display: block;
+    text-decoration: none;
+    font-style: bobbyjones;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.pesta-tukar-kupon-ebook {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1;
+    background-color: white;
+    box-shadow: 15px 15px 25px gray;
+    color: #517148;
+}
+
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -389,11 +431,6 @@ body {
 }
 
 @media only screen and (min-width: 1441px) {
-    #balai-kota-outer {
-        overflow-x: auto;
-        width: 100vw;
-    }
-
     #balai-kota-container {
         min-height: 100vh;
         width: 100%;
@@ -478,9 +515,24 @@ body {
 
     .wehea-tooltip-burung,
     .wehea-tooltip-kucing,
-    .wehea-tooltip-kukang {
+    .wehea-tooltip-kukang,
+    .wehea-tooltip-2-papan-pengumuman,
+    .wehea-tooltip-2-air-mancur {
         /* 107px */
         width: 7.5vw;
+    }
+
+    .wehea-tooltip-2-papan-pengumuman {
+        /* 350px, 200px */
+        top: 35%;
+        left: 12.5%;
+    }
+
+    .wehea-tooltip-2-air-mancur {
+        /* 225px, 625px */
+        top: 40%;
+        left: 52.5%;
+        transform: translate(-50%, -50%);
     }
 
     .wehea-tooltip-burung {
@@ -666,5 +718,14 @@ body {
     .balai-kota-back-button-container button {
         width: 10.417vw;
         font-size: 1.2vw;
+    }
+
+    .pesta-tukar-kupon-ebook {
+        width: 13.889vw;
+        font-size: 1.2vw;
+    }
+
+    .pesta-tukar-kupon-ebook img {
+        width: 1.389vw !important;
     }
 }

@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="scanner-qr-booth-game-container">
-        <h1 class="mb-2 text-center">SWISH & DONATE</h1>
+        <h1 class="mb-2 text-center">PESTA TUKAR BAJU</h1>
         <div id="reader"></div>
     </div>
 @endsection

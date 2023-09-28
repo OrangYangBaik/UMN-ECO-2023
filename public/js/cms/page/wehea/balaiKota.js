@@ -19,17 +19,23 @@ $(document).ready(function () {
         $(this).fadeOut();
     });
 
-    $(".wehea-air-mancur").on("click", function () {
-        $(".balai-kota-air-mancur-overlay").css("display", "flex");
-    });
+    $(".wehea-air-mancur, .wehea-tooltip-2-air-mancur").on(
+        "click",
+        function () {
+            $(".balai-kota-air-mancur-overlay").css("display", "flex");
+        }
+    );
 
     $(".back-button-air-mancur").on("click", function (event) {
         $(".balai-kota-air-mancur-overlay").hide();
     });
 
-    $(".wehea-papan-pengumuman").on("click", function () {
-        $(".balai-kota-papan-pengumuman-overlay").css("display", "flex");
-    });
+    $(".wehea-papan-pengumuman, .wehea-tooltip-2-papan-pengumuman").on(
+        "click",
+        function () {
+            $(".balai-kota-papan-pengumuman-overlay").css("display", "flex");
+        }
+    );
 
     $(".back-button-papan-pengumuman").on("click", function () {
         $(".balai-kota-papan-pengumuman-overlay").hide();
