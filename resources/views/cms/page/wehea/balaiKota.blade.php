@@ -2,51 +2,9 @@
 
 @section('custom-css')
     <link rel="stylesheet" href="{{ asset('css/cms/page/wehea/balaiKota.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cms/page/wehea/floatingIcons.css') }}">
 @endsection
 
 @section('content')
-    {{-- <div class="d-flex align-items-center flex-column container" style="padding: 100px 0 50px 0;">
-
-        <div class="mb-3">
-            <button class="btn btn-primary" style="width: 300px;">
-                <a href="/wehea/info" class="text-decoration-none text-white">View my info</a>
-            </button>
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-primary" style="width: 300px;">
-                <a href="/scannerPageMain" class="text-decoration-none text-white">Scan QR Code Arcade</a>
-            </button>
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-primary" style="width: 300px;">
-                <a href="/scannerPageDapatKupon" class="text-decoration-none text-white">Scan QR Code Get Kupon</a>
-            </button>
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-primary" style="width: 300px;">
-                <a href="/scannerPageKurangKupon" class="text-decoration-none text-white">Scan QR Code Tukar Kupon</a>
-            </button>
-
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-primary" style="width: 300px;">
-                <a href="/scannerPageDapatCredit" class="text-decoration-none text-white">Scan QR Code Side Quest</a>
-            </button>
-
-        </div>
-        <div class="mb-3">
-            <button class="btn btn-primary" style="width: 300px;">
-                <a href="/scannerPageMerchandise" class="text-decoration-none text-white">Scan QR Code Merchandise</a>
-            </button>
-        </div>
-        @if ($isJoin == 0)
-            <form action="/wehea/register" method="post">
-                @csrf
-                <button type="submit" class="btn btn-primary" style="width: 300px;">Join Wehea</button>
-            </form>
-        @endif
-    </div> --}}
     @include('cms.page.wehea.floatingIcons')
     <div id="balai-kota-outer">
         <div id="balai-kota-container">
@@ -84,6 +42,12 @@
                 <img src="{{ asset('images/wehea/balaiKota/Tong sampah_.svg') }}" alt="Tong Sampah" />
             </div>
 
+            <div id="tooltip-air-mancur" class="wehea-pict wehea-tooltip-2 wehea-tooltip-2-air-mancur">
+                <img src="{{ asset('images/wehea/balaiKota/Tooltip.svg') }}" alt="Tooltip Air Mancur" />
+            </div>
+            <div id="tooltip-papan-pengumuman" class="wehea-pict wehea-tooltip-2 wehea-tooltip-2-papan-pengumuman">
+                <img src="{{ asset('images/wehea/balaiKota/Tooltip.svg') }}" alt="Tooltip Papan Pengumuman" />
+            </div>
             <div id="tooltip-burung" class="wehea-pict wehea-tooltip wehea-tooltip-burung">
                 <img src="{{ asset('images/wehea/balaiKota/Tooltip.svg') }}" alt="Tooltip Burung" />
             </div>
@@ -147,6 +111,13 @@
 
             <div class="balai-kota-papan-pengumuman-overlay">
                 <div class="balai-kota-papan-pengumuman-content">
+                    <a id="ebook-fashion-balai-kota"
+                        href="https://drive.google.com/drive/folders/1-aivT_-fW5VLaXFaQQIuZ8OjY58-UAcx" target="_blank">
+                        <div class="pesta-tukar-kupon-ebook">
+                            <img src="{{ asset('images/nawasena/Vector.svg') }}" alt="EBook Icon" style="width: 20px;" />
+                            <div>AKSES E-BOOK</div>
+                        </div>
+                    </a>
                     <div class="wehea-papan-pengumuman-2D">
                         <img src="{{ asset('images/wehea/balaiKota/2D/Io.png') }}" alt="Papan Pengumuman 2D" />
                     </div>
@@ -162,7 +133,8 @@
                     </div>
                     @if ($isJoin == false)
                         <div class="wehea-poster-daftar-wehea">
-                            <img src="{{ asset('images/wehea/balaiKota/poster-daftar.png') }}" alt="Poster Daftar Wehea" />
+                            <img src="{{ asset('images/wehea/balaiKota/poster-daftar.png') }}"
+                                alt="Poster Daftar Wehea" />
                         </div>
                     @else
                         <div class="wehea-poster-sukses-daftar-wehea">
@@ -184,5 +156,4 @@
 
 @section('custom-js')
     <script src="{{ asset('js/cms/page/wehea/balaiKota.js') }}"></script>
-    <script src="{{ asset('js/cms/page/wehea/floatingIcons.js') }}"></script>
 @endsection

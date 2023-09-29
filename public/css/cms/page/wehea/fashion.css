@@ -1,0 +1,156 @@
+.fashion-outer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+}
+
+.container-fashion{
+    background-image: url(../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 800px;
+    width: 1440px;
+    position: relative;
+}
+
+
+.manekin1 {
+    position: absolute;
+    width: 250px;
+    top: 150px;
+    left: 400px;
+    z-index: 0;
+}
+.manekin2 {
+    position: absolute;
+    width: 250px;
+    top: 100px;
+    left: 520px;
+    z-index: 2;
+}
+.manekin3 {
+    position: absolute;
+    width: 250px;
+    top: 155px;
+    left: 640px;
+    z-index: 2;
+}
+.lukisan {
+    position: absolute;
+    width: 250px;
+    top: 100px;
+    left: 40px;
+    z-index: 2;
+}
+.rakBaju {
+    transform: rotate(3deg);
+    position: absolute;
+    width: 350px;
+    top: 280px;
+    left: 10px;
+    z-index: 1;
+}
+
+.cermin {
+    transform: rotate(3deg);
+    position: absolute;
+    width: 350px;
+    top: 140px;
+    left: 165px;
+}
+
+.nala {
+    transform: scaleX(-1);
+    position: absolute;
+    width: 280px;
+    top: 240px;
+    left: 300px;
+}
+
+.baju {
+    position: absolute;
+    width: 400px;
+    top: 420px;
+    left: 1020px;
+    z-index: 3;
+}
+
+.celana {
+    position: absolute;
+    width: 400px;
+    top: 250px;
+    left: 770px;
+    z-index: 2;
+}
+.dress {
+    position: absolute;
+    width: 400px;
+    top: 350px;
+    left: 890px;
+    z-index: 2;
+}
+
+@media screen and (min-width: 1441px) {
+    .container-fashion {
+        background-image: url(../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-height: 100vh;
+        width: 100vw;
+    }
+    .manekin1 {
+        width: 17.361111111111vw;
+        top: 20%;
+        left: 27%;
+    }
+    .manekin2 {
+        width: 17.361111111111vw;
+        top: 17%;
+        left: 34%;
+    }
+    .manekin3 {
+        width: 17.361111111111vw;
+        top: 20%;
+        left: 43%;
+    }
+    .lukisan {
+        width: 17.361111111111vw;
+        top: 8%;
+        left: 2%;
+    }
+    .rakBaju {
+        width: 24.305555555556vw;
+        top: 30%;
+        left: 1%;
+    }
+    
+    .cermin {
+        width: 24.305555555556vw;
+        top: 13%;
+        left: 11%;
+    }
+    
+    .nala {
+        width: 19.444444444444vw;
+        top: 30%;
+        left: 20%;
+    }
+    
+    .baju {
+        width: 27.777777777778vw;
+        top: 41%;
+        left: 63%;
+    }
+    
+    .celana {
+        width: 27.777777777778vw;
+        top: 31%;
+        left: 47%;
+    }
+    .dress {
+        width: 27.777777777778vw;
+        top: 36%;
+        left: 55%;
+    }
+}

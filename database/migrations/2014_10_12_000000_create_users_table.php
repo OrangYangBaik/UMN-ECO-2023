@@ -16,10 +16,10 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('nama');
-            $table->string('nim');
-            $table->string('angkatan');
-            $table->string('fakultas');
-            $table->string('prodi');
+            $table->string('nim')->nullable();
+            $table->string('angkatan')->nullable();
+            $table->string('fakultas')->nullable();
+            $table->string('prodi')->nullable();
             $table->string('email')->unique();
             $table->string('line');
             $table->string('instagram');
@@ -38,6 +38,7 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('booth_arcade')->default('0');
             $table->tinyInteger('credit')->default('5');
             $table->integer('point')->default('0');
+            $table->boolean('skkm')->default('0');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

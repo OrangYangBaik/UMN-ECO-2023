@@ -16,7 +16,7 @@ $(document).ready(function () {
         rules: {
             "email-student": {
                 required: true,
-                correct_email_umn: true,
+                // correct_email_umn: true,
             },
             password: {
                 required: true,

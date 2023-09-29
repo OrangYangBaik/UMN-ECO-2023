@@ -1,0 +1,227 @@
+
+.pasar-outer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+}
+.container-pasar{
+    background-image: url(../../../../images/wehea/Pasar/bg-lantai-pasar.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 800px;
+    width: 1440px;
+    position: relative;
+}
+
+
+.tenda-merah-pasar{
+    transform: scaleX(-1);
+    z-index: 2;
+    position: absolute;
+    width: 300px;
+    top: 305px;
+    left: -40px;
+    /* xxx */
+
+}
+.labu-pasar{
+    transform: scaleX(-1);
+    z-index: 3;
+    position: absolute;
+    width: 160px;
+    top: 385px;
+    left: 120px;
+}
+
+.labu2-pasar{
+    transform: scaleX(-1);
+    z-index: 2;
+    position: absolute;
+    width: 190px;
+    top: 317px;
+    left: 127px;
+}
+
+.mangga-pasar{
+    transform: scaleX(-1);
+    z-index: 4;
+    position: absolute;
+    width: 200px;
+    top: 340px;
+    left: 201px;
+    
+}
+
+.apelIjo-pasar{
+    z-index: 2;
+    position: absolute;
+    width: 200px;
+    top: 266px;
+    left: 279px;
+}
+
+.apel-pasar{
+    z-index: 2;
+    position: absolute;
+    width: 215px;
+    top: 233px;
+    left: 329px;
+}
+
+.pasar-buah-pasar{
+    transform: scaleX(-1);
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    top: 207px;
+    left: 142px;
+}
+
+.terong-pasar{
+    transform: rotate(90deg);
+    transform: scaleX(-1);
+    z-index: 2;
+    position: absolute;
+    width: 260px;
+    top: 162px;
+    left: 359px;
+}
+
+
+
+/* KANAN */
+
+.tenda-merah-kanan-pasar{
+    z-index: 2;
+    position: absolute;
+    width:300px;
+    top: 340px;
+    left: 1150px;
+    
+}
+.labu-kanan-pasar{
+    transform: scaleX(-1);
+    z-index: 2;
+    position: absolute;
+    width: 255px;
+    top: 150px;
+    left: 65px;
+}
+
+.labu2-kanan-pasar{
+    transform: scaleX(-1);
+    z-index: 2;
+    position: absolute;
+    width: 135px;
+    top: 315px;
+    left: 108px;
+}
+
+.mangga-kanan-pasar{
+    z-index: 3;
+    position: absolute;
+    width: 145px;
+    top: 495px;
+    left: 1153px;
+    
+}
+
+.apelIjo-kanan-pasar{
+    z-index: 2;
+    position: absolute;
+    width: 117px;
+    top: 455px;
+    left: 1125px;
+}
+
+.apel-kanan-pasar{
+    z-index: 2;
+    position: absolute;
+    width: 120px;
+    top: 390px;
+    left: 1030px;
+}
+
+.arto{
+    position: absolute;
+    width: 500px;
+    top: 80px;
+    left: 700px;
+}
+.pasar-buah-kanan-pasar{
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    top: 275px;
+    left: 1035px;
+}
+
+.terong-kanan-pasar{
+    transform: rotate(90deg);
+    transform: scaleX(-1);
+    z-index: 2;
+    position: absolute;
+    width: 300px;
+    top: 50px;
+    left: 405px;
+}
+
+.daging-kanan-pasar{
+    z-index: 2;
+    transform: scaleX(-1);
+    position: absolute;
+    width: 180px;
+    top: 470px;
+    left: 1305px;
+
+}
+.market1{
+    z-index: 2;
+    position: absolute;
+    width: 250px;
+    top: 40px;
+    left: 460px;
+}
+
+.market2{
+    z-index: 2;
+    position: absolute;
+    width: 300px;
+    top: 80px;
+    left: 580px;
+}
+
+.merch1{
+    z-index: 3;
+    width: 200px;
+    top: 250px;
+    left: 700px;
+    position: absolute;
+}
+.merch2{
+    z-index: 3;
+    width: 200px;
+    top: 280px;
+    left: 730px;
+    position: absolute;
+}
+.nala{
+    transform: scaleX(-1);
+    z-index: 3;
+    width: 250px;
+    top: 450px;
+    left: 780px;
+    position: absolute;
+}
+
+@media screen and (min-width: 1441px) {
+    .container-fashion{
+        background-image: url(../../../../images/wehea/Pasar/bg-lantai-pasar.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    
+}

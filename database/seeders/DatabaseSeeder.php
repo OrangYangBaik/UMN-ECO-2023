@@ -269,32 +269,6 @@ class DatabaseSeeder extends Seeder
             'point' => 0,
             'booth_arcade' => 0
         ]);
-
-        User::create([
-            'id' => Str::uuid(),
-            'nama' => 'Bryan Richie',
-            'nim' => '00000056044',
-            'angkatan' => '2021',
-            'fakultas' => 'Teknik dan Informatika',
-            'prodi' => 'Informatika',
-            'email' => 'bryan.richie@student.umn.ac.id',
-            'line' => '1234556',
-            'instagram' => '1234556',
-            'password' => '$2y$10$d25hKWLtzt7rhRYP.XkjOOKUMZnLRRw2ZoQc/OFFRPZRnLHR0rl2S',
-            'wehea' => 0,
-            'meru_betiri' => 0,
-            'scanned_arcade' => 0,
-            'scanned_merchandise' => 0,
-            'scanned_dapat_kupon' => 0,
-            'scanned_tukar_kupon' => 0,
-            'booth_merchandise' => 0,
-            'booth_dapat_kupon' => 0,
-            'booth_tukar_kupon' => 0,
-            'credit' => 5,
-            'point' => 0,
-            'booth_arcade' => 0
-        ]);
-
         
         // Divisi UMN ECO 2023
         Team::create([

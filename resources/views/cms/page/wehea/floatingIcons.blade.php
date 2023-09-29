@@ -2,6 +2,7 @@
     $currentUrl = url()->current();
     $urlSegments = explode('/', $currentUrl);
     $lastParameter = end($urlSegments);
+    $decodedParam = urldecode($lastParameter);
 @endphp
 
 @if ($user)
@@ -25,24 +26,26 @@
     <label for="locationSelect" style="display:none;">Select a Location:</label>
     <select id="locationSelect" name="location">
         <option value="" disabled selected>
-            @if ($lastParameter == 'wehea')
+            @if ($decodedParam == 'wehea')
                 BALAI KOTA
             @else
-                {{ strtoupper($lastParameter) }}
+                {{ strtoupper($decodedParam) }}
             @endif
         </option>
-        @if ($lastParameter != 'wehea')
+        @if ($decodedParam != 'wehea')
             <option value="1">BALAI KOTA</option>
         @endif
-        @if ($lastParameter != 'carnival')
+        @if ($decodedParam != 'carnival')
             <option value="2">CARNIVAL</option>\
         @endif
-        @if ($lastParameter != 'fashion')
-            <option value="3">FASHION</option>
+        @if ($decodedParam != 'fashion')
+            <option value="3" disabled>FASHION</option>
         @endif
-        <option value="4">GEDUNG KESENIAN</option>
-        @if ($lastParameter != 'fleamarket')
-            <option value="4">FLEAMARKET</option>
+        @if ($decodedParam != 'gedung kesenian')
+            <option value="4">GEDUNG KESENIAN</option>
+        @endif
+        @if ($decodedParam != 'fleamarket')
+            <option value="5" disabled>FLEAMARKET</option>
         @endif
     </select>
 </div>

@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="scanner-qr-booth-game-container">
-        <h1 class="mb-2 text-center">SWISH & DONATE</h1>
+        <h1 class="mb-2 text-center">PESTA TUKAR BAJU</h1>
         <div id="reader"></div>
     </div>
 @endsection
@@ -73,7 +73,7 @@
                                 document.getElementById('reader').remove();
                                 alert(response2.message);
                                 //ini routenya (buat redirect) kalo dia udh ngescan dan bener datanya 
-                                window.location.href = "{{ route('homepage') }}";
+                                window.location.href = "{{ route('wehea-landing') }}";
                             } else {
                                 alert(response1.message);
                             }

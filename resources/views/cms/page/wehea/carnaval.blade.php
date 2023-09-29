@@ -1,7 +1,7 @@
 @extends('cms.template.app')
 
 @section('custom-css')
-<link rel="stylesheet" href="{{ asset('css/cms/page/wehea/carnaval.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cms/page/wehea/carnaval.css') }}">
 @endsection
 
 @section('content')
@@ -167,7 +167,6 @@
       </a>
       <img class="nala-carnival" src="{{ asset('images/wehea/carnaval/Nala balai kota.svg') }}">
     </div>
-  </div>
 @endsection
 
 @section('custom-js')

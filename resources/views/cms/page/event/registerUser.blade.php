@@ -40,7 +40,8 @@
                     <h5 class="mt-3">Angkatan</h5>
                     <div class="input-group">
                         <select class="form-select" id="angkatan" name="angkatan">
-                            <option @if (old('angkatan') != '2020') selected @endif value="2020">2020</option>
+                            <option @if (old('angkatan') != '') selected @endif value="">Eksternal</option>
+                            <option @if (old('angkatan') === '2020') selected @endif value="2020">2020</option>
                             <option @if (old('angkatan') === '2021') selected @endif value="2021">2021</option>
                             <option @if (old('angkatan') === '2022') selected @endif value="2022">2022</option>
                             <option @if (old('angkatan') === '2023') selected @endif value="2023">2023</option>
@@ -49,7 +50,8 @@
                     <h5 class="mt-3">Fakultas</h5>
                     <div class="input-group">
                         <select class="form-select" id="fakultas" name="fakultas">
-                            <option @if (old('fakultas') != 'Teknik dan Informatika') selected @endif value="Teknik dan Informatika">Teknik
+                            <option @if (old('fakultas') != '') selected @endif value="">Eksternal</option>
+                            <option @if (old('fakultas') === 'Teknik dan Informatika') selected @endif value="Teknik dan Informatika">Teknik
                                 dan
                                 Informatika</option>
                             <option @if (old('fakultas') === 'Bisnis') selected @endif value="Bisnis">Bisnis</option>
@@ -64,7 +66,10 @@
                     <h5 class="mt-3">Program Studi</h5>
                     <div class="input-group">
                         <select class="form-select" id="program-studi" name="program-studi">
-                            <option @if (old('program-studi') != 'Informatika') selected @endif value="Informatika">Informatika
+                            <option @if (old('program-studi') != '') selected @endif value="">Eksternal
+                            </option>
+                            <option @if (old('program-studi') === 'Informatika') selected @endif value="Informatika">
+                                Informatika
                             </option>
                             <option @if (old('program-studi') === 'Teknik Komputer') selected @endif value="Teknik Komputer">Teknik
                                 Komputer</option>
@@ -120,7 +125,8 @@
                     <h5 class="mt-3">Confirmation Password</h5>
                     <input type="password" placeholder="Password"
                         class="form-control @error('confirmation-password') is-invalid @enderror"
-                        id="confirmation-password" name="confirmation-password" value="{{ old('confirmation-password') }}">
+                        id="confirmation-password" name="confirmation-password"
+                        value="{{ old('confirmation-password') }}">
                     @error('confirmation-password')
                         <div class="invalid-feedback">
                             {{ $message }}
