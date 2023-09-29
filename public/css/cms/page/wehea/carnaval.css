@@ -77,6 +77,7 @@ body {
   width: 1250px;
   top: 0;
   left: 60px;
+  pointer-events: none;
   /* display: none; */
 }
 
@@ -257,7 +258,7 @@ body {
 
 /* tanda seru */
 
-.tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-carnaval {
+.tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-muda-carnaval {
   z-index: 5;
   width: 99px;
   height: 95px;
@@ -269,7 +270,7 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.16);
 }
 
-.tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-carnaval span {
+.tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-muda-carnaval span {
   font-family: Bobby Jones Soft;
   font-size: 64px;
   font-style: normal;
@@ -318,7 +319,7 @@ body {
   color: #275280;
 }
 
-.tanda-seru-biru-carnaval {
+.tanda-seru-biru-muda-carnaval {
   z-index: 3;
   position: absolute;
   top: 429px;
@@ -334,6 +335,112 @@ body {
   left: 589px;  
 }
 
+.button-tenda-merah, .button-tenda-oren, .button-tenda-kuning, .button-tenda-biru-tua, .button-tenda-biru-muda {
+  cursor: pointer;
+}
+
+.clickable-tenda-merah, .clickable-tenda-oren, .clickable-tenda-kuning, .clickable-tenda-biru-tua, .clickable-tenda-biru-muda {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  margin: auto;
+  border-radius: 52.757px;
+  border: 9.892px solid #DB4A26;
+  background: #FFF;
+  width: 1000px;
+  height: 585px;
+  z-index: 9999;
+}
+
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9998;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.clickable-tenda-merah:target, .clickable-tenda-oren:target, .clickable-tenda-kuning:target, .clickable-tenda-biru-tua:target, .clickable-tenda-biru-muda:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.clickable-tenda-merah button, .clickable-tenda-oren button, .clickable-tenda-kuning button, .clickable-tenda-biru-tua button, .clickable-tenda-biru-muda button {
+  position: absolute;
+  right: 10px;
+  bottom: -102px;
+  padding: 12px 18px 12px 24px;
+  align-items: center;
+  gap: 6px;
+  border-radius: 9px;
+  border: 3.75px solid var(--Black, #1B1B1B);
+  background: var(--colors-brand-macchiato, #D0C5A9);
+  color: var(--Black, #1B1B1B);
+  text-align: center;
+  cursor: pointer;
+
+  /* Desktop/Text/Link Large */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: 0.75px;
+  z-index: 9999;
+}
+
+.clickable-tenda-merah h2, .clickable-tenda-oren h2, .clickable-tenda-kuning h2, .clickable-tenda-biru-tua h2, .clickable-tenda-biru-muda h2 {
+  color: #DB4A26;
+  text-align: center;
+  margin: 30px 0;
+  /* Desktop/Display/Huge Bold */
+  font-family: Bobby Jones Soft;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 88px; /* 137.5% */
+  letter-spacing: 1px;
+}
+
+.clickable-tenda-merah p, .clickable-tenda-oren p, .clickable-tenda-kuning p, .clickable-tenda-biru-tua p, .clickable-tenda-biru-muda p {
+  color: var(--colors-brand-sap-green, #1F576F);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* Desktop/Display/Small */
+  font-family: Montserrat;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 133.333% */
+  margin: 0 30px;
+}
+
+.clickable-tenda-merah .nala-balai-kota img, .clickable-tenda-oren .nala-balai-kota img, .clickable-tenda-kuning .nala-balai-kota img, .clickable-tenda-biru-tua .nala-balai-kota img, .clickable-tenda-biru-muda .nala-balai-kota img {
+  width: 127px;
+  flex-shrink: 0;
+  z-index: 9999;
+  position: absolute;
+  right: 50px;
+  top: 18px; 
+}
+
+.popup-tenda {
+  width: 250px;
+  margin: auto;
+  transform: scaleX(-1)
+}
 
 @media only screen and (min-width: 1441px) {
   .container-carnaval {
@@ -460,7 +567,7 @@ body {
     left: 2.5vw;
   }
 
-  .tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-carnaval {
+  .tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-muda-carnaval {
     width: 7%;
     height: 7%;
     padding: 0px 1vw 2vw 1vw;
@@ -468,7 +575,7 @@ body {
     border: 0.3vw solid var(--Black, #1B1B1B);
   }
   
-  .tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-carnaval span {
+  .tanda-seru-merah-carnaval, .tanda-seru-oren-carnaval, .tanda-seru-kuning-carnaval, .tanda-seru-biru-tua-carnaval, .tanda-seru-biru-muda-carnaval span {
     font-size: 5vw;
     line-height: 6vw;
   }
@@ -493,9 +600,50 @@ body {
     left: 66vw;
   }
   
-  .tanda-seru-biru-carnaval {
+  .tanda-seru-biru-muda-carnaval {
     top: 32vw;
     left: 76vw;
   }
 
+}
+
+@media only screen and (max-width: 1024px) {
+  .clickable-tenda-merah, .clickable-tenda-oren, .clickable-tenda-kuning, .clickable-tenda-biru-tua, .clickable-tenda-biru-muda {
+    width: 100%;
+    height: 70%;
+  }
+
+}
+
+@media only screen and (max-width: 390px) {
+  .clickable-tenda-merah, .clickable-tenda-oren, .clickable-tenda-kuning, .clickable-tenda-biru-tua, .clickable-tenda-biru-muda {
+    width: 100%;
+    height: 70%;
+  }
+
+  .clickable-tenda-merah button, .clickable-tenda-oren button, .clickable-tenda-kuning button, .clickable-tenda-biru-tua button, .clickable-tenda-biru-muda button {
+    padding: 0.6vw 1vw 0.5vw 1.2vw;
+    font-size: 5vw;
+  }
+  
+  .clickable-tenda-merah h2, .clickable-tenda-oren h2, .clickable-tenda-kuning h2, .clickable-tenda-biru-tua h2, .clickable-tenda-biru-muda h2 {
+    margin: 8vw 0;
+    font-size: 9vw;
+    line-height: 42px;
+  }
+  
+  .clickable-tenda-merah p, .clickable-tenda-oren p, .clickable-tenda-kuning p, .clickable-tenda-biru-tua p, .clickable-tenda-biru-muda p {
+    font-size: 3vw;
+    line-height: 21px;
+  }
+  
+  .clickable-tenda-merah .nala-balai-kota img, .clickable-tenda-oren .nala-balai-kota img, .clickable-tenda-kuning .nala-balai-kota img, .clickable-tenda-biru-tua .nala-balai-kota img, .clickable-tenda-biru-muda .nala-balai-kota img {
+    width: 12%;
+    right: 20px;
+    top: 10px;
+  }
+
+  .popup-tenda {
+    width: 50%;
+  }
 }
