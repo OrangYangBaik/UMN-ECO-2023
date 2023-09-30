@@ -71,8 +71,8 @@
 .baju {
     position: absolute;
     width: 400px;
-    top: 420px;
-    left: 1020px;
+    top: 356px;
+    left: 956px;
     z-index: 3;
 }
 
@@ -86,8 +86,8 @@
 .dress {
     position: absolute;
     width: 400px;
-    top: 350px;
-    left: 890px;
+    top: 304px;
+    left: 862px;
     z-index: 2;
 }
 
@@ -153,4 +153,56 @@
         top: 36%;
         left: 55%;
     }
+}
+
+
+/* pop up content */
+/* CSS untuk gaya pop-up */
+#openPopup{
+    position: relative;
+    width: 0px;
+    height: 0px;
+    left: 1085px;
+    top: 237px;
+    background-color: #A4CCCB;
+    border-color: #A4CCCB;
+    z-index: 3;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    display: none;
+}
+
+.popup-content {
+    background-color: #fff;
+    top: 290px;
+    width: 750px;
+    max-width: 1441px;
+    left: 237px;
+    padding: 28px;
+    border-radius: 20px;
+    border: 25px;
+    border-color:darkslateblue;
+    position: absolute;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.tokoBaju2d{
+    position: relative;
+    width: 20px;
+
 }
