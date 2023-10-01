@@ -44,40 +44,39 @@
         <div class="tenda-merah-kanan-pasar">
             <img src="{{ asset('images/wehea/Pasar/pasarBuah2.svg') }}" />
         </div>
+        <div class="apel-kanan-pasar">
+             <img src="{{ asset('images/wehea/Pasar/Apel.svg') }}" />
+        </div>
+        <div class="apelIjo-kanan-pasar">
+            <img src="{{ asset('images/wehea/Pasar/Apel ijo.svg') }}" />
+        </div>
+        <div class="daging-kanan-pasar">
+            <img src="{{ asset('images/wehea/Pasar/Daging.svg') }}" />
+        </div>
+        <div class="merch1">
+            <img src="{{ asset('images/wehea/Pasar/Merch.svg') }}" />
+        </div>
+        <div class="merch2">
+            <img src="{{ asset('images/wehea/Pasar/Merch.svg') }}" />
+        </div>
+        <div class="nala">
+            <img src="{{ asset('images/wehea/Pasar/Nala balai kota.svg') }}" />
+        </div>
+        <div class="market1">
+            <img src="{{ asset('images/wehea/Pasar/Market .svg') }}" />
+        </div>
+        <div class="market2">
+            <img src="{{ asset('images/wehea/Pasar/Market .svg') }}" />
+        </div>
+        <div class="arto">
+            <img src="{{ asset('images/wehea/Pasar/Arto.svg') }}" />
+        </div>
+        <div class="tanda-seru1">
+            <span>!</span>
+        </div>
     </div>
-
-    <div class="apel-kanan-pasar">
-        <img src="{{ asset('images/wehea/Pasar/Apel.svg') }}" />
-    </div>
-    <div class="apelIjo-kanan-pasar">
-        <img src="{{ asset('images/wehea/Pasar/Apel ijo.svg') }}" />
-    </div>
-    <div class="daging-kanan-pasar">
-        <img src="{{ asset('images/wehea/Pasar/Daging.svg') }}" />
-    </div>
-    <div class="merch1">
-        <img src="{{ asset('images/wehea/Pasar/Merch.svg') }}" />
-    </div>
-    <div class="merch2">
-        <img src="{{ asset('images/wehea/Pasar/Merch.svg') }}" />
-    </div>
-    <div class="nala">
-        <img src="{{ asset('images/wehea/Pasar/Nala balai kota.svg') }}" />
-    </div>
-    <div class="market1">
-        <img src="{{ asset('images/wehea/Pasar/Market .svg') }}" />
-    </div>
-    <div class="market2">
-        <img src="{{ asset('images/wehea/Pasar/Market .svg') }}" />
-    </div>
-    <div class="arto">
-        <img src="{{ asset('images/wehea/Pasar/Arto.svg') }}" />
-    </div>
-    <div class="tanda-seru1">
-        <span>!</span>
-    </div>
-    </div>
-    </div>
+</div>
+    
 @endsection
 
 @section('custom-js')
