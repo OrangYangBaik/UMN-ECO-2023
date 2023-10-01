@@ -9,7 +9,7 @@
     <div class="register-form">
         <div class="row form-regis container m-auto py-5">
             <div class="col-md-8 m-auto mt-5">
-                <h1 class="register-title">WELCOME TO NAWASENA</h1>
+                <h1 class="register-title">WELCOME TO UMN ECO 2023</h1>
                 <form action="/register" method="POST" id="form-register" style="width:80%; margin:auto">
                     @csrf
                     <h5 class="mt-3">Nama Lengkap</h5>

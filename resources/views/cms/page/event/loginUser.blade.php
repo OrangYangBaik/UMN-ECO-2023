@@ -9,7 +9,7 @@
     <div class="login-form">
         <div class="row container m-auto py-5">
             <div class="col-md-8 m-auto mt-5">
-                <h1 class="login-title">WELCOME TO NAWASENA</h1>
+                <h1 class="login-title">WELCOME TO UMN ECO 2023</h1>
 
                 <form action="/login" method="POST" id="form-login">
                     @csrf

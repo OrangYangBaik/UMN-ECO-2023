@@ -1,10 +1,14 @@
-.fashion-outer{
+body {
+    overflow-x: hidden;
+}
+
+.fashion-outer {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100vw;
 }
 
-.container-fashion{
+.container-fashion {
     background-image: url(../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -13,7 +17,6 @@
     width: 1440px;
     position: relative;
 }
-
 
 .manekin1 {
     position: absolute;
@@ -124,25 +127,25 @@
         top: 30%;
         left: 1%;
     }
-    
+
     .cermin {
         width: 24.305555555556vw;
         top: 13%;
         left: 11%;
     }
-    
+
     .nala {
         width: 19.444444444444vw;
         top: 30%;
         left: 20%;
     }
-    
+
     .baju {
         width: 27.777777777778vw;
         top: 41%;
         left: 63%;
     }
-    
+
     .celana {
         width: 27.777777777778vw;
         top: 31%;
@@ -155,17 +158,16 @@
     }
 }
 
-
 /* pop up content */
 /* CSS untuk gaya pop-up */
-#openPopup{
+#openPopup {
     position: relative;
     width: 0px;
     height: 0px;
     left: 1085px;
     top: 237px;
-    background-color: #A4CCCB;
-    border-color: #A4CCCB;
+    background-color: #a4cccb;
+    border-color: #a4cccb;
     z-index: 3;
 }
 
@@ -189,7 +191,7 @@
     padding: 28px;
     border-radius: 20px;
     border: 25px;
-    border-color:darkslateblue;
+    border-color: darkslateblue;
     position: absolute;
     display: block;
 }
@@ -201,8 +203,8 @@
     cursor: pointer;
     font-size: 24px;
 }
-.tokoBaju2d{
-    position: relative;
-    width: 20px;
 
+#tokoBaju2D {
+    position: absolute;
+    width: 20px;
 }

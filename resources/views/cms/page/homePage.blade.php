@@ -12,8 +12,7 @@
         </audio>
         @include('cms.page.preEvent.jnanaSanka')
         <div class="maskot-nala">
-            <img class="hoverable-obj" id="maskot-nala" src="{{ asset('images/treasureMap/nala-maskot.svg') }}"
-                alt="Maskot Nala" />
+            <img id="maskot-nala" src="{{ asset('images/treasureMap/nala-maskot.svg') }}" alt="Maskot Nala" />
         </div>
         <div class="garis-putus">
             <img class="hoverable-obj" id="garis-putus-1" src="{{ asset('images/treasureMap/garis-putus.svg') }}"

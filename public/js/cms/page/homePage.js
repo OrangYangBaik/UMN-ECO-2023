@@ -55,6 +55,12 @@ $(document).ready(function () {
         setTimeout(function () {
             window.location.href = "/nawasena";
         }, 3000);
+
+        // Set a timeout to hide the overlay after 3 seconds
+        setTimeout(function () {
+            $(".overlay-container").css("display", "none");
+            $("body").css("overflow", "auto");
+        }, 3000);
     });
 
     $(".wehea").click(function () {
@@ -70,6 +76,12 @@ $(document).ready(function () {
 
         setTimeout(function () {
             window.location.href = "/wehea";
+        }, 3000);
+
+        // Set a timeout to hide the overlay after 3 seconds
+        setTimeout(function () {
+            $(".overlay-container").css("display", "none");
+            $("body").css("overflow", "auto");
         }, 3000);
     });
 });

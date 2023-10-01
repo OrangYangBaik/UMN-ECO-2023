@@ -39,13 +39,13 @@
             <option value="2">CARNIVAL</option>\
         @endif
         @if ($decodedParam != 'fashion')
-            <option value="3" disabled>FASHION</option>
+            <option value="3">FASHION</option>
         @endif
         @if ($decodedParam != 'gedung kesenian')
             <option value="4">GEDUNG KESENIAN</option>
         @endif
         @if ($decodedParam != 'fleamarket')
-            <option value="5" disabled>FLEAMARKET</option>
+            <option value="5">FLEAMARKET</option>
         @endif
     </select>
 </div>

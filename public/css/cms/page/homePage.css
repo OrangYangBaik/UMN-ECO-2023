@@ -66,8 +66,7 @@
 .overlay-content img {
     max-width: 100%;
     max-height: 100%;
-    animation: zoom-in 3s ease-in-out;
-    animation-fill-mode: forwards;
+    animation: zoom-in 3s ease-in-out forwards;
 }
 
 @keyframes zoom-in {
