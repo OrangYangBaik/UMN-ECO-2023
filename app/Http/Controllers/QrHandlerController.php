@@ -320,6 +320,7 @@ class QrHandlerController extends Controller
         $credit1 = "weheadptcredit1";
         $credit2 = "weheadptcredit2";
         $credit3 = "weheadptcredit3";
+        $credit4 = "weheadptcredit4";
 
         if (Auth::guard('participant')->check()) {
             $user = Auth::guard('participant')->user();
@@ -362,6 +363,22 @@ class QrHandlerController extends Controller
     
                     $user->scanned_dapat_credit = true;
                     $user->booth_dapat_credit = 3;
+    
+                    //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
+                    $user->save();
+    
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Mohon tunggu transaksi sedang diproses',
+                        'nama' => $userNama,
+                        'nim' => $userNim,
+                    ]);
+                }else if(strcmp($request->input('qrcode'), $credit4) === 0){
+                    $userNama = $user->nama;
+                    $userNim = $user->nim;
+    
+                    $user->scanned_dapat_credit = true;
+                    $user->booth_dapat_credit = 4;
     
                     //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
                     $user->save();

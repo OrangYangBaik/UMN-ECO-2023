@@ -93,6 +93,12 @@ class DatabaseSeeder extends Seeder
             'booth' => 3,
             'password' => bcrypt('nirmalabentalaumneco2023')
         ]);
+        Admin::create([
+            'name' => 'AdminSideQuest4',
+            'email' => 'adminsidequest4@umn.ac.id',
+            'booth' => 4,
+            'password' => bcrypt('nirmalabentalaumneco2023')
+        ]);
        
         // User Admin Dapat Kupon
         Admin::create([
