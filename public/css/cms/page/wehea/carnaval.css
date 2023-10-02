@@ -68,7 +68,7 @@ body {
 }
 
 .full-confetti-carnaval {
-  z-index: 10;
+  z-index: 1;
   position: absolute;
   width: 1250px;
   top: 0;
@@ -307,7 +307,7 @@ body {
 }
 
 .tanda-seru-biru-tua-carnaval {
-    /* z-index: 3; */
+    z-index: 1;
     position: absolute;
     top: 344px;
     left: 939px;
@@ -607,7 +607,7 @@ body {
   }
 
   .clickable-tenda-merah, .clickable-tenda-oren, .clickable-tenda-kuning, .clickable-tenda-biru-tua, .clickable-tenda-biru-muda {
-    width: 60vw;
+    width: 65vw;
   }
 
   .popup-tenda {
