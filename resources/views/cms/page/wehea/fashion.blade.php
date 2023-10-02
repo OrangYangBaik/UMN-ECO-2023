@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    @include('cms.page.wehea.floatingIcons')
     <div class="fashion-outer">
         <div class="container-fashion">
             <div class="manekin1">
