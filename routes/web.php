@@ -71,6 +71,7 @@ Route::group(['prefix' => 'wehea'], function() {
     Route::get('/fleamarket',[WeheaController::class,'pasarWehea'])->name('pasar-landing');
     Route::get('/carnival', [WeheaController::class, 'carnival'])->name('carnival-landing');
     Route::get('/gedung kesenian', [WeheaController::class, 'gedungKesenian'])->name('gedung-kesenian-landing');
+    Route::get('/gedung kesenian/eco art class', [WeheaController::class, 'ecoArtClass'])->name('eco-art-class-landing');
 
     // QR
     Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');

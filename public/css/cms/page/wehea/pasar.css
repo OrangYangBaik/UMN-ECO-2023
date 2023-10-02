@@ -1,11 +1,14 @@
+body {
+    overflow-x: hidden;
+}
 
-.pasar-outer{
+.pasar-outer {
     overflow-x: auto;
     overflow-y: hidden;
     width: 100vw;
 }
-.container-pasar{
-    background-image: url(../../../../images/wehea/Pasar/bg-lantai-pasar.png);
+.container-pasar {
+    background-image: url("../../../../images/wehea/Pasar/bg-lantai-pasar.png");
     background-repeat: no-repeat;
     background-size: 100%;
     height: 800px;
@@ -13,8 +16,7 @@
     position: relative;
 }
 
-
-.tenda-merah-pasar{
+.tenda-merah-pasar {
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
@@ -22,9 +24,8 @@
     top: 317px;
     left: -40px;
     /* xxx */
-
 }
-.labu-pasar{
+.labu-pasar {
     transform: scaleX(-1);
     z-index: 3;
     position: absolute;
@@ -33,7 +34,7 @@
     left: 132px;
 }
 
-.labu2-pasar{
+.labu2-pasar {
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
@@ -42,17 +43,16 @@
     left: 124px;
 }
 
-.mangga-pasar{
+.mangga-pasar {
     transform: scaleX(-1);
     z-index: 3;
     position: absolute;
     width: 200px;
     top: 344px;
     left: 208px;
-    
 }
 
-.apelIjo-pasar{
+.apelIjo-pasar {
     z-index: 2;
     position: absolute;
     width: 200px;
@@ -60,7 +60,7 @@
     left: 284px;
 }
 
-.apel-pasar{
+.apel-pasar {
     z-index: 2;
     position: absolute;
     width: 220px;
@@ -68,17 +68,16 @@
     left: 329px;
 }
 
-.pasar-buah-pasar{
+.pasar-buah-pasar {
     transform: scaleX(-1);
     z-index: 1;
     position: absolute;
     width: 300px;
     top: 219px;
     left: 138px;
-
 }
 
-.terong-pasar{
+.terong-pasar {
     transform: rotate(90deg);
     transform: scaleX(-1);
     z-index: 2;
@@ -88,19 +87,16 @@
     left: 341px;
 }
 
-
-
 /* KANAN */
 
-.tenda-merah-kanan-pasar{
+.tenda-merah-kanan-pasar {
     z-index: 4;
     position: absolute;
     width: 300px;
     top: 392px;
     left: 999px;
-    
 }
-.labu-kanan-pasar{
+.labu-kanan-pasar {
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
@@ -109,7 +105,7 @@
     left: 65px;
 }
 
-.labu2-kanan-pasar{
+.labu2-kanan-pasar {
     transform: scaleX(-1);
     z-index: 2;
     position: absolute;
@@ -118,16 +114,15 @@
     left: 108px;
 }
 
-.mangga-kanan-pasar{
+.mangga-kanan-pasar {
     z-index: 5;
     position: absolute;
     width: 211px;
     top: 509px;
     left: 1011px;
-    
 }
 
-.apelIjo-kanan-pasar{
+.apelIjo-kanan-pasar {
     z-index: 4;
     position: absolute;
     width: 157px;
@@ -135,23 +130,22 @@
     left: 979px;
 }
 
-.apel-kanan-pasar{
+.apel-kanan-pasar {
     z-index: 4;
     position: absolute;
     width: 200px;
     top: 376px;
     left: 842px;
-
 }
 
-.arto{
+.arto {
     z-index: 3;
     position: absolute;
     width: 470px;
     top: 166px;
     left: 608px;
 }
-.pasar-buah-kanan-pasar{
+.pasar-buah-kanan-pasar {
     z-index: 4;
     position: absolute;
     width: 304px;
@@ -159,7 +153,7 @@
     left: 897px;
 }
 
-.terong-kanan-pasar{
+.terong-kanan-pasar {
     transform: rotate(90deg);
     transform: scaleX(-1);
     z-index: 2;
@@ -169,16 +163,15 @@
     left: 405px;
 }
 
-.daging-kanan-pasar{
+.daging-kanan-pasar {
     z-index: 2;
     transform: scaleX(-1);
     position: absolute;
     width: 218px;
     top: 513px;
     left: 1147px;
-
 }
-.market1{
+.market1 {
     z-index: 2;
     position: absolute;
     width: 247px;
@@ -186,7 +179,7 @@
     left: 491px;
 }
 
-.market2{
+.market2 {
     z-index: 2;
     position: absolute;
     width: 300px;
@@ -194,21 +187,21 @@
     left: 577px;
 }
 
-.merch1{
+.merch1 {
     z-index: 3;
     width: 200px;
     top: 354px;
     left: 582px;
     position: absolute;
 }
-.merch2{
+.merch2 {
     z-index: 4;
     width: 200px;
     top: 374px;
     left: 621px;
     position: absolute;
 }
-.nala{
+.nala {
     transform: scaleX(-1);
     z-index: 3;
     width: 250px;
@@ -217,312 +210,334 @@
     position: absolute;
 }
 
+.tooltip-ecostore {
+    position: absolute;
+    top: 200px;
+    right: 500px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.tooltip-ecostore-chatbox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip-ecostore-chatbox {
+    background-color: white;
+    width: 1000px;
+    height: 500px;
+    padding: 25px 50px;
+    border-radius: 20px;
+    border: 3px solid #1f576f;
+    font-size: 22px;
+}
+
+#tooltip-ecostore-close {
+    position: absolute;
+    bottom: 100px;
+    right: 150px;
+}
+
+#tooltip-ecostore-close button {
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #d0c5a9;
+}
 
 @media screen and (min-width: 1441px) {
-    .container-pasar{
-        background-image: url(../../../../images/wehea/Pasar/bg-lantai-pasar.png);
+    .container-pasar {
+        background-image: url("../../../../images/wehea/Pasar/bg-lantai-pasar.png");
         background-repeat: no-repeat;
         background-size: 100%;
         min-height: 100vh;
         width: 100vw;
     }
-    .tenda-merah-pasar{
+    .tenda-merah-pasar {
         width: 20.818875780708vw;
         top: 39%;
         left: -3%;
         /* xxx */
-    
     }
-    .labu-pasar{
+    .labu-pasar {
         width: 11.103400416378vw;
         top: 50%;
         left: 9%;
     }
-    
-    .labu2-pasar{
+
+    .labu2-pasar {
         width: 13.185287994448vw;
         top: 41%;
         left: 8%;
     }
-    
-    .mangga-pasar{
-        width:  13.879250520472vw;
+
+    .mangga-pasar {
+        width: 13.879250520472vw;
         top: 43%;
         left: 14%;
-        
     }
-    
-    .apelIjo-pasar{
+
+    .apelIjo-pasar {
         width: 13.879250520472vw;
         top: 35%;
         left: 19%;
     }
-    
-    .apel-pasar{
+
+    .apel-pasar {
         width: 15.267175572519vw;
         top: 30%;
         left: 22.3%;
     }
-    
-    .pasar-buah-pasar{
+
+    .pasar-buah-pasar {
         width: 20.818875780708vw;
         top: 27%;
         left: 9%;
-    
     }
-    
-    .terong-pasar{
+
+    .terong-pasar {
         width: 18.043025676613vw;
         top: 22%;
         left: 24%;
     }
-    
-    
-    
+
     /* KANAN */
-    
-    .tenda-merah-kanan-pasar{
+
+    .tenda-merah-kanan-pasar {
         width: 20.818875780708vw;
         top: 48%;
         left: 69%;
-        
     }
-    .labu-kanan-pasar{
+    .labu-kanan-pasar {
         width: 255px;
         top: 150px;
         left: 65px;
     }
-    
-    .labu2-kanan-pasar{
+
+    .labu2-kanan-pasar {
         width: 135px;
         top: 315px;
         left: 108px;
     }
-    
-    .mangga-kanan-pasar{
+
+    .mangga-kanan-pasar {
         width: 14.642609299098vw;
         top: 64%;
         left: 70.4%;
-        
     }
-    
-    .apelIjo-kanan-pasar{
+
+    .apelIjo-kanan-pasar {
         width: 10.89521165857vw;
         top: 60%;
         left: 67%;
     }
-    
-    .apel-kanan-pasar{
+
+    .apel-kanan-pasar {
         width: 13.879250520472vw;
         top: 48%;
         left: 59%;
-    
     }
-    
-    .arto{
+
+    .arto {
         width: 32.616238723109vw;
         top: 21%;
         left: 43%;
     }
-    .pasar-buah-kanan-pasar{
-        width:  21.096460791117vw;
+    .pasar-buah-kanan-pasar {
+        width: 21.096460791117vw;
         top: 40%;
         left: 62%;
     }
-    
-    .terong-kanan-pasar{
+
+    .terong-kanan-pasar {
         width: 300px;
         top: 50px;
         left: 405px;
     }
-    
-    .daging-kanan-pasar{
+
+    .daging-kanan-pasar {
         width: 15.128383067314vw;
         top: 64.4%;
         left: 79.8%;
-    
     }
-    .market1{
+    .market1 {
         width: 17.140874392783vw;
         top: 13%;
         left: 34%;
     }
-    
-    .market2{
+
+    .market2 {
         width: 20.818875780708vw;
         top: 15.3%;
         left: 40%;
     }
-    
-    .merch1{
+
+    .merch1 {
         width: 13.879250520472vw;
         top: 43%;
         left: 40%;
     }
-    .merch2{
+    .merch2 {
         width: 13.879250520472vw;
         top: 46%;
         left: 43%;
     }
-    .nala{
+    .nala {
         width: 17.34906315059vw;
         top: 64%;
-        left: 49%;    
+        left: 49%;
     }
-
-    
 }
 
 @media screen and (min-width: 1600px) {
-    .container-pasar{
+    .container-pasar {
         background-image: url(../../../../images/wehea/Pasar/bg-lantai-pasar.png);
         background-repeat: no-repeat;
         background-size: 100%;
         min-height: 100vh;
         width: 100vw;
     }
-    .tenda-merah-pasar{
+    .tenda-merah-pasar {
         width: 20.818875780708vw;
         top: 45%;
         left: -3%;
         /* xxx */
-    
     }
-    .labu-pasar{
+    .labu-pasar {
         width: 11.103400416378vw;
         top: 58%;
         left: 8%;
     }
-    
-    .labu2-pasar{
+
+    .labu2-pasar {
         width: 13.185287994448vw;
         top: 48%;
         left: 8%;
     }
-    
-    .mangga-pasar{
-        width:  13.879250520472vw;
+
+    .mangga-pasar {
+        width: 13.879250520472vw;
         top: 51%;
         left: 14%;
     }
-    
-    .apelIjo-pasar{
+
+    .apelIjo-pasar {
         width: 13.879250520472vw;
         top: 42%;
         left: 19%;
     }
-    
-    .apel-pasar{
+
+    .apel-pasar {
         width: 15.267175572519vw;
         top: 36%;
         left: 22.3%;
     }
-    
-    .pasar-buah-pasar{
+
+    .pasar-buah-pasar {
         width: 20.818875780708vw;
         top: 33%;
         left: 9%;
-    
     }
-    
-    .terong-pasar{
+
+    .terong-pasar {
         width: 18.043025676613vw;
         top: 27%;
         left: 22%;
     }
-    
-    
-    
+
     /* KANAN */
-    
-    .tenda-merah-kanan-pasar{
+
+    .tenda-merah-kanan-pasar {
         width: 20.818875780708vw;
         top: 50%;
         left: 68%;
-        
     }
-    .labu-kanan-pasar{
+    .labu-kanan-pasar {
         width: 255px;
         top: 150px;
         left: 65px;
     }
-    
-    .labu2-kanan-pasar{
+
+    .labu2-kanan-pasar {
         width: 135px;
         top: 315px;
         left: 108px;
     }
-    
-    .mangga-kanan-pasar{
+
+    .mangga-kanan-pasar {
         width: 14.642609299098vw;
         top: 67%;
         left: 70.4%;
-        
     }
-    
-    .apelIjo-kanan-pasar{
+
+    .apelIjo-kanan-pasar {
         width: 10.89521165857vw;
         top: 63%;
         left: 67%;
     }
-    
-    .apel-kanan-pasar{
+
+    .apel-kanan-pasar {
         width: 13.879250520472vw;
         top: 51%;
         left: 59%;
-    
     }
-    
-    .arto{
+
+    .arto {
         width: 32.616238723109vw;
         top: 23%;
         left: 43%;
     }
-    .pasar-buah-kanan-pasar{
-        width:  21.096460791117vw;
+    .pasar-buah-kanan-pasar {
+        width: 21.096460791117vw;
         top: 41%;
         left: 61%;
     }
-    
-    .terong-kanan-pasar{
+
+    .terong-kanan-pasar {
         width: 300px;
         top: 50px;
         left: 405px;
     }
-    
-    .daging-kanan-pasar{
+
+    .daging-kanan-pasar {
         width: 15.128383067314vw;
         top: 67.4%;
         left: 79.8%;
-    
     }
-    .market1{
+    .market1 {
         width: 17.140874392783vw;
         top: 18%;
         left: 33%;
     }
-    
-    .market2{
+
+    .market2 {
         width: 20.818875780708vw;
         top: 21.3%;
         left: 39%;
     }
-    
-    .merch1{
+
+    .merch1 {
         width: 13.879250520472vw;
         top: 49%;
         left: 40%;
     }
-    .merch2{
+    .merch2 {
         width: 13.879250520472vw;
         top: 52%;
         left: 43%;
     }
-    .nala{
+    .nala {
         width: 17.34906315059vw;
         top: 66%;
-        left: 49%;    
+        left: 49%;
     }
-
-    
 }

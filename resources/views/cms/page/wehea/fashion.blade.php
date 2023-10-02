@@ -38,9 +38,9 @@
             <div class="dress">
                 <img src="{{ asset('images/wehea/fashion/Fashion/Dress.svg') }}">
             </div>
-            <button id="openPopup">
+            <div id="openPopup">
                 <img src="{{ asset('images/wehea/balaiKota/Tooltip.svg') }}">
-            </button>
+            </div>
             <div class="popup" id="popup">
                 <div class="popup-content">
                     <span id="closePopup" class="close">&times;</span>

@@ -9,7 +9,7 @@ body {
 }
 
 .container-fashion {
-    background-image: url(../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png);
+    background-image: url("../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -157,7 +157,6 @@ body {
         left: 55%;
     }
 }
-<<<<<<< Updated upstream
 
 /* pop up content */
 /* CSS untuk gaya pop-up */
@@ -170,6 +169,7 @@ body {
     background-color: #a4cccb;
     border-color: #a4cccb;
     z-index: 3;
+    cursor: pointer;
 }
 
 .popup {
@@ -209,5 +209,3 @@ body {
     position: absolute;
     width: 20px;
 }
-=======
->>>>>>> Stashed changes

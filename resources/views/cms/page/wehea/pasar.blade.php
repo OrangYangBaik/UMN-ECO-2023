@@ -72,12 +72,42 @@
             <div class="arto">
                 <img src="{{ asset('images/wehea/Pasar/Arto.svg') }}" />
             </div>
-            <div class="tanda-seru1">
-                <span>!</span>
+
+            <div id="tooltip-ecostore" class="tooltip-ecostore">
+                <img src="{{ asset('images/wehea/balaiKota/Tooltip.svg') }}" alt="Tooltip Papan Tulis" />
+            </div>
+
+            <div class="tooltip-ecostore-chatbox-overlay">
+                <div id="tooltip-ecostore-chatbox" class="tooltip-ecostore-chatbox">
+                    <h2 style="color: #ED927B; text-align: center;">ECO Store</h2>
+                    <p style="text-align: justify;">
+                        ECO Store, seperti gambaran pada namanya, merupakan toko yang menjual berbagai produk eco-friendly
+                        dengan intensi untuk memberikan kontribusi kembali dalam menghidupkan bumi dan alam semesta. ECO
+                        Store juga dikelola langsung oleh Tim ARTO dari UMN ECO 2021 lho!
+                    </p>
+                    <p style="text-align: justify;">
+                        <b>UMN ECO x WWF ID</b>
+                        <br />
+                        Dalam rangka bekerja sama dengan WWF ID, UMN ECO 2023 akan mengadakan bundling merchandise WWF x UMN
+                        ECO. WWF adalah Eco-friendly store yang sudah dikenal oleh mancanegara loh, ECO Friends! Keren
+                        banget ga sih🤩 Fun factnya lagi, WWF first time collab sama kampus loh!
+                    </p>
+                    <p style="text-align: justify;">
+                        <b>Spot us on</b>
+                        <br />
+                        Instagram: <a href="https://www.instagram.com/ecostore_umn/" target="_blank">@ecostore_umn</a>
+                    </p>
+                </div>
+                <a id="tooltip-ecostore-close" class="close" href="#">
+                    <div class="button-kembali">
+                        <button>KEMBALI</button>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 @endsection
 
 @section('custom-js')
+    <script src="{{ asset('js/cms/page/wehea/pasar.js') }}"></script>
 @endsection

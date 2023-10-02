@@ -1,7 +1,7 @@
 .wehea-floating-icon {
     position: fixed;
     box-sizing: border-box;
-    z-index: 4;
+    z-index: 10;
 }
 
 .wehea-point-section:hover,
@@ -235,6 +235,15 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (min-width: 1441px) {
+    .wehea-point-section,
+    .wehea-credit-section,
+    .wehea-coupon-section,
+    .wehea-navigation-section {
+        top: 8.333vw;
     }
 }
 

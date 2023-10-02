@@ -181,6 +181,38 @@ class WeheaController extends Controller
         ]);
     }
 
+    public function ecoArtClass(){
+        $user = Auth::guard('participant')->user();
+        
+        if(!$user){
+            return view('cms.page.wehea.ecoArtClass',[
+                'title'=>'Gedung Kesenian - Art Class',
+                'user' => $user,
+                'isJoin' => false,
+            ]);
+        }
+
+        $credit = $user->credit;
+        $point = $user->point;
+        $kupon = $user->kupon->first();
+        $atasan = 0;
+        $bawahan = 0;
+        if($kupon){
+            $atasan = $kupon->atasan;
+            $bawahan = $kupon->bawahan;
+        }
+
+        return view('cms.page.wehea.ecoArtClass',[
+            'title'=>'Gedung Kesenian - Art Class',
+            'user' => $user,
+            'isJoin' => $user->wehea,
+            'credit' => $credit,
+            'point' => $point,
+            'atasan' => $atasan,
+            'bawahan' => $bawahan,
+        ]);
+    }
+
     public function restricted(){
         return view('cms.page.wehea.notLoggedInWehea', ["title" => "Wehea - Restricted"]);
     }

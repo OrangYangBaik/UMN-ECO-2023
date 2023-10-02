@@ -1,0 +1,111 @@
+body {
+    overflow-x: hidden;
+}
+
+.outer-container-eco-art-class {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+}
+
+.container-eco-art-class {
+    background-image: url("../../../../images/wehea/gedungKesenian/eco-art-class-wall.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 900px;
+    width: 1440px;
+}
+
+.eco-art-class-exit {
+    position: absolute;
+    width: 425px;
+    height: 425px;
+    bottom: 10px;
+    left: -90px;
+    transform: scaleX(-1);
+}
+
+.eco-art-class-nala {
+    position: absolute;
+    width: 442px;
+    bottom: 50px;
+    left: 300px;
+    z-index: 1;
+}
+
+.eco-art-class-patung {
+    position: absolute;
+    width: 501px;
+    right: 0;
+    bottom: 15px;
+    transform: scaleX(-1);
+    z-index: 1;
+}
+
+.eco-art-class-papan-tulis {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 1200px;
+    z-index: 0;
+}
+
+.papan-tulis-chatbox {
+    position: absolute;
+    top: 350px;
+    left: 550px;
+    width: 500px;
+    z-index: 1;
+    color: white;
+}
+
+.tooltip-exit {
+    position: absolute;
+    bottom: 350px;
+    left: 75px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1441px) {
+    .container-eco-art-class {
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .eco-art-class-exit {
+        width: 29.514vw;
+        bottom: 5%;
+        left: -5%;
+    }
+
+    .eco-art-class-nala {
+        width: 30.694vw;
+        bottom: 5%;
+        left: 20%;
+    }
+
+    .eco-art-class-patung {
+        width: 34.792vw;
+        right: 0;
+        bottom: 2.5%;
+    }
+
+    .eco-art-class-papan-tulis {
+        top: 20%;
+        left: 20%;
+        width: 83.333vw;
+    }
+
+    .papan-tulis-chatbox {
+        top: 50%;
+        left: 45%;
+        width: 34.722vw;
+        z-index: 1;
+    }
+
+    .tooltip-exit {
+        bottom: 40%;
+        left: 7.5%;
+    }
+}
