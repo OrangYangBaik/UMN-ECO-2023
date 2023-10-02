@@ -1,22 +1,23 @@
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .outer-container-carnaval {
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100vw;
 }
 
 .container-carnaval {
-    position: relative;
-    height: 850px;
-    width: 1440px;
+  position: relative;
+  height: 900px;
+  /* background-color: red; */
+  width: 1440px;
 }
 
 .background-carnaval {
     position: absolute;
-    width: 100%;
+    width: 101%;
     top: -130px;
     left: 0;
 }
@@ -334,12 +335,11 @@ body {
 }
 
 .clickable-tenda-merah, .clickable-tenda-oren, .clickable-tenda-kuning, .clickable-tenda-biru-tua, .clickable-tenda-biru-muda {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  backdrop-filter: blur(10px);
   transition: all 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -352,8 +352,8 @@ body {
   z-index: 9999;
 }
 
-.popup-backdrop {
-  position: fixed;
+.backdrop-filter {
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -361,7 +361,9 @@ body {
   backdrop-filter: blur(10px);
   visibility: hidden;
   opacity: 0;
-  z-index: 9998;
+  margin: auto;
+  z-index: 9999;
+  pointer-events: none;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -577,31 +579,43 @@ body {
   .tanda-seru-merah-carnaval {
     top: 31vw;
     left: 2vw;
+    height: 6.5vw;
   }
   
   .tanda-seru-oren-carnaval {
     top: 25vw;
     left: 12vw;
+    height: 6.5vw;
   }
   
   .tanda-seru-kuning-carnaval {
     top: 20vw;
     left: 22vw;
+    height: 6.5vw;
   }
   
   .tanda-seru-biru-tua-carnaval {
     top: 26vw;
     left: 66vw;
+    height: 6.5vw;
   }
   
   .tanda-seru-biru-muda-carnaval {
     top: 32vw;
     left: 76vw;
+    height: 6.5vw;
   }
 
+  .clickable-tenda-merah, .clickable-tenda-oren, .clickable-tenda-kuning, .clickable-tenda-biru-tua, .clickable-tenda-biru-muda {
+    width: 60vw;
+  }
+
+  .popup-tenda {
+    width: 13vw;
+  }
 }
 
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
   .clickable-tenda-merah, .clickable-tenda-oren, .clickable-tenda-kuning, .clickable-tenda-biru-tua, .clickable-tenda-biru-muda {
     width: 100%;
     height: 70%;
@@ -640,4 +654,4 @@ body {
   .popup-tenda {
     width: 50%;
   }
-}
+} */
