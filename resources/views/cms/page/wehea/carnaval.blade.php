@@ -43,31 +43,32 @@
       <div class="tenda-biru-muda-carnaval">
         <img src="{{ asset('images/wehea/carnaval/Tenda karnaval biru muda.svg') }}" />
       </div>
-      <div id="popup5" class="clickable-tenda-biru-muda">
-        <div class="popup-tenda-biru-muda">
-          <h2>CAKRASHA (RODA HARAPAN)</h2>
-          <p>Setiap usaha yang dilakukan pasti akan membuahkan hasil dan membawa harapan baru. Setiap poin yang ECO Friends kumpulkan melalui berbagai aktivitas di Hidden City in Wehea dapat ditukarkan dengan berbagai perlengkapan yang dapat membantu ECO Friends menjalankan hidup yang berkelanjutan. 
-        </p>
-        <div class="popup-tenda">
-          <img src="{{ asset('images/wehea/carnaval/Tenda karnaval biru muda.svg') }}" alt="">
-        </div>
-        <a class="close" href="#">
-          <div class="button-kembali">
-            <button>KEMBALI</button>
-          </div>&times;</a>
-          <div class="nala-balai-kota">
-            <img src="{{ asset('images/wehea/carnaval/token nala 4.png') }}" alt="">
+      <div class="backdrop-filter"></div>
+        <div id="popup5" class="clickable-tenda-biru-muda">
+          <div class="popup-tenda-biru-muda">
+            <h2>CAKRASHA (RODA HARAPAN)</h2>
+            <p>Setiap usaha yang dilakukan pasti akan membuahkan hasil dan membawa harapan baru. Setiap poin yang ECO Friends kumpulkan melalui berbagai aktivitas di Hidden City in Wehea dapat ditukarkan dengan berbagai perlengkapan yang dapat membantu ECO Friends menjalankan hidup yang berkelanjutan. 
+          </p>
+          <div class="popup-tenda">
+            <img src="{{ asset('images/wehea/carnaval/Tenda karnaval biru muda.svg') }}" alt="">
           </div>
-        <div class="button-kembali">  
+          <a class="close" href="#">
+            <div class="button-kembali">
+              <button>KEMBALI</button>
+            </div>&times;</a>
+            <div class="nala-balai-kota">
+              <img src="{{ asset('images/wehea/carnaval/token nala 4.png') }}" alt="">
+            </div>
+          <div class="button-kembali">  
+          </div>
+          </div>
         </div>
-        </div>
-      </div>
-      <a class="button-tenda-biru-muda" href="#popup5">
-        <div class="tanda-seru-biru-muda-carnaval">
-          <span>!</span>
-          <img class="bottom-beak" src="{{ asset('images/wehea/carnaval/Bottom beak.svg') }}" alt="bottom beak">
-        </div>
-      </a>
+        <a class="button-tenda-biru-muda" href="#popup5">
+          <div class="tanda-seru-biru-muda-carnaval">
+            <span>!</span>
+            <img class="bottom-beak" src="{{ asset('images/wehea/carnaval/Bottom beak.svg') }}" alt="bottom beak">
+          </div>
+        </a>
       <div class="tenda-biru-tua-carnaval">
         <img src="{{ asset('images/wehea/carnaval/Tenda karnaval biru tua.svg') }}" />
       </div>
@@ -119,7 +120,6 @@
       <div class="tenda-merah-carnaval">
         <img src="{{ asset('images/wehea/carnaval/Tenda karnaval merah.svg') }}" />
       </div>
-      <div class="popup-backdrop"></div>
       <div id="popup1" class="clickable-tenda-merah">
           <h2>CAGAK MARTA</h2>
           <p>Pilar Jenga menggambarkan kelestarian alam. Setiap block Jenga merepresentasikan kegiatan atau tindakan yang bisa dilakukan untuk menjaga kelestarian alam. Semakin banyak block Jenga yang ditarik atau semakin banyak tindakan yang tidak kita lakukan untuk menjaga lingkungan akhirnya dapat merusak kelestarian alam.
@@ -167,7 +167,10 @@
       </a>
       <img class="nala-carnival" src="{{ asset('images/wehea/carnaval/Nala balai kota.svg') }}">
     </div>
+  </div>
+</div>
 @endsection
 
 @section('custom-js')
+    <script src="{{ asset('js/cms/page/wehea/carnival.js') }}"></script>
 @endsection
