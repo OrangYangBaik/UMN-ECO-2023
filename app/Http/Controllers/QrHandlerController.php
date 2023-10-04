@@ -330,7 +330,7 @@ class QrHandlerController extends Controller
                     $userNim = $user->nim;
     
                     $user->scanned_dapat_credit = true;
-                    $user->booth_dapat_kupon = 1;
+                    $user->booth_dapat_credit = 1;
     
                     //ini error biarin aja krn blm ada usernya (modelnya) makanya save functionnya ga kedetect
                     $user->save();

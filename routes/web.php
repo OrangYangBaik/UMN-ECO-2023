@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
@@ -23,6 +24,10 @@ use App\Http\Controllers\NawasenaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/hehehaha', function(){
+    dd(Hash::make('akucintaumn'));
+});
 
 // WEB UTAMA UMN ECO 2023
 
