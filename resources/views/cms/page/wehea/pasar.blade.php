@@ -16,6 +16,9 @@
             </div>
             <div class="pasar-buah-pasar">
                 <img src="{{ asset('images/wehea/Pasar/pasarBuah.svg') }}" />
+            </div>            
+            <div class="pasar-buah-pasar2">
+                <img src="{{ asset('images/wehea/Pasar/pasarBuah.svg') }}" />
             </div>
             <div class="labu2-pasar">
                 <img src="{{ asset('images/wehea/Pasar/Labu.svg') }}" />
@@ -72,6 +75,39 @@
             <div class="arto">
                 <img src="{{ asset('images/wehea/Pasar/Arto.svg') }}" />
             </div>
+            <div class="bush-kiri">
+                <img src="{{asset('images/wehea/Pasar/Bush 1 belakang.svg') }}" />
+            </div>
+            <div class="bush-kiri2">
+                <img src="{{asset('images/wehea/Pasar/Bush 1 belakang.svg') }}" />
+            </div>
+            <div class="bush-kanan">
+                <img src="{{asset('images/wehea/Pasar/Bush 1 depan.svg') }}" />
+            </div>
+            <div class="rumput1">
+                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" /> 
+            </div>
+            <div class="rumput2">
+                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" /> 
+            </div>
+            <div class="rumput3">
+                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" /> 
+            </div>
+            <div class="palm-tree1">
+                <img src="{{ asset('images/wehea/Pasar/Palm Tree kiri.svg') }}" />
+            </div>
+            <div class="palm-tree2">
+                <img src="{{ asset('images/wehea/Pasar/Palm Tree kiri.svg') }}" />
+            </div>
+            <div class="palm-tree3">
+                <img src="{{ asset('images/wehea/Pasar/Palm Tree kiri.svg') }}" />
+            </div>
+            <div class="pot1">
+                <img src="{{asset('images/wehea/Pasar/tanaman ga pakai tali.svg') }}" />
+            </div>
+            <div class="pot2">
+                <img src="{{asset('images/wehea/Pasar/tanaman ga pakai tali.svg') }}" />
+            </div>
 
             <div id="tooltip-ecostore" class="tooltip-ecostore">
                 <img src="{{ asset('images/wehea/balaiKota/Tooltip.svg') }}" alt="Tooltip Papan Tulis" />
@@ -104,6 +140,57 @@
                     </div>
                 </a>
             </div>
+            <div class="daftarBooth">
+                <button id="openPopup" style="color: #1F576E;">Lihat Daftar Booth</button>
+                
+                <div id="popupContainer" class="popup">
+                    <div class="popup-content">
+                        <span id="closePopup" class="close">&times;</span>
+                        <h2 style="color: #FFFFFF; text-align: center;">Both Tenants</h2>
+                        <div class="tabel-booth-tenant">
+                            <div class="tabel-booth-tenant-isi">
+                            <table>
+                                    <a style="color: #1F576E"> F&B</a>
+                                    <tr>
+                                        <td>Baris 1, Kolom 1</td>
+                                        <td>Baris 1, Kolom 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baris 2, Kolom 1</td>
+                                        <td>Baris 2, Kolom 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baris 3, Kolom 1</td>
+                                        <td>Baris 3, Kolom 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baris 4, Kolom 1</td>
+                                        <td>Baris 4, Kolom 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baris 5, Kolom 1</td>
+                                        <td>Baris 5, Kolom 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baris 6, Kolom 1</td>
+                                        <td>Baris 6, Kolom 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baris 7, Kolom 1</td>
+                                        <td>Baris 7, Kolom 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baris 8, Kolom 1</td>
+                                        <td>Baris 8, Kolom 2</td>
+                                    </tr>
+                            </table>
+                        </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
         </div>
     </div>
 @endsection
