@@ -18,16 +18,16 @@
                 <img src="{{ asset('images/wehea/fashion/Fashion/Manekin.svg') }}">
             </div>
             <div class="cermin">
-                <img src="{{ asset('images/wehea/fashion/Fashion/cermin.svg') }}">
+                <img src="{{ asset('images/wehea/fashion/Fashion/Cermin.svg') }}">
             </div>
             <div class="lukisan">
                 <img src="{{ asset('images/wehea/fashion/Fashion/Lukisan 1.svg') }}">
             </div>
             <div class="nala">
-                <img src="{{ asset('images/wehea/fashion/Fashion/nala peta.svg') }}">
+                <img src="{{ asset('images/wehea/fashion/Fashion/Nala Peta.svg') }}">
             </div>
             <div class="rakBaju">
-                <img src="{{ asset('images/wehea/fashion/Fashion/Rak Baju.svg') }}">
+                <img src="{{ asset('images/wehea/fashion/Fashion/Rak baju.svg') }}">
             </div>
             <div class="baju">
                 <img src="{{ asset('images/wehea/fashion/Fashion/Baju.svg') }}">
