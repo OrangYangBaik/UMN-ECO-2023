@@ -76,7 +76,7 @@ body {
     top: 219px;
     left: 138px;
 }
-.pasar-buah-pasar2{
+.pasar-buah-pasar2 {
     transform: scaleX(-1);
     z-index: 3;
     position: absolute;
@@ -216,21 +216,21 @@ body {
     left: 374px;
     position: absolute;
 }
-.rumput3{
+.rumput3 {
     width: 100px;
     position: absolute;
     z-index: 4;
     top: 657px;
     left: 1266px;
 }
-.pot1{
+.pot1 {
     z-index: 4;
     width: 100px;
     top: 459px;
     left: 806px;
     position: absolute;
 }
-.pot2{
+.pot2 {
     z-index: 4;
     width: 100px;
     top: 655px;
@@ -260,83 +260,175 @@ body {
 }
 
 .tooltip-ecostore-chatbox {
+    position: relative;
     background-color: white;
     width: 1000px;
     height: 500px;
     padding: 25px 50px;
     border-radius: 20px;
-    border: 3px solid #1f576f;
+    border: 5px solid #1f576f;
     font-size: 22px;
+    overflow-y: hidden;
+}
+
+.nala-popup-ecostore {
+    position: absolute;
+    width: 200px;
+    right: 0;
+    bottom: -50px;
+    transform: scaleX(-1);
+}
+
+.ecostore-logo-popup-ecostore {
+    position: absolute;
+    width: 100px;
+    bottom: 0;
+    right: 200px;
+}
+
+.ecostore-logo-popup-ecostore img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 #tooltip-ecostore-close {
     position: absolute;
     bottom: 100px;
-    right: 150px;
+    right: 225px;
 }
 
-#tooltip-ecostore-close button {
+#tooltip-booth-close {
+    position: absolute;
+    bottom: 50px;
+    right: 190px;
+}
+
+#tooltip-ecostore-close button,
+#tooltip-booth-close button {
     width: 150px;
     padding: 5px;
     border-radius: 5px;
     background-color: #d0c5a9;
 }
 
-.bush-kiri{
+.bush-kiri {
     width: 500px;
     position: absolute;
     top: 735px;
     left: -26px;
 }
 
-.bush-kanan{
+.bush-kanan {
     width: 350px;
     position: absolute;
     top: 728px;
     left: 1090px;
     z-index: 2;
 }
-.rumput1{
+.rumput1 {
     width: 150px;
     position: absolute;
     z-index: 1;
     top: 353px;
     left: 37px;
 }
-.rumput2{
+.rumput2 {
     width: 100px;
     position: absolute;
     top: 210px;
     left: 505px;
     transform: rotate(357deg);
 }
-.bush-kiri2{
+.bush-kiri2 {
     width: 400px;
     position: absolute;
     top: 326px;
     left: 157px;
     transform: rotate(332deg);
 }
-.palm-tree1{
+.palm-tree1 {
     width: 180px;
     position: absolute;
     z-index: 0;
     top: 112px;
     left: 269px;
 }
-.palm-tree2{
+.palm-tree2 {
     width: 180px;
     position: absolute;
     z-index: 0;
     top: 42px;
-    left: 573px
+    left: 573px;
 }
-.palm-tree3{
+.palm-tree3 {
     width: 180px;
     position: absolute;
     z-index: 0;
     top: 240px;
     left: 1019px;
+}
+
+.daftarBooth {
+    width: 210px;
+    position: absolute;
+    top: 590px;
+    left: 434px;
+    z-index: 4;
+}
+
+#openPopup {
+    border-radius: 100px;
+    width: 300px;
+    color: #1f576f;
+    height: 50px;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #be8b58;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    position: relative;
+    width: 1057px;
+    height: 596px;
+}
+
+.tabel-booth-tenant {
+    background-color: #d1c29e;
+    width: 949px;
+    height: 449px;
+    padding: 10px;
+    overflow-y: auto;
+    margin: auto;
+    color: #1f576f;
+    font-family: bobbyjones;
+}
+
+.tabel-booth-tenant table {
+    width: 100%;
+    text-align: start;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.tabel-booth-tenant table tbody tr td:nth-child(-n + 2) {
+    border-right: 2px solid #1f576f;
 }
 
 @media screen and (min-width: 1441px) {
@@ -347,9 +439,9 @@ body {
         min-height: 100vh;
         width: 100vw;
     }
-    .pasar-buah-pasar2{
-        width: 20.83%; 
-        top: 41.88%; 
+    .pasar-buah-pasar2 {
+        width: 20.83%;
+        top: 41.88%;
         left: -4.44%;
     }
     .tenda-merah-pasar {
@@ -362,7 +454,7 @@ body {
         top: 56%;
         left: 7%;
     }
-    .palm-tree3{
+    .palm-tree3 {
         width: 12.491325468425vw;
         top: 27%;
         left: 68%;
@@ -373,7 +465,7 @@ body {
         top: 49%;
         left: 9%;
     }
-    .pot2{
+    .pot2 {
         width: 6.9396252602359vw;
         top: 81%;
         left: 83%;
@@ -389,9 +481,8 @@ body {
         width: 13.879250520472vw;
         top: 36%;
         left: 20%;
-    
     }
-    .rumput3{
+    .rumput3 {
         width: 6.9396252602359vw;
         top: 78%;
         left: 87%;
@@ -414,28 +505,27 @@ body {
         top: 22%;
         left: 24%;
     }
-    .rumput1{
+    .rumput1 {
         width: 10.409437890354vw;
         top: 45%;
         left: 2%;
     }
-    .bush-kiri2{
+    .bush-kiri2 {
         width: 27.758501040944vw;
         top: 40%;
         left: 12%;
-    
     }
-    .palm-tree1{
+    .palm-tree1 {
         width: 12.491325468425vw;
         top: 15%;
         left: 19%;
     }
-    .rumput2{
+    .rumput2 {
         width: 6.9396252602359vw;
         top: 27%;
         left: 36%;
     }
-    .palm-tree2{
+    .palm-tree2 {
         width: 12.491325468425vw;
         top: 2%;
         left: 40%;
@@ -483,7 +573,7 @@ body {
         top: 21%;
         left: 43%;
     }
-    .pot1{
+    .pot1 {
         width: 6.9396252602359vw;
         top: 57%;
         left: 57%;
@@ -504,7 +594,6 @@ body {
         width: 17.34906315059vw;
         top: 57.4%;
         left: 77.8%;
-        
     }
     .market1 {
         width: 17.140874392783vw;
@@ -533,15 +622,83 @@ body {
         top: 48%;
         left: 22%;
     }
-    .bush-kanan{
+    .bush-kanan {
         width: 24.288688410826vw;
         top: 91%;
         left: 75.7%;
     }
-    .bush-kiri{
+    .bush-kiri {
         width: 34.69812630118vw;
         top: 93%;
         left: -3%;
+    }
+
+    .tooltip-ecostore {
+        top: 13.889vw;
+        right: 34.722vw;
+        width: 7.431vw;
+    }
+
+    .tooltip-ecostore-chatbox {
+        width: 69.444vw;
+        height: 34.722vw;
+        border-size: 0.347vw;
+        font-size: 1.528vw;
+    }
+
+    .ecostore-logo-popup-ecostore {
+        width: 6.944vw;
+        bottom: 0;
+        right: 13.889vw;
+    }
+
+    #tooltip-ecostore-close {
+        bottom: 6.944vw;
+        right: 15.625vw;
+    }
+
+    #tooltip-booth-close {
+        bottom: 3.472vw;
+        right: 13.194vw;
+    }
+
+    #tooltip-ecostore-close button,
+    #tooltip-button-close button {
+        width: 10.417vw;
+        padding: 0.347vw;
+    }
+
+    .nala-popup-ecostore {
+        width: 13.889vw;
+        right: 0;
+        bottom: -3.472vw;
+    }
+
+    .daftarBooth {
+        width: 14.583vw;
+        top: 40.972vw;
+        left: 30.139vw;
+    }
+
+    #openPopup {
+        width: 20.833vw;
+        font-size: 1.2vw;
+        height: 3.472vw;
+    }
+
+    .popup-content {
+        width: 73.403vw;
+        height: 41.389vw;
+        font-size: 1.2vw;
+    }
+
+    .tabel-booth-tenant {
+        width: 65.903vw;
+        height: 31.181vw;
+    }
+
+    .tabel-booth-tenant table tbody tr td:nth-child(-n + 2) {
+        border-size: 0.139vw;
     }
 }
 
@@ -721,61 +878,4 @@ body {
         top: 93%;
         left: -3%;
     }
-}
-
-/* BUTTON POP UP*/
-/* Styling for the popup container */
-.daftarBooth{
-    width: 210px;
-    position: absolute;
-    top: 590px;
-    left: 434px;
-    z-index: 6;
-}
-#openPopup{
-    border-radius: 100px;
-    width: 300px;
-    color: #1f576f;
-    height: 50px;
-}
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    
-}
-
-/* Styling for the popup content */
-.popup-content {
-    background-color: #BE8B58;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    text-align: center;
-    position: relative;
-    top: 189px;
-    left: 513px;
-    width: 400px;
-    
-}
-
-/* Styling for the close button */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.tabel-booth-tenant{
-   background-color: #D1C29E;
-   border-radius: 20px;
 }

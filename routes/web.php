@@ -13,6 +13,7 @@ use App\Http\Controllers\MilestoneController;
 use App\Http\Controllers\QrHandlerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NawasenaController;
+use Illuminate\Support\Facades\Hash;
 
 /*{{  }}
 |--------------------------------------------------------------------------

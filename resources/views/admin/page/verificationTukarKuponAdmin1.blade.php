@@ -25,8 +25,8 @@
                         <input type="number" name="jumlah_atasan" id="point" class="point-input text-dark" />
                         <label for="point">Jumlah kupon bawahan:</label>
                         <input type="number" name="jumlah_bawahan" id="point" class="point-input text-dark" />
-                        <label for="point">Jumlah kupon aksesoris:</label>
-                        <input type="number" name="jumlah_aksesoris" id="point" class="point-input text-dark" />
+                        <input type="hidden" value="0" name="jumlah_aksesoris" id="point"
+                            class="point-input text-dark" />
                         <button class="acc-button text-dark" type="submit">Approve</button>
                     </form>
                 </div>

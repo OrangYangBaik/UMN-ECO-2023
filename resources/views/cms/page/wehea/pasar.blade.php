@@ -16,7 +16,7 @@
             </div>
             <div class="pasar-buah-pasar">
                 <img src="{{ asset('images/wehea/Pasar/pasarBuah.svg') }}" />
-            </div>            
+            </div>
             <div class="pasar-buah-pasar2">
                 <img src="{{ asset('images/wehea/Pasar/pasarBuah.svg') }}" />
             </div>
@@ -76,22 +76,22 @@
                 <img src="{{ asset('images/wehea/Pasar/Arto.svg') }}" />
             </div>
             <div class="bush-kiri">
-                <img src="{{asset('images/wehea/Pasar/Bush 1 belakang.svg') }}" />
+                <img src="{{ asset('images/wehea/Pasar/Bush 1 belakang.svg') }}" />
             </div>
             <div class="bush-kiri2">
-                <img src="{{asset('images/wehea/Pasar/Bush 1 belakang.svg') }}" />
+                <img src="{{ asset('images/wehea/Pasar/Bush 1 belakang.svg') }}" />
             </div>
             <div class="bush-kanan">
-                <img src="{{asset('images/wehea/Pasar/Bush 1 depan.svg') }}" />
+                <img src="{{ asset('images/wehea/Pasar/Bush 1 depan.svg') }}" />
             </div>
             <div class="rumput1">
-                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" /> 
+                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" />
             </div>
             <div class="rumput2">
-                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" /> 
+                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" />
             </div>
             <div class="rumput3">
-                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" /> 
+                <img src="{{ asset('images/wehea/Pasar/Bush 2 kanan.svg') }}" />
             </div>
             <div class="palm-tree1">
                 <img src="{{ asset('images/wehea/Pasar/Palm Tree kiri.svg') }}" />
@@ -103,10 +103,10 @@
                 <img src="{{ asset('images/wehea/Pasar/Palm Tree kiri.svg') }}" />
             </div>
             <div class="pot1">
-                <img src="{{asset('images/wehea/Pasar/tanaman ga pakai tali.svg') }}" />
+                <img src="{{ asset('images/wehea/Pasar/tanaman ga pakai tali.svg') }}" />
             </div>
             <div class="pot2">
-                <img src="{{asset('images/wehea/Pasar/tanaman ga pakai tali.svg') }}" />
+                <img src="{{ asset('images/wehea/Pasar/tanaman ga pakai tali.svg') }}" />
             </div>
 
             <div id="tooltip-ecostore" class="tooltip-ecostore">
@@ -133,64 +133,103 @@
                         <br />
                         Instagram: <a href="https://www.instagram.com/ecostore_umn/" target="_blank">@ecostore_umn</a>
                     </p>
+                    <div class="nala-popup-ecostore">
+                        <img src="{{ asset('images/wehea/Pasar/Nala balai kota.svg') }}" alt="Nala ECO Store" />
+                    </div>
+                    <div class="ecostore-logo-popup-ecostore">
+                        <img src="{{ asset('images/wehea/Pasar/ECOSTORE LOGO.jpg') }}" alt="ECO Store" />
+                    </div>
                 </div>
-                <a id="tooltip-ecostore-close" class="close" href="#">
+                <a id="tooltip-ecostore-close" href="#">
                     <div class="button-kembali">
                         <button>KEMBALI</button>
                     </div>
                 </a>
             </div>
+
             <div class="daftarBooth">
                 <button id="openPopup" style="color: #1F576E;">Lihat Daftar Booth</button>
-                
-                <div id="popupContainer" class="popup">
-                    <div class="popup-content">
-                        <span id="closePopup" class="close">&times;</span>
-                        <h2 style="color: #FFFFFF; text-align: center;">Both Tenants</h2>
-                        <div class="tabel-booth-tenant">
-                            <div class="tabel-booth-tenant-isi">
-                            <table>
-                                    <a style="color: #1F576E"> F&B</a>
-                                    <tr>
-                                        <td>Baris 1, Kolom 1</td>
-                                        <td>Baris 1, Kolom 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 2, Kolom 1</td>
-                                        <td>Baris 2, Kolom 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 3, Kolom 1</td>
-                                        <td>Baris 3, Kolom 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 4, Kolom 1</td>
-                                        <td>Baris 4, Kolom 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 5, Kolom 1</td>
-                                        <td>Baris 5, Kolom 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 6, Kolom 1</td>
-                                        <td>Baris 6, Kolom 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 7, Kolom 1</td>
-                                        <td>Baris 7, Kolom 2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 8, Kolom 1</td>
-                                        <td>Baris 8, Kolom 2</td>
-                                    </tr>
-                            </table>
-                        </div>
-                           
-                        </div>
+            </div>
+
+            <div id="popupContainer" class="popup">
+                <div class="popup-content">
+                    <h2 style="color: #FFFFFF; text-align: center; margin: 20px 0;">Both Tenants</h2>
+                    <div class="tabel-booth-tenant">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama</th>
+                                    <th>Jenis</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Kreatif Corner</td>
+                                    <td>Stationary</td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                    <td>Teh Poci</td>
+                                    <td>F&B</td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>Sonkit</td>
+                                    <td>F&B</td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>Legato</td>
+                                    <td>F&B</td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                    <td>Mbok Dimsum</td>
+                                    <td>F&B</td>
+                                </tr>
+                                <tr>
+                                    <td>6.</td>
+                                    <td>Goed bos</td>
+                                    <td>F&B</td>
+                                </tr>
+                                <tr>
+                                    <td>7.</td>
+                                    <td>For You Milles</td>
+                                    <td>F&B</td>
+                                </tr>
+                                <tr>
+                                    <td>8.</td>
+                                    <td>Kaizu</td>
+                                    <td>Fashion</td>
+                                </tr>
+                                <tr>
+                                    <td>9.</td>
+                                    <td>IQOO</td>
+                                    <td>Gadget</td>
+                                </tr>
+                                <tr>
+                                    <td>10.</td>
+                                    <td>Enak Powl</td>
+                                    <td>F&B</td>
+                                </tr>
+                                <tr>
+                                    <td>11.</td>
+                                    <td>aboutstudio</td>
+                                    <td>Foto</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+                <a id="tooltip-booth-close" href="#">
+                    <div class="button-kembali">
+                        <button>KEMBALI</button>
+                    </div>
+                </a>
             </div>
-                
+
         </div>
     </div>
 @endsection
