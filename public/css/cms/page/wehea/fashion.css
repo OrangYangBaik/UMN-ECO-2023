@@ -9,7 +9,7 @@ body {
 }
 
 .container-fashion {
-    background-image: url(../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png);
+    background-image: url("../../../../images/wehea/fashion/Fashion/bg-lantai-fashion.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -169,6 +169,7 @@ body {
     background-color: #a4cccb;
     border-color: #a4cccb;
     z-index: 3;
+    cursor: pointer;
 }
 
 .popup {

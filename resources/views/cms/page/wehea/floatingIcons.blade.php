@@ -28,6 +28,8 @@
         <option value="" disabled selected>
             @if ($decodedParam == 'wehea')
                 BALAI KOTA
+            @elseif($decodedParam == 'eco art class')
+                GEDUNG KESENIAN
             @else
                 {{ strtoupper($decodedParam) }}
             @endif
@@ -41,7 +43,7 @@
         @if ($decodedParam != 'fashion')
             <option value="3">FASHION</option>
         @endif
-        @if ($decodedParam != 'gedung kesenian')
+        @if ($decodedParam != 'gedung kesenian' && $decodedParam != 'eco art class')
             <option value="4">GEDUNG KESENIAN</option>
         @endif
         @if ($decodedParam != 'fleamarket')
