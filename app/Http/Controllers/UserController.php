@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -105,6 +106,7 @@ class UserController extends Controller
             $user->save();
             return view('cms.page.event.loginUser', ['title' => 'Login']);
         }catch(Exception $e){
+            Log::info($e);
             return response()->json([
                 'status' => 500,
                 'message' => $e->getMessage()

@@ -26,7 +26,7 @@ use App\Http\Controllers\NawasenaController;
 */
 
 Route::get('/hehehaha', function(){
-    dd(Hash::make('akucintaumn'));
+    dd(Hash::make('devano'));
 });
 
 // WEB UTAMA UMN ECO 2023
