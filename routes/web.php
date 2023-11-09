@@ -52,44 +52,44 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser')->m
 // Route::get('/oprec-thanks', [HomeController::class, 'oprecthanks'])->name('oprec-thanks');
 
 // Nawasena
-Route::group(['prefix' => 'nawasena'], function() {
-    Route::get('/', [NawasenaController::class, 'index'])->name('nawasena-landing');
-    // Route::get('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasenaGet'])->name('nawasena')->middleware('auth:participant');
-    Route::post('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasena'])->name('nawasena.post')->middleware('auth:participant');
-    Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink')->middleware('auth:participant');
-    Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post')->middleware('auth:participant');
-    //Route::get('/nawasenaFetchImage/{filename}', SheetController::class, 'getImageNawasena')->name('nawasena.fetchImage');
-    Route::get('/thanks', [NawasenaController::class, 'nawasenaThanks'])->name('nawasena-thanks');
-});
+// Route::group(['prefix' => 'nawasena'], function() {
+//     Route::get('/', [NawasenaController::class, 'index'])->name('nawasena-landing');
+//     // Route::get('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasenaGet'])->name('nawasena')->middleware('auth:participant');
+//     Route::post('/pengumpulanNawasena', [NawasenaController::class, 'pengumpulanNawasena'])->name('nawasena.post')->middleware('auth:participant');
+//     Route::get('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasenaGet'])->name('nawasenaLink')->middleware('auth:participant');
+//     Route::post('/pengumpulanLinkNawasena', [SheetController::class, 'pengumpulanLinkNawasena'])->name('nawasenaLink.post')->middleware('auth:participant');
+//     //Route::get('/nawasenaFetchImage/{filename}', SheetController::class, 'getImageNawasena')->name('nawasena.fetchImage');
+//     Route::get('/thanks', [NawasenaController::class, 'nawasenaThanks'])->name('nawasena-thanks');
+// });
 
 // Wehea
-Route::group(['prefix' => 'wehea'], function() {
-    Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing');
-    Route::post('/register', [WeheaController::class, 'register'])->middleware('auth:participant');
-    // Route::get('/info', [UserController::class, 'getAllUserInfo'])->middleware('auth:participant');
-    Route::get('/carnival', [WeheaController::class, 'ngasal'])->name('carnival-landing');
-    Route::get('/fashion',[WeheaController::class, 'fashionWehea'])->name('fashion-landing');
-    Route::get('/fleamarket',[WeheaController::class,'pasarWehea'])->name('pasar-landing');
-    Route::get('/carnival', [WeheaController::class, 'carnival'])->name('carnival-landing');
-    Route::get('/gedung kesenian', [WeheaController::class, 'gedungKesenian'])->name('gedung-kesenian-landing');
-    Route::get('/gedung kesenian/eco art class', [WeheaController::class, 'ecoArtClass'])->name('eco-art-class-landing');
+// Route::group(['prefix' => 'wehea'], function() {
+//     Route::get('/', [WeheaController::class, 'index'])->name('wehea-landing');
+//     Route::post('/register', [WeheaController::class, 'register'])->middleware('auth:participant');
+//     // Route::get('/info', [UserController::class, 'getAllUserInfo'])->middleware('auth:participant');
+//     Route::get('/carnival', [WeheaController::class, 'ngasal'])->name('carnival-landing');
+//     Route::get('/fashion',[WeheaController::class, 'fashionWehea'])->name('fashion-landing');
+//     Route::get('/fleamarket',[WeheaController::class,'pasarWehea'])->name('pasar-landing');
+//     Route::get('/carnival', [WeheaController::class, 'carnival'])->name('carnival-landing');
+//     Route::get('/gedung kesenian', [WeheaController::class, 'gedungKesenian'])->name('gedung-kesenian-landing');
+//     Route::get('/gedung kesenian/eco art class', [WeheaController::class, 'ecoArtClass'])->name('eco-art-class-landing');
 
-    // QR
-    Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
-    Route::get('/scannerPageDapatKupon', [QrHandlerController::class, 'dapatKupon'])->name('scannerPageDapatKupon')->middleware('auth:participant');
-    Route::get('/scannerPageKurangKupon', [QrHandlerController::class, 'kurangKupon'])->name('scannerPageKurangKupon')->middleware('auth:participant');
-    Route::get('/scannerPageDapatCredit', [QrHandlerController::class, 'dapatCredit'])->name('scannerPageDapatCredit')->middleware('auth:participant');
-    Route::get('/scannerPageMerchandise', [QrHandlerController::class, 'merchandise'])->name('scannerPageMerchandise')->middleware('auth:participant');
+//     // QR
+//     Route::get('/scannerPageMain', [QrHandlerController::class, 'main'])->name('scannerPageMain')->middleware('auth:participant');
+//     Route::get('/scannerPageDapatKupon', [QrHandlerController::class, 'dapatKupon'])->name('scannerPageDapatKupon')->middleware('auth:participant');
+//     Route::get('/scannerPageKurangKupon', [QrHandlerController::class, 'kurangKupon'])->name('scannerPageKurangKupon')->middleware('auth:participant');
+//     Route::get('/scannerPageDapatCredit', [QrHandlerController::class, 'dapatCredit'])->name('scannerPageDapatCredit')->middleware('auth:participant');
+//     Route::get('/scannerPageMerchandise', [QrHandlerController::class, 'merchandise'])->name('scannerPageMerchandise')->middleware('auth:participant');
 
-    Route::get('/restricted', [WeheaController::class, 'restricted'])->name('wehea-restricted');
-    
-});
+//     Route::get('/restricted', [WeheaController::class, 'restricted'])->name('wehea-restricted');
+// });
 
 // Meru Betiri
 Route::group(['prefix' => 'meru-betiri'], function() {
-    Route::get('/', [MeruBetiriController::class, 'index'])->name('meru-betiri-landing');
-    Route::get('/register');
-    Route::get('/info');
+    Route::get('/', [MeruBetiriController::class, 'landingPage'])->name('meru-betiri-landing');
+    Route::get('/register', [MeruBetiriController::class, 'pagePulau1']);
+    Route::get('/info', [MeruBetiriController::class, 'pagePulau2']);
+    Route::get('/funwalk-rute', [MeruBetiriController::class, 'pagePulau3']);
 });
 
 // Milestone
@@ -160,9 +160,3 @@ Route::post('/sendDataKurangKuponToAdmin', [AdminController::class, 'sendToAdmin
 Route::post('/sendDataDapatCreditToAdmin', [AdminController::class, 'sendToAdminPageDapatCredit']);
 Route::post('/sendDataMerchandiseToAdmin', [AdminController::class, 'sendToAdminPageMerchandise']);
 Route::post('/respond', [AdminController::class, 'respond']);
-
-//Meru Betiri
-Route::get('/meru-betiri/landing',[MeruBetiriController::class, 'landingPage']);
-Route::get('/meru-betiri/pulau1',[MeruBetiriController::class, 'pagePulau1']);
-Route::get('/meru-betiri/pulau2',[MeruBetiriController::class, 'pagePulau2']);
-Route::get('/meru-betiri/pulau3',[MeruBetiriController::class, 'pagePulau3']);

@@ -41,41 +41,63 @@ $(document).ready(function () {
         mouseleave: pauseHoverSound,
     });
 
-    $(".nawasena").click(function () {
-        const overlayImage = $("#overlay-image");
-        const nawasenaImageSrc = $(this).find("img").attr("src");
-        const nawasenaImageAlt = $(this).find("img").attr("alt");
+    // $(".nawasena").click(function () {
+    //     const overlayImage = $("#overlay-image");
+    //     const nawasenaImageSrc = $(this).find("img").attr("src");
+    //     const nawasenaImageAlt = $(this).find("img").attr("alt");
 
-        overlayImage.attr("src", nawasenaImageSrc);
-        overlayImage.attr("alt", nawasenaImageAlt);
+    //     overlayImage.attr("src", nawasenaImageSrc);
+    //     overlayImage.attr("alt", nawasenaImageAlt);
+
+    //     $("body").css("overflow", "hidden");
+    //     $(".overlay-container").css("display", "flex");
+
+    //     setTimeout(function () {
+    //         window.location.href = "/nawasena";
+    //     }, 3000);
+
+    //     // Set a timeout to hide the overlay after 3 seconds
+    //     setTimeout(function () {
+    //         $(".overlay-container").css("display", "none");
+    //         $("body").css("overflow", "auto");
+    //     }, 3000);
+    // });
+
+    // $(".wehea").click(function () {
+    //     const overlayImage = $("#overlay-image");
+    //     const weheaImageSrc = $(this).find("img").attr("src");
+    //     const weheaImageAlt = $(this).find("img").attr("alt");
+
+    //     overlayImage.attr("src", weheaImageSrc);
+    //     overlayImage.attr("alt", weheaImageAlt);
+
+    //     $("body").css("overflow", "hidden");
+    //     $(".overlay-container").css("display", "flex");
+
+    //     setTimeout(function () {
+    //         window.location.href = "/wehea";
+    //     }, 3000);
+
+    //     // Set a timeout to hide the overlay after 3 seconds
+    //     setTimeout(function () {
+    //         $(".overlay-container").css("display", "none");
+    //         $("body").css("overflow", "auto");
+    //     }, 3000);
+    // });
+
+    $(".meru-betiri").click(function () {
+        const overlayImage = $("#overlay-image");
+        const meruBetiriImgSrc = $(this).find("img").attr("src");
+        const meruBetiriImgAlt = $(this).find("img").attr("alt");
+
+        overlayImage.attr("src", meruBetiriImgSrc);
+        overlayImage.attr("alt", meruBetiriImgAlt);
 
         $("body").css("overflow", "hidden");
         $(".overlay-container").css("display", "flex");
 
         setTimeout(function () {
-            window.location.href = "/nawasena";
-        }, 3000);
-
-        // Set a timeout to hide the overlay after 3 seconds
-        setTimeout(function () {
-            $(".overlay-container").css("display", "none");
-            $("body").css("overflow", "auto");
-        }, 3000);
-    });
-
-    $(".wehea").click(function () {
-        const overlayImage = $("#overlay-image");
-        const weheaImageSrc = $(this).find("img").attr("src");
-        const weheaImageAlt = $(this).find("img").attr("alt");
-
-        overlayImage.attr("src", weheaImageSrc);
-        overlayImage.attr("alt", weheaImageAlt);
-
-        $("body").css("overflow", "hidden");
-        $(".overlay-container").css("display", "flex");
-
-        setTimeout(function () {
-            window.location.href = "/wehea";
+            window.location.href = "/meru-betiri";
         }, 3000);
 
         // Set a timeout to hide the overlay after 3 seconds

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class MeruBetiriController extends Controller
 {
     public function landingPage(){
-        return('hehe');
+        return view('cms.page.meruBetiri.landingMeruBetiri', ['title' => "Gate of Meru Betiri"]);
     }
     public function pagePulau1(){
         return('pulau1');
