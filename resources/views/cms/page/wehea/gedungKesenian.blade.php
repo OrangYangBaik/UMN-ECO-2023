@@ -31,7 +31,7 @@
                 <img src="{{ asset('images/wehea/gedungkesenian/Patung.svg') }}" />
             </div>
             <img class="rak-kerajinan-gedung-kesenian"
-                src="{{ asset('images/wehea/gedungkesenian/Rak kerajinan vas.png') }}" />
+                src="{{ asset('images/wehea/gedungkesenian/rak kerajinan vas.png') }}" />
             {{-- <div class="rak-gedung-kesenian">
                 <img src="{{ asset('images/wehea/gedungkesenian/Rak.svg') }}" />
             </div> --}}

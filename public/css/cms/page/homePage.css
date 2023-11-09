@@ -83,8 +83,8 @@
         position: absolute;
         width: 175px;
         height: auto;
-        top: 25%;
-        left: 0;
+        top: 35%;
+        left: 30%;
         z-index: 1;
         filter: drop-shadow(0 20px 30px black);
     }
@@ -136,8 +136,8 @@
         position: absolute;
         width: 125px;
         height: auto;
-        top: 30%;
-        left: 5%;
+        top: 37.5%;
+        left: 32.5%;
         z-index: 1;
         filter: drop-shadow(0 20px 30px black);
     }
@@ -216,10 +216,11 @@
         position: absolute;
         width: 150px;
         height: auto;
-        top: 20%;
-        right: 40%;
+        top: 40%;
+        right: 10%;
         z-index: 1;
         filter: drop-shadow(0 20px 30px black);
+        transform: scaleX(-1);
     }
 
     #homepage-container .jnana-sanka img {
@@ -277,10 +278,11 @@
         position: absolute;
         width: 90px;
         height: auto;
-        top: 20%;
-        right: 32.5%;
+        top: 37.5%;
+        right: 0;
         z-index: 1;
         filter: drop-shadow(0 20px 30px black);
+        transform: scaleX(-1);
     }
 
     #homepage-container .jnana-sanka img {
