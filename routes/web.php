@@ -13,7 +13,6 @@ use App\Http\Controllers\MilestoneController;
 use App\Http\Controllers\QrHandlerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NawasenaController;
-use Illuminate\Support\Facades\Hash;
 
 /*{{  }}
 |--------------------------------------------------------------------------
@@ -25,10 +24,6 @@ use Illuminate\Support\Facades\Hash;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/hehehaha', function(){
-    dd(Hash::make('devano'));
-});
 
 // WEB UTAMA UMN ECO 2023
 
@@ -165,3 +160,9 @@ Route::post('/sendDataKurangKuponToAdmin', [AdminController::class, 'sendToAdmin
 Route::post('/sendDataDapatCreditToAdmin', [AdminController::class, 'sendToAdminPageDapatCredit']);
 Route::post('/sendDataMerchandiseToAdmin', [AdminController::class, 'sendToAdminPageMerchandise']);
 Route::post('/respond', [AdminController::class, 'respond']);
+
+//Meru Betiri
+Route::get('/meru-betiri/landing',[MeruBetiriController::class, 'landingPage']);
+Route::get('/meru-betiri/pulau1',[MeruBetiriController::class, 'pagePulau1']);
+Route::get('/meru-betiri/pulau2',[MeruBetiriController::class, 'pagePulau2']);
+Route::get('/meru-betiri/pulau3',[MeruBetiriController::class, 'pagePulau3']);
