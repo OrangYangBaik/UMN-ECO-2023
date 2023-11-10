@@ -87,8 +87,7 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser')->m
 // Meru Betiri
 Route::group(['prefix' => 'meru-betiri'], function() {
     Route::get('/', [MeruBetiriController::class, 'landingPage'])->name('meru-betiri-landing');
-    Route::get('/merubetiri', [MeruBetiriController::class, 'merubetiri'])->name('merubetiri');
-    Route::get('/register', [MeruBetiriController::class, 'pagePulau1']);
+    Route::get('/registration', [MeruBetiriController::class, 'pagePulau1'])->name('meru-betiri-registration');
     Route::get('/info', [MeruBetiriController::class, 'pagePulau2']);
     Route::get('/funwalk-rute', [MeruBetiriController::class, 'pagePulau3']);
 });

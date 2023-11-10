@@ -1,5 +1,5 @@
 .landing-meru-betiri-container {
-    min-height: 120vh;
+    height: 800px;
     background-color: #ffecd5;
     position: relative;
     background-image: url("../../../../images/meruBetiri/Map BG.svg");
@@ -69,29 +69,44 @@
 @media only screen and (max-width: 1024px) {
     .landing-meru-betiri-container .pulauSatu {
         width: 50%;
-        height: auto;
-        top: 60%;
-        left: 50%;
     }
 
     .landing-meru-betiri-container .pulauDua {
         width: 40%;
-        height: auto;
-        top: 75px;
-        right: 25px;
     }
 
     .landing-meru-betiri-container .pulauTiga {
         width: 40%;
-        height: auto;
+    }
+}
+
+@media only screen and (max-width: 578px) {
+    .landing-meru-betiri-container {
+        height: 100vh;
+    }
+
+    .landing-meru-betiri-container .pulauSatu {
+        width: 400px;
+        top: 50%;
+    }
+
+    .landing-meru-betiri-container .pulauDua {
+        width: 300px;
+        top: auto;
+        bottom: 10px;
+        right: 0;
+    }
+
+    .landing-meru-betiri-container .pulauTiga {
+        width: 300px;
         top: 25px;
         left: 0;
     }
-
     .landing-meru-betiri-container .nala-lari {
         width: 150px;
         height: auto;
-        top: 62%;
+        position: absolute;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
