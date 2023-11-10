@@ -9,6 +9,10 @@
     overflow-x: hidden;
 }
 
+#homepage-container .hoverable-obj-done {
+    cursor: not-allowed !important;
+}
+
 #homepage-container
     :where(
         .jnana-sanka img,
@@ -83,10 +87,11 @@
         position: absolute;
         width: 175px;
         height: auto;
-        top: 35%;
-        left: 30%;
+        top: 25%;
+        right: 5%;
         z-index: 1;
         filter: drop-shadow(0 20px 30px black);
+        transform: scaleX(-1);
     }
 
     #homepage-container .jnana-sanka img {
@@ -136,10 +141,11 @@
         position: absolute;
         width: 125px;
         height: auto;
-        top: 37.5%;
-        left: 32.5%;
+        top: 30%;
+        right: 7.5%;
         z-index: 1;
         filter: drop-shadow(0 20px 30px black);
+        transform: scaleX(-1);
     }
 
     #homepage-container .jnana-sanka img {
@@ -216,7 +222,7 @@
         position: absolute;
         width: 150px;
         height: auto;
-        top: 40%;
+        bottom: 10%;
         right: 10%;
         z-index: 1;
         filter: drop-shadow(0 20px 30px black);
@@ -278,7 +284,7 @@
         position: absolute;
         width: 90px;
         height: auto;
-        top: 37.5%;
+        bottom: 15%;
         right: 0;
         z-index: 1;
         filter: drop-shadow(0 20px 30px black);

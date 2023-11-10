@@ -23,16 +23,20 @@
                 alt="Garis Putus" />
         </div>
         <div class="jnana-sanka">
-            <img class="hoverable-obj" src="{{ asset('images/treasureMap/jnana-sanka.svg') }}" alt="Jnana Sanka" />
+            <img class="hoverable-obj hoverable-obj-done" src="{{ asset('images/treasureMap/jnana-sanka.svg') }}"
+                alt="Jnana Sanka" />
         </div>
         <div class="nawasena">
-            <img class="hoverable-obj" src="{{ asset('images/treasureMap/nawasena.svg') }}" alt="Nawasena" />
+            <img class="hoverable-obj hoverable-obj-done" src="{{ asset('images/treasureMap/nawasena.svg') }}"
+                alt="Nawasena" />
         </div>
         <div class="wehea">
-            <img class="hoverable-obj" src="{{ asset('images/treasureMap/wehea.svg') }}" alt="Hidden City in Wehea" />
+            <img class="hoverable-obj hoverable-obj-done" src="{{ asset('images/treasureMap/wehea.svg') }}"
+                alt="Hidden City in Wehea" />
         </div>
         <div class="eco-patra">
-            <img class="hoverable-obj" src="{{ asset('images/treasureMap/eco-patra.svg') }}" alt="Eco Patra" />
+            <img class="hoverable-obj hoverable-obj-done" src="{{ asset('images/treasureMap/eco-patra.svg') }}"
+                alt="Eco Patra" />
         </div>
         <div class="meru-betiri">
             <img class="hoverable-obj" src="{{ asset('images/treasureMap/meru-betiri.svg') }}" alt="Gate of Meru Betiri" />
