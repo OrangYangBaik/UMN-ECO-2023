@@ -28,7 +28,6 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: drop-shadow(3px 3px #00dfff);
 }
 
 .landing-meru-betiri-container .pulauDua {
@@ -38,7 +37,6 @@
     top: 75px;
     right: 25px;
     transform: scaleX(-1);
-    filter: drop-shadow(3px 3px #00dfff);
 }
 
 .landing-meru-betiri-container .pulauTiga {
@@ -47,7 +45,6 @@
     position: absolute;
     top: 25px;
     left: 0;
-    filter: drop-shadow(3px 3px #00dfff);
 }
 .landing-meru-betiri-container .nala-lari {
     width: 150px;
