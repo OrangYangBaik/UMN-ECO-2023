@@ -36,7 +36,7 @@
             </div>
             <div>
                 <img src="{{ asset('images/meruBetiri/Aset GOMB webBlack Clock.png') }}" alt="">
-                <div>05.00-10.00  WIB (Pagi)</div>
+                <div>06.00-10.00  WIB (Pagi)</div>
             </div>
             <div>
                 <img src="{{ asset('images/meruBetiri/Aset GOMB webBlack Location.png') }}" alt="">
