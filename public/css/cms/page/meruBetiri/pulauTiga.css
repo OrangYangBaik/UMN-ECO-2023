@@ -1,0 +1,60 @@
+body {
+    overflow-x: hidden;
+}
+
+.outer-container-pulauTiga {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+}
+
+.container-pulauTiga {
+    position: relative;
+    height: 900px;
+    /* background-color: red; */
+    width: 1440px;
+}
+
+.background-pulauTiga {
+    background-image: url("/images/meruBetiri/Map BG.svg");
+    position: absolute;
+    width: 101%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.pulauTiga-img {
+    position: relative;
+    left: -34rem;
+    top: -25rem;
+}
+
+.pulauTiga-img img {
+    width: 120rem;
+}
+
+@media screen and (min-width: 1441px) {
+    .container-pulauTiga {
+        width: 100%;
+        height: 60vw;
+    }
+
+    .background-pulauTiga {
+        width: 101%;
+        height: 100%;
+    }
+
+    /* position */
+    .pulauTiga-img {
+        position: relative;
+        left: -37vw;
+        top: -28vw;
+    }
+
+    .pulauTiga-img img {
+        width: 130vw;
+    }
+}

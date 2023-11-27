@@ -88,8 +88,8 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logoutUser')->m
 Route::group(['prefix' => 'meru-betiri'], function() {
     Route::get('/', [MeruBetiriController::class, 'landingPage'])->name('meru-betiri-landing');
     Route::get('/registration', [MeruBetiriController::class, 'pagePulau1'])->name('meru-betiri-registration');
-    Route::get('/info', [MeruBetiriController::class, 'pagePulau2']);
-    Route::get('/funwalk-rute', [MeruBetiriController::class, 'pagePulau3']);
+    Route::get('/funwalk-rute', [MeruBetiriController::class, 'pagePulau2']);
+    Route::get('/info', [MeruBetiriController::class, 'pagePulau3']);
 });
 
 // Milestone
