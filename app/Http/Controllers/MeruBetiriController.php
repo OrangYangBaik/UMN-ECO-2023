@@ -15,10 +15,10 @@ class MeruBetiriController extends Controller
     }
 
     public function pagePulau2(){
-        return('pulau2');
+        return view('cms.page.meruBetiri.pulauDua.pulauDua', ['title' => "Rute Funwalk"]);
     }
     
     public function pagePulau3(){
-        return('pulau3');
+        return view('cms.page.meruBetiri.pulauTiga.pulauTiga', ['title' => "Info"]);
     }
 }
